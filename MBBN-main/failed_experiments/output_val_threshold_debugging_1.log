@@ -1,0 +1,1752 @@
+starting phase2: mbbn
+saving the results at /global/homes/p/pakmasha/model/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_debug
+Skipping subject Barcelona-HCPB_sub-008 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR117CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-DNO23LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Bangalore-NIMHANS_sub-ODP203 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C032 due to invalid knee frequency.
+Skipping subject Chiba-CHB_sub-MADHC010 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr7977 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-C0071 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO39JHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO27LCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb1751 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR38LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C293 due to invalid knee frequency.
+Skipping subject Bergen_sub-00006 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-MADHC090 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR53PSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0806 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP002 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR59KDW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15250 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0049 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP118 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0156 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Pediatric_sub-ZFIGFT due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8123 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-009 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916052 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT08CTRPRE due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR71HRK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Bangalore-NIMHANS_sub-C0137 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj1050 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-MADHC056 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb1917 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C051 due to invalid knee frequency.
+Skipping subject UCLA_sub-AOCD052 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO03KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb2073 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0963 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO05HSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO14PMY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Brazil_sub-P00328420170524 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P70 due to invalid knee frequency.
+Error processing subject Vancouver-BCCHR_sub-032: operands could not be broadcast together with shapes (100,) (0,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (0,)
+Skipping subject Bangalore-NIMHANS_sub-ODP235 due to invalid knee frequency.
+Skipping subject Chiba-CHBC_sub-HCC027 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT16CTRPRE due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8222 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP083 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Trio_sub-YaleHCPTriota7283 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C001 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201406022OCD068 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-091 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-096 due to invalid knee frequency.
+Skipping subject Cape-Town-UCT-Skyra_sub-ESCO108 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO59KDH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15254 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0094 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P21 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15207 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916037 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-031 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP243 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0152 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0159 due to invalid knee frequency.
+Skipping subject UCLA_sub-AOCD068 due to invalid knee frequency.
+Skipping subject Yale-Gruner_sub-S2470VCI due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd567000 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0225 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP071 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO15KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Bangalore-NIMHANS_sub-C0047 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15216 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P07 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO63KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Brazil_sub-P00247120151005 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15201 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP025 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-103 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0220 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR56YIW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Shanghai-SMCH_sub-008 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0177 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR51CBD: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201911051BART040 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00356020180529 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI202006191BART055 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C078 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P47 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP139 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00348920180306 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI202007101BART059 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP238 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-026 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0036 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd287000 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Trio_sub-YaleHCPTriota7654 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR112YIS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201510093OCD099 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0201 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00309620161127 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR40LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR91SJY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj1012 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201407143CogTD037 due to invalid knee frequency.
+Skipping subject Brazil_sub-C001437 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00198320141201 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15270 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00309520161127 due to invalid knee frequency.
+Skipping subject Dresden_sub-GEROME3051 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj1024 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0162 due to invalid knee frequency.
+Skipping subject Brazil_sub-C001914 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR12BJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201908142BART021 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4635 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8791 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C086 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO36CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Brazil_sub-P00282120160530 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00235020150811 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR87YSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Chiba-CHB_sub-MADHC030 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0529 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-056 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT13CTRPOST due to invalid knee frequency.
+Skipping subject Dresden_sub-GEROME4018 due to invalid knee frequency.
+Skipping subject Bergen_sub-00046 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-040 due to invalid knee frequency.
+Skipping subject New-York_sub-subSEQ1NKISENR159 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR73KMS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Chiba-CHBSRPB_sub-OCD148 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C282 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO17LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR29JSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP001 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR21JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C017 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-C0067 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO01LYH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Vancouver-BCCHR_sub-054 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO34KJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bergen_sub-00045 due to invalid knee frequency.
+Skipping subject Chiba-CHBC_sub-HCC023 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00229920150721 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR106KSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP126 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-SUA008 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0016 due to invalid knee frequency.
+Skipping subject Brazil_sub-C001978 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0001 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR100JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR104LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT20CTRPOST due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-017 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr9459 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Trio_sub-YaleHCPTriota6195 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-MADHC057 due to invalid knee frequency.
+Skipping subject Yale-Gruner_sub-S8060PXV due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P32 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP252 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-MADHC099 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P06 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO18LKB: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Shanghai-SMCH_sub-044 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO02LTY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR46LYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C022 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO61JCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP169 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-OCD138 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr7767 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO11YSO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR04JJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP207 due to invalid knee frequency.
+Skipping subject Chiba-CHBC_sub-HCC017 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR65LES: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd767000 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-OCD154 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd787000 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb2002 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15227 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO23SJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Cape-Town-UCT-Skyra_sub-CIMP120 due to invalid knee frequency.
+Skipping subject Chiba-CHBC_sub-OCDC029 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-050 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-025 due to invalid knee frequency.
+Skipping subject Brazil_sub-C001582 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P84 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00196320141117 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0056 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P28 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-018 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C066 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO35ISR: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR84LJE: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO35KKK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-C0055 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO25CEG: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO72YHY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT25CTRPRE due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR31HKO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR55JJU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR45LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR93BHU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR15KKY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP023 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C054 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP163 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR97LKH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO02KHA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-C0003 due to invalid knee frequency.
+Skipping subject Bergen_sub-00069 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP176 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-OCD088 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-022 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-052 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP222 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO38LTH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P68 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP191 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP006 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP066 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP157 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR105KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject UCLA_sub-AOCD041 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR39KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C091 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0099 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C291 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0054 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C304 due to invalid knee frequency.
+Skipping subject UCLA_sub-AOCD071 due to invalid knee frequency.
+Skipping subject Bergen_sub-00022 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj1020 due to invalid knee frequency.
+Skipping subject Bergen_sub-00078 due to invalid knee frequency.
+Skipping subject Bergen_sub-00007 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Trio_sub-YaleHCPTriota6220 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P14 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR95LMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8511 due to invalid knee frequency.
+Skipping subject Brazil_sub-C001708 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0046 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd467000 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00199420141215 due to invalid knee frequency.
+Skipping subject New-York_sub-subSEQ1NKISENR82 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO55LBY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Chiba-CHB_sub-OCD098 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0117 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P83 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr7987 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO30HWK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201208032OCD017 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO58PYA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR16KYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR33SHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Dresden_sub-GEROME4046 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR85CJM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR68SDS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP152 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR64SSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201207044OCD006 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR66LDY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR114LOY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15267 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P10 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00252320151109 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP029 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj1052 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR108KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Shanghai-SMCH_sub-012 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP143 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO48LDJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Vancouver-BCCHR_sub-045 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDta0860 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO68LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj1040 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR01LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Shanghai-SMCH_sub-017 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO31PPS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C014 due to invalid knee frequency.
+Skipping subject Dresden_sub-GEROME4025 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0121 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT09CTRPOST due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C084 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-071 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201704071OCD136 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO09KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO11LSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP173 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO10YBI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Brazil_sub-P00210220150309 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd867000 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO46LYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Shanghai-SMCH_sub-036 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR36HYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-C0233 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR11KYT: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Yale-Pittinger-HCP-Trio_sub-YaleHCPTriota7899 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201508073OCD086 due to invalid knee frequency.
+Skipping subject New-York_sub-subSEQ1NKISENR163 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201507224OCD084 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-MADHC094 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR75LSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bergen_sub-00051 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT21CTRPOST due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-002 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj1018 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201910161BART039 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C053 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P38 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr7529 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0003 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Pediatric_sub-PALNYO due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO47LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP103 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0224 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P71 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO04KSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201508191OCD091 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-062 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00326920170510 due to invalid knee frequency.
+Skipping subject Dresden_sub-GEROME3039 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO45LSW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201407163CogTD040 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C099 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00291520160719 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C312 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C302 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201307244CogTD011 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR42PSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C113 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-C0081 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201905081BART001 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201909303BART036 due to invalid knee frequency.
+Skipping subject Chiba-CHB_sub-MADHC019 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd217000 due to invalid knee frequency.
+Skipping subject Bergen_sub-00067 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916067 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C021 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR109KSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP092 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-007 due to invalid knee frequency.
+Skipping subject New-York_sub-subSEQ1NKISENR153 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0197 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO45JJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15225 due to invalid knee frequency.
+Skipping subject UCLA_sub-AOCD062 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO05JSI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0019 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj1031 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916078 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-053 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0021 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201911131BART044 due to invalid knee frequency.
+Skipping subject New-York_sub-subSEQ1NKISENR134 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP034 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0040 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP220 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0817 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201409173CogTD055 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO38BYU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Chiba-CHBSRPB_sub-MADHC095 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916017 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP051 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO27KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO56KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb1503 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP013 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR49YHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject New-York_sub-subSEQ1NKISENR137 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15243 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00298020160904 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0032 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0178 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916059 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR62MBS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0033 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201911061BART041 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-006 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0135 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO29CJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO33JWJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201409012CogTD048 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916057 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP199 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-096 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR79KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15261 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C070 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT13CTRPRE due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0209 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0861 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C286 due to invalid knee frequency.
+Skipping subject Yale-Gruner_sub-S7548VVI due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-SUA013 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0083 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Pediatric_sub-PYSYAT due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0027 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0053 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C110 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-C0061 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4349 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15228 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8010 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO22KMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Brazil_sub-C002045 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP184 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr9746 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15209 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0071 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0237 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C292 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr7582 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0113 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP014 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C045 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P45 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR78LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201307242CogTD009 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDta0743 due to invalid knee frequency.
+Skipping subject Cape-Town-UCT-Skyra_sub-CIMP133 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR72KCK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Chiba-CHBC_sub-OCDC037 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-051 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201303202OCD047 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-015 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-072 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-055 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP072 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0010 due to invalid knee frequency.
+Skipping subject Bergen_sub-00013 due to invalid knee frequency.
+Skipping subject Bergen_sub-00055 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-008 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR117CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-DNO23LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Bangalore-NIMHANS_sub-ODP203 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C032 due to invalid knee frequency.
+Skipping subject Chiba-CHB_sub-MADHC010 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr7977 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-C0071 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO39JHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO27LCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb1751 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR38LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C293 due to invalid knee frequency.
+Skipping subject Bergen_sub-00006 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-MADHC090 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR53PSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0806 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP002 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR59KDW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15250 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0049 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP118 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0156 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Pediatric_sub-ZFIGFT due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8123 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-009 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916052 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT08CTRPRE due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR71HRK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Bangalore-NIMHANS_sub-C0137 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj1050 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-MADHC056 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb1917 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C051 due to invalid knee frequency.
+Skipping subject UCLA_sub-AOCD052 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO03KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb2073 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0963 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO05HSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO14PMY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Brazil_sub-P00328420170524 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P70 due to invalid knee frequency.
+Error processing subject Vancouver-BCCHR_sub-032: operands could not be broadcast together with shapes (100,) (0,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (0,)
+Skipping subject Bangalore-NIMHANS_sub-ODP235 due to invalid knee frequency.
+Skipping subject Chiba-CHBC_sub-HCC027 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT16CTRPRE due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8222 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP083 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Trio_sub-YaleHCPTriota7283 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C001 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201406022OCD068 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-091 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-096 due to invalid knee frequency.
+Skipping subject Cape-Town-UCT-Skyra_sub-ESCO108 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO59KDH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15254 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0094 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P21 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15207 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916037 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-031 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP243 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0152 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0159 due to invalid knee frequency.
+Skipping subject UCLA_sub-AOCD068 due to invalid knee frequency.
+Skipping subject Yale-Gruner_sub-S2470VCI due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd567000 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0225 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP071 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO15KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Bangalore-NIMHANS_sub-C0047 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15216 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P07 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO63KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Skipping subject Brazil_sub-P00247120151005 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15201 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP025 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-103 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0220 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR56YIW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Shanghai-SMCH_sub-008 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0177 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR51CBD: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201911051BART040 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00356020180529 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI202006191BART055 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C078 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P47 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP139 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00348920180306 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI202007101BART059 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP238 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-026 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0036 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd287000 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Trio_sub-YaleHCPTriota7654 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR112YIS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201510093OCD099 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0201 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00309620161127 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR40LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR91SJY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj1012 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201407143CogTD037 due to invalid knee frequency.
+Skipping subject Brazil_sub-C001437 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00198320141201 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15270 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00309520161127 due to invalid knee frequency.
+Skipping subject Dresden_sub-GEROME3051 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj1024 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0162 due to invalid knee frequency.
+Skipping subject Brazil_sub-C001914 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR12BJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201908142BART021 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4635 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8791 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C086 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO36CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Brazil_sub-P00282120160530 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00235020150811 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR87YSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Chiba-CHB_sub-MADHC030 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0529 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-056 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT13CTRPOST due to invalid knee frequency.
+Skipping subject Dresden_sub-GEROME4018 due to invalid knee frequency.
+Skipping subject Bergen_sub-00046 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-040 due to invalid knee frequency.
+Skipping subject New-York_sub-subSEQ1NKISENR159 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR73KMS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Chiba-CHBSRPB_sub-OCD148 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C282 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO17LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR29JSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP001 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR21JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C017 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-C0067 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO01LYH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Vancouver-BCCHR_sub-054 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO34KJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bergen_sub-00045 due to invalid knee frequency.
+Skipping subject Chiba-CHBC_sub-HCC023 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00229920150721 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR106KSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP126 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-SUA008 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0016 due to invalid knee frequency.
+Skipping subject Brazil_sub-C001978 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0001 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR100JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR104LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT20CTRPOST due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-017 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr9459 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Trio_sub-YaleHCPTriota6195 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-MADHC057 due to invalid knee frequency.
+Skipping subject Yale-Gruner_sub-S8060PXV due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P32 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP252 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-MADHC099 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P06 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO18LKB: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Shanghai-SMCH_sub-044 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO02LTY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR46LYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C022 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO61JCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP169 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-OCD138 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr7767 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO11YSO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR04JJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP207 due to invalid knee frequency.
+Skipping subject Chiba-CHBC_sub-HCC017 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR65LES: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd767000 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-OCD154 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd787000 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb2002 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15227 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO23SJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Cape-Town-UCT-Skyra_sub-CIMP120 due to invalid knee frequency.
+Skipping subject Chiba-CHBC_sub-OCDC029 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-050 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-025 due to invalid knee frequency.
+Skipping subject Brazil_sub-C001582 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P84 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00196320141117 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0056 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P28 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-018 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C066 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO35ISR: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR84LJE: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO35KKK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-C0055 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO25CEG: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO72YHY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT25CTRPRE due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR31HKO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR55JJU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR45LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR93BHU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR15KKY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP023 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C054 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP163 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR97LKH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO02KHA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-C0003 due to invalid knee frequency.
+Skipping subject Bergen_sub-00069 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP176 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-OCD088 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-022 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-052 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP222 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO38LTH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P68 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP191 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP006 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP066 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP157 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR105KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject UCLA_sub-AOCD041 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR39KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C091 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0099 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C291 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0054 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C304 due to invalid knee frequency.
+Skipping subject UCLA_sub-AOCD071 due to invalid knee frequency.
+Skipping subject Bergen_sub-00022 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj1020 due to invalid knee frequency.
+Skipping subject Bergen_sub-00078 due to invalid knee frequency.
+Skipping subject Bergen_sub-00007 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Trio_sub-YaleHCPTriota6220 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P14 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR95LMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8511 due to invalid knee frequency.
+Skipping subject Brazil_sub-C001708 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0046 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd467000 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00199420141215 due to invalid knee frequency.
+Skipping subject New-York_sub-subSEQ1NKISENR82 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO55LBY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Chiba-CHB_sub-OCD098 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0117 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P83 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr7987 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO30HWK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201208032OCD017 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO58PYA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR16KYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR33SHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Dresden_sub-GEROME4046 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR85CJM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR68SDS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP152 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR64SSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201207044OCD006 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR66LDY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR114LOY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15267 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P10 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00252320151109 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP029 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj1052 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR108KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Shanghai-SMCH_sub-012 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP143 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO48LDJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Vancouver-BCCHR_sub-045 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDta0860 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO68LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj1040 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR01LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Shanghai-SMCH_sub-017 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO31PPS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C014 due to invalid knee frequency.
+Skipping subject Dresden_sub-GEROME4025 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0121 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT09CTRPOST due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C084 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-071 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201704071OCD136 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO09KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO11LSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP173 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO10YBI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Brazil_sub-P00210220150309 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd867000 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO46LYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Shanghai-SMCH_sub-036 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR36HYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-C0233 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR11KYT: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Yale-Pittinger-HCP-Trio_sub-YaleHCPTriota7899 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201508073OCD086 due to invalid knee frequency.
+Skipping subject New-York_sub-subSEQ1NKISENR163 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201507224OCD084 due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-MADHC094 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR75LSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bergen_sub-00051 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT21CTRPOST due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-002 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj1018 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201910161BART039 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C053 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P38 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr7529 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0003 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Pediatric_sub-PALNYO due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO47LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP103 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0224 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P71 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO04KSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201508191OCD091 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-062 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00326920170510 due to invalid knee frequency.
+Skipping subject Dresden_sub-GEROME3039 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO45LSW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201407163CogTD040 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C099 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00291520160719 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C312 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C302 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201307244CogTD011 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR42PSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C113 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-C0081 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201905081BART001 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201909303BART036 due to invalid knee frequency.
+Skipping subject Chiba-CHB_sub-MADHC019 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Adults_sub-simpaocd217000 due to invalid knee frequency.
+Skipping subject Bergen_sub-00067 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916067 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C021 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR109KSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Bangalore-NIMHANS_sub-ODP092 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-007 due to invalid knee frequency.
+Skipping subject New-York_sub-subSEQ1NKISENR153 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0197 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO45JJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15225 due to invalid knee frequency.
+Skipping subject UCLA_sub-AOCD062 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO05JSI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0019 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj1031 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916078 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-053 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0021 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201911131BART044 due to invalid knee frequency.
+Skipping subject New-York_sub-subSEQ1NKISENR134 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP034 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0040 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP220 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0817 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201409173CogTD055 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO38BYU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Chiba-CHBSRPB_sub-MADHC095 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916017 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP051 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO27KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO56KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb1503 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP013 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR49YHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject New-York_sub-subSEQ1NKISENR137 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15243 due to invalid knee frequency.
+Skipping subject Brazil_sub-P00298020160904 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0032 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0178 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916059 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR62MBS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0033 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-3T_sub-MRI201911061BART041 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-006 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0135 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-UMO29CJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO33JWJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T_sub-MRI201409012CogTD048 due to invalid knee frequency.
+Skipping subject Amsterdam-VUmc_sub-916057 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP199 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-096 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR79KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15261 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C070 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-RESP-CBT-3T_sub-RESPCBT13CTRPRE due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0209 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0861 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C286 due to invalid knee frequency.
+Skipping subject Yale-Gruner_sub-S7548VVI due to invalid knee frequency.
+Skipping subject Chiba-CHBSRPB_sub-SUA013 due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0083 due to invalid knee frequency.
+Skipping subject NYSPI-Columbia-Pediatric_sub-PYSYAT due to invalid knee frequency.
+Skipping subject Kyoto-KPU-Kyoto3T_sub-subKyoto3Tsubj0027 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0053 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C110 due to invalid knee frequency.
+Skipping subject Barcelona-HCPB_sub-C0061 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4349 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15228 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8010 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-DNO22KMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Brazil_sub-C002045 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP184 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr9746 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15209 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0071 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0237 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-PROV-1.5T_sub-subIDIBELL15C292 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr7582 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtb0113 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP014 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C045 due to invalid knee frequency.
+Skipping subject Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15P45 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR78LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201307242CogTD009 due to invalid knee frequency.
+Skipping subject Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDta0743 due to invalid knee frequency.
+Skipping subject Cape-Town-UCT-Skyra_sub-CIMP133 due to invalid knee frequency.
+Error processing subject Seoul-SNU_sub-NOR72KCK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Skipping subject Chiba-CHBC_sub-OCDC037 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-051 due to invalid knee frequency.
+Skipping subject Braga-UMinho-Braga-1.5T-act_sub-MRI201303202OCD047 due to invalid knee frequency.
+Skipping subject Shanghai-SMCH_sub-015 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-072 due to invalid knee frequency.
+Skipping subject Vancouver-BCCHR_sub-055 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-ODP072 due to invalid knee frequency.
+Skipping subject Bangalore-NIMHANS_sub-C0010 due to invalid knee frequency.
+Skipping subject Bergen_sub-00013 due to invalid knee frequency.
+Skipping subject Bergen_sub-00055 due to invalid knee frequency.
+/global/homes/p/pakmasha/model/MBBN-main/splits/ENIGMA_OCD/ENIGMA_OCD_OCD_ROI_322_seq_len_100_split1.txt
+loading splits
+length of train_idx: 1153
+length of val_idx: 245
+length of test_idx: 246
+workers: 8
+length of training generator is: 144
+workers: 8
+length of valid generator is: 30
+workers: 8
+length of test generator is: 30
+Number of training batches: 144
+Number of validation batches: 30
+Number of test batches: 30
+self.task: MBBN
+Number of heads: 4
+Number of parameters of the model: 19525061
+There are no checkpoints or weights from previous steps
+Single GPU or CPU training
+self.gpu: 0
+self.device: cuda
+moved model to: cuda:0
+mbbn
+using binary_classification loss
+using spatial_difference loss
+Starting epoch 1/10
+max allocated memory: 74.52 MB
+max cached memory: 96.00 MB
+
+______epoch summary 1/10_____
+
+binary_classification_train: 0.7857786588784721
+binary_classification_val: 0.7147007048130035
+binary_classification_test: 0.7100294450918834
+spatial_difference_train: 22.682066996892292
+spatial_difference_val: 22.456094360351564
+spatial_difference_test: 22.469809659322102
+total_train: 23.46784578429328
+total_val: 23.170795059204103
+total_test: 23.17983913421631
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5219846172800394
+train_Regular_Accuracy: 0.5215759849906192
+train_AUROC: 0.5056919583927346
+train_best_bal_acc: 0.5210500378407871
+train_best_threshold: 0.5011281967163086
+train_gmean: 0.5104984041692096
+train_specificity: 0.6308851224105461
+train_sensitivity: 0.4130841121495327
+train_f1_score: 0.46267087276551
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.5064377682403434
+val_AUROC: 0.5442520265291083
+val_best_bal_acc: 0.5574797347089167
+val_best_threshold: 0.3933267593383789
+val_gmean: 0.5745781189171699
+val_specificity: 0.5932203389830508
+val_sensitivity: 0.5565217391304348
+val_f1_score: 0.5381165919282511
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5107296137339056
+test_AUROC: 0.5598555211558307
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+time taken to perform 1: 27.24
+Starting epoch 2/10
+max allocated memory: 900.88 MB
+max cached memory: 1012.00 MB
+
+______epoch summary 2/10_____
+
+binary_classification_train: 0.7872818470415142
+binary_classification_val: 0.71599839925766
+binary_classification_test: 0.710376399755478
+spatial_difference_train: 22.450446526209515
+spatial_difference_val: 22.23352403640747
+spatial_difference_test: 22.249224376678466
+total_train: 23.237728430165184
+total_val: 22.949522495269775
+total_test: 22.959600766499836
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.4818396226415094
+train_Regular_Accuracy: 0.4812382739212008
+train_AUROC: 0.48462404956350325
+train_best_bal_acc: 0.4818396226415094
+train_best_threshold: 0.5
+train_gmean: 0.4793394027455913
+train_specificity: 0.3754716981132076
+train_sensitivity: 0.6119402985074627
+train_f1_score: 0.42094240837696334
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.4978540772532189
+val_AUROC: 0.5689286766872974
+val_best_bal_acc: 0.5705865016209843
+val_best_threshold: 0.3890821933746338
+val_gmean: 0.5758167996310984
+val_specificity: 0.5172413793103448
+val_sensitivity: 0.6410256410256411
+val_f1_score: 0.5934959349593496
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5107296137339056
+test_AUROC: 0.5672637476043048
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+time taken to perform 2: 25.55
+Starting epoch 3/10
+max allocated memory: 900.88 MB
+max cached memory: 1012.00 MB
+
+______epoch summary 3/10_____
+
+binary_classification_train: 0.7844750193396101
+binary_classification_val: 0.7084298306041293
+binary_classification_test: 0.7041934543185764
+spatial_difference_train: 22.2287153756177
+spatial_difference_val: 22.019768545362684
+spatial_difference_test: 22.036605559455023
+total_train: 23.01319043724625
+total_val: 22.728198369344074
+total_test: 22.740798971388074
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5013886688843128
+train_Regular_Accuracy: 0.50093808630394
+train_AUROC: 0.5104370170899555
+train_best_bal_acc: 0.5136702043402503
+train_best_threshold: 0.4963608682155609
+train_gmean: 0.5031817031550223
+train_specificity: 0.4067796610169492
+train_sensitivity: 0.6224299065420561
+train_f1_score: 0.5617597292724196
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.49356223175965663
+val_AUROC: 0.5710759027266028
+val_best_bal_acc: 0.5660648489314665
+val_best_threshold: 0.47353553771972656
+val_gmean: 0.568906953369131
+val_specificity: 0.5304347826086957
+val_sensitivity: 0.6101694915254238
+val_f1_score: 0.5843621399176955
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5107296137339056
+test_AUROC: 0.5711705734925548
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+time taken to perform 3: 26.75
+Starting epoch 4/10
+max allocated memory: 900.88 MB
+max cached memory: 1012.00 MB
+
+______epoch summary 4/10_____
+
+binary_classification_train: 0.7788186341317164
+binary_classification_val: 0.7079069202144941
+binary_classification_test: 0.7036111156145731
+spatial_difference_train: 22.015838427676094
+spatial_difference_val: 21.814124139149985
+spatial_difference_test: 21.8313419342041
+total_train: 22.794657124413384
+total_val: 22.522031021118163
+total_test: 22.53495297431946
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5117748521543227
+train_Regular_Accuracy: 0.5112570356472795
+train_AUROC: 0.5194997887918895
+train_best_bal_acc: 0.5175302731624895
+train_best_threshold: 0.5184242725372314
+train_gmean: 0.5058618649543513
+train_specificity: 0.6320754716981132
+train_sensitivity: 0.4048507462686567
+train_f1_score: 0.45617740232312565
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.4978540772532189
+val_AUROC: 0.5723916887709991
+val_best_bal_acc: 0.5665340406719717
+val_best_threshold: 0.4151952564716339
+val_gmean: 0.5708045727747973
+val_specificity: 0.5689655172413793
+val_sensitivity: 0.5726495726495726
+val_f1_score: 0.5665236051502146
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5085470085470085
+test_AUROC: 0.5720496894409939
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+time taken to perform 4: 25.55
+Starting epoch 5/10
+max allocated memory: 900.88 MB
+max cached memory: 1012.00 MB
+
+______epoch summary 5/10_____
+
+binary_classification_train: 0.7777109579907523
+binary_classification_val: 0.712271260023117
+binary_classification_test: 0.7077436848481496
+spatial_difference_train: 21.810735297203063
+spatial_difference_val: 21.61570561726888
+spatial_difference_test: 21.63390143076579
+total_train: 22.588446304533218
+total_val: 22.32797684987386
+total_test: 22.34164503733317
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5192935213052432
+train_Regular_Accuracy: 0.5187617260787992
+train_AUROC: 0.5188394318601827
+train_best_bal_acc: 0.5223067039794428
+train_best_threshold: 0.49918606877326965
+train_gmean: 0.5210529791884009
+train_specificity: 0.4670433145009416
+train_sensitivity: 0.5813084112149532
+train_f1_score: 0.5483584738243124
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.49356223175965663
+val_AUROC: 0.5687177597641857
+val_best_bal_acc: 0.5580324244657332
+val_best_threshold: 0.36829209327697754
+val_gmean: 0.5665055328868834
+val_specificity: 0.5652173913043479
+val_sensitivity: 0.5677966101694916
+val_f1_score: 0.5579399141630901
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5021459227467812
+test_AUROC: 0.6035956380783968
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+time taken to perform 5: 26.20
+Starting epoch 6/10
+max allocated memory: 900.88 MB
+max cached memory: 1012.00 MB
+
+______epoch summary 6/10_____
+
+binary_classification_train: 0.7797664528781617
+binary_classification_val: 0.7192461513810687
+binary_classification_test: 0.7111851612726847
+spatial_difference_train: 21.613334854443867
+spatial_difference_val: 21.42416654162937
+spatial_difference_test: 21.44252594841851
+total_train: 22.393101350024896
+total_val: 22.143412664201524
+total_test: 22.15371102227105
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.4949204449450859
+train_Regular_Accuracy: 0.49437148217636023
+train_AUROC: 0.5048824274852154
+train_best_bal_acc: 0.5171430582934384
+train_best_threshold: 0.4864763915538788
+train_gmean: 0.5035427851979637
+train_specificity: 0.39622641509433965
+train_sensitivity: 0.6399253731343284
+train_f1_score: 0.5709515859766278
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.48497854077253216
+val_AUROC: 0.5517330383480826
+val_best_bal_acc: 0.5646755162241888
+val_best_threshold: 0.36342090368270874
+val_gmean: 0.5635826192596463
+val_specificity: 0.6460176991150443
+val_sensitivity: 0.49166666666666664
+val_f1_score: 0.5321100917431193
+test_Balanced_Accuracy: 0.5001105379513633
+test_Regular_Accuracy: 0.5064377682403434
+test_AUROC: 0.6043109801031687
+test_best_bal_acc: 0.5001105379513633
+test_best_threshold: 0.5
+test_gmean: 0.09285451096385952
+test_specificity: 0.9915254237288136
+test_sensitivity: 0.008695652173913044
+test_f1_score: 0.017094017094017096
+time taken to perform 6: 25.10
+Starting epoch 7/10
+max allocated memory: 900.88 MB
+max cached memory: 1012.00 MB
+
+______epoch summary 7/10_____
+
+binary_classification_train: 0.7761284977138515
+binary_classification_val: 0.7291067194370996
+binary_classification_test: 0.7181412841592516
+spatial_difference_train: 21.422722909185623
+spatial_difference_val: 21.239470173063733
+spatial_difference_test: 21.258343978155228
+total_train: 22.198851449148997
+total_val: 21.968576867239815
+total_test: 21.976485197884696
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5225233296792872
+train_Regular_Accuracy: 0.5220243673851921
+train_AUROC: 0.5350823565786885
+train_best_bal_acc: 0.5234737330297664
+train_best_threshold: 0.5011882781982422
+train_gmean: 0.5130886583523278
+train_specificity: 0.6327683615819208
+train_sensitivity: 0.416044776119403
+train_f1_score: 0.46589716684155297
+val_Balanced_Accuracy: 0.5211833185971116
+val_Regular_Accuracy: 0.51931330472103
+val_AUROC: 0.5589817270851754
+val_best_bal_acc: 0.5670498084291188
+val_best_threshold: 0.34809091687202454
+val_gmean: 0.5589346103210958
+val_specificity: 0.6896551724137931
+val_sensitivity: 0.452991452991453
+val_f1_score: 0.5073170731707317
+test_Balanced_Accuracy: 0.5469348659003831
+test_Regular_Accuracy: 0.5450643776824035
+test_AUROC: 0.6245579133510168
+test_best_bal_acc: 0.5469348659003831
+test_best_threshold: 0.5
+test_gmean: 0.33044727612563335
+test_specificity: 0.9827586206896551
+test_sensitivity: 0.1111111111111111
+test_f1_score: 0.19696969696969696
+time taken to perform 7: 24.43
+Starting epoch 8/10
+max allocated memory: 900.88 MB
+max cached memory: 1012.00 MB
+
+______epoch summary 8/10_____
+
+binary_classification_train: 0.7688224704211785
+binary_classification_val: 0.7289303224533796
+binary_classification_test: 0.7153139190127452
+spatial_difference_train: 21.238870688610607
+spatial_difference_val: 21.0616095940272
+spatial_difference_test: 21.08088491757711
+total_train: 22.00769319799211
+total_val: 21.79053990840912
+total_test: 21.79619879722595
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5576605593396343
+train_Regular_Accuracy: 0.5572232645403377
+train_AUROC: 0.5856117007233751
+train_best_bal_acc: 0.568930073745534
+train_best_threshold: 0.48253580927848816
+train_gmean: 0.5545866905913498
+train_specificity: 0.4387947269303202
+train_sensitivity: 0.7009345794392523
+train_f1_score: 0.6197183098591549
+val_Balanced_Accuracy: 0.5501105379513633
+val_Regular_Accuracy: 0.5493562231759657
+val_AUROC: 0.5758658806190126
+val_best_bal_acc: 0.5669491525423729
+val_best_threshold: 0.4863315224647522
+val_gmean: 0.570459226249834
+val_specificity: 0.6
+val_sensitivity: 0.5423728813559322
+val_f1_score: 0.5550660792951542
+test_Balanced_Accuracy: 0.6307839669908635
+test_Regular_Accuracy: 0.630901287553648
+test_AUROC: 0.6300839964633068
+test_best_bal_acc: 0.6307839669908635
+test_best_threshold: 0.5
+test_gmean: 0.6301913780775186
+test_specificity: 0.6581196581196581
+test_sensitivity: 0.603448275862069
+test_f1_score: 0.6194690265486725
+time taken to perform 8: 26.68
+Starting epoch 9/10
+max allocated memory: 900.88 MB
+max cached memory: 1012.00 MB
+
+______epoch summary 9/10_____
+
+binary_classification_train: 0.7634701769982959
+binary_classification_val: 0.7296417197695485
+binary_classification_test: 0.7121945438561617
+spatial_difference_train: 21.061574663644954
+spatial_difference_val: 20.890081257290312
+spatial_difference_test: 20.909308398211444
+total_train: 21.825044871848306
+total_val: 21.61972298092312
+total_test: 21.621502883345993
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.574686707969586
+train_Regular_Accuracy: 0.574108818011257
+train_AUROC: 0.6008747535905378
+train_best_bal_acc: 0.5747078287806251
+train_best_threshold: 0.5010986328125
+train_gmean: 0.5658919834875732
+train_specificity: 0.6811320754716981
+train_sensitivity: 0.4701492537313433
+train_f1_score: 0.5251046025104602
+val_Balanced_Accuracy: 0.5534924845269673
+val_Regular_Accuracy: 0.5536480686695279
+val_AUROC: 0.5788756262894194
+val_best_bal_acc: 0.553639846743295
+val_best_threshold: 0.479579895734787
+val_gmean: 0.5579450528433217
+val_specificity: 0.5555555555555556
+val_sensitivity: 0.5603448275862069
+val_f1_score: 0.5517241379310345
+test_Balanced_Accuracy: 0.6270824119121332
+test_Regular_Accuracy: 0.6266094420600858
+test_AUROC: 0.6440365619932182
+test_best_bal_acc: 0.6270824119121332
+test_best_threshold: 0.5
+test_gmean: 0.6266949595402341
+test_specificity: 0.6050420168067226
+test_sensitivity: 0.6491228070175439
+test_f1_score: 0.6297872340425532
+time taken to perform 9: 26.89
+Starting epoch 10/10
+max allocated memory: 900.88 MB
+max cached memory: 1012.00 MB
+
+______epoch summary 10/10_____
+
+binary_classification_train: 0.7554295073780749
+binary_classification_val: 0.7284261951843898
+binary_classification_test: 0.7106196394562722
+spatial_difference_train: 20.890617118941414
+spatial_difference_val: 20.72423546473185
+spatial_difference_test: 20.743377494812012
+total_train: 21.646046658356983
+total_val: 21.452661660512288
+total_test: 21.453997084299722
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.6100922275415376
+train_Regular_Accuracy: 0.6097560975609756
+train_AUROC: 0.6427080399887356
+train_best_bal_acc: 0.6110673049845115
+train_best_threshold: 0.5051611065864563
+train_gmean: 0.6085001712920095
+train_specificity: 0.6773584905660377
+train_sensitivity: 0.5466417910447762
+train_f1_score: 0.5845845845845846
+val_Balanced_Accuracy: 0.5534044418468731
+val_Regular_Accuracy: 0.5555555555555556
+val_AUROC: 0.603813559322034
+val_best_bal_acc: 0.5686002337814144
+val_best_threshold: 0.6541218757629395
+val_gmean: 0.5724152894433767
+val_specificity: 0.5948275862068966
+val_sensitivity: 0.5508474576271186
+val_f1_score: 0.5589519650655022
+test_Balanced_Accuracy: 0.5592027704096669
+test_Regular_Accuracy: 0.5579399141630901
+test_AUROC: 0.6506410256410257
+test_best_bal_acc: 0.5592027704096669
+test_best_threshold: 0.5
+test_gmean: 0.4755284649260306
+test_specificity: 0.2649572649572649
+test_sensitivity: 0.853448275862069
+test_f1_score: 0.6578073089700996
+time taken to perform 10: 25.03
+finishing phase2: mbbn
+[1;34mwandb[0m: 🚀 View run [33mENIGMA_OCD_mbbn_OCD_debug[0m at: [34mhttps://wandb.ai/pakmasha-seoul-national-university/enigma-ocd_mbbn/runs/rpisdgqs[0m
+[1;34mwandb[0m: Find logs at: [1;35m../../../../../u1/p/pakmasha/model/MBBN-main/wandb/run-20241230_195307-rpisdgqs/logs[0m

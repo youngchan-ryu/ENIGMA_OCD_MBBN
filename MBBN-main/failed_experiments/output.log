@@ -1,0 +1,1107 @@
+starting phase1: vanilla_BERT
+saving the results at /global/homes/p/pakmasha/model/MBBN-main/experiments/ENIGMA_OCD_vanilla_BERT_OCD_vanilla_bert_seed1
+Error processing subject Seoul-SNU_sub-NOR117CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-DNO23LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-DNO39JHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO27LCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-NOR38LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-NOR53PSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-NOR59KDW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-NOR71HRK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO03KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO05HSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO14PMY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO59KDH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO15KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO63KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR56YIW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR51CBD: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR112YIS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR40LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR91SJY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR12BJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO36CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR87YSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR73KMS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO17LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR29JSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR21JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO01LYH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO34KJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR106KSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR100JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR104LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO18LKB: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO02LTY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR46LYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO61JCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO11YSO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR04JJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR65LES: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO23SJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO35ISR: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR84LJE: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO35KKK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO25CEG: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO72YHY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR31HKO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR55JJU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR45LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR93BHU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR15KKY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR97LKH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO02KHA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO38LTH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR105KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR39KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR95LMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO55LBY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO30HWK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO58PYA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR16KYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR33SHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR85CJM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR68SDS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR64SSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR66LDY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR114LOY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR108KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO48LDJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO68LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR01LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO31PPS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO09KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO11LSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO10YBI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO46LYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR36HYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR11KYT: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR75LSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO47LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO04KSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO45LSW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR42PSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR109KSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO45JJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO05JSI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO38BYU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO27KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO56KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR49YHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR62MBS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO29CJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO33JWJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR79KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO22KMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR78LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR72KCK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR117CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-DNO23LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-DNO39JHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO27LCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-NOR38LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-NOR53PSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-NOR59KDW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-NOR71HRK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO03KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO05HSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO14PMY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO59KDH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO15KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: (92,)
+Error processing subject Seoul-SNU_sub-UMO63KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR56YIW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR51CBD: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR112YIS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR40LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR91SJY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR12BJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO36CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR87YSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR73KMS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO17LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR29JSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR21JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO01LYH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO34KJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR106KSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR100JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR104LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO18LKB: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO02LTY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR46LYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO61JCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO11YSO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR04JJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR65LES: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO23SJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO35ISR: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR84LJE: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO35KKK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO25CEG: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO72YHY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR31HKO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR55JJU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR45LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR93BHU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR15KKY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR97LKH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO02KHA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO38LTH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR105KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR39KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR95LMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO55LBY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO30HWK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO58PYA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR16KYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR33SHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR85CJM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR68SDS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR64SSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR66LDY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR114LOY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR108KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO48LDJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO68LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR01LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO31PPS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO09KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO11LSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO10YBI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO46LYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR36HYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR11KYT: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR75LSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO47LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO04KSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO45LSW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR42PSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR109KSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO45JJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO05JSI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO38BYU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO27KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO56KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR49YHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR62MBS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO29CJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-UMO33JWJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR79KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-DNO22KMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR78LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+Error processing subject Seoul-SNU_sub-NOR72KCK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+sample_whole shape: (100,)
+y[i] shape: Index out of bounds
+/global/homes/p/pakmasha/model/MBBN-main/splits/ENIGMA_OCD/ENIGMA_OCD_OCD_ROI_316_seq_len_100_split1.txt
+loading splits
+length of train_idx: 1401
+length of val_idx: 298
+length of test_idx: 299
+workers: 8
+length of training generator is: 175
+workers: 8
+length of valid generator is: 37
+workers: 8
+length of test generator is: 37
+Number of training batches: 175
+Number of validation batches: 37
+Number of test batches: 37
+self.task: vanilla_BERT
+Number of parameters of the model: 19008909
+There are no checkpoints or weights from previous steps
+Single GPU or CPU training
+self.gpu: 0
+self.device: cuda
+moved model to: cuda:0
+vanilla_bert
+using binary_classification loss
+using spatial_difference loss
+Starting epoch 1/100
+max allocated memory: 72.55 MB
+max cached memory: 94.00 MB
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+
+______epoch summary 1/100_____
+
+binary_classification_train: 0.707102940423148
+binary_classification_val: 0.7458597437755482
+binary_classification_test: 0.7415922074704557
+spatial_difference_train: 0.0
+spatial_difference_val: 0.0
+spatial_difference_test: 0.0
+total_train: 0.707102940423148
+total_val: 0.7458597437755482
+total_test: 0.7415922074704557
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5014857264140932
+train_Regular_Accuracy: 0.5014285714285714
+train_AUROC: 0.49847957942513815
+train_best_bal_acc: 0.5131511277643083
+train_best_threshold: 0.47648829221725464
+train_gmean: 0.5033135374046998
+train_specificity: 0.41025641025641024
+train_sensitivity: 0.6174785100286533
+train_f1_score: 0.5577172503242542
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.49324324324324326
+val_AUROC: 0.6255479452054794
+val_best_bal_acc: 0.5835159817351598
+val_best_threshold: 0.6522414088249207
+val_gmean: 0.5890941889632927
+val_specificity: 0.5066666666666666
+val_sensitivity: 0.684931506849315
+val_f1_score: 0.5494505494505495
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5
+test_AUROC: 0.6447909057706356
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 0.0
+test_sensitivity: 1.0
+test_f1_score: 0.6666666666666666
+time taken to perform 1: 15.42
+Starting epoch 2/100
+max allocated memory: 431.39 MB
+max cached memory: 482.00 MB
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
+self.fmri_type: timeseries, output_dict.keys: dict_keys(['binary_classification'])
