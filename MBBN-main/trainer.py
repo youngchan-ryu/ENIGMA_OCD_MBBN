@@ -327,9 +327,10 @@ class Trainer():
                     self.writer.save_history_to_csv()
 
                     #wandb
-                    if self.rank == 0:
+                    if self.rank == 0: # YC : Only save checkpoint for rank 0 gpu process
                         self.writer.register_wandb(epoch, lr=self.optimizer.param_groups[0]['lr'])
-                        self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)
+                        if epoch % 5 == 0:
+                            self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)
                     
                 else:
                     self.eval_epoch('val')
@@ -344,8 +345,11 @@ class Trainer():
                     self.writer.save_history_to_csv()
 
                     #wandb
+                    #from scratch training
                     if self.rank == 0:
                         self.writer.register_wandb(epoch, lr=self.optimizer.param_groups[0]['lr'])
+                        if epoch % 5 == 0:
+                            self.save_checkpoint_(epoch, len(self.train_loader), self.scaler) # YC : Why no checkpoint here?
 
 
                     for metric_name in dir(self.writer):
@@ -369,9 +373,10 @@ class Trainer():
                 self.writer.save_history_to_csv()
 
                 #wandb
-                if self.rank == 0:
+                if self.rank == 0: # YC : Only save checkpoint for rank 0 gpu process
                     self.writer.register_wandb(epoch, lr=self.optimizer.param_groups[0]['lr'])
-                    self.save_checkpoint_(epoch, len(self.train_loader), self.scaler) 
+                    if epoch % 5 == 0:
+                        self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)
 
                 end = time.time()
 

@@ -57,8 +57,9 @@ def init_distributed(args):
             args.rank = int(os.environ['SLURM_PROCID'])
             args.gpu = args.rank % torch.cuda.device_count()
         
-        #print('args.rank:',args.rank)
-        #print('args.gpu:',args.gpu)    
+        print('args.world_size:',args.world_size)
+        print('args.rank:',args.rank)
+        print('args.gpu:',args.gpu)    
         if args.init_method == 'file':
             sync_file = _get_sync_file()
             # print('initializing DDP with sync file')

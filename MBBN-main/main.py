@@ -22,7 +22,7 @@ def get_arguments(base_path):
     parser.add_argument('--abide_path', default='/scratch/connectome/stellasybae/ABIDE_ROI') ## labserver
     parser.add_argument('--enigma_path', default='/pscratch/sd/p/pakmasha/MBBN_data') ## Perlmutter 
     parser.add_argument('--base_path', default=base_path) # where your main.py, train.py, model.py are in.
-    parser.add_argument('--step', default='1', choices=['1','2','3','4'], help='which step you want to run')
+    parser.add_argument('--step', default='1', choices=['1','2','3','4'], help='which step you want to run') # YC : Step 1 : vanilla_BERT / Step 2 : MBBN / Step 3 : divfreqBERT_reconstruction / Step 4 : test
     
     
     parser.add_argument('--target', type=str, default='OCD')
@@ -68,9 +68,9 @@ def get_arguments(base_path):
     parser.add_argument("--profiling", action='store_true')
     
     #wandb related
-    parser.add_argument('--wandb_key', default='285aadcd46b8af7731dca6cf50c7051164415461', type=str,  help='default: key for Maria')
+    parser.add_argument('--wandb_key', default='d0330ca06936eecd637c3470c47af6d33e1cb277', type=str,  help='default: key for ycryu')
     parser.add_argument('--wandb_mode', default='online', type=str,  help='online|offline')
-    parser.add_argument('--wandb_entity', default='pakmasha-seoul-national-university', type=str)
+    parser.add_argument('--wandb_entity', default='youngchanryu-seoul-national-university', type=str)
     parser.add_argument('--wandb_project', default='enigma-ocd_mbbn', type=str)
 
     
@@ -106,6 +106,7 @@ def get_arguments(base_path):
     ## ablation
     parser.add_argument('--ablation', type=str, choices=['convolution', 'no_high_freq'])
     
+    ## YC : Phase means step
     ## phase 1 vanilla BERT
     parser.add_argument('--task_phase1', type=str, default='vanilla_BERT')
     parser.add_argument('--batch_size_phase1', type=int, default=8, help='for DDP, each GPU processes batch_size_pahse1 samples')
