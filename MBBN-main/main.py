@@ -67,7 +67,7 @@ def get_arguments(base_path):
     # Nsight profiling
     parser.add_argument("--profiling", action='store_true')
     
-    #wandb related
+    # wandb related
     parser.add_argument('--wandb_key', default='285aadcd46b8af7731dca6cf50c7051164415461', type=str,  help='default: key for Maria')
     parser.add_argument('--wandb_mode', default='online', type=str,  help='online|offline')
     parser.add_argument('--wandb_entity', default='pakmasha-seoul-national-university', type=str)
@@ -80,7 +80,7 @@ def get_arguments(base_path):
     parser.add_argument('--divide_by_lorentzian', action='store_true')
     parser.add_argument('--use_raw_knee', action='store_true')
     parser.add_argument('--seq_part', type=str, default='head')
-    parser.add_argument('--fmri_dividing_type', default='three_channels', choices=['two_channels', 'three_channels'])
+    parser.add_argument('--fmri_dividing_type', default='three_channels', choices=['two_channels', 'three_channels', 'four_channels'])
     
     # Dropouts
     parser.add_argument('--transformer_dropout_rate', type=float, default=0.3) 

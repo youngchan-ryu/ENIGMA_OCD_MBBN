@@ -197,7 +197,9 @@ class Trainer():
 
         #elif self.task.lower() == 'divfreqbert':
         elif self.task.lower() == 'mbbn':
-            if self.fmri_dividing_type == 'three_channels':                
+            if self.fmri_dividing_type == 'four_channels':       
+                self.model = Transformer_Finetune_Four_Channels(**self.kwargs)
+            elif self.fmri_dividing_type == 'three_channels':                
                 self.model = Transformer_Finetune_Three_Channels(**self.kwargs)
                 
         elif self.task.lower() == 'mbbn_pretraining':
@@ -284,7 +286,7 @@ class Trainer():
                 if self.exp_name.split('_')[0] == 'HCPMMP1':
                     plt.ylim(0, 12)  
                     plt.yticks(range(0, 13, 2))  
-                elif self.exp_name.split('_')[0] == 'Schaefer':
+                elif self.exp_name.split('_')[0] == 'Schaefer':  ### EDIT ###
                     plt.ylim(0, 26) 
                     plt.yticks(range(0, 27, 2))  
             else:
@@ -343,10 +345,12 @@ class Trainer():
                         self.writer.accuracy_summary(mid_epoch=False, mean=None, std=None)
                     self.writer.save_history_to_csv()
 
+                    print(f"self.rank: {self.rank}")
+
                     #wandb
                     if self.rank == 0:
                         self.writer.register_wandb(epoch, lr=self.optimizer.param_groups[0]['lr'])
-
+                        self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)  ### DEBUGGED
 
                     for metric_name in dir(self.writer):
                         if 'history' not in metric_name:
@@ -505,6 +509,8 @@ class Trainer():
                     output_dict = self.model(input_dict['fmri_lowfreq_sequence'], input_dict['fmri_ultralowfreq_sequence'])
                 elif self.fmri_dividing_type == 'three_channels':
                     output_dict = self.model(input_dict['fmri_highfreq_sequence'], input_dict['fmri_lowfreq_sequence'], input_dict['fmri_ultralowfreq_sequence'])
+                elif self.fmri_dividing_type == 'four_channels':
+                    output_dict = self.model(input_dict['fmri_imf1_sequence'], input_dict['fmri_imf2_sequence'], input_dict['fmri_imf3_sequence'], input_dict['fmri_imf4_sequence'])
   
         
         #### train & valid ####
@@ -516,42 +522,26 @@ class Trainer():
                 if self.fmri_dividing_type == 'two_channels':
                     output_dict = self.model(input_dict['fmri_lowfreq_sequence'], input_dict['fmri_ultralowfreq_sequence'])
                 elif self.fmri_dividing_type == 'three_channels':
+                    output_dict = self.model(input_dict['fmri_highfreq_sequence'], input_dict['fmri_lowfreq_sequence'], input_dict['fmri_ultralowfreq_sequence'])
+                elif self.fmri_dividing_type == 'four_channels':
+                    output_dict = self.model(input_dict['fmri_imf1_sequence'], input_dict['fmri_imf2_sequence'], input_dict['fmri_imf3_sequence'], input_dict['fmri_imf4_sequence'])
                     
                     ### DEBUG STATEMENT ###
-                    # print("three channels")
                     torch.cuda.synchronize()
-                    # print("CUDA synchronized successfully.")
                     #######################
-                    
-                    output_dict = self.model(input_dict['fmri_highfreq_sequence'], input_dict['fmri_lowfreq_sequence'], input_dict['fmri_ultralowfreq_sequence'])
-            
+                               
             
         torch.cuda.nvtx.range_push("aggregate_losses")
         loss_dict, loss = self.aggregate_losses(input_dict, output_dict)
         
-        ### DEBUG STATEMENT ###
-        # print(f"input_dict OCD labels: {input_dict['OCD']}, output_dict binary classification: {output_dict['binary_classification']}")
-        #######################
-        
         torch.cuda.nvtx.range_pop()
-        #if self.task.lower() in ['vanilla_bert', 'divfreqbert', 'test']:
         if self.task.lower() in ['vanilla_bert', 'mbbn', 'mbbn_pretraining', 'test']:
             if self.target != 'reconstruction':
                 self.compute_accuracy(input_dict, output_dict)
                 
-        ### DEBUG STATEMENT ###
-        # print(f"Input Dictionary Keys: {input_dict.keys()}")
-        # for key, value in input_dict.items():
-        #     if isinstance(value, torch.Tensor):
-        #         print(f"Key: {key}, Shape: {value.shape}, Device: {value.device}")
-        #######################
         return loss_dict, loss
     
     def aggregate_losses(self,input_dict,output_dict):  # combines losses across different tasks or data
-        
-        ### DEBUG STATEMENT ###
-        # print(f"Loss Calculation for Subject: {input_dict['subject_name']}")
-        #######################
         
         final_loss_dict = {}
         final_loss_value = 0
@@ -655,6 +645,7 @@ class Trainer():
             return None
 
     def save_checkpoint_(self, epoch, batch_idx, scaler):
+
         loss = self.get_last_loss()
         #accuracy = self.get_last_AUROC()
         val_ACC = self.get_last_ACC()
@@ -673,7 +664,8 @@ class Trainer():
 
         # Build checkpoint dict to save.
         ckpt_dict = {
-            'model_state_dict':self.model.module.state_dict(),
+            # 'model_state_dict':self.model.module.state_dict(),  # Distributed case
+            'model_state_dict':self.model.module.state_dict() if hasattr(self.model, "module") else self.model.state_dict(),
             'optimizer_state_dict':self.optimizer.state_dict() if self.optimizer is not None else None,
             'epoch':epoch,
             'loss_value':loss,
@@ -732,25 +724,42 @@ class Trainer():
                 pass
 
     def compute_reconstruction(self,input_dict,output_dict):
-                  
-        fmri_highfreq_sequence = input_dict['fmri_highfreq_sequence']
-        reconstruction_loss_high = self.reconstruction_loss_func(fmri_highfreq_sequence,
-                                                                 output_dict['reconstructed_high_fmri_sequence'])          
-                  
-        fmri_lowfreq_sequence = input_dict['fmri_lowfreq_sequence']
-        reconstruction_loss_low = self.reconstruction_loss_func(fmri_lowfreq_sequence,
-                                                                 output_dict['reconstructed_low_fmri_sequence'])
         
-        fmri_ultralowfreq_sequence = input_dict['fmri_ultralowfreq_sequence']
-        reconstruction_loss_ultralow = self.reconstruction_loss_func(fmri_ultralowfreq_sequence,
-                                                                     output_dict['reconstructed_ultralow_fmri_sequence'])
-        
-                  
-        reconstruction_loss = reconstruction_loss_high + reconstruction_loss_low + reconstruction_loss_ultralow
-        
-        ### DEBUG STATEMENT ###
-        # print(f"Reconstruction loss: {reconstruction_loss.item()}")
-        #######################
+        if self.fmri_dividing_type == 'four_channels':
+            fmri_imf1_sequence = input_dict['fmri_imf1_sequence']
+            reconstruction_loss_imf1 = self.reconstruction_loss_func(fmri_imf1_sequence,
+                                                                    output_dict['reconstructed_imf1_fmri_sequence'])          
+                    
+            fmri_imf2_sequence = input_dict['fmri_imf2_sequence']
+            reconstruction_loss_imf2 = self.reconstruction_loss_func(fmri_imf2_sequence,
+                                                                    output_dict['reconstructed_imf2_fmri_sequence'])
+            
+            fmri_imf3_sequence = input_dict['fmri_imf3_sequence']
+            reconstruction_loss_imf3 = self.reconstruction_loss_func(fmri_imf3_sequence,
+                                                                    output_dict['reconstructed_imf3_fmri_sequence'])
+            
+            fmri_imf4_sequence = input_dict['fmri_imf4_sequence']
+            reconstruction_loss_imf4 = self.reconstruction_loss_func(fmri_imf4_sequence,
+                                                                    output_dict['reconstructed_imf4_fmri_sequence'])
+            
+                    
+            reconstruction_loss = reconstruction_loss_high + reconstruction_loss_low + reconstruction_loss_ultralow
+
+        elif self.fmri_dividing_type == 'three_channels':
+            fmri_highfreq_sequence = input_dict['fmri_highfreq_sequence']
+            reconstruction_loss_high = self.reconstruction_loss_func(fmri_highfreq_sequence,
+                                                                    output_dict['reconstructed_high_fmri_sequence'])          
+                    
+            fmri_lowfreq_sequence = input_dict['fmri_lowfreq_sequence']
+            reconstruction_loss_low = self.reconstruction_loss_func(fmri_lowfreq_sequence,
+                                                                    output_dict['reconstructed_low_fmri_sequence'])
+            
+            fmri_ultralowfreq_sequence = input_dict['fmri_ultralowfreq_sequence']
+            reconstruction_loss_ultralow = self.reconstruction_loss_func(fmri_ultralowfreq_sequence,
+                                                                    output_dict['reconstructed_ultralow_fmri_sequence'])
+            
+                    
+            reconstruction_loss = reconstruction_loss_high + reconstruction_loss_low + reconstruction_loss_ultralow
                                                                 
         return reconstruction_loss
     
@@ -758,80 +767,152 @@ class Trainer():
     def compute_spatial_difference(self,input_dict,output_dict):
         if self.task.lower() == 'vanilla_bert':
             spatial_difference_loss = torch.tensor(0.0, device=self.device)
-        else:
-            spatial_difference_loss = self.spatial_difference_loss_func(output_dict['high_spatial_attention'], output_dict['low_spatial_attention'], output_dict['ultralow_spatial_attention'])
+        elif self.fmri_dividing_type == 'four_channels':
+            spatial_difference_loss = self.spatial_difference_loss_func(output_dict['imf1_spatial_attention'], output_dict['imf2_spatial_attention'], output_dict['imf3_spatial_attention'],  output_dict['imf4_spatial_attention'])
+        elif self.fmri_dividing_type == 'three_channels':
+            spatial_difference_loss = self.spatial_difference_loss_func(output_dict['high_spatial_attention'], output_dict['low_spatial_attention'], output_dict['ultralow_spatial_attention'], 0)
 
-        ### DEBUG STATEMENT ###
-        # print(f"Spatial difference loss: {spatial_difference_loss.item()}")
-        #######################
-        
         return spatial_difference_loss
    
     def compute_mask(self, input_dict, output_dict):
-        fmri_highfreq_sequence = input_dict['fmri_highfreq_sequence']
-        fmri_lowfreq_sequence = input_dict['fmri_lowfreq_sequence']          
-        fmri_ultralowfreq_sequence = input_dict['fmri_ultralowfreq_sequence']
-                  
-        if self.masking_method == 'temporal':
-            if self.temporal_masking_type == 'single_point':  
+        if self.fmri_dividing_type == 'four_channels':    
+            fmri_imf1_sequence = input_dict['fmri_imf1_sequence']
+            fmri_imf2_sequence = input_dict['fmri_imf2_sequence']          
+            fmri_imf3_sequence = input_dict['fmri_imf3_sequence']
+            fmri_imf4_sequence = input_dict['fmri_imf4_sequence']
+                    
+            if self.masking_method == 'temporal':
+                if self.temporal_masking_type == 'single_point':  
+                    mask_loss_imf1 = self.mask_loss_func(fmri_imf1_sequence,
+                                                        output_dict['mask_single_point_imf1_fmri_sequence'])
+                    mask_loss_imf2 = self.mask_loss_func(fmri_imf2_sequence,
+                                                        output_dict['mask_single_point_imf2_fmri_sequence'])
+                    mask_loss_imf3 = self.mask_loss_func(fmri_imf3_sequence,
+                                                        output_dict['mask_single_point_imf3_fmri_sequence'])
+                    mask_loss_imf4 = self.mask_loss_func(fmri_imf4_sequence,
+                                                        output_dict['mask_single_point_imf4_fmri_sequence'])
+                elif self.temporal_masking_type == 'time_window':  
+                    mask_loss_imf1 = self.mask_loss_func(fmri_imf1_sequence,
+                                                        output_dict['mask_time_window_imf1_fmri_sequence'])
+                    mask_loss_imf2 = self.mask_loss_func(fmri_imf2_sequence,
+                                                        output_dict['mask_time_window_imf2_fmri_sequence'])
+                    mask_loss_imf3 = self.mask_loss_func(fmri_imf3_sequence,
+                                                        output_dict['mask_time_window_imf3_fmri_sequence'])
+                    mask_loss_imf4 = self.mask_loss_func(fmri_imf4_sequence,
+                                                        output_dict['mask_time_window_imf4_fmri_sequence'])
+            elif self.masking_method == 'spatial':
+                mask_loss_imf1 = self.mask_loss_func(fmri_imf1_sequence,
+                                                    output_dict['mask_hub_ROIs_imf1_fmri_sequence'])
+                mask_loss_imf2 = self.mask_loss_func(fmri_imf2_sequence,
+                                                    output_dict['mask_hub_ROIs_imf2_fmri_sequence'])
+                mask_loss_imf3 = self.mask_loss_func(fmri_imf3_sequence,
+                                                    output_dict['mask_hub_ROIs_imf3_fmri_sequence'])  
+                mask_loss_imf4 = self.mask_loss_func(fmri_imf4_sequence,
+                                                    output_dict['mask_hub_ROIs_imf4_fmri_sequence'])    
+                    
+            else: # spatiotemporal
+                if self.spatiotemporal_masking_type == 'separate':
+                    temporal_mask_loss_imf1 = self.mask_loss_func(fmri_imf1_sequence,
+                                                                output_dict['temporal_mask_spatiotemporal_imf1_fmri_sequence'])
+                    spatial_mask_loss_imf1 = self.mask_loss_func(fmri_imf1_sequence,
+                                                                output_dict['spatial_mask_spatiotemporal_imf1_fmri_sequence'])
+                    mask_loss_imf1 = temporal_mask_loss_imf1 + spatial_mask_loss_imf1
+                    
+                    temporal_mask_loss_imf2 = self.mask_loss_func(fmri_imf2_sequence,
+                                                                output_dict['temporal_mask_spatiotemporal_imf2_fmri_sequence'])
+                    spatial_mask_loss_imf2 = self.mask_loss_func(fmri_imf2_sequence,
+                                                                output_dict['spatial_mask_spatiotemporal_imf2_fmri_sequence'])
+                    mask_loss_imf2 = temporal_mask_loss_imf2 + spatial_mask_loss_imf2
+
+                    temporal_mask_loss_imf3 = self.mask_loss_func(fmri_imf3_sequence,
+                                                                output_dict['temporal_mask_spatiotemporal_imf3_fmri_sequence'])
+                    spatial_mask_loss_imf3 = self.mask_loss_func(fmri_imf3_sequence,
+                                                                output_dict['spatial_mask_spatiotemporal_imf3_fmri_sequence'])
+                    mask_loss_imf3 = temporal_mask_loss_imf3 + spatial_mask_loss_imf3
+
+                    temporal_mask_loss_imf4 = self.mask_loss_func(fmri_imf4_sequence,
+                                                                output_dict['temporal_mask_spatiotemporal_imf4_fmri_sequence'])
+                    spatial_mask_loss_imf4 = self.mask_loss_func(fmri_imf4_sequence,
+                                                                output_dict['spatial_mask_spatiotemporal_imf4_fmri_sequence'])
+                    mask_loss_imf4 = temporal_mask_loss_imf4 + spatial_mask_loss_imf4
+                    
+                else:
+                    mask_loss_imf1 = self.mask_loss_func(fmri_imf1_sequence,
+                                                        output_dict['mask_spatiotemporal_imf1_fmri_sequence'])
+                    mask_loss_imf2 = self.mask_loss_func(fmri_imf2_sequence,
+                                                        output_dict['mask_spatiotemporal_imf2_fmri_sequence'])  
+                    mask_loss_imf3 = self.mask_loss_func(fmri_imf3_sequence,
+                                                        output_dict['mask_spatiotemporal_imf3_fmri_sequence'])
+                    mask_loss_imf4 = self.mask_loss_func(fmri_imf4_sequence,
+                                                        output_dict['mask_spatiotemporal_imf4_fmri_sequence'])
+                    
+            mask_loss = mask_loss_imf1 + mask_loss_imf2 + mask_loss_imf3 + mask_loss_imf4
+
+        elif self.fmri_dividing_type == 'three_channels':    
+            fmri_highfreq_sequence = input_dict['fmri_highfreq_sequence']
+            fmri_lowfreq_sequence = input_dict['fmri_lowfreq_sequence']          
+            fmri_ultralowfreq_sequence = input_dict['fmri_ultralowfreq_sequence']
+                    
+            if self.masking_method == 'temporal':
+                if self.temporal_masking_type == 'single_point':  
+                    mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
+                                                        output_dict['mask_single_point_high_fmri_sequence'])
+
+                    mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
+                                                        output_dict['mask_single_point_low_fmri_sequence'])
+
+                    mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
+                                                            output_dict['mask_single_point_ultralow_fmri_sequence'])
+                elif self.temporal_masking_type == 'time_window':  
+                    mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
+                                                        output_dict['mask_time_window_high_fmri_sequence'])
+
+                    mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
+                                                        output_dict['mask_time_window_low_fmri_sequence'])
+
+                    mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
+                                                            output_dict['mask_time_window_ultralow_fmri_sequence'])
+            elif self.masking_method == 'spatial':
                 mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
-                                                    output_dict['mask_single_point_high_fmri_sequence'])
+                                                    output_dict['mask_hub_ROIs_high_fmri_sequence'])
 
                 mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
-                                                    output_dict['mask_single_point_high_fmri_sequence'])
+                                                    output_dict['mask_hub_ROIs_low_fmri_sequence'])
 
                 mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
-                                                         output_dict['mask_single_point_high_fmri_sequence'])
-            elif self.temporal_masking_type == 'time_window':  
-                mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
-                                                    output_dict['mask_time_window_high_fmri_sequence'])
+                                                        output_dict['mask_hub_ROIs_ultralow_fmri_sequence'])    
+                    
+            else: # spatiotemporal
+                if self.spatiotemporal_masking_type == 'separate':
+                    temporal_mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
+                                                                output_dict['temporal_mask_spatiotemporal_high_fmri_sequence'])
+                    spatial_mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
+                                                                output_dict['spatial_mask_spatiotemporal_high_fmri_sequence'])
+                    mask_loss_high = temporal_mask_loss_high + spatial_mask_loss_high
+                    
+                    temporal_mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
+                                                                output_dict['temporal_mask_spatiotemporal_low_fmri_sequence'])
+                    spatial_mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
+                                                                output_dict['spatial_mask_spatiotemporal_low_fmri_sequence'])
+                    mask_loss_low = temporal_mask_loss_low + spatial_mask_loss_low
+                    
+                    temporal_mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
+                                                                output_dict['temporal_mask_spatiotemporal_ultralow_fmri_sequence'])
+                    spatial_mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
+                                                                output_dict['spatial_mask_spatiotemporal_ultralow_fmri_sequence'])
+                    mask_loss_ultralow = temporal_mask_loss_ultralow + spatial_mask_loss_ultralow
+                    
+                else:
+                    mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
+                                                        output_dict['mask_spatiotemporal_high_fmri_sequence'])
 
-                mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
-                                                    output_dict['mask_time_window_low_fmri_sequence'])
+                    mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
+                                                        output_dict['mask_spatiotemporal_low_fmri_sequence'])
 
-                mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
-                                                         output_dict['mask_time_window_ultralow_fmri_sequence'])
-        elif self.masking_method == 'spatial':
-            mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
-                                                 output_dict['mask_hub_ROIs_high_fmri_sequence'])
-
-            mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
-                                                output_dict['mask_hub_ROIs_low_fmri_sequence'])
-
-            mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
-                                                     output_dict['mask_hub_ROIs_ultralow_fmri_sequence'])    
-                  
-        else: # spatiotemporal
-            if self.spatiotemporal_masking_type == 'separate':
-                temporal_mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
-                                                              output_dict['temporal_mask_spatiotemporal_high_fmri_sequence'])
-                spatial_mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
-                                                              output_dict['spatial_mask_spatiotemporal_high_fmri_sequence'])
-                mask_loss_high = temporal_mask_loss_high + spatial_mask_loss_high
-                  
-                temporal_mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
-                                                              output_dict['temporal_mask_spatiotemporal_low_fmri_sequence'])
-                spatial_mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
-                                                              output_dict['spatial_mask_spatiotemporal_low_fmri_sequence'])
-                mask_loss_low = temporal_mask_loss_low + spatial_mask_loss_low
-                  
-                temporal_mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
-                                                              output_dict['temporal_mask_spatiotemporal_ultralow_fmri_sequence'])
-                spatial_mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
-                                                              output_dict['spatial_mask_spatiotemporal_ultralow_fmri_sequence'])
-                mask_loss_ultralow = temporal_mask_loss_ultralow + spatial_mask_loss_ultralow
-                  
-            else:
-                mask_loss_high = self.mask_loss_func(fmri_highfreq_sequence,
-                                                     output_dict['mask_spatiotemporal_high_fmri_sequence'])
-
-                mask_loss_low = self.mask_loss_func(fmri_lowfreq_sequence,
-                                                    output_dict['mask_spatiotemporal_low_fmri_sequence'])
-
-                mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
-                                                         output_dict['mask_spatiotemporal_ultralow_fmri_sequence'])       
-                  
-        mask_loss = mask_loss_high + mask_loss_low + mask_loss_ultralow
+                    mask_loss_ultralow = self.mask_loss_func(fmri_ultralowfreq_sequence,
+                                                            output_dict['mask_spatiotemporal_ultralow_fmri_sequence'])       
+                    
+            mask_loss = mask_loss_high + mask_loss_low + mask_loss_ultralow
         
         ### DEBUG STATEMENT ###
         # print(f"Mask loss: {mask_loss.item()}")

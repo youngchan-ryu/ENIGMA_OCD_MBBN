@@ -22,6 +22,6 @@ python main.py --dataset_name ENIGMA_OCD --base_path /global/homes/p/pakmasha/mo
 --workers_phase1 8 --fine_tune_task binary_classification --target OCD \
 --fmri_type timeseries --transformer_hidden_layers 8 --seq_part head  \
 --spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
---exp_name vanilla_bert_seed3 --seed 3 --sequence_length_phase1 100 \
---intermediate_vec 316 --nEpochs_phase1 40 --num_heads 4 \
+--exp_name trial_run_vanillabert --seed 3 --sequence_length_phase1 100 \
+--intermediate_vec 316 --nEpochs_phase1 2 --num_heads 4 \
 2> /global/homes/p/pakmasha/model/MBBN-main/failed_experiments/enigma_ocd_error.log

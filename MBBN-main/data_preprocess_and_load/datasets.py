@@ -88,10 +88,22 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
         data_list = []
 
         for sub in os.listdir(self.data_dir):
-            data_list.append(os.path.join(self.data_dir, sub, sub+'_filtered_0.01_0.1.npy'))
+            if self.fmri_dividing_type == 'four_channels' or self.fmri_type == 'timeseries':
+                data_list.append(os.path.join(self.data_dir, sub, sub+'.npy'))  # unfiltered data
+            elif self.fmri_dividing_type == 'three_channels':
+                data_list.append(os.path.join(self.data_dir, sub, sub+'_filtered_0.01_0.1.npy'))  # band-pass-filtered data
+            else:
+                raise ValueError("Filename is not defined for this fmri_dividing_type")
+             
             
             ### DEBUG STATEMENT ###
-            filepath = os.path.join(self.data_dir, sub, sub + '_filtered_0.01_0.1.npy')
+            if self.fmri_dividing_type == 'four_channels' or self.fmri_type == 'timeseries':
+                filepath = os.path.join(self.data_dir, sub, sub + '.npy')
+            elif self.fmri_dividing_type == 'three_channels':
+                filepath = os.path.join(self.data_dir, sub, sub + '_filtered_0.01_0.1.npy')
+            else:
+                raise ValueError("Filename is not defined for this fmri_dividing_type")
+
             if not os.path.exists(filepath):
                 print(f"Missing file for subject: {sub}")
             #######################
@@ -217,7 +229,7 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 f1 = popt[1]
                 knee = round(popt[1]/(1/(sample_whole.shape[0]*TR)))   # calculates knee frequency  
                 
-                if self.step != '1':
+                if self.step != '1' and self.fmri_dividing_type != 'four_channels':
                     try:
                         if knee > xdata.shape[0] or knee > ydata.shape[0]:
                             raise ValueError("The training is stopped because of an invalid knee frequency.")
@@ -406,6 +418,8 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
         else:   
             if self.fmri_type == 'timeseries':
                 pass
+            elif self.fmri_dividing_type == 'four_channels':
+                pass
             else:
                 ## don't use raw knee frequency!
                 sample_whole = np.zeros(self.sequence_length,)
@@ -533,8 +547,61 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
             high = torch.from_numpy(high).T.float()
             ans_dict = {'fmri_sequence':high,'subject':subj,'subject_name':subj_name, self.target:target}
             
-        elif self.fmri_type == 'divided_timeseries':   # divides the time series into three bands (high, low, ultralow)
-            if self.fmri_dividing_type == 'three_channels':
+        elif self.fmri_type == 'divided_timeseries':   # divides the time series into frequency bands
+
+            if self.fmri_dividing_type == 'four_channels':
+
+                nyquist_freq = 1/(2*TR)
+
+                # VMD IMF1: 0.20-0.24 Hz
+                if nyquist_freq > 0.185:
+                    lower_bound = 0.185
+                    upper_bound = 1 / (2*TR)
+                    T1 = TimeSeries(y, sampling_interval=TR)  # creates a time-series object from y
+                    FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
+                    imf1 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
+                    imf2_4 = FA1.data-FA1.filtered_boxcar.data
+                else: # filter out the whole band
+                    imf1 = np.zeros_like(y) 
+                    imf2_4 = y
+
+                # VMD IMF2: 0.13-0.17 Hz
+                lower_bound = 0.115
+                upper_bound = max(0.185, nyquist_freq)
+                T1 = TimeSeries(imf2_4, sampling_interval=TR)  # creates a time-series object from y
+                FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
+                imf2 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
+                imf3_4 = FA1.data-FA1.filtered_boxcar.data
+
+                # VMD IMF3: 0.063- 0.098 Hz
+                lower_bound = 0.05
+                upper_bound = 0.115
+                T1 = TimeSeries(imf3_4, sampling_interval=TR)  # creates a time-series object from y
+                S_original = SpectralAnalyzer(T1)
+                FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
+                imf3 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
+                imf4 = FA1.data-FA1.filtered_boxcar.data
+
+                # VMD IMF4: 0.021-0.036 Hz
+                lower_bound = 0.001
+                upper_bound = 0.05
+                T1 = TimeSeries(imf4, sampling_interval=TR)  # creates a time-series object from y
+                S_original = SpectralAnalyzer(T1)
+                FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
+                imf4 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
+
+                # DO PADDING ALWAYS
+                imf1 = F.pad(torch.from_numpy(imf1), (pad//2, pad//2), "constant", 0).T.float()
+                imf2 = F.pad(torch.from_numpy(imf2), (pad//2, pad//2), "constant", 0).T.float()
+                imf3 = F.pad(torch.from_numpy(imf3), (pad//2, pad//2), "constant", 0).T.float()
+                imf4 = F.pad(torch.from_numpy(imf4), (pad//2, pad//2), "constant", 0).T.float()
+                    
+                ans_dict= {'fmri_imf1_sequence':imf1, 'fmri_imf2_sequence':imf2,
+                           'fmri_imf3_sequence':imf3, 'fmri_imf4_sequence':imf4,
+                           'subject':subj, 'subject_name':subj_name, self.target:target}
+
+
+            elif self.fmri_dividing_type == 'three_channels':
                 # 01 high ~ (low+ultralow)    # extracts the high-frequency components
                 T1 = TimeSeries(y, sampling_interval=TR)  # creates a time-series object from y
                 S_original1 = SpectralAnalyzer(T1)  # creates a spectral analyzer object for the time-series data T1
@@ -1360,6 +1427,7 @@ class ABIDE_fMRI_timeseries(BaseDataset):
             ans_dict = {'fmri_sequence':high,'subject':subj,'subject_name':subj_name, self.target:target}
             
         elif self.fmri_type == 'divided_timeseries':
+
             if self.fmri_dividing_type == 'three_channels':
                 # 01 high ~ (low+ultralow)
                 T1 = TimeSeries(y, sampling_interval=TR)
