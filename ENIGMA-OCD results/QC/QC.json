@@ -1,0 +1,488 @@
+[
+{
+    "site": "Amsterdam_VUmc",
+    "type": "total",
+    "subtype": "none",
+    "failed_subjects": ["sub-916016","sub-916044","sub-916046","sub-916074"]
+},
+{
+    "site": "Brazil",
+    "type": "covariates",
+    "subtype": "age",
+    "failed_subjects": ["sub-P00289520160705","sub-P00298820160906"]
+},
+{
+    "site": "New_York",
+    "type": "covariates",
+    "subtype": "age",
+    "failed_subjects": ["sub-subSEQ1NKISENR45","sub-subSEQ1NKISENR68","sub-subSEQ1NKISENR107","sub-subSEQ1NKISENR116","sub-subSEQ1NKISENR118","sub-subSEQ1NKISENR145","sub-subSEQ1NKISENR149","sub-subSEQ1NKISENR151","sub-subSEQ1NKISENR176"]
+},
+{
+    "site": "New_York",
+    "type": "covariates",
+    "subtype": "sex",
+    "failed_subjects": ["sub-subSEQ1NKISENR45","sub-subSEQ1NKISENR68","sub-subSEQ1NKISENR107","sub-subSEQ1NKISENR116","sub-subSEQ1NKISENR118","sub-subSEQ1NKISENR145","sub-subSEQ1NKISENR149","sub-subSEQ1NKISENR151","sub-subSEQ1NKISENR176"]
+},
+{
+    "site": "Yale_Pittinger/HCP_Trio",
+    "type": "total",
+    "subtype": "none",
+    "failed_subjects": ["sub-YaleHCPTriota6521","sub-YaleHCPTriota6681","sub-YaleHCPTriota7075","sub-YaleHCPTriota7257","sub-YaleHCPTriota7589","sub-YaleHCPTriota7696","sub-YaleHCPTriota7962","sub-YaleHCPTriota8097"]
+},
+{
+    "site": "Amsterdam_AMC",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-106", "sub-115", "sub-118", "sub-119", "sub-120", "sub-124", "sub-251", "sub-255"]
+},
+{
+    "site": "Amsterdam_VUmc",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-916018", "sub-916023", "sub-916042"]
+},
+{
+    "site": "Barcelona_HCPB",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-001","sub-004","sub-010","sub-011","sub-014","sub-021","sub-022","sub-026","sub-029","sub-031","sub-032","sub-033","sub-034","sub-038","sub-040","sub-044","sub-046","sub-047","sub-051","sub-055","sub-057","sub-061","sub-065","sub-078","sub-085","sub-102","sub-C0057","sub-C0062","sub-C0064","sub-C0065",
+    "sub-C0079","sub-C0080","sub-C0083","sub-C0084","sub-C0086","sub-C0090","sub-C0098"]
+},     
+{
+    "site": "Bergen",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-00019", "sub-00021", "sub-00053", "sub-00080"]
+},     
+{
+    "site": "Braga_UMinho/Braga_1.5T",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-MRI201407093CogTD035", "sub-MRI201409033CogTD051", "sub-MRI201410154CogTD071"]
+},            
+{
+    "site": "Braga_UMinho/Braga_1.5T_act",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-MRI201506191OCD081", "sub-MRI201511061OCD105"]
+},
+{
+    "site": "Brazil",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-C001829","sub-C001833","sub-C001834","sub-C001852","sub-C002030","sub-C002047","sub-C002190","sub-P00208520150303","sub-P00257820151215","sub-P00271920160404","sub-P00327820170517","sub-P00334220170726","sub-P00342220171004"]
+},
+{
+    "site": "Cape_Town_UCT/Allegra",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-ESCC35"]
+},
+{
+    "site": "Cape_Town_UCT/Skyra",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-CT04", "sub-ESCO5"]
+},
+{
+    "site": "Chiba/CHBC",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-HCC014"]
+},
+{
+    "site": "Chiba/CHBSRPB",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-OCD137"]
+},
+{
+    "site": "Dresden",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-GEROME3029", "sub-GEROME3055", "sub-GEROME3059", "sub-GEROME3062", "sub-GEROME3066", "sub-GEROME3070", "sub-GEROME3075", "sub-GEROME3078", "sub-GEROME4037", "sub-GEROME4045", "sub-GEROME4048"]
+},
+{
+    "site": "Kyoto_KPU/Kyoto1.5T",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-subKyoto15Tsubj0102", "sub-subKyoto15Tsubj0117", "sub-subKyoto15Tsubj0119", "sub-subKyoto15Tsubj0128", "sub-subKyoto15Tsubj0131",
+    "sub-subKyoto15Tsubj0136", "sub-subKyoto15Tsubj1034", "sub-subKyoto15Tsubj1035", "sub-subKyoto15Tsubj1036", "sub-subKyoto15Tsubj1045"]
+},
+{
+    "site": "Kyoto_KPU/Kyoto3T",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-subKyoto3Tsubj1014"]
+},
+{
+    "site": "Kyushu",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-E005", "sub-E007", "sub-E019", "sub-E031", "sub-E038"]
+},
+{
+    "site": "Milan_HSR",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-28", "sub-50"]
+},
+{
+    "site": "New_York",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-subSEQ1NKISENR116", "sub-subSEQ1NKISENR118", "sub-subSEQ1NKISENR145", "sub-subSEQ1NKISENR149", "sub-subSEQ1NKISENR151"]
+},
+{
+    "site": "NYSPI_Columbia/Adults",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-simpaocd57000"]
+},
+{
+    "site": "NYSPI_Columbia/Pediatric",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-DLSENS", "sub-DVAXFW", "sub-EMHJPJ", "sub-JLGRTV", "sub-JPKOMZ", "sub-SXGETF", "sub-VJZJLM", "sub-XRDHDZ", "sub-XUXBUJ", "sub-YJKIRA"]    
+},
+{
+    "site": "Yale_Pittinger/HCP_Prisma",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-YaleHCPPrismapb2393", "sub-YaleHCPPrismapb7151"]       
+},
+{
+    "site": "Yale_Pittinger/HCP_Trio",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-YaleHCPTriota7932"]         
+},
+{
+    "site": "Yale_Pittinger/Yale_2014",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-Yale2014AdultOCDta0822", "sub-Yale2014AdultOCDtb0506", "sub-Yale2014AdultOCDtb0728", "sub-Yale2014AdultOCDtb0934", "sub-Yale2014AdultOCDtb1043",
+    "sub-Yale2014AdultOCDtb1086", "sub-Yale2014AdultOCDtb1318", "sub-Yale2014AdultOCDtb1330", "sub-Yale2014AdultOCDtb1450", "sub-Yale2014AdultOCDtr7751", "sub-Yale2014AdultOCDtr7932", "sub-Yale2014AdultOCDtr9707"]  
+},
+{
+    "site": "Amsterdam_VUmc",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-916084", "sub-916075", "sub-916046", "sub-916039"]     
+},
+{
+    "site": "Barcelona_HCPB",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-051", "sub-046", "sub-C0055", "sub-C0090", "sub-057", "sub-026"]     
+},
+{
+    "site": "Bergen",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-00050", "sub-00053", "sub-00024", "sub-00033"]  
+},
+{
+    "site": "Braga_UMinho/Braga_1.5T_act",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-MRI201212121OCD040"]  
+},
+{
+    "site": "Braga_UMinho/Braga_3T",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-MRI201906212BART015"]  
+},
+{
+    "site": "Brazil",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-P00324420170405", "sub-P00327020170511", "sub-P00234520150810", "sub-P00208520150303", "sub-C002190", "sub-P00366620181127", "sub-C001428", "sub-P00244520150921"]  
+},
+{
+    "site": "Cape_Town_UCT/Allegra",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-ESCC28"]  
+},
+{
+    "site": "Cape_Town_UCT/Skyra",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-CIMP150", "sub-CT04"]  
+},
+{
+    "site": "Chiba/CHBC",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-HCC014", "sub-HCC031"]  
+},
+{
+    "site": "Chiba/CHBSRPB",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-MADHC085"]  
+},
+{
+    "site": "Dresden",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-GEROME3029", "sub-GEROME3070", "sub-GEROME4014", "sub-GEROME3075", "sub-GEROME3078", "sub-GEROME3020", "sub-GEROME3062", "sub-GEROME3066", "sub-GEROME3055", "sub-GEROME3059", "sub-GEROME4048"]  
+},
+{
+    "site": "Kyoto_KPU/Kyoto1.5T",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-subKyoto15Tsubj1047"]  
+},
+{
+    "site": "Kyushu",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-E030", "sub-E007", "sub-E023", "sub-E011", "sub-E005", "sub-E024"]  
+},
+{
+    "site": "Milan_HSR",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-11"]  
+},
+{
+    "site": "New_York",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-subSEQ1NKISENR41", "sub-subSEQ1NKISENR115", "sub-subSEQ1NKISENR155", "sub-subSEQ1NKISENR154", "sub-subSEQ1NKISENR69", "sub-subSEQ1NKISENR141"]  
+},
+{
+    "site": "NYSPI_Columbia/Pediatric",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-XRDHDZ", "sub-SXGETF", "sub-VJZJLM", "sub-EMHJPJ", "sub-JLGRTV", "sub-DVAXFW", "sub-VRUCJS"]  
+},
+{
+    "site": "Yale_Pittinger/HCP_Trio",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-YaleHCPTriota7932", "sub-YaleHCPTriota7356"]  
+},
+{
+    "site": "Yale_Pittinger/Yale_2014",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-Yale2014AdultOCDta0822"]  
+},
+{
+    "site": "New_York",
+    "type": "medicated_hc",
+    "subtype": "none",
+    "failed_subjects": ["sub-subSEQ1NKISENR85", "sub-subSEQ1NKISENR103"]  
+},
+{
+    "site": "New_York",
+    "type": "ybocs_hc",
+    "subtype": "none",
+    "failed_subjects": ["sub-subSEQ1NKISENR94"]  
+},
+{
+    "site": "NYSPI_Columbia/Adults",
+    "type": "ybocs_hc",
+    "subtype": "none",
+    "failed_subjects": ["sub-simpaocd877000"]  
+},
+{
+    "site": "NYSPI_Columbia/Pediatric",
+    "type": "ybocs_hc",
+    "subtype": "none",
+    "failed_subjects": ["sub-KRKTVN"]  
+},
+{
+    "site": "Yale_Pittinger/HCP_Prisma",
+    "type": "ybocs_hc_weak",
+    "subtype": "none",
+    "failed_subjects": ["sub-YaleHCPPrismapb3883", "sub-YaleHCPPrismapb3868"]  
+},
+{
+    "site": "Amsterdam_AMC",
+    "type": "ybocs_hc_weak",
+    "subtype": "none",
+    "failed_subjects": ["sub-103", "sub-123", "sub-127"]  
+},
+{
+    "site": "Bangalore_NIMHANS",
+    "type": "covariates",
+    "subtype": "age and/or sex",
+    "failed_subjects": ["sub-C0045", "sub-ODP045", "sub-ODP067", "sub-ODP068", "sub-ODP073", "sub-ODP081", "sub-ODP082", "sub-ODP087", "sub-ODP093", "sub-ODP102", "sub-ODP105", "sub-ODP110", "sub-ODP162", 
+    "sub-ODP172", "sub-ODP185", "sub-ODP193", "sub-ODP200", "sub-ODP245", "sub-ODP246", "sub-ODP247"]  
+},
+{
+    "site": "Barcelone_Bellvitge/COMPULSE_3T",
+    "type": "total",
+    "subtype": "none",
+    "failed_subjects": ["sub-CTOC04T1", "sub-CTOC04T2"]  
+},
+{
+    "site": "Vancouver_BCCHR",
+    "type": "ybocs_hc",
+    "subtype": "none",
+    "failed_subjects": ["sub-020", "sub-029", "sub-046", "sub-069", "sub-073", "sub-076"]  
+},
+{
+    "site": "Bangalore_NIMHANS",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-ODP050", "sub-C0011", "sub-ODP086", "sub-ODP131", "sub-C0212", "sub-ODP098", "sub-C0044", "sub-ODP060", "sub-ODP046", "sub-C0167", "sub-C0067", 
+    "sub-ODP089", "sub-C0061", "sub-ODP115", "sub-ODP094", "sub-C0184", "sub-C0127", "sub-C0231", "sub-ODP036", "sub-ODP128", "sub-C0088", "sub-ODP097", "sub-ODP107", 
+    "sub-ODP167", "sub-ODP150", "sub-ODP153", "sub-ODP228", "sub-C0215", "sub-C0147", "sub-ODP120", "sub-ODP190", "sub-ODP138", "sub-ODP154", "sub-C0097", "sub-ODP011"]  
+},
+{
+    "site": "Barcelone_Bellvitge/ANTIGA_1.5T",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-subIDIBELL15P58", "sub-subIDIBELL15P26", "sub-subIDIBELL15C048", "sub-subIDIBELL15C093", "sub-subIDIBELL15C024", "sub-subIDIBELL15P15", "sub-subIDIBELL15P57", 
+    "sub-subIDIBELL15C028", "sub-subIDIBELL15C112", "sub-subIDIBELL15P29", "sub-subIDIBELL15P78", "sub-subIDIBELL15P23", "sub-subIDIBELL15P05", "sub-subIDIBELL15C092", "sub-subIDIBELL15P69", 
+    "sub-subIDIBELL15C068", "sub-subIDIBELL15P87", "sub-subIDIBELL15P56", "sub-subIDIBELL15C035", "sub-subIDIBELL15P22"]  
+},
+{
+    "site": "Barcelone_Bellvitge/COMPULSE_3T",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-CTOC10T2", "sub-CTOC04T2", "sub-CTOC25T2"]  
+},
+{
+    "site": "Barcelone_Bellvitge/PROV_1.5T",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-subIDIBELL15212", "sub-subIDIBELL15238", "sub-subIDIBELL15236", "sub-subIDIBELL15C309", "sub-subIDIBELL15C313", "sub-subIDIBELL15248", "sub-subIDIBELL15208", 
+    "sub-subIDIBELL15214", "sub-subIDIBELL15230", "sub-subIDIBELL15210", "sub-subIDIBELL15204", "sub-subIDIBELL15C287", "sub-subIDIBELL15280", "sub-subIDIBELL15251", "sub-subIDIBELL15223", 
+    "sub-subIDIBELL15200", "sub-subIDIBELL15255", "sub-subIDIBELL15211"]  
+},
+{
+    "site": "Barcelone_Bellvitge/RESP_CBT_3T",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-RESPCBT13OCDPOST", "sub-RESPCBT27CTRPOST", "sub-RESPCBT33CTRPOST", "sub-RESPCBT06CTRPRE", "sub-RESPCBT17OCDPOST", "sub-RESPCBT15CTRPRE", "sub-RESPCBT13OCDPRE", 
+    "sub-RESPCBT01OCDPOST", "sub-RESPCBT26CTRPRE", "sub-RESPCBT01OCDPRE", "sub-RESPCBT02OCDPRE", "sub-RESPCBT04OCDPRE"]  
+},
+{
+    "site": "Shanghai_SMCH",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-083", "sub-003", "sub-022"]  
+},
+{
+    "site": "UCLA",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-AOCD018", "sub-AOCD028", "sub-AOCD030", "sub-AOCD004", "sub-AOCD016", "sub-AOCD023", "sub-AOCD001", "sub-AOCD021", "sub-AOCD042", "sub-AOCD003", "sub-AOCD013", 
+    "sub-AOCD011", "sub-AOCD049", "sub-AOCD010", "sub-AOCD014", "sub-AOCD022"]  
+},
+{
+    "site": "Vancouver_BCCHR",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-057", "sub-055", "sub-017", "sub-041", "sub-074"]  
+},
+{
+    "site": "Bangalore_NIMHANS",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-ODP012", "sub-C0026", "sub-C0179", "sub-ODP036", "sub-ODP190", "sub-ODP171", "sub-ODP236", "sub-ODP063", "sub-ODP098", "sub-ODP100", "sub-ODP097", "sub-ODP213", 
+    "sub-ODP140", "sub-ODP175", "sub-C0107", "sub-C0105", "sub-ODP101", "sub-C0020", "sub-ODP180", "sub-C0016", "sub-ODP086", "sub-ODP131", "sub-ODP214", "sub-ODP022", "sub-C0111", "sub-ODP153", 
+    "sub-ODP229", "sub-ODP115", "sub-ODP050", "sub-ODP094", "sub-C0112", "sub-ODP237"]  
+},
+{
+    "site": "Barcelone_Bellvitge/ANTIGA_1.5T",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-subIDIBELL15P88", "sub-subIDIBELL15P40", "sub-subIDIBELL15P63", "sub-subIDIBELL15C082", "sub-subIDIBELL15C028", "sub-subIDIBELL15P44", "sub-subIDIBELL15P50", 
+    "sub-subIDIBELL15C065", "sub-subIDIBELL15C081", "sub-subIDIBELL15C079", "sub-subIDIBELL15C107", "sub-subIDIBELL15C035", "sub-subIDIBELL15C024", "sub-subIDIBELL15P76", "sub-subIDIBELL15P65", 
+    "sub-subIDIBELL15P27", "sub-subIDIBELL15C108", "sub-subIDIBELL15C083", "sub-subIDIBELL15P69", "sub-subIDIBELL15P23"]  
+},
+{
+    "site": "Barcelone_Bellvitge/COMPULSE_3T",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-CTOC15T1", "sub-CTOC08T2", "sub-CTOC31T1", "sub-CTOC26T2", "sub-CTOC08T1", "sub-CTOC04T2", "sub-CTOC31T2", "sub-CTOC26T1"]  
+},
+{
+    "site": "Barcelone_Bellvitge/PROV_1.5T",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-subIDIBELL15259", "sub-subIDIBELL15274", "sub-subIDIBELL15244", "sub-subIDIBELL15219", "sub-subIDIBELL15C309", "sub-subIDIBELL15264", "sub-subIDIBELL15276", 
+    "sub-subIDIBELL15210", "sub-subIDIBELL15C283", "sub-subIDIBELL15214"]  
+},
+{
+    "site": "Barcelone_Bellvitge/RESP_CBT_3T",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-RESPCBT17OCDPOST", "sub-RESPCBT12OCDPRE", "sub-RESPCBT14OCDPRE", "sub-RESPCBT26CTRPRE", "sub-RESPCBT02OCDPRE", "sub-RESPCBT01OCDPRE", "sub-RESPCBT06CTRPRE", 
+    "sub-RESPCBT09OCDPRE", "sub-RESPCBT16CTRPOST"]  
+},
+{
+    "site": "Seoul_SNU",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-UMO16KSK", "sub-UMO51PHU", "sub-NOR35SNH", "sub-NOR47HSH", "sub-DNO08CHY", "sub-UMO17KDM", "sub-NOR06HYH", "sub-UMO57LJT", "sub-DNO21SJM", "sub-UMO06KSY"]  
+},
+{
+    "site": "Shanghai_SMCH",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-063", "sub-090", "sub-083"]
+},
+{
+    "site": "UCLA",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-AOCD036", "sub-AOCD075", "sub-AOCD001", "sub-AOCD049", "sub-AOCD030"]  
+},
+{
+    "site": "Yale_Gruner",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-S7236YCN", "sub-S8247RTD", "sub-S5615RHB", "sub-S2710WCJ", "sub-S5323HKN", "sub-S4266NVJ", "sub-S3841XDC", "sub-S7734EQF", "sub-S8712WMB", "sub-S5323TTO"]  
+},
+{
+    "site": "Vancouver_BCCHR",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-032", "sub-044", "sub-019", "sub-041", "sub-017", "sub-046"]  
+},
+{
+    "site": "Chiba/CHB",
+    "type": "none",
+    "subtype": "none",
+    "failed_subjects": []  
+},
+{
+    "site": "Zurich_UCH",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-subj225", "sub-subj403", "sub-subj221", "sub-subj514", "sub-subj404", "sub-subj126", "sub-subj211", "sub-subj146", 
+    "sub-subj415", "sub-subj522", "sub-subj141", "sub-subj503", "sub-subj159", "sub-subj417", "sub-subj523", "sub-subj215", "sub-subj217", 
+    "sub-subj405", "sub-subj414", "sub-subj512", "sub-subj202", "sub-subj411", "sub-subj150", "sub-subj406", "sub-subj156", "sub-subj501", 
+    "sub-subj513", "sub-subj142", "sub-subj153", "sub-subj509", "sub-subj205", "sub-subj408", "sub-subj519", "sub-subj409", "sub-subj216", 
+    "sub-subj413", "sub-subj206"]  
+},
+{
+    "site": "Rome_SLF",
+    "type": "MRI",
+    "subtype": "none",
+    "failed_subjects": ["sub-subAOCD009"]  
+},
+{
+    "site": "Zurich_UCH",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-subj216"]  
+},
+{
+    "site": "Rome_SLF",
+    "type": "motion",
+    "subtype": "none",
+    "failed_subjects": ["sub-subAOCD013", "sub-subAOCD005", "sub-subAOCD012"]  
+}
+]
+
+

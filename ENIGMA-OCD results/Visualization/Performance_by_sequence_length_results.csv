@@ -1,0 +1,7 @@
+Sequence length,Sample size,% of the dataset,Mean test AUROC,Epoch #,# of unique sites
+80,,0,,,
+100,1645,79,0.63,74,28
+148,1125,54,0.66,110,23
+200,693,33,0.79,117,13
+248,498,24,0.64,99,10
+300,344,16,0.69,119,7
