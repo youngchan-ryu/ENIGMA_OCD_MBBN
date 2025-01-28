@@ -35,6 +35,6 @@ python main.py --dataset_name ENIGMA_OCD --base_path /scratch/connectome/ycryu/E
 --fmri_type divided_timeseries --transformer_hidden_layers 8 \
 --divide_by_lorentzian --seq_part head --use_raw_knee --fmri_dividing_type three_channels --use_high_freq \
 --spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
---exp_name from_scratch_seed3 --seed 3 --sequence_length_phase2 100 \
---intermediate_vec 316 --nEpochs_phase2 50 --num_heads 4 \
-2> /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error.log
+--exp_name trial_run --seed 2 --sequence_length_phase2 100 \
+--intermediate_vec 316 --nEpochs_phase2 2 --num_heads 4 \
+2> /global/homes/p/pakmasha/model/MBBN-main/failed_experiments/enigma_ocd_error.log

@@ -32,6 +32,8 @@ class DataHandler():  # primary class for dataset management (initialization, pr
         self.seq_len = kwargs.get('sequence_length')
         self.intermediate_vec = kwargs.get('intermediate_vec')  # dimentionality of intermediate vectors (e.g., number of ROIs)
         self.seed = kwargs.get('seed')  # random seed for reproducibility
+        self.fmri_dividing_type = kwargs.get('fmri_dividing_type')  # ADDED
+        self.fmri_type = kwargs.get('fmri_type')  # ADDED
         reproducibility(**self.kwargs)
         dataset = self.get_dataset()
         self.train_dataset = dataset(**self.kwargs)  # initializes the training dataset
@@ -44,7 +46,7 @@ class DataHandler():  # primary class for dataset management (initialization, pr
                 self.mean = self.eval_dataset.mean
                 self.std = self.eval_dataset.std
         self.eval_dataset.augment = None  # disables data augmentation for evaluation datasets
-
+        
         if self.target == 'ADHD_label':  # standardizing target names
             self.target = 'ADHD'
         elif self.target == 'ASD':
@@ -137,7 +139,13 @@ class DataHandler():  # primary class for dataset management (initialization, pr
                     file = np.load(filename)[20:20+self.seq_len].T
                 elif self.dataset_name == 'ENIGMA_OCD':
                     if self.intermediate_vec == 316:
-                        filename = os.path.join(kwargs.get('enigma_path'), i+'/'+i+'_filtered_0.01_0.1.npy')   
+                        if self.fmri_dividing_type == 'four_channels' or self.fmri_type == 'timeseries':
+                            filename = os.path.join(kwargs.get('enigma_path'), i+'/'+i+'.npy')  # unfiltered data
+                        elif self.fmri_dividing_type == 'three_channels':
+                            filename = os.path.join(kwargs.get('enigma_path'), i+'/'+i+'_filtered_0.01_0.1.npy')  # band-pass-filtered data
+                        else:
+                            raise ValueError("Filename is not defined for this fmri_dividing_type")
+
                         file = np.load(filename)[20:20+self.seq_len].T 
                         site = filename.split('/')[-2].split('_')[-2]      
 
@@ -240,6 +248,8 @@ class DataHandler():  # primary class for dataset management (initialization, pr
                     
                     # Vanilla BERT does not require frequency band division
                     if self.step == 1:
+                        valid_sub.append(i)
+                    elif self.fmri_dividing_type == 'four_channels':
                         valid_sub.append(i)
                     else:
                         if knee < xdata.shape[0] and knee < ydata.shape[0]:

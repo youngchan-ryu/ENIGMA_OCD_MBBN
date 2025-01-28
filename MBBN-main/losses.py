@@ -30,7 +30,7 @@ class Spatial_Difference_Loss(nn.Module):
         self.spat_diff_loss = 0.0
         self.spat_diff_loss_type = kwargs.get('spat_diff_loss_type')
         self.fmri_dividing_type = kwargs.get('fmri_dividing_type')
-    def forward(self, h, l, u):
+    def forward(self, h, l, u, z):
         '''
         h, l, u is attention map
         h : (batch, ROI, ROI)
@@ -39,7 +39,9 @@ class Spatial_Difference_Loss(nn.Module):
         #loss = nn.MSELoss()
         if self.spat_diff_loss_type == 'minus_log':
             # current SOTA #
-            if self.fmri_dividing_type == 'three_channels':
+            if self.fmri_dividing_type == 'four_channels':
+                self.spat_diff_loss = -torch.log((loss(h, l)+loss(h, u)+loss(h, z)+loss(l, u)+loss(l, z)+loss(u, z)))
+            elif self.fmri_dividing_type == 'three_channels':
                 self.spat_diff_loss = -torch.log((loss(h, l)+loss(h, u)+loss(l, u)))
             elif self.fmri_dividing_type == 'two_channels':
                 self.spat_diff_loss = -torch.log(loss(l, u))
