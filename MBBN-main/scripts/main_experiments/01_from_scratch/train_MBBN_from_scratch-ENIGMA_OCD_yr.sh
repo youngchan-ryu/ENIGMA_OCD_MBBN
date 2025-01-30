@@ -35,9 +35,9 @@ python main.py --dataset_name ENIGMA_OCD --base_path /scratch/connectome/ycryu/E
 --fmri_type divided_timeseries --transformer_hidden_layers 8 \
 --divide_by_lorentzian --seq_part head --use_raw_knee --fmri_dividing_type three_channels --use_high_freq \
 --spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
---exp_name from_scratch_seed3 --seed 3 --sequence_length_phase2 100 \
---intermediate_vec 316 --nEpochs_phase2 50 --num_heads 4 \
-2> /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error.log
+--exp_name layer_check_seed101 --seed 101 --sequence_length_phase2 100 \
+--intermediate_vec 316 --nEpochs_phase2 1 --num_heads 4 \
+2> /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error_layer_check_seed101.log
 
 torchrun --nproc_per_node=8 --nnodes=1 --node_rank=0 --master_addr="localhost" --master_port=12345 main.py --dataset_name ENIGMA_OCD \
 --base_path /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main --enigma_path /scratch/connectome/pakmasha99/ENIGMA_OCD_MBBN/MBBN_data \
@@ -50,3 +50,7 @@ torchrun --nproc_per_node=8 --nnodes=1 --node_rank=0 --master_addr="localhost" -
 --intermediate_vec 316 --nEpochs_phase2 50 --num_heads 4 \
 --world_size 8 \
 2> /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error.log
+
+# using pdb
+# python -m pdb ...
+# > /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error.log 2>&1
