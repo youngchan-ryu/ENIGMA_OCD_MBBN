@@ -10,8 +10,6 @@ import time
 import pathlib
 import os
 
-from torchinfo import summary
-from torchviz import make_dot
 
 from torch.nn import MSELoss,L1Loss,BCELoss, BCEWithLogitsLoss, Sigmoid
 
@@ -211,41 +209,7 @@ class Trainer():
         elif self.task.lower() == 'divfreqbert_reconstruction':
             self.model = Transformer_Reconstruction_Three_Channels (**self.kwargs)
         total_params = sum(p.numel() for p in self.model.parameters())
-        print(f"Number of parameters of the model: {total_params}")
-        total_dropout_cnt = 0
-        for layer in self.model.modules():
-            if isinstance(layer, torch.nn.Dropout):
-                total_dropout_cnt += 1
-        print(f"Number of dropout layers counted one by one of the model: {total_dropout_cnt}")
-        print("Model summary:")
-        print(self.model)
-        print("Model parameters info:")
-        for name, param in self.model.named_parameters():
-            print("Model parameters:")
-            print(name)
-            print(param)
-        print("Model parameters:")
-        print(self.model.parameters())
-        print("Model layers info:")
-        for name, layer in self.model.named_modules():
-            print("Model layer:")
-            print(name)
-            print(layer)
         
-        print("Model summary:")
-        summary(self.model, x_h=(8, 92, 316), x_l=(8, 92, 316), x_ul=(8, 92, 316))
-        print("Model graph:")
-        dummy_input1 = torch.randn(8, 92, 316)
-        dummy_input2 = torch.randn(8, 92, 316)
-        dummy_input3 = torch.randn(8, 92, 316)
-        output = self.model(dummy_input1, dummy_input2, dummy_input3)
-        print(output)
-        print(output['binary_classification'].shape, output['high_spatial_attention'].shape, output['low_spatial_attention'].shape, output['ultralow_spatial_attention'].shape)
-        make_dot(output['binary_classification'], params=dict(self.model.named_parameters())).render("model_graph_binary_classification", format="png")
-        make_dot(output['high_spatial_attention'], params=dict(self.model.named_parameters())).render("model_graph_high_spatial_attention", format="png")
-        make_dot(output['low_spatial_attention'], params=dict(self.model.named_parameters())).render("model_graph_low_spatial_attention", format="png")
-        make_dot(output['ultralow_spatial_attention'], params=dict(self.model.named_parameters())).render("model_graph_ultralow_spatial_attention", format="png")
-
         
     def set_model_device(self):  # assigns the model to appropriate devices (e.g., GPU or CPU)
         if self.distributed:
@@ -586,6 +550,7 @@ class Trainer():
         final_loss_value = 0
         for loss_name, current_loss_dict in self.writer.losses.items():
             if current_loss_dict['is_active']:
+                # YC : find active loss functions and compute with 'compute_loss_name' function
                 loss_func = getattr(self, 'compute_' + loss_name)
                 torch.cuda.nvtx.range_push(f"{loss_name}")
                 current_loss_value = loss_func(input_dict,output_dict)
