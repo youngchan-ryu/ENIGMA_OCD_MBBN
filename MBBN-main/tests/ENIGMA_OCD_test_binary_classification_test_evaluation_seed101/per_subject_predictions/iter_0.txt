@@ -1,0 +1,8 @@
+subject:2 (UQ-mcdropout)
+outputs: 0.4504±0.1846  -  truth: 0.0
+subject:2 (test)
+outputs: 0.6099±0.0436  -  truth: 0.0
+subject:2 (test)
+outputs: 0.5383±0.1631  -  truth: 0.0
+subject:2 (test)
+outputs: 0.5383±0.1631  -  truth: 0.0

@@ -19,12 +19,12 @@ norm_axis: 1
 cuda: True
 log_dir: /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/runs
 transformer_hidden_layers: 8
-world_size: 8
-rank: 3
+world_size: -1
+rank: 0
 local_rank: -1
 dist_backend: nccl
 init_method: file
-distributed: True
+distributed: False
 amp: True
 gradient_clipping: False
 clip_max_norm: 1.0
@@ -115,7 +115,7 @@ lr_step_phase4: 3000
 lr_warmup_phase4: 100
 sequence_length_phase4: 300
 workers_phase4: 4
-gpu: 3
+gpu: 0
 loaded_model_weights_path_phase2: None
 experiment_folder: /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_from_scratch_seed3
 experiment_title: ENIGMA_OCD_mbbn_OCD_from_scratch_seed3
