@@ -28,6 +28,9 @@ from nitime.timeseries import TimeSeries
 # Import the analysis objects:
 from nitime.analysis import SpectralAnalyzer, FilterAnalyzer, NormalizationAnalyzer
 
+from sktime.libs.vmdpy import VMD  # ADDED
+from joblib import Parallel, delayed # ADDED
+
 def lorentzian_function(x, s0, corner):
     return (s0*corner**2) / (x**2 + corner**2)
 
@@ -551,44 +554,198 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
 
             if self.fmri_dividing_type == 'four_channels':
 
-                nyquist_freq = 1/(2*TR)
+                # nyquist_freq = 1/(2*TR)
+                print(f"Site: {site}, TR: {TR}")
 
-                # VMD IMF1: 0.20-0.24 Hz
-                if nyquist_freq > 0.185:
-                    lower_bound = 0.185
-                    upper_bound = 1 / (2*TR)
-                    T1 = TimeSeries(y, sampling_interval=TR)  # creates a time-series object from y
-                    FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
-                    imf1 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
-                    imf2_4 = FA1.data-FA1.filtered_boxcar.data
-                else: # filter out the whole band
-                    imf1 = np.zeros_like(y) 
-                    imf2_4 = y
+                # average the time series across ROIs
+                sample_whole = np.zeros(ts_length,)
+                intermediate_vec = y.shape[0]
 
-                # VMD IMF2: 0.13-0.17 Hz
-                lower_bound = 0.115
-                upper_bound = max(0.185, nyquist_freq)
-                T1 = TimeSeries(imf2_4, sampling_interval=TR)  # creates a time-series object from y
-                FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
-                imf2 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
-                imf3_4 = FA1.data-FA1.filtered_boxcar.data
+                for i in range(intermediate_vec):
+                    sample_whole+=y[i]
 
-                # VMD IMF3: 0.063- 0.098 Hz
-                lower_bound = 0.05
-                upper_bound = 0.115
-                T1 = TimeSeries(imf3_4, sampling_interval=TR)  # creates a time-series object from y
-                S_original = SpectralAnalyzer(T1)
-                FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
-                imf3 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
-                imf4 = FA1.data-FA1.filtered_boxcar.data
+                sample_whole /= intermediate_vec 
 
-                # VMD IMF4: 0.021-0.036 Hz
-                lower_bound = 0.001
-                upper_bound = 0.05
-                T1 = TimeSeries(imf4, sampling_interval=TR)  # creates a time-series object from y
-                S_original = SpectralAnalyzer(T1)
-                FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
-                imf4 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
+                # VMD setting
+                f = sample_whole
+                f = (f - np.mean(f)) / np.std(f)  # z-score normalization
+                K = 4             # 3 modes
+                DC = 0             # no DC part imposed
+                init = 0           # initialize omegas uniformly
+                tol = 1e-7        # convergence tolerance
+                alpha = 100
+                tau = 3.5
+
+                # VMD
+                u, _, _ = VMD(f, alpha, tau, K, DC, init, tol)
+
+
+                def compute_imf_bandwidths(u, fs, threshold=0.05):
+                    """
+                    Compute the bandwidths of IMFs using the Fourier spectrum directly from VMD output.
+                    
+                    This version correctly extracts frequency bounds in Hz, avoiding the issue of 
+                    symmetric zero-centered results.
+                    
+                    Parameters:
+                    u (ndarray): IMFs (shape: K x N, where K is the number of IMFs, N is the time samples).
+                    fs (float): Sampling frequency of the time series (Hz).
+                    threshold (float): Power threshold for frequency support (default 1% of max power).
+
+                    Returns:
+                    dict: Band cutoffs in Hz as { 'imf1_lb': ..., 'imf1_hb': ..., ... }
+                    """
+                    K, N = u.shape  # Number of IMFs and time samples
+                    f_N = fs / 2  # Nyquist frequency
+                    freqs = np.fft.fftfreq(N, d=1/fs)  # Compute frequencies WITHOUT shifting
+                    positive_freqs = freqs[:N//2]  # Keep only positive frequencies
+                    band_cutoffs = {}
+
+                    for k in range(K):
+                        # Compute the Fourier Transform of the IMF
+                        U_k = np.fft.fft(u[k, :])
+                        power_spectrum = np.abs(U_k) ** 2
+
+                        # Normalize power and apply threshold
+                        power_threshold = threshold * np.max(power_spectrum)
+                        
+                        # Extract frequency support only from the positive range
+                        freq_support = positive_freqs[power_spectrum[:N//2] > power_threshold]
+
+                        if len(freq_support) > 0:
+                            f_min = np.min(freq_support)  # Minimum frequency with significant power
+                            f_max = np.max(freq_support)  # Maximum frequency with significant power
+                        else:
+                            f_min, f_max = 0, 0  # In case no significant power is detected
+
+                        # Store the frequency cutoffs
+                        band_cutoffs[f'imf{k+1}_lb'] = max(0, f_min)  # Ensure non-negative frequencies
+                        band_cutoffs[f'imf{k+1}_hb'] = min(f_N, f_max)  # Ensure does not exceed Nyquist
+
+                        # Print results
+                        # print(f"IMF {k+1}: Bandwidth = {f_max - f_min:.4f} Hz (Lower: {f_min:.4f} Hz, Upper: {f_max:.4f} Hz)")
+
+                    return band_cutoffs
+
+
+                band_cutoffs = compute_imf_bandwidths(u, 1/TR)
+                print(band_cutoffs)
+
+                from scipy.signal import butter, filtfilt
+
+                def bandpass_filter_2d(data, lowcut, highcut, fs, order=4):
+                    """
+                    Applies a Butterworth bandpass filter to each ROI in a 2D time-series dataset.
+                    
+                    Parameters:
+                    - data: numpy array of shape (#ROIs, #timepoints), where each row is a time series for one ROI.
+                    - lowcut: Lower cutoff frequency (Hz).
+                    - highcut: Upper cutoff frequency (Hz).
+                    - fs: Sampling frequency (Hz) = 1 / TR.
+                    - order: Order of the Butterworth filter (default = 4).
+
+                    Returns:
+                    - filtered_data: numpy array of the same shape as 'data' with filtered time series.
+                    """
+                    nyquist = 0.5 * fs  # Nyquist frequency
+                    low = lowcut / nyquist
+                    high = highcut / nyquist
+
+                    # Design Butterworth bandpass filter
+                    b, a = butter(order, [low, high], btype='band')
+
+                    # Apply filter to each ROI (row-wise)
+                    filtered_data = np.array([filtfilt(b, a, roi_signal) for roi_signal in data])
+
+                    return filtered_data
+
+
+                imf1 = bandpass_filter_2d(y, band_cutoffs['imf4_lb'], band_cutoffs['imf4_hb'], 1/TR)
+                imf1 = stats.zscore(imf1, axis=1)
+
+                imf2 = bandpass_filter_2d(y, band_cutoffs['imf3_lb'], band_cutoffs['imf3_hb'], 1/TR)
+                imf2 = stats.zscore(imf2, axis=1)
+
+                imf3 = bandpass_filter_2d(y, band_cutoffs['imf2_lb'], band_cutoffs['imf2_hb'], 1/TR)
+                imf3 = stats.zscore(imf3, axis=1)
+
+                imf4 = bandpass_filter_2d(y, band_cutoffs['imf1_lb'], band_cutoffs['imf1_hb'], 1/TR)
+                imf4 = stats.zscore(imf4, axis=1)
+
+
+                """
+                VMD with fixed cutoffs
+                """
+                # # IMF1
+                # if nyquist_freq > 0.185:
+                #     lower_bound = 0.185
+                #     upper_bound = 1 / (2*TR)
+                #     T1 = TimeSeries(y, sampling_interval=TR)  # creates a time-series object from y
+                #     FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
+                #     imf1 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
+                #     imf2_4 = FA1.data-FA1.filtered_boxcar.data
+                # else: # filter out the whole band
+                #     imf1 = np.zeros_like(y) 
+                #     imf2_4 = y
+
+                # # IMF2
+                # lower_bound = 0.115
+                # upper_bound = max(0.185, nyquist_freq)
+                # T1 = TimeSeries(imf2_4, sampling_interval=TR)  # creates a time-series object from y
+                # FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
+                # imf2 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
+                # imf3_4 = FA1.data-FA1.filtered_boxcar.data
+
+                # # IMF3
+                # lower_bound = 0.05
+                # upper_bound = 0.115
+                # T1 = TimeSeries(imf3_4, sampling_interval=TR)  # creates a time-series object from y
+                # S_original = SpectralAnalyzer(T1)
+                # FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
+                # imf3 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
+                # imf4 = FA1.data-FA1.filtered_boxcar.data
+
+                # # IMF4
+                # lower_bound = 0.001
+                # upper_bound = 0.05
+                # T1 = TimeSeries(imf4, sampling_interval=TR)  # creates a time-series object from y
+                # S_original = SpectralAnalyzer(T1)
+                # FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
+                # imf4 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
+
+
+                """
+                VMD for each ROI
+                """
+                # num_of_rois = y.shape[0]
+
+                # # VMD parameters
+                # K = 4             # modes
+                # DC = 0             # no DC part imposed
+                # init = 0           # initialize omegas uniformly
+                # tol = 1e-7        # convergence tolerance
+                # alpha = 100       # tuned before training based on reconstruction performance
+                # tau = 3.5         # tuned before training based on reconstruction performance
+
+                # # Initialize IMFs
+                # imf1 = np.zeros((y.shape[0], y.shape[1]))
+                # imf2 = np.zeros((y.shape[0], y.shape[1]))
+                # imf3 = np.zeros((y.shape[0], y.shape[1]))
+                # imf4 = np.zeros((y.shape[0], y.shape[1]))
+
+                # for roi in range(num_of_rois):
+
+                #     f = y[roi,:] # ROI time series
+                #     f = (f - np.mean(f)) / np.std(f)  # z-score normalization
+                    
+                #     # Run actual VMD code
+                #     u, u_hat, omega = VMD(f, alpha, tau, K, DC, init, tol)
+
+                #     # add the ROI modes to the total IMFs
+                #     imf1[roi, :] = u[0, :]
+                #     imf2[roi, :] = u[1, :]
+                #     imf3[roi, :] = u[2, :]
+                #     imf4[roi, :] = u[3, :]
 
                 # DO PADDING ALWAYS
                 imf1 = F.pad(torch.from_numpy(imf1), (pad//2, pad//2), "constant", 0).T.float()
