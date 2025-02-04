@@ -40,7 +40,23 @@ class Attention(nn.Module):
         tensor = tensor.permute(0, 2, 1, 3).reshape(batch_size * head_size, seq_len, dim // head_size)
         return tensor
      
-    def forward(self, x, return_attn=True):
+    def forward(self, x, mask=None, return_attn=True):
+        """
+        x: (batch, ROI, seq_len)
+        mask: (batch, seq_len, ROI) from the dataloader
+        """
+
+        # Compute spatial mask if mask is provided
+        if mask is not None:
+            # Compute a per-ROI validity: an ROI is valid if any timepoint is non-zero.
+            # Aggregate over the time dimension.
+            roi_mask = (mask.sum(dim=1) != 0).long()  # shape: (batch, ROI)
+            # Reshape for broadcasting: (batch, 1, 1, ROI)
+            spatial_mask = roi_mask.unsqueeze(1).unsqueeze(1) 
+            
+        else:
+            spatial_mask = None
+
         B, N, C = x.shape
         qkv = self.qkv(x).reshape(B, N, 3, self.num_heads, C // self.num_heads).permute(2, 0, 3, 1, 4)
         q, k, v = qkv.unbind(0)   # make torchscript happy (cannot use tensor as tuple)
@@ -48,6 +64,9 @@ class Attention(nn.Module):
         # k: B, num_heads, N, C // num_heads
         # v: B, num_heads, N, C // num_heads
         attn = (q @ k.transpose(-2, -1)) * self.scale
+        if spatial_mask is not None:
+            # spatial_mask has shape (batch, 1, 1, ROI) and is applied along the key dimension.
+            attn = attn.masked_fill(spatial_mask == 0, float('-inf'))
         attn = attn.softmax(dim=-1)
         attn = self.attn_drop(attn)
         # attn : batch, num_heads, ROI, ROI
@@ -198,10 +217,26 @@ class Transformer_Block(BertPreTrainedModel, BaseModel):
         cls_token = self.cls_embedding(self.cls_id.expand(x.size()[0], -1, -1))
         return torch.cat([cls_token, x], dim=1)
     
-    def forward(self, x):
+    def forward(self, x, mask=None):
         inputs_embeds = self.concatenate_cls(x) # (batch, seq_len+1, ROI)
+
+        # If mask is provided, convert it to a per-timepoint mask.
+        # Assumption: a valid timepoint has nonzero values in at least one ROI.
+        if mask is not None:
+            # mask: (batch, seq_len, ROI) --> aggregate over ROI dimension
+            # Here, we consider a timepoint valid if the sum across ROIs is not zero.
+            temp_mask = (mask.sum(dim=-1) != 0).long()  # shape: (batch, seq_len)
+            
+            # Create a mask for the CLS token. Typically, you want to attend to the CLS token, so set it to 1.
+            cls_mask = torch.ones(temp_mask.size(0), 1, device=temp_mask.device, dtype=temp_mask.dtype)
+            
+            # Concatenate to get an extended mask: (batch, seq_len+1)
+            extended_mask = torch.cat([cls_mask, temp_mask], dim=1)
+        else:
+            extended_mask = None
+
         outputs = self.bert(input_ids=None,
-                            attention_mask=None,
+                            attention_mask=extended_mask,
                             token_type_ids=None,
                             position_ids=None,
                             head_mask=None,
@@ -412,10 +447,7 @@ class Transformer_Finetune_Four_Channels(BaseModel):
         self.regression_head = Classifier(self.intermediate_vec, self.label_num)
         
             
-    def forward(self, x_1, x_2, x_3, x_4):
-        
-        # input shape : (batch, seq_len, ROI)
-        device = x_1.get_device()
+    def forward(self, x_1, x_2, x_3, x_4, mask=None):
 
         if self.ablation == 'convolution':
             x_1 = self.cnn(x_1)
@@ -427,16 +459,16 @@ class Transformer_Finetune_Four_Channels(BaseModel):
         if self.spatiotemporal:  
             
             # temporal
-            transformer_dict_imf1 = self.transformer(x_1)
-            transformer_dict_imf2 = self.transformer(x_2)
-            transformer_dict_imf3 = self.transformer(x_3)
-            transformer_dict_imf4 = self.transformer(x_4)
+            transformer_dict_imf1 = self.transformer(x_1, mask=mask)
+            transformer_dict_imf2 = self.transformer(x_2, mask=mask)
+            transformer_dict_imf3 = self.transformer(x_3, mask=mask)
+            transformer_dict_imf4 = self.transformer(x_4, mask=mask)
             
             # spatial
-            imf1_spatial_attention = self.imf1_spatial_attention(x_1.permute(0, 2, 1)) # (batch, ROI, sequence length)
-            imf2_spatial_attention = self.imf2_spatial_attention(x_2.permute(0, 2, 1)) # (batch, ROI, sequence length)
-            imf3_spatial_attention = self.imf3_spatial_attention(x_3.permute(0, 2, 1)) # (batch, ROI, sequence length)
-            imf4_spatial_attention = self.imf4_spatial_attention(x_4.permute(0, 2, 1)) # (batch, ROI, sequence length)
+            imf1_spatial_attention = self.imf1_spatial_attention(x_1.permute(0, 2, 1), mask=mask) # (batch, ROI, sequence length)
+            imf2_spatial_attention = self.imf2_spatial_attention(x_2.permute(0, 2, 1), mask=mask) # (batch, ROI, sequence length)
+            imf3_spatial_attention = self.imf3_spatial_attention(x_3.permute(0, 2, 1), mask=mask) # (batch, ROI, sequence length)
+            imf4_spatial_attention = self.imf4_spatial_attention(x_4.permute(0, 2, 1), mask=mask) # (batch, ROI, sequence length)
             # desired output shape : (batch, num_heads, ROI, ROI)
         
             

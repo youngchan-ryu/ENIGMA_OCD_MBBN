@@ -30,6 +30,7 @@ from nitime.analysis import SpectralAnalyzer, FilterAnalyzer, NormalizationAnaly
 
 from sktime.libs.vmdpy import VMD  # ADDED
 from joblib import Parallel, delayed # ADDED
+from time_series_utils import *
 
 def lorentzian_function(x, s0, corner):
     return (s0*corner**2) / (x**2 + corner**2)
@@ -128,119 +129,46 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 target = 0.0 if target == 2 else 1.0
                 target = torch.tensor(target)
                 
-                ################################################################
-                ######################## DEBUG STATEMENT #######################
-                # print(f"Target label: {target}")
+                # ################################################################
+                # ######################## DEBUG STATEMENT #######################
+                # TR = repetition_time(site)
+ 
+                # y = np.load(filename)[20:20+self.seq_len].T
+                # sample_whole = np.zeros(self.sequence_length,) # originally self.sequence_length   ## aggregates time-series data across ROIs
+
+                # try:
+                #     for l in range(self.intermediate_vec):
+                #         sample_whole+=y[l]
+                #     sample_whole /= self.intermediate_vec    # averages the time-series signals (y) across a set number of ROIs
+                # except Exception as e:
+                #     print(f"Error processing subject {subid}: {e}")
+                #     continue  # Skip this subject 
+
+                # T = TimeSeries(sample_whole, sampling_interval=TR)  # same data as in sample_whole but including TR and is ready for advanced analysis
+                # S_original = SpectralAnalyzer(T)  # computes power spectral density (PSD) of the averaged time-series signal
+
+                # # Lorentzian function fitting (dividing ultralow ~ low)  ## extracts the PSD data
+                # xdata = np.array(S_original.spectrum_fourier[0][1:])  # xdata = frequency values   (x-axis of the PSD, excluding the first component with freq = 0 Hz)
+                # ydata = np.abs(S_original.spectrum_fourier[1][1:])    # ydata = corresponding power values (y-axis of the PSD)
+
+                # # initial parameter setting
+                # p0 = [0, 0.006]   
+                # param_bounds = ([-np.inf, 0], [np.inf, 1])
+
+                # # fitting Lorentzian function
+                # popt, pcov = curve_fit(lorentzian_function, xdata, ydata, p0=p0, maxfev = 5000, bounds=param_bounds)   # popt = optimal parameters
+                # f1 = popt[1]
+                # knee = round(popt[1]/(1/(sample_whole.shape[0]*TR)))   # calculates knee frequency  
                 
-                if 'Amsterdam-AMC' in site:
-                    TR = 2.375
-                elif 'Amsterdam-VUmc' in site:
-                    TR = 1.8
-                elif 'Barcelona-HCPB' in site:
-                    TR = 2
-                elif 'Bergen' in site:
-                    TR = 1.8
-                elif 'Braga-UMinho-Braga-1.5T' in site:
-                    TR = 2
-                elif 'Braga-UMinho-Braga-1.5T-act' in site:
-                    TR = 2
-                elif 'Braga-UMinho-Braga-3T' in site:
-                    TR = 1
-                elif 'Brazil' in site:
-                    TR = 2
-                elif 'Cape-Town-UCT-Allegra' in site:
-                    TR = 1.6
-                elif 'Cape-Town-UCT-Skyra' in site:
-                    TR = 1.73
-                elif 'Chiba-CHB' in site:
-                    TR = 2.3
-                elif 'Chiba-CHBC' in site:
-                    TR = 2.3 
-                elif 'Chiba-CHBSRPB' in site:
-                    TR = 2.5 
-                elif 'Dresden' in site:
-                    TR = 0.8 
-                elif 'Kyoto-KPU-Kyoto1.5T' in site:
-                    TR = 2.411 
-                elif 'Kyoto-KPU-Kyoto3T' in site:
-                    TR = 2
-                elif 'Kyushu' in site:
-                    TR = 2.5
-                elif 'Milan-HSR' in site:
-                    TR = 2
-                elif 'New-York' in site:
-                    TR = 1
-                elif 'NYSPI-Columbia-Adults' in site:
-                    TR = 0.85
-                elif 'NYSPI-Columbia-Pediatric' in site:
-                    TR = 0.85
-                elif 'Yale-Pittinger-HCP-Prisma' in site:
-                    TR = 0.8
-                elif 'Yale-Pittinger-HCP-Trio' in site:
-                    TR = 0.7
-                elif 'Yale-Pittinger-Yale-2014' in site:
-                    TR = 2
-                elif 'Bangalore-NIMHANS' in site:
-                    TR = 2 
-                elif 'Barcelone-Bellvitge-ANTIGA-1.5T' in site:
-                    TR = 2
-                elif 'Barcelone-Bellvitge-COMPULSE-3T' in site:
-                    TR = 2
-                elif 'Barcelone-Bellvitge-PROV-1.5T' in site:
-                    TR = 2
-                elif 'Barcelone-Bellvitge-RESP-CBT-3T' in site:
-                    TR = 2
-                elif 'Seoul-SNU' in site:
-                    TR = 3.5
-                elif 'Shanghai-SMCH' in site:
-                    TR = 3
-                elif 'UCLA' in site:
-                    TR = 2
-                elif 'Vancouver-BCCHR' in site:
-                    TR = 2
-                elif 'Yale-Gruner' in site:
-                    TR = 2
-                else:
-                    raise ValueError(f"Site '{site}' does not have a defined TR value in TR_mappings. Please add it.")
-                
-                y = np.load(filename)[20:20+self.seq_len].T
-                sample_whole = np.zeros(self.sequence_length,) # originally self.sequence_length   ## aggregates time-series data across ROIs
-
-                try:
-                    for l in range(self.intermediate_vec):
-                        sample_whole+=y[l]
-                    sample_whole /= self.intermediate_vec    # averages the time-series signals (y) across a set number of ROIs
-                except Exception as e:
-                    print(f"Error processing subject {subid}: {e}")
-                    # print(f"sample_whole shape: {sample_whole.shape}")
-                    # print(f"y[i] shape: {y[i].shape if i < len(y) else 'Index out of bounds'}")
-                    continue  # Skip this subject 
-
-                T = TimeSeries(sample_whole, sampling_interval=TR)  # same data as in sample_whole but including TR and is ready for advanced analysis
-                S_original = SpectralAnalyzer(T)  # computes power spectral density (PSD) of the averaged time-series signal
-
-                # Lorentzian function fitting (dividing ultralow ~ low)  ## extracts the PSD data
-                xdata = np.array(S_original.spectrum_fourier[0][1:])  # xdata = frequency values   (x-axis of the PSD, excluding the first component with freq = 0 Hz)
-                ydata = np.abs(S_original.spectrum_fourier[1][1:])    # ydata = corresponding power values (y-axis of the PSD)
-
-                # initial parameter setting
-                p0 = [0, 0.006]   
-                param_bounds = ([-np.inf, 0], [np.inf, 1])
-
-                # fitting Lorentzian function
-                popt, pcov = curve_fit(lorentzian_function, xdata, ydata, p0=p0, maxfev = 5000, bounds=param_bounds)   # popt = optimal parameters
-                f1 = popt[1]
-                knee = round(popt[1]/(1/(sample_whole.shape[0]*TR)))   # calculates knee frequency  
-                
-                if self.step != '1' and self.fmri_dividing_type != 'four_channels':
-                    try:
-                        if knee > xdata.shape[0] or knee > ydata.shape[0]:
-                            raise ValueError("The training is stopped because of an invalid knee frequency.")
-                    except:
-                        print(f"Skipping subject {subid} due to invalid knee frequency.")
-                        continue  # Skip this subject
-                ################################################################
-                ################################################################
+                # if self.step != '1' and self.fmri_dividing_type != 'four_channels':
+                #     try:
+                #         if knee > xdata.shape[0] or knee > ydata.shape[0]:
+                #             raise ValueError("The training is stopped because of an invalid knee frequency.")
+                #     except:
+                #         print(f"Skipping subject {subid} due to invalid knee frequency.")
+                #         continue  # Skip this subject
+                # ################################################################
+                # ################################################################
             
             self.index_l.append((i, sub, filename, target, site))
                 
@@ -258,12 +186,12 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
 
         if self.seq_part=='tail':   # truncates fMRI data based on the specified sequence part
             y = np.load(path_to_fMRIs)[-self.sequence_length:].T # [ROI, seq_len]   # takes the last sequence_length frames
-            # y = pd.read_csv(path_to_fMRIs, sep='\t', header=None).values
-            # y = y[-self.sequence_length:].T
         elif self.seq_part=='head':
-            y = np.load(path_to_fMRIs)[20:20+self.sequence_length].T # [ROI, seq_len]   # takes a sequence starting from index 20
-            # y = pd.read_csv(path_to_fMRIs, sep='\t', header=None).values
-            # y = y[20:20 + self.seq_len].T
+            # y = np.load(path_to_fMRIs)[20:20+self.sequence_length].T # [ROI, seq_len]   # takes a sequence starting from index 20
+            y = np.load(path_to_fMRIs)[20:].T  # FOR SEQUENCE LENGTH PADDING EXPERIMENT
+        
+        if y.shape[1] > self.sequence_length:
+            y = y[:, :self.sequence_length]
         
         ts_length = y.shape[1]   # temporal padding
         pad = self.sequence_length-ts_length
@@ -272,81 +200,8 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
             # standard length : 464 (UKB) - because I pretrained divfreqBERT with UKB!
             pad = 464 - self.sequence_length
             
-            ##### DEBUG STATEMENT #####
-            # print(f"Temporal padding length: {pad}")
-            ###########################
-
-        if 'Amsterdam-AMC' in site:
-            TR = 2.375
-        elif 'Amsterdam-VUmc' in site:
-            TR = 1.8
-        elif 'Barcelona-HCPB' in site:
-            TR = 2
-        elif 'Bergen' in site:
-            TR = 1.8
-        elif 'Braga-UMinho-Braga-1.5T' in site:
-            TR = 2
-        elif 'Braga-UMinho-Braga-1.5T-act' in site:
-            TR = 2
-        elif 'Braga-UMinho-Braga-3T' in site:
-            TR = 1
-        elif 'Brazil' in site:
-            TR = 2
-        elif 'Cape-Town-UCT-Allegra' in site:
-            TR = 1.6
-        elif 'Cape-Town-UCT-Skyra' in site:
-            TR = 1.73
-        elif 'Chiba-CHB' in site:
-            TR = 2.3
-        elif 'Chiba-CHBC' in site:
-            TR = 2.3 
-        elif 'Chiba-CHBSRPB' in site:
-            TR = 2.5 
-        elif 'Dresden' in site:
-            TR = 0.8 
-        elif 'Kyoto-KPU-Kyoto1.5T' in site:
-            TR = 2.411 
-        elif 'Kyoto-KPU-Kyoto3T' in site:
-            TR = 2
-        elif 'Kyushu' in site:
-            TR = 2.5
-        elif 'Milan-HSR' in site:
-            TR = 2
-        elif 'New-York' in site:
-            TR = 1
-        elif 'NYSPI-Columbia-Adults' in site:
-            TR = 0.85
-        elif 'NYSPI-Columbia-Pediatric' in site:
-            TR = 0.85
-        elif 'Yale-Pittinger-HCP-Prisma' in site:
-            TR = 0.8
-        elif 'Yale-Pittinger-HCP-Trio' in site:
-            TR = 0.7
-        elif 'Yale-Pittinger-Yale-2014' in site:
-            TR = 2
-        elif 'Bangalore-NIMHANS' in site:
-            TR = 2 
-        elif 'Barcelone-Bellvitge-ANTIGA-1.5T' in site:
-            TR = 2
-        elif 'Barcelone-Bellvitge-COMPULSE-3T' in site:
-            TR = 2
-        elif 'Barcelone-Bellvitge-PROV-1.5T' in site:
-            TR = 2
-        elif 'Barcelone-Bellvitge-RESP-CBT-3T' in site:
-            TR = 2
-        elif 'Seoul-SNU' in site:
-            TR = 3.5
-        elif 'Shanghai-SMCH' in site:
-            TR = 3
-        elif 'UCLA' in site:
-            TR = 2
-        elif 'Vancouver-BCCHR' in site:
-            TR = 2
-        elif 'Yale-Gruner' in site:
-            TR = 2
-        else:
-            raise ValueError(f"Site '{site}' does not have a defined TR value in TR_mappings. Please add it.")
-
+        TR = repetition_time(site)
+ 
         if self.lorentzian:  # Lorentzian-based frequence filtering
             ### DEBUG STATEMENT ###
             try: 
@@ -390,13 +245,6 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 if self.fmri_dividing_type == 'three_channels':  # optional multi-fractal function fitting
                     # initial parameter setting
                     p1 = [2, 1, 23, 25, 0.16]
-
-                    ### DEBUGGING ####
-                    # print(f"xdata shape: {xdata.shape}, ydata shape: {ydata.shape}, knee: {knee}")
-                    #print(f"xdata[knee:]: {xdata[knee:]}")
-                    #print(f"ydata[knee:]: {ydata[knee:]}")
-                    #print(f"Raw data: {ydata}")
-                    ##################
 
                     # fitting multifractal function
                     popt_mo, pcov = curve_fit(multi_fractal_function, xdata[knee:], ydata[knee:], p0=p1, maxfev = 50000)   # fits a multi-fractal model to the high-frequency range (above the knee)
@@ -554,9 +402,6 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
 
             if self.fmri_dividing_type == 'four_channels':
 
-                # nyquist_freq = 1/(2*TR)
-                print(f"Site: {site}, TR: {TR}")
-
                 # average the time series across ROIs
                 sample_whole = np.zeros(ts_length,)
                 intermediate_vec = y.shape[0]
@@ -569,7 +414,7 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 # VMD setting
                 f = sample_whole
                 f = (f - np.mean(f)) / np.std(f)  # z-score normalization
-                K = 4             # 3 modes
+                K = 4             # number of modes modes
                 DC = 0             # no DC part imposed
                 init = 0           # initialize omegas uniformly
                 tol = 1e-7        # convergence tolerance
@@ -579,103 +424,105 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 # VMD
                 u, _, _ = VMD(f, alpha, tau, K, DC, init, tol)
 
-
-                def compute_imf_bandwidths(u, fs, threshold=0.05):
-                    """
-                    Compute the bandwidths of IMFs using the Fourier spectrum directly from VMD output.
-                    
-                    This version correctly extracts frequency bounds in Hz, avoiding the issue of 
-                    symmetric zero-centered results.
-                    
-                    Parameters:
-                    u (ndarray): IMFs (shape: K x N, where K is the number of IMFs, N is the time samples).
-                    fs (float): Sampling frequency of the time series (Hz).
-                    threshold (float): Power threshold for frequency support (default 1% of max power).
-
-                    Returns:
-                    dict: Band cutoffs in Hz as { 'imf1_lb': ..., 'imf1_hb': ..., ... }
-                    """
-                    K, N = u.shape  # Number of IMFs and time samples
-                    f_N = fs / 2  # Nyquist frequency
-                    freqs = np.fft.fftfreq(N, d=1/fs)  # Compute frequencies WITHOUT shifting
-                    positive_freqs = freqs[:N//2]  # Keep only positive frequencies
-                    band_cutoffs = {}
-
-                    for k in range(K):
-                        # Compute the Fourier Transform of the IMF
-                        U_k = np.fft.fft(u[k, :])
-                        power_spectrum = np.abs(U_k) ** 2
-
-                        # Normalize power and apply threshold
-                        power_threshold = threshold * np.max(power_spectrum)
-                        
-                        # Extract frequency support only from the positive range
-                        freq_support = positive_freqs[power_spectrum[:N//2] > power_threshold]
-
-                        if len(freq_support) > 0:
-                            f_min = np.min(freq_support)  # Minimum frequency with significant power
-                            f_max = np.max(freq_support)  # Maximum frequency with significant power
-                        else:
-                            f_min, f_max = 0, 0  # In case no significant power is detected
-
-                        # Store the frequency cutoffs
-                        band_cutoffs[f'imf{k+1}_lb'] = max(0, f_min)  # Ensure non-negative frequencies
-                        band_cutoffs[f'imf{k+1}_hb'] = min(f_N, f_max)  # Ensure does not exceed Nyquist
-
-                        # Print results
-                        # print(f"IMF {k+1}: Bandwidth = {f_max - f_min:.4f} Hz (Lower: {f_min:.4f} Hz, Upper: {f_max:.4f} Hz)")
-
-                    return band_cutoffs
-
-
                 band_cutoffs = compute_imf_bandwidths(u, 1/TR)
-                print(band_cutoffs)
+                
+                if band_cutoffs['imf4_lb'] > band_cutoffs['imf4_hb']:
+                    raise ValueError(f"band_cutoffs['imf4_lb'] {band_cutoffs['imf4_lb']} is larger than band_cutoffs['imf4_hb'] {band_cutoffs['imf4_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf4_lb'] == band_cutoffs['imf4_hb']:
+                    imf1 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf1 = bandpass_filter_2d(y, band_cutoffs['imf4_lb'], band_cutoffs['imf4_hb'], 1/TR)
+                    imf1 = stats.zscore(imf1, axis=1)
 
-                from scipy.signal import butter, filtfilt
+                if band_cutoffs['imf3_lb'] > band_cutoffs['imf3_hb']:
+                    raise ValueError(f"band_cutoffs['imf3_lb'] {band_cutoffs['imf3_lb']} is larger than band_cutoffs['imf3_hb'] {band_cutoffs['imf3_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf3_lb'] == band_cutoffs['imf3_hb']:
+                    imf2 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf2 = bandpass_filter_2d(y, band_cutoffs['imf3_lb'], band_cutoffs['imf3_hb'], 1/TR)
+                    imf2 = stats.zscore(imf2, axis=1)
 
-                def bandpass_filter_2d(data, lowcut, highcut, fs, order=4):
-                    """
-                    Applies a Butterworth bandpass filter to each ROI in a 2D time-series dataset.
-                    
-                    Parameters:
-                    - data: numpy array of shape (#ROIs, #timepoints), where each row is a time series for one ROI.
-                    - lowcut: Lower cutoff frequency (Hz).
-                    - highcut: Upper cutoff frequency (Hz).
-                    - fs: Sampling frequency (Hz) = 1 / TR.
-                    - order: Order of the Butterworth filter (default = 4).
+                if band_cutoffs['imf2_lb'] > band_cutoffs['imf2_hb']:
+                    raise ValueError(f"band_cutoffs['imf2_lb'] {band_cutoffs['imf2_lb']} is larger than band_cutoffs['imf2_hb'] {band_cutoffs['imf2_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf2_lb'] == band_cutoffs['imf2_hb']:
+                    imf3 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf3 = bandpass_filter_2d(y, band_cutoffs['imf2_lb'], band_cutoffs['imf2_hb'], 1/TR)
+                    imf3 = stats.zscore(imf3, axis=1)
 
-                    Returns:
-                    - filtered_data: numpy array of the same shape as 'data' with filtered time series.
-                    """
-                    nyquist = 0.5 * fs  # Nyquist frequency
-                    low = lowcut / nyquist
-                    high = highcut / nyquist
+                if band_cutoffs['imf1_lb'] > band_cutoffs['imf1_hb']:
+                    raise ValueError(f"band_cutoffs['imf1_lb'] {band_cutoffs['imf1_lb']} is larger than band_cutoffs['imf1_hb'] {band_cutoffs['imf1_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf1_lb'] == band_cutoffs['imf1_hb']:
+                    imf4 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf4 = bandpass_filter_2d(y, band_cutoffs['imf1_lb'], band_cutoffs['imf1_hb'], 1/TR)
+                    imf4 = stats.zscore(imf4, axis=1)
 
-                    # Design Butterworth bandpass filter
-                    b, a = butter(order, [low, high], btype='band')
+                """
+                VMD for each subject
+                """
+                # # average the time series across ROIs
+                # sample_whole = np.zeros(ts_length,)
+                # intermediate_vec = y.shape[0]
 
-                    # Apply filter to each ROI (row-wise)
-                    filtered_data = np.array([filtfilt(b, a, roi_signal) for roi_signal in data])
+                # for i in range(intermediate_vec):
+                #     sample_whole+=y[i]
 
-                    return filtered_data
+                # sample_whole /= intermediate_vec 
 
+                # # VMD setting
+                # f = sample_whole
+                # f = (f - np.mean(f)) / np.std(f)  # z-score normalization
+                # K = 4             # number of modes modes
+                # DC = 0             # no DC part imposed
+                # init = 0           # initialize omegas uniformly
+                # tol = 1e-7        # convergence tolerance
+                # alpha = 100
+                # tau = 3.5
 
-                imf1 = bandpass_filter_2d(y, band_cutoffs['imf4_lb'], band_cutoffs['imf4_hb'], 1/TR)
-                imf1 = stats.zscore(imf1, axis=1)
+                # # VMD
+                # u, _, omega = VMD(f, alpha, tau, K, DC, init, tol)
 
-                imf2 = bandpass_filter_2d(y, band_cutoffs['imf3_lb'], band_cutoffs['imf3_hb'], 1/TR)
-                imf2 = stats.zscore(imf2, axis=1)
+                # band_cutoffs = compute_imf_bandwidths(u, 1/TR)
+                
+                # if band_cutoffs['imf4_lb'] > band_cutoffs['imf4_hb']:
+                #     raise ValueError(f"band_cutoffs['imf4_lb'] {band_cutoffs['imf4_lb']} is larger than band_cutoffs['imf4_hb'] {band_cutoffs['imf4_hb']} for subject {subj_name}")
+                # elif band_cutoffs['imf4_lb'] == band_cutoffs['imf4_hb']:
+                #     imf1 = np.zeros((y.shape[0], y.shape[1]))
+                # else:
+                #     imf1 = bandpass_filter_2d(y, band_cutoffs['imf4_lb'], band_cutoffs['imf4_hb'], 1/TR)
+                #     imf1 = stats.zscore(imf1, axis=1)
 
-                imf3 = bandpass_filter_2d(y, band_cutoffs['imf2_lb'], band_cutoffs['imf2_hb'], 1/TR)
-                imf3 = stats.zscore(imf3, axis=1)
+                # if band_cutoffs['imf3_lb'] > band_cutoffs['imf3_hb']:
+                #     raise ValueError(f"band_cutoffs['imf3_lb'] {band_cutoffs['imf3_lb']} is larger than band_cutoffs['imf3_hb'] {band_cutoffs['imf3_hb']} for subject {subj_name}")
+                # elif band_cutoffs['imf3_lb'] == band_cutoffs['imf3_hb']:
+                #     imf2 = np.zeros((y.shape[0], y.shape[1]))
+                # else:
+                #     imf2 = bandpass_filter_2d(y, band_cutoffs['imf3_lb'], band_cutoffs['imf3_hb'], 1/TR)
+                #     imf2 = stats.zscore(imf2, axis=1)
 
-                imf4 = bandpass_filter_2d(y, band_cutoffs['imf1_lb'], band_cutoffs['imf1_hb'], 1/TR)
-                imf4 = stats.zscore(imf4, axis=1)
+                # if band_cutoffs['imf2_lb'] > band_cutoffs['imf2_hb']:
+                #     raise ValueError(f"band_cutoffs['imf2_lb'] {band_cutoffs['imf2_lb']} is larger than band_cutoffs['imf2_hb'] {band_cutoffs['imf2_hb']} for subject {subj_name}")
+                # elif band_cutoffs['imf2_lb'] == band_cutoffs['imf2_hb']:
+                #     imf3 = np.zeros((y.shape[0], y.shape[1]))
+                # else:
+                #     imf3 = bandpass_filter_2d(y, band_cutoffs['imf2_lb'], band_cutoffs['imf2_hb'], 1/TR)
+                #     imf3 = stats.zscore(imf3, axis=1)
+
+                # if band_cutoffs['imf1_lb'] > band_cutoffs['imf1_hb']:
+                #     raise ValueError(f"band_cutoffs['imf1_lb'] {band_cutoffs['imf1_lb']} is larger than band_cutoffs['imf1_hb'] {band_cutoffs['imf1_hb']} for subject {subj_name}")
+                # elif band_cutoffs['imf1_lb'] == band_cutoffs['imf1_hb']:
+                #     imf4 = np.zeros((y.shape[0], y.shape[1]))
+                # else:
+                #     imf4 = bandpass_filter_2d(y, band_cutoffs['imf1_lb'], band_cutoffs['imf1_hb'], 1/TR)
+                #     imf4 = stats.zscore(imf4, axis=1)
 
 
                 """
                 VMD with fixed cutoffs
                 """
+                # nyquist_freq = 1/(2*TR)
+
                 # # IMF1
                 # if nyquist_freq > 0.185:
                 #     lower_bound = 0.185
@@ -748,14 +595,23 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 #     imf4[roi, :] = u[3, :]
 
                 # DO PADDING ALWAYS
-                imf1 = F.pad(torch.from_numpy(imf1), (pad//2, pad//2), "constant", 0).T.float()
-                imf2 = F.pad(torch.from_numpy(imf2), (pad//2, pad//2), "constant", 0).T.float()
-                imf3 = F.pad(torch.from_numpy(imf3), (pad//2, pad//2), "constant", 0).T.float()
-                imf4 = F.pad(torch.from_numpy(imf4), (pad//2, pad//2), "constant", 0).T.float()
+                # imf1 = F.pad(torch.from_numpy(imf1), (pad//2, pad//2), "constant", 0).T.float()
+                # imf2 = F.pad(torch.from_numpy(imf2), (pad//2, pad//2), "constant", 0).T.float()
+                # imf3 = F.pad(torch.from_numpy(imf3), (pad//2, pad//2), "constant", 0).T.float()
+                # imf4 = F.pad(torch.from_numpy(imf4), (pad//2, pad//2), "constant", 0).T.float()
+                imf1 = F.pad(torch.from_numpy(imf1), (0, pad), "constant", 0).T.float()
+                imf2 = F.pad(torch.from_numpy(imf2), (0, pad), "constant", 0).T.float()
+                imf3 = F.pad(torch.from_numpy(imf3), (0, pad), "constant", 0).T.float()
+                imf4 = F.pad(torch.from_numpy(imf4), (0, pad), "constant", 0).T.float()
+
+                if self.sequence_length > ts_length:
+                    mask = (imf1 != 0).float()  # Create mask where 1 means valid and 0 means padding
+                else:
+                    mask = torch.ones(self.sequence_length, intermediate_vec)
                     
                 ans_dict= {'fmri_imf1_sequence':imf1, 'fmri_imf2_sequence':imf2,
                            'fmri_imf3_sequence':imf3, 'fmri_imf4_sequence':imf4,
-                           'subject':subj, 'subject_name':subj_name, self.target:target}
+                           'subject':subj, 'subject_name':subj_name, self.target:target, 'mask':mask}
 
 
             elif self.fmri_dividing_type == 'three_channels':

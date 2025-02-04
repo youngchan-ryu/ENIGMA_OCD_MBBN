@@ -151,114 +151,121 @@ class DataHandler():  # primary class for dataset management (initialization, pr
 
                     
                 ##### ADDED #####
-                if 'Amsterdam-AMC' in site:
-                    TR = 2.375
-                elif 'Amsterdam-VUmc' in site:
-                    TR = 1.8
-                elif 'Barcelona-HCPB' in site:
-                    TR = 2
-                elif 'Bergen' in site:
-                    TR = 1.8
-                elif 'Braga-UMinho-Braga-1.5T' in site:
-                    TR = 2
-                elif 'Braga-UMinho-Braga-1.5T-act' in site:
-                    TR = 2
-                elif 'Braga-UMinho-Braga-3T' in site:
-                    TR = 1
-                elif 'Brazil' in site:
-                    TR = 2
-                elif 'Cape-Town-UCT-Allegra' in site:
-                    TR = 1.6
-                elif 'Cape-Town-UCT-Skyra' in site:
-                    TR = 1.73
-                elif 'Chiba-CHB' in site:
-                    TR = 2.3
-                elif 'Chiba-CHBC' in site:
-                    TR = 2.3 
-                elif 'Chiba-CHBSRPB' in site:
-                    TR = 2.5 
-                elif 'Dresden' in site:
-                    TR = 0.8 
-                elif 'Kyoto-KPU-Kyoto1.5T' in site:
-                    TR = 2.411 
-                elif 'Kyoto-KPU-Kyoto3T' in site:
-                    TR = 2
-                elif 'Kyushu' in site:
-                    TR = 2.5
-                elif 'Milan-HSR' in site:
-                    TR = 2
-                elif 'New-York' in site:
-                    TR = 1
-                elif 'NYSPI-Columbia-Adults' in site:
-                    TR = 0.85
-                elif 'NYSPI-Columbia-Pediatric' in site:
-                    TR = 0.85
-                elif 'Yale-Pittinger-HCP-Prisma' in site:
-                    TR = 0.8
-                elif 'Yale-Pittinger-HCP-Trio' in site:
-                    TR = 0.7
-                elif 'Yale-Pittinger-Yale-2014' in site:
-                    TR = 2
-                elif 'Bangalore-NIMHANS' in site:
-                    TR = 2 
-                elif 'Barcelone-Bellvitge-ANTIGA-1.5T' in site:
-                    TR = 2
-                elif 'Barcelone-Bellvitge-COMPULSE-3T' in site:
-                    TR = 2
-                elif 'Barcelone-Bellvitge-PROV-1.5T' in site:
-                    TR = 2
-                elif 'Barcelone-Bellvitge-RESP-CBT-3T' in site:
-                    TR = 2
-                elif 'Seoul-SNU' in site:
-                    TR = 3.5
-                elif 'Shanghai-SMCH' in site:
-                    TR = 3
-                elif 'UCLA' in site:
-                    TR = 2
-                elif 'Vancouver-BCCHR' in site:
-                    TR = 2
-                elif 'Yale-Gruner' in site:
-                    TR = 2
-                else:
-                    raise ValueError(f"Site '{site}' does not have a defined TR value in TR_mappings. Please add it.")
+                # if 'Amsterdam-AMC' in site:
+                #     TR = 2.375
+                # elif 'Amsterdam-VUmc' in site:
+                #     TR = 1.8
+                # elif 'Barcelona-HCPB' in site:
+                #     TR = 2
+                # elif 'Bergen' in site:
+                #     TR = 1.8
+                # elif 'Braga-UMinho-Braga-1.5T' in site:
+                #     TR = 2
+                # elif 'Braga-UMinho-Braga-1.5T-act' in site:
+                #     TR = 2
+                # elif 'Braga-UMinho-Braga-3T' in site:
+                #     TR = 1
+                # elif 'Brazil' in site:
+                #     TR = 2
+                # elif 'Cape-Town-UCT-Allegra' in site:
+                #     TR = 1.6
+                # elif 'Cape-Town-UCT-Skyra' in site:
+                #     TR = 1.73
+                # elif 'Chiba-CHB' in site:
+                #     TR = 2.3
+                # elif 'Chiba-CHBC' in site:
+                #     TR = 2.3 
+                # elif 'Chiba-CHBSRPB' in site:
+                #     TR = 2.5 
+                # elif 'Dresden' in site:
+                #     TR = 0.8 
+                # elif 'Kyoto-KPU-Kyoto1.5T' in site:
+                #     TR = 2.411 
+                # elif 'Kyoto-KPU-Kyoto3T' in site:
+                #     TR = 2
+                # elif 'Kyushu' in site:
+                #     TR = 2.5
+                # elif 'Milan-HSR' in site:
+                #     TR = 2
+                # elif 'New-York' in site:
+                #     TR = 1
+                # elif 'NYSPI-Columbia-Adults' in site:
+                #     TR = 0.85
+                # elif 'NYSPI-Columbia-Pediatric' in site:
+                #     TR = 0.85
+                # elif 'Yale-Pittinger-HCP-Prisma' in site:
+                #     TR = 0.8
+                # elif 'Yale-Pittinger-HCP-Trio' in site:
+                #     TR = 0.7
+                # elif 'Yale-Pittinger-Yale-2014' in site:
+                #     TR = 2
+                # elif 'Bangalore-NIMHANS' in site:
+                #     TR = 2 
+                # elif 'Barcelone-Bellvitge-ANTIGA-1.5T' in site:
+                #     TR = 2
+                # elif 'Barcelone-Bellvitge-COMPULSE-3T' in site:
+                #     TR = 2
+                # elif 'Barcelone-Bellvitge-PROV-1.5T' in site:
+                #     TR = 2
+                # elif 'Barcelone-Bellvitge-RESP-CBT-3T' in site:
+                #     TR = 2
+                # elif 'Seoul-SNU' in site:
+                #     TR = 3.5
+                # elif 'Shanghai-SMCH' in site:
+                #     TR = 3
+                # elif 'UCLA' in site:
+                #     TR = 2
+                # elif 'Vancouver-BCCHR' in site:
+                #     TR = 2
+                # elif 'Yale-Gruner' in site:
+                #     TR = 2
+                # else:
+                #     raise ValueError(f"Site '{site}' does not have a defined TR value in TR_mappings. Please add it.")
                 
-                if file.shape[1] >= self.seq_len:
-                    sample_whole = np.zeros(self.seq_len,) # originally self.sequence_length   ## aggregates time-series data across ROIs
+                # if file.shape[1] >= self.seq_len:
+                #     sample_whole = np.zeros(self.seq_len,) # originally self.sequence_length   ## aggregates time-series data across ROIs
 
-                    for l in range(self.intermediate_vec):
-                        sample_whole+=file[l]
+                #     for l in range(self.intermediate_vec):
+                #         sample_whole+=file[l]
                         
-                    sample_whole /= self.intermediate_vec    # averages the time-series signals (y) across a set number of ROIs
+                #     sample_whole /= self.intermediate_vec    # averages the time-series signals (y) across a set number of ROIs
 
-                    T = TimeSeries(sample_whole, sampling_interval=TR)  # computes power spectral density (PSD) of the averaged time-series signal
-                    S_original = SpectralAnalyzer(T)
+                #     T = TimeSeries(sample_whole, sampling_interval=TR)  # computes power spectral density (PSD) of the averaged time-series signal
+                #     S_original = SpectralAnalyzer(T)
 
-                    # Lorentzian function fitting (dividing ultralow ~ low)  ## extracts the PSD data
-                    xdata = np.array(S_original.spectrum_fourier[0][1:])  # xdata = frequency values  
-                    ydata = np.abs(S_original.spectrum_fourier[1][1:])    # ydata = corresponding power values
+                #     # Lorentzian function fitting (dividing ultralow ~ low)  ## extracts the PSD data
+                #     xdata = np.array(S_original.spectrum_fourier[0][1:])  # xdata = frequency values  
+                #     ydata = np.abs(S_original.spectrum_fourier[1][1:])    # ydata = corresponding power values
 
-                    # initial parameter setting
-                    p0 = [0, 0.006]   
-                    param_bounds = ([-np.inf, 0], [np.inf, 1])
+                #     # initial parameter setting
+                #     p0 = [0, 0.006]   
+                #     param_bounds = ([-np.inf, 0], [np.inf, 1])
 
-                    # fitting Lorentzian function
-                    popt, pcov = curve_fit(lorentzian_function, xdata, ydata, p0=p0, maxfev = 5000, bounds=param_bounds)   # popt = optimal parameters
-                    f1 = popt[1]
-                    knee = round(popt[1]/(1/(sample_whole.shape[0]*TR)))   # calculates knee frequency
+                #     # fitting Lorentzian function
+                #     popt, pcov = curve_fit(lorentzian_function, xdata, ydata, p0=p0, maxfev = 5000, bounds=param_bounds)   # popt = optimal parameters
+                #     f1 = popt[1]
+                #     knee = round(popt[1]/(1/(sample_whole.shape[0]*TR)))   # calculates knee frequency
                     
-                    # Vanilla BERT does not require frequency band division
-                    if self.step == 1:
-                        valid_sub.append(i)
-                    elif self.fmri_dividing_type == 'four_channels':
-                        valid_sub.append(i)
-                    else:
-                        if knee < xdata.shape[0] and knee < ydata.shape[0]:
-                            valid_sub.append(i)
+                #     # Vanilla BERT does not require frequency band division
+                #     if self.step == 1:
+                #         valid_sub.append(i)
+                #     elif self.fmri_dividing_type == 'four_channels':
+                #         valid_sub.append(i)
+                #     else:
+                #         if knee < xdata.shape[0] and knee < ydata.shape[0]:
+                #             valid_sub.append(i)
 
-                for j in range(file.shape[0]):  # checks for zero ROIs
-                    if np.sum(file[j]) == 0:  # if all time points for a specific ROI are zero, the subject ID is added to the problematic subject list
-                        prob_sub.append(i)
+                # for j in range(file.shape[0]):  # checks for zero ROIs
+                #     if np.sum(file[j]) == 0:  # if all time points for a specific ROI are zero, the subject ID is added to the problematic subject list
+                #         prob_sub.append(i)
                 #################
+
+                """
+                Sequence length padding experiment
+                """    
+                valid_sub.append(i)
+                """
+                """
                
             valid_sub = list(set(valid_sub) - set(prob_sub))  # removes problematic subjects
             print(f"Number of subjects used for training: {len(valid_sub)}")

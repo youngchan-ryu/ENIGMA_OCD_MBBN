@@ -1,2 +1,5 @@
-MBBN_main/experiments
+MBBN-main/mbbn
 MBBN-main/experiments
+MBBN-main/wandb
+MBBN-main/runs
+ENIGMA-OCD results/QC/carpet_plots
