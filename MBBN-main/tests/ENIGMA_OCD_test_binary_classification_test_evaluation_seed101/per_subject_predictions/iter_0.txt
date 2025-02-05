@@ -6,3 +6,473 @@ subject:2 (test)
 outputs: 0.5383±0.1631  -  truth: 0.0
 subject:2 (test)
 outputs: 0.5383±0.1631  -  truth: 0.0
+subject:2 (test)
+outputs: 0.5383±0.1631  -  truth: 0.0
+subject:43 (test)
+outputs: 0.5083±0.2058  -  truth: 0.0
+subject:2 (test)
+outputs: 0.5383±0.1631  -  truth: 0.0
+subject:43 (test)
+outputs: 0.5083±0.2058  -  truth: 0.0
+subject:2 (test)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (test)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (test)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (test)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (test)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (test)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (test)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (test)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (test)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (test)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (test)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (test)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (test)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (test)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (test)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (test)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (test)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (test)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (test)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (test)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (test)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (test)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (test)
+outputs: 0.4907±0.1115  -  truth: 1.0
+subject:2 (test)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (test)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (test)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (test)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (test)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (test)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (test)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (test)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (test)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (test)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (test)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (test)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (test)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (test)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (test)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (test)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (test)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (test)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (test)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (test)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (test)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (test)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (test)
+outputs: 0.4907±0.1115  -  truth: 1.0
+subject:2 (UQ-mcdropout)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:2 (UQ-mcdropout)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (UQ-mcdropout)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (UQ-mcdropout)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (UQ-mcdropout)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (UQ-mcdropout)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (UQ-mcdropout)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (UQ-mcdropout)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (UQ-mcdropout)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (UQ-mcdropout)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (UQ-mcdropout)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (UQ-mcdropout)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (UQ-mcdropout)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (UQ-mcdropout)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (UQ-mcdropout)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (UQ-mcdropout)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (UQ-mcdropout)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (UQ-mcdropout)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (UQ-mcdropout)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (UQ-mcdropout)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (UQ-mcdropout)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (UQ-mcdropout)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (UQ-mcdropout)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (UQ-mcdropout)
+outputs: 0.4907±0.1115  -  truth: 1.0
+subject:2 (UQ-mcdropout)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (UQ-mcdropout)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (UQ-mcdropout)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (UQ-mcdropout)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (UQ-mcdropout)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (UQ-mcdropout)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (UQ-mcdropout)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (UQ-mcdropout)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (UQ-mcdropout)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (UQ-mcdropout)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (UQ-mcdropout)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (UQ-mcdropout)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (UQ-mcdropout)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (UQ-mcdropout)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (UQ-mcdropout)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (UQ-mcdropout)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (UQ-mcdropout)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (UQ-mcdropout)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (UQ-mcdropout)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (UQ-mcdropout)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (UQ-mcdropout)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (UQ-mcdropout)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (UQ-mcdropout)
+outputs: 0.4907±0.1115  -  truth: 1.0
+subject:2 (UQ-mcdropout)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (UQ-mcdropout)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (UQ-mcdropout)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (UQ-mcdropout)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (UQ-mcdropout)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (UQ-mcdropout)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (UQ-mcdropout)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (UQ-mcdropout)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (UQ-mcdropout)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (UQ-mcdropout)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (UQ-mcdropout)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (UQ-mcdropout)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (UQ-mcdropout)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (UQ-mcdropout)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (UQ-mcdropout)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (UQ-mcdropout)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (UQ-mcdropout)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (UQ-mcdropout)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (UQ-mcdropout)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (UQ-mcdropout)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (UQ-mcdropout)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (UQ-mcdropout)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (UQ-mcdropout)
+outputs: 0.4907±0.1115  -  truth: 1.0
+subject:2 (UQ-mcdropout)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (UQ-mcdropout)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (UQ-mcdropout)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (UQ-mcdropout)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (UQ-mcdropout)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (UQ-mcdropout)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (UQ-mcdropout)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (UQ-mcdropout)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (UQ-mcdropout)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (UQ-mcdropout)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (UQ-mcdropout)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (UQ-mcdropout)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (UQ-mcdropout)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (UQ-mcdropout)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (UQ-mcdropout)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (UQ-mcdropout)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (UQ-mcdropout)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (UQ-mcdropout)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (UQ-mcdropout)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (UQ-mcdropout)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (UQ-mcdropout)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (UQ-mcdropout)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (UQ-mcdropout)
+outputs: 0.4907±0.1115  -  truth: 1.0
+subject:2 (UQ-mcdropout)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (UQ-mcdropout)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (UQ-mcdropout)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (UQ-mcdropout)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (UQ-mcdropout)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (UQ-mcdropout)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (UQ-mcdropout)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (UQ-mcdropout)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (UQ-mcdropout)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (UQ-mcdropout)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (UQ-mcdropout)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (UQ-mcdropout)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (UQ-mcdropout)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (UQ-mcdropout)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (UQ-mcdropout)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (UQ-mcdropout)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (UQ-mcdropout)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (UQ-mcdropout)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (UQ-mcdropout)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (UQ-mcdropout)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (UQ-mcdropout)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (UQ-mcdropout)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (UQ-mcdropout)
+outputs: 0.4907±0.1115  -  truth: 1.0
+subject:2 (UQ-mcdropout)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (UQ-mcdropout)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (UQ-mcdropout)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (UQ-mcdropout)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (UQ-mcdropout)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (UQ-mcdropout)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (UQ-mcdropout)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (UQ-mcdropout)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (UQ-mcdropout)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (UQ-mcdropout)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (UQ-mcdropout)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (UQ-mcdropout)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (UQ-mcdropout)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (UQ-mcdropout)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (UQ-mcdropout)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (UQ-mcdropout)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (UQ-mcdropout)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (UQ-mcdropout)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (UQ-mcdropout)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (UQ-mcdropout)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (UQ-mcdropout)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (UQ-mcdropout)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (UQ-mcdropout)
+outputs: 0.4907±0.1115  -  truth: 1.0
+subject:2 (UQ-mcdropout)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (UQ-mcdropout)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (UQ-mcdropout)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (UQ-mcdropout)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (UQ-mcdropout)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (UQ-mcdropout)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (UQ-mcdropout)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (UQ-mcdropout)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (UQ-mcdropout)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (UQ-mcdropout)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (UQ-mcdropout)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (UQ-mcdropout)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (UQ-mcdropout)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (UQ-mcdropout)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (UQ-mcdropout)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (UQ-mcdropout)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (UQ-mcdropout)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (UQ-mcdropout)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (UQ-mcdropout)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (UQ-mcdropout)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (UQ-mcdropout)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (UQ-mcdropout)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (UQ-mcdropout)
+outputs: 0.4907±0.1115  -  truth: 1.0
+subject:2 (UQ-mcdropout)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (UQ-mcdropout)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (UQ-mcdropout)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (UQ-mcdropout)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (UQ-mcdropout)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (UQ-mcdropout)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (UQ-mcdropout)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (UQ-mcdropout)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (UQ-mcdropout)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (UQ-mcdropout)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (UQ-mcdropout)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (UQ-mcdropout)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (UQ-mcdropout)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (UQ-mcdropout)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (UQ-mcdropout)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (UQ-mcdropout)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (UQ-mcdropout)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (UQ-mcdropout)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (UQ-mcdropout)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (UQ-mcdropout)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (UQ-mcdropout)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (UQ-mcdropout)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (UQ-mcdropout)
+outputs: 0.4907±0.1115  -  truth: 1.0

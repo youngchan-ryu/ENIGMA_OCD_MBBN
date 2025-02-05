@@ -1,0 +1,511 @@
+Namespace(exp_name='test_evaluation_seed101', dataset_name='ENIGMA_OCD', fmri_type='divided_timeseries', intermediate_vec=316, abcd_path='/scratch/connectome/stellasybae/ABCD_ROI/7.ROI', ukb_path='/scratch/connectome/stellasybae/UKB_ROI', abide_path='/scratch/connectome/stellasybae/ABIDE_ROI', enigma_path='/scratch/connectome/ycryu/MBBN_data_mini', base_path='/scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main', step='4', target='OCD', fine_tune_task='binary_classification', seed=101, visualization=False, prepare_visualization=False, weightwatcher=False, weightwatcher_save_dir=None, norm_axis=1, cuda=True, log_dir='/scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/runs', transformer_hidden_layers=8, world_size=-1, rank=-1, local_rank=-1, dist_backend='nccl', init_method='file', distributed='False', amp=True, gradient_clipping=False, clip_max_norm=1.0, accumulation_steps=1, profiling=False, wandb_key='d0330ca06936eecd637c3470c47af6d33e1cb277', wandb_mode='disabled', wandb_entity='youngchanryu-seoul-national-university', wandb_project='enigma-ocd_mbbn', filtering_type='Boxcar', use_high_freq=True, divide_by_lorentzian=True, use_raw_knee=True, seq_part='head', fmri_dividing_type='three_channels', transformer_dropout_rate=0.3, num_heads=4, attn_mask=True, pretrained_model_weights_path=None, finetune=False, finetune_test=False, spatiotemporal=True, spat_diff_loss_type='minus_log', spatial_loss_factor=4.0, ablation=None, task_phase1='vanilla_BERT', batch_size_phase1=8, validation_frequency_phase1=10000000, nEpochs_phase1=2, optim_phase1='AdamW', weight_decay_phase1=0.01, lr_policy_phase1='SGDR', lr_init_phase1=0.001, lr_gamma_phase1=0.97, lr_step_phase1=3000, lr_warmup_phase1=500, sequence_length_phase1=300, workers_phase1=1, num_heads_2DBert=12, task_phase2='MBBN', batch_size_phase2=8, nEpochs_phase2=100, optim_phase2='AdamW', weight_decay_phase2=0.01, lr_policy_phase2='SGDR', lr_init_phase2=0.001, lr_gamma_phase2=0.97, lr_step_phase2=3000, lr_warmup_phase2=500, sequence_length_phase2=300, workers_phase2=1, task_phase3='MBBN_pretraining', batch_size_phase3=8, validation_frequency_phase3=10000000, nEpochs_phase3=1000, optim_phase3='AdamW', weight_decay_phase3=0.01, lr_policy_phase3='SGDR', lr_init_phase3=0.001, lr_gamma_phase3=0.97, lr_step_phase3=3000, lr_warmup_phase3=500, sequence_length_phase3=300, workers_phase3=1, use_recon_loss=False, use_mask_loss=False, use_cont_loss=False, masking_rate=0.1, masking_method='spatiotemporal', temporal_masking_type='time_window', temporal_masking_window_size=20, window_interval_rate=2, spatial_masking_type='random_ROIs', communicability_option='remove_high_comm_node', num_hub_ROIs=5, num_random_ROIs=5, spatiotemporal_masking_type='whole', task_phase4='test', model_weights_path_phase4=None, batch_size_phase4=4, nEpochs_phase4=1, optim_phase4='AdamW', weight_decay_phase4=0.01, lr_policy_phase4='SGDR', lr_init_phase4=0.0001, lr_gamma_phase4=0.9, lr_step_phase4=3000, lr_warmup_phase4=1, sequence_length_phase4=100, workers_phase4=1)
+Error processing subject Seoul-SNU_sub-NOR68SDS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO27LCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR55JJU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO05HSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR68SDS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO27LCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR55JJU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO05HSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+/scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/splits/ENIGMA_OCD/ENIGMA_OCD_OCD_ROI_316_seq_len_100_split101.txt
+loading splits
+length of train_idx: 74
+length of val_idx: 15
+length of test_idx: 23
+workers: 1
+length of training generator is: 18
+workers: 1
+length of valid generator is: 3
+workers: 1
+length of test generator is: 5
+Number of training batches: 18
+Number of validation batches: 3
+Number of test batches: 5
+self.task: test
+Number of heads: 4
+loading parameters onto new model...
+...
+last learning rate - 3e-05
+validation loss - 19.86556491336307
+validation AUROC - 0.6198630136986301val_threshold - 0.47936657071113586
+test
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+Failed to detect the name of this notebook, you can set it manually with the WANDB_NOTEBOOK_NAME environment variable to enable code saving.
+using binary_classification loss
+using spatial_difference loss
+test
+len(loader): 46
+subject_names: ['NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124']
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+...
+Enabling MC Dropout for layer Dropout(p=0.0, inplace=False) - p=0.0
+Enabling MC Dropout for layer Dropout(p=0.0, inplace=False) - p=0.0
+Enabling MC Dropout for layer Dropout(p=0.0, inplace=False) - p=0.0
+Enabling MC Dropout for layer Dropout(p=0.6, inplace=False) - p=0.6
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+  0%|          | 0/46 [00:00<?, ?it/s]
+Batch 1/46 class distribution: {0.0: 7, 1.0: 1}
+  4%|▍         | 2/46 [00:01<00:24,  1.77it/s]
+Batch 2/46 class distribution: {0.0: 1, 1.0: 7}
+  7%|▋         | 3/46 [00:01<00:19,  2.20it/s]
+Batch 3/46 class distribution: {0.0: 3, 1.0: 5}
+  9%|▊         | 4/46 [00:01<00:16,  2.51it/s]
+Batch 4/46 class distribution: {0.0: 6, 1.0: 2}
+ 11%|█         | 5/46 [00:02<00:15,  2.72it/s]
+Batch 5/46 class distribution: {0.0: 1, 1.0: 7}
+ 13%|█▎        | 6/46 [00:02<00:15,  2.61it/s]
+Batch 6/46 class distribution: {0.0: 4, 1.0: 4}
+ 15%|█▌        | 7/46 [00:02<00:14,  2.71it/s]
+Batch 7/46 class distribution: {0.0: 5, 1.0: 3}
+ 17%|█▋        | 8/46 [00:03<00:13,  2.79it/s]
+Batch 8/46 class distribution: {0.0: 2, 1.0: 6}
+ 20%|█▉        | 9/46 [00:03<00:12,  2.86it/s]
+Batch 9/46 class distribution: {0.0: 4, 1.0: 4}
+ 22%|██▏       | 10/46 [00:04<00:14,  2.55it/s]
+Batch 10/46 class distribution: {0.0: 5, 1.0: 3}
+ 24%|██▍       | 11/46 [00:04<00:13,  2.57it/s]
+Batch 11/46 class distribution: {0.0: 2, 1.0: 6}
+ 26%|██▌       | 12/46 [00:04<00:12,  2.63it/s]
+Batch 12/46 class distribution: {0.0: 4, 1.0: 4}
+ 28%|██▊       | 13/46 [00:05<00:13,  2.45it/s]
+Batch 13/46 class distribution: {0.0: 4, 1.0: 4}
+ 30%|███       | 14/46 [00:05<00:14,  2.26it/s]
+Batch 14/46 class distribution: {0.0: 2, 1.0: 6}
+ 33%|███▎      | 15/46 [00:06<00:16,  1.94it/s]
+Batch 15/46 class distribution: {0.0: 5, 1.0: 3}
+ 35%|███▍      | 16/46 [00:07<00:19,  1.55it/s]
+Batch 16/46 class distribution: {0.0: 3, 1.0: 5}
+ 37%|███▋      | 17/46 [00:08<00:19,  1.46it/s]
+Batch 17/46 class distribution: {0.0: 2, 1.0: 6}
+ 39%|███▉      | 18/46 [00:09<00:20,  1.39it/s]
+Batch 18/46 class distribution: {0.0: 6, 1.0: 2}
+ 41%|████▏     | 19/46 [00:09<00:19,  1.35it/s]
+Batch 19/46 class distribution: {0.0: 2, 1.0: 6}
+ 43%|████▎     | 20/46 [00:10<00:17,  1.52it/s]
+Batch 20/46 class distribution: {0.0: 2, 1.0: 6}
+ 46%|████▌     | 21/46 [00:10<00:14,  1.78it/s]
+Batch 21/46 class distribution: {0.0: 7, 1.0: 1}
+ 48%|████▊     | 22/46 [00:10<00:11,  2.00it/s]
+Batch 22/46 class distribution: {0.0: 1, 1.0: 7}
+ 50%|█████     | 23/46 [00:11<00:10,  2.22it/s]
+Batch 23/46 class distribution: {0.0: 2, 1.0: 6}
+ 52%|█████▏    | 24/46 [00:11<00:08,  2.45it/s]
+Batch 24/46 class distribution: {0.0: 7, 1.0: 1}
+ 54%|█████▍    | 25/46 [00:11<00:08,  2.62it/s]
+Batch 25/46 class distribution: {0.0: 1, 1.0: 7}
+ 57%|█████▋    | 26/46 [00:12<00:07,  2.75it/s]
+Batch 26/46 class distribution: {0.0: 3, 1.0: 5}
+ 59%|█████▊    | 27/46 [00:12<00:06,  2.87it/s]
+Batch 27/46 class distribution: {0.0: 6, 1.0: 2}
+ 61%|██████    | 28/46 [00:12<00:06,  2.95it/s]
+Batch 28/46 class distribution: {0.0: 1, 1.0: 7}
+ 63%|██████▎   | 29/46 [00:13<00:05,  2.99it/s]
+Batch 29/46 class distribution: {0.0: 4, 1.0: 4}
+ 65%|██████▌   | 30/46 [00:13<00:05,  3.04it/s]
+Batch 30/46 class distribution: {0.0: 5, 1.0: 3}
+ 67%|██████▋   | 31/46 [00:13<00:05,  2.97it/s]
+Batch 31/46 class distribution: {0.0: 2, 1.0: 6}
+ 70%|██████▉   | 32/46 [00:14<00:04,  2.95it/s]
+Batch 32/46 class distribution: {0.0: 4, 1.0: 4}
+ 72%|███████▏  | 33/46 [00:14<00:04,  2.91it/s]
+Batch 33/46 class distribution: {0.0: 5, 1.0: 3}
+ 74%|███████▍  | 34/46 [00:14<00:04,  2.92it/s]
+Batch 34/46 class distribution: {0.0: 2, 1.0: 6}
+ 76%|███████▌  | 35/46 [00:15<00:03,  2.93it/s]
+Batch 35/46 class distribution: {0.0: 4, 1.0: 4}
+ 78%|███████▊  | 36/46 [00:15<00:03,  2.93it/s]
+Batch 36/46 class distribution: {0.0: 4, 1.0: 4}
+ 80%|████████  | 37/46 [00:15<00:03,  2.91it/s]
+Batch 37/46 class distribution: {0.0: 2, 1.0: 6}
+ 83%|████████▎ | 38/46 [00:16<00:02,  2.89it/s]
+Batch 38/46 class distribution: {0.0: 5, 1.0: 3}
+ 85%|████████▍ | 39/46 [00:16<00:02,  2.85it/s]
+Batch 39/46 class distribution: {0.0: 3, 1.0: 5}
+ 87%|████████▋ | 40/46 [00:17<00:02,  2.87it/s]
+Batch 40/46 class distribution: {0.0: 2, 1.0: 6}
+ 89%|████████▉ | 41/46 [00:17<00:01,  2.89it/s]
+Batch 41/46 class distribution: {0.0: 6, 1.0: 2}
+ 91%|█████████▏| 42/46 [00:17<00:01,  2.74it/s]
+Batch 42/46 class distribution: {0.0: 2, 1.0: 6}
+ 93%|█████████▎| 43/46 [00:18<00:01,  2.76it/s]
+Batch 43/46 class distribution: {0.0: 2, 1.0: 6}
+ 96%|█████████▌| 44/46 [00:18<00:00,  2.87it/s]
+Batch 44/46 class distribution: {0.0: 7, 1.0: 1}
+ 98%|█████████▊| 45/46 [00:18<00:00,  2.92it/s]
+Batch 45/46 class distribution: {0.0: 1, 1.0: 7}
+100%|██████████| 46/46 [00:19<00:00,  2.41it/s]
+Batch 46/46 class distribution: {0.0: 2, 1.0: 6}
+
+torch.Size([368, 1])
+torch.Size([368, 4, 316, 316])
+torch.Size([368, 4, 316, 316])
+torch.Size([368, 4, 316, 316])
+tensor([[ 9.9219e-01],
+        [-1.0039e+00],
+        [-4.7534e-01],
+        [ 3.3203e-01],
+        [-3.3667e-01],
+        [ 5.9766e-01],
+        [-1.0273e+00],
+        [ 7.6172e-01],
+        [ 1.1660e+00],
+        [-3.6987e-01],
+        [-0.0000e+00],
+        [ 0.0000e+00],
+        [ 7.4951e-01],
+        [ 0.0000e+00],
+        [-7.9492e-01],
+        [ 8.8086e-01],
+        [ 9.6240e-01],
+        [-3.3472e-01],
+        [ 2.3352e-01],
+        [-3.2397e-01],
+        [ 8.3984e-01],
+        [-6.5918e-01],
+        [-0.0000e+00],
+        [ 0.0000e+00],
+        [-1.4111e+00],
+...
+        [ 1.1104e+00],
+        [ 2.9395e-01],
+        [ 1.5205e+00],
+        [-1.6094e+00],
+        [ 4.6094e-01]], device='cuda:0', dtype=torch.float16)
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+torch.Size([368, 100, 316])
+torch.Size([368, 100, 316])
+torch.Size([368, 100, 316])
+torch.Size([368])
+['NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124', 'NYSPI-Columbia-Adults_sub-simpaocd597000', 'Chiba-CHBSRPB_sub-SUA015', 'Yale-Pittinger-Yale-2014_sub-Yale2014AdultOCDtr8119', 'Bangalore-NIMHANS_sub-C0224', 'Yale-Pittinger-HCP-Trio_sub-YaleHCPTriopb2759', 'Chiba-CHBSRPB_sub-MADHC042', 'Barcelone-Bellvitge-ANTIGA-1.5T_sub-subIDIBELL15C030', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb3318', 'Dresden_sub-GEROME3027', 'Brazil_sub-P00309620161127', 'Chiba-CHBC_sub-HCC017', 'Braga-UMinho-Braga-1.5T_sub-MRI201507152OCD082', 'Yale-Pittinger-HCP-Prisma_sub-YaleHCPPrismapb4591', 'Dresden_sub-GEROME3043', 'Braga-UMinho-Braga-1.5T_sub-MRI201508212OCD093', 'Braga-UMinho-Braga-3T_sub-MRI201909031BART028', 'New-York_sub-subSEQ1NKISENR139', 'Chiba-CHBC_sub-HCC027', 'Chiba-CHBC_sub-HCC012', 'Yale-Gruner_sub-S2271VJF', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0111', 'Cape-Town-UCT-Skyra_sub-ESCO66', 'Kyoto-KPU-Kyoto1.5T_sub-subKyoto15Tsubj0124']
+torch.Size([368])
+tensor([0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 0.,
+        0., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 1.,
+        1., 1., 1., 1., 0., 0., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 1.,
+        1., 1., 0., 1., 1., 1., 1., 1., 1., 0., 0., 1., 1., 1., 1., 0., 0., 0.,
+        0., 0., 0., 0., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 0., 0., 1., 1.,
+        1., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 1., 1., 1., 1.,
+        1., 0., 0., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 0.,
+        1., 1., 1., 1., 1., 1., 0., 0., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0.,
+        0., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 0., 0., 1., 1., 1., 1., 0.,
+        0., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 0., 0.,
+        1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 1., 1.,
+        1., 1., 1., 0., 0., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1.,
+        1., 0., 1., 1., 1., 1., 1., 1., 0., 0., 1., 1., 1., 1., 0., 0., 0., 0.,
+        0., 0., 0., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 0., 0., 1., 1., 1.,
+        1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1.,
+        0., 0., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1.,
+        1., 1., 1., 1., 1., 0., 0., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0.,
+        1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 0., 0., 1., 1., 1., 1., 0., 0.,
+        0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 0., 0., 1.,
+        1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 1., 1., 1.,
+        1., 1., 0., 0., 1., 1., 1., 1.], device='cuda:0')
+{'2': {'score': tensor([ 0.9922,  0.0000,  0.0000,  1.6680,  0.0000,  0.0000,  0.0000,  2.5742,
+           0.0000,  2.2402,  2.4199,  1.1973,  1.3438,  1.3115, -0.3450,  0.9570],
+         dtype=torch.float16),
+  'mode': 'UQ-mcdropout',
+  'truth': tensor(0.),
+  'count': 16},
+ '5': {'score': tensor([-1.0039, -1.4111, -1.1074, -0.2532, -1.5244, -1.1592, -1.9561, -0.0000,
+          -0.0000, -0.0000, -1.2627, -0.8218, -0.1744, -1.3525, -1.1748, -0.8691],
+         dtype=torch.float16),
+  'mode': 'UQ-mcdropout',
+  'truth': tensor(0.),
+  'count': 16},
+ '9': {'score': tensor([-0.4753, -0.0674, -1.2627,  0.2605,  0.5649,  1.0625,  0.5142,  0.3035,
+          -0.0651,  0.1494,  0.0407, -0.6514, -0.3118,  0.0000, -0.7969, -0.2549],
+         dtype=torch.float16),
+  'mode': 'UQ-mcdropout',
+  'truth': tensor(0.),
+  'count': 16},
+ '11': {'score': tensor([ 0.3320, -0.4187,  0.0000,  0.0673,  1.2393,  1.0791,  1.6328,  0.0000,
+           0.3662,  2.5078,  0.0327, -0.0381, -0.2542,  0.0000,  0.5962,  0.9243],
+         dtype=torch.float16),
+  'mode': 'UQ-mcdropout',
+  'truth': tensor(0.),
+  'count': 16},
+ '14': {'score': tensor([-0.3367, -0.7661, -0.6416, -0.0356, -1.4834, -0.0020, -1.1182, -0.1957,
+...
+           0.5000, -0.3328, -0.1730, -0.5054, -0.0710,  0.0000, -0.0000,  0.4609],
+         dtype=torch.float16),
+  'mode': 'UQ-mcdropout',
+  'truth': tensor(1.),
+  'count': 16}}
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+scores before sigmoid: tensor([ 0.9922,  0.0000,  0.0000,  1.6680,  0.0000,  0.0000,  0.0000,  2.5742,
+         0.0000,  2.2402,  2.4199,  1.1973,  1.3438,  1.3115, -0.3450,  0.9570])
+scores after sigmoid: tensor([0.7295, 0.5000, 0.5000, 0.8413, 0.5000, 0.5000, 0.5000, 0.9292, 0.5000,
+        0.9038, 0.9183, 0.7680, 0.7931, 0.7878, 0.4146, 0.7225])
+subj_dict['score']: tensor([0.7295, 0.5000, 0.5000, 0.8413, 0.5000, 0.5000, 0.5000, 0.9292, 0.5000,
+        0.9038, 0.9183, 0.7680, 0.7931, 0.7878, 0.4146, 0.7225])
+subj_dict['truth']: 0.0
+pred_all_sets AFTER adding 2, subj_mode = test: {'test': [0.6755117774009705]}
+std_all_sets AFTER adding 2, subj_mode = test: {'test': [0.18183057010173798]}
+truth_all_sets AFTER adding 2, subj_mode = test: {'test': [0.0]}
+scores before sigmoid: tensor([-1.0039, -1.4111, -1.1074, -0.2532, -1.5244, -1.1592, -1.9561, -0.0000,
+        -0.0000, -0.0000, -1.2627, -0.8218, -0.1744, -1.3525, -1.1748, -0.8691])
+scores after sigmoid: tensor([0.2682, 0.1961, 0.2484, 0.4370, 0.1788, 0.2388, 0.1239, 0.5000, 0.5000,
+        0.5000, 0.2205, 0.3054, 0.4565, 0.2055, 0.2360, 0.2954])
+subj_dict['score']: tensor([0.2682, 0.1961, 0.2484, 0.4370, 0.1788, 0.2388, 0.1239, 0.5000, 0.5000,
+        0.5000, 0.2205, 0.3054, 0.4565, 0.2055, 0.2360, 0.2954])
+subj_dict['truth']: 0.0
+pred_all_sets AFTER adding 5, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517]}
+std_all_sets AFTER adding 5, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798]}
+truth_all_sets AFTER adding 5, subj_mode = test: {'test': [0.0, 0.0]}
+scores before sigmoid: tensor([-0.4753, -0.0674, -1.2627,  0.2605,  0.5649,  1.0625,  0.5142,  0.3035,
+        -0.0651,  0.1494,  0.0407, -0.6514, -0.3118,  0.0000, -0.7969, -0.2549])
+scores after sigmoid: tensor([0.3834, 0.4832, 0.2205, 0.5648, 0.6376, 0.7432, 0.6258, 0.5753, 0.4837,
+        0.5373, 0.5102, 0.3427, 0.4227, 0.5000, 0.3107, 0.4366])
+subj_dict['score']: tensor([0.3834, 0.4832, 0.2205, 0.5648, 0.6376, 0.7432, 0.6258, 0.5753, 0.4837,
+        0.5373, 0.5102, 0.3427, 0.4227, 0.5000, 0.3107, 0.4366])
+subj_dict['truth']: 0.0
+pred_all_sets AFTER adding 9, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973]}
+std_all_sets AFTER adding 9, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286]}
+truth_all_sets AFTER adding 9, subj_mode = test: {'test': [0.0, 0.0, 0.0]}
+scores before sigmoid: tensor([ 0.3320, -0.4187,  0.0000,  0.0673,  1.2393,  1.0791,  1.6328,  0.0000,
+         0.3662,  2.5078,  0.0327, -0.0381, -0.2542,  0.0000,  0.5962,  0.9243])
+scores after sigmoid: tensor([0.5823, 0.3968, 0.5000, 0.5168, 0.7754, 0.7463, 0.8366, 0.5000, 0.5905,
+        0.9247, 0.5082, 0.4905, 0.4368, 0.5000, 0.6448, 0.7159])
+subj_dict['score']: tensor([0.5823, 0.3968, 0.5000, 0.5168, 0.7754, 0.7463, 0.8366, 0.5000, 0.5905,
+        0.9247, 0.5082, 0.4905, 0.4368, 0.5000, 0.6448, 0.7159])
+subj_dict['truth']: 0.0
+pred_all_sets AFTER adding 11, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914]}
+std_all_sets AFTER adding 11, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788]}
+truth_all_sets AFTER adding 11, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0]}
+scores before sigmoid: tensor([-0.3367, -0.7661, -0.6416, -0.0356, -1.4834, -0.0020, -1.1182, -0.1957,
+         0.0000, -0.1635,  1.0488, -0.6089, -0.9370,  0.0000,  0.5288,  1.6299])
+scores after sigmoid: tensor([0.4166, 0.3173, 0.3449, 0.4911, 0.1849, 0.4995, 0.2464, 0.4512, 0.5000,
+        0.4592, 0.7405, 0.3523, 0.2815, 0.5000, 0.6292, 0.8362])
+subj_dict['score']: tensor([0.4166, 0.3173, 0.3449, 0.4911, 0.1849, 0.4995, 0.2464, 0.4512, 0.5000,
+        0.4592, 0.7405, 0.3523, 0.2815, 0.5000, 0.6292, 0.8362])
+subj_dict['truth']: 0.0
+pred_all_sets AFTER adding 14, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471]}
+std_all_sets AFTER adding 14, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322]}
+truth_all_sets AFTER adding 14, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0]}
+scores before sigmoid: tensor([ 0.5977, -0.4221, -1.5850,  0.0000,  0.0000,  0.0000,  0.0970,  0.9575,
+        -0.9844,  0.7319, -2.0293,  1.1592,  0.0000,  1.2256, -0.7715, -0.8535])
+scores after sigmoid: tensor([0.6451, 0.3960, 0.1701, 0.5000, 0.5000, 0.5000, 0.5242, 0.7226, 0.2720,
+        0.6752, 0.1162, 0.7612, 0.5000, 0.7730, 0.3162, 0.2987])
+subj_dict['score']: tensor([0.6451, 0.3960, 0.1701, 0.5000, 0.5000, 0.5000, 0.5242, 0.7226, 0.2720,
+        0.6752, 0.1162, 0.7612, 0.5000, 0.7730, 0.3162, 0.2987])
+subj_dict['truth']: 0.0
+pred_all_sets AFTER adding 23, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204]}
+std_all_sets AFTER adding 23, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503]}
+truth_all_sets AFTER adding 23, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}
+scores before sigmoid: tensor([-1.0273, -2.0703, -0.1652, -0.8823, -1.0947,  0.5679, -0.0806,  0.0000,
+         0.0000, -0.0755, -1.7344, -1.0479, -0.0000, -0.4219, -2.6445, -1.6904])
+scores after sigmoid: tensor([0.2636, 0.1120, 0.4588, 0.2927, 0.2507, 0.6383, 0.4799, 0.5000, 0.5000,
+        0.4811, 0.1500, 0.2596, 0.5000, 0.3961, 0.0663, 0.1557])
+subj_dict['score']: tensor([0.2636, 0.1120, 0.4588, 0.2927, 0.2507, 0.6383, 0.4799, 0.5000, 0.5000,
+        0.4811, 0.1500, 0.2596, 0.5000, 0.3961, 0.0663, 0.1557])
+subj_dict['truth']: 0.0
+pred_all_sets AFTER adding 33, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834]}
+std_all_sets AFTER adding 33, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806]}
+truth_all_sets AFTER adding 33, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}
+scores before sigmoid: tensor([0.7617, 1.7021, 0.0000, 1.3994, 0.0000, 2.7598, 0.0000, 0.0000, 2.4395,
+        1.2822, 0.6309, 0.0000, 0.0000, 0.0000, 1.8594, 1.5225])
+scores after sigmoid: tensor([0.6817, 0.8458, 0.5000, 0.8021, 0.5000, 0.9405, 0.5000, 0.5000, 0.9198,
+        0.7828, 0.6527, 0.5000, 0.5000, 0.5000, 0.8652, 0.8209])
+subj_dict['score']: tensor([0.6817, 0.8458, 0.5000, 0.8021, 0.5000, 0.9405, 0.5000, 0.5000, 0.9198,
+        0.7828, 0.6527, 0.5000, 0.5000, 0.5000, 0.8652, 0.8209])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 35, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709]}
+std_all_sets AFTER adding 35, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305]}
+truth_all_sets AFTER adding 35, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]}
+scores before sigmoid: tensor([ 1.1660,  0.0000,  0.0000, -0.4395,  2.5898, -1.1143,  0.1016,  1.7812,
+         0.0000, -0.6025,  0.6235,  1.4268,  0.0000, -0.3367,  0.7729,  0.0426])
+scores after sigmoid: tensor([0.7624, 0.5000, 0.5000, 0.3919, 0.9302, 0.2471, 0.5254, 0.8559, 0.5000,
+        0.3538, 0.6510, 0.8064, 0.5000, 0.4166, 0.6842, 0.5107])
+subj_dict['score']: tensor([0.7624, 0.5000, 0.5000, 0.3919, 0.9302, 0.2471, 0.5254, 0.8559, 0.5000,
+        0.3538, 0.6510, 0.8064, 0.5000, 0.4166, 0.6842, 0.5107])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 38, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025]}
+std_all_sets AFTER adding 38, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124]}
+truth_all_sets AFTER adding 38, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0]}
+scores before sigmoid: tensor([-0.3699, -1.1084, -0.2754,  1.0752, -0.2976, -0.4246, -0.0000, -0.9004,
+         0.8711, -0.5312,  0.0000, -0.6138, -1.2275,  0.3574, -0.8711, -0.4417])
+scores after sigmoid: tensor([0.4086, 0.2482, 0.4316, 0.7456, 0.4261, 0.3954, 0.5000, 0.2890, 0.7050,
+        0.3702, 0.5000, 0.3512, 0.2266, 0.5884, 0.2950, 0.3913])
+subj_dict['score']: tensor([0.4086, 0.2482, 0.4316, 0.7456, 0.4261, 0.3954, 0.5000, 0.2890, 0.7050,
+        0.3702, 0.5000, 0.3512, 0.2266, 0.5884, 0.2950, 0.3913])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 40, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678]}
+std_all_sets AFTER adding 40, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612]}
+truth_all_sets AFTER adding 40, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0]}
+scores before sigmoid: tensor([-0.0000, -1.3828, -2.7812, -2.5059,  0.0000, -1.0879, -2.1113, -1.5947,
+        -0.0612, -2.4355, -1.9893, -0.0000, -1.3223, -0.8315, -1.2705, -1.1650])
+scores after sigmoid: tensor([0.5000, 0.2006, 0.0583, 0.0754, 0.5000, 0.2520, 0.1080, 0.1687, 0.4847,
+        0.0805, 0.1203, 0.5000, 0.2104, 0.3033, 0.2192, 0.2378])
+subj_dict['score']: tensor([0.5000, 0.2006, 0.0583, 0.0754, 0.5000, 0.2520, 0.1080, 0.1687, 0.4847,
+        0.0805, 0.1203, 0.5000, 0.2104, 0.3033, 0.2192, 0.2378])
+subj_dict['truth']: 0.0
+pred_all_sets AFTER adding 43, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479]}
+std_all_sets AFTER adding 43, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794]}
+truth_all_sets AFTER adding 43, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0]}
+scores before sigmoid: tensor([ 0.0000,  0.4011,  1.7080,  0.5308,  0.6929,  0.4404,  0.6743, -0.3157,
+        -0.3516,  1.8447,  1.1611,  0.8335,  0.0000,  0.3838,  0.0000,  0.1094])
+scores after sigmoid: tensor([0.5000, 0.5990, 0.8466, 0.6297, 0.6666, 0.6084, 0.6625, 0.4217, 0.4130,
+        0.8635, 0.7615, 0.6971, 0.5000, 0.5948, 0.5000, 0.5273])
+subj_dict['score']: tensor([0.5000, 0.5990, 0.8466, 0.6297, 0.6666, 0.6084, 0.6625, 0.4217, 0.4130,
+        0.8635, 0.7615, 0.6971, 0.5000, 0.5948, 0.5000, 0.5273])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 44, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771]}
+std_all_sets AFTER adding 44, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251]}
+truth_all_sets AFTER adding 44, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0]}
+scores before sigmoid: tensor([ 0.7495,  0.2932,  0.0000,  1.6318, -0.4524,  0.3718, -0.6685, -0.0104,
+         0.7090,  0.3762,  0.0000,  0.3557,  0.7656,  0.4846,  0.1947, -0.8101])
+scores after sigmoid: tensor([0.6791, 0.5728, 0.5000, 0.8364, 0.3888, 0.5919, 0.3388, 0.4974, 0.6702,
+        0.5930, 0.5000, 0.5880, 0.6826, 0.6188, 0.5485, 0.3079])
+subj_dict['score']: tensor([0.6791, 0.5728, 0.5000, 0.8364, 0.3888, 0.5919, 0.3388, 0.4974, 0.6702,
+        0.5930, 0.5000, 0.5880, 0.6826, 0.6188, 0.5485, 0.3079])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 46, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671]}
+std_all_sets AFTER adding 46, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034]}
+truth_all_sets AFTER adding 46, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0]}
+scores before sigmoid: tensor([ 0.0000,  0.0000,  0.0000,  1.6885,  1.5547,  0.0000,  0.0000,  0.2281,
+         0.1962,  1.1748,  1.2910, -0.7241,  0.0000,  0.0000,  1.4092,  1.8955])
+scores after sigmoid: tensor([0.5000, 0.5000, 0.5000, 0.8440, 0.8256, 0.5000, 0.5000, 0.5568, 0.5489,
+        0.7640, 0.7843, 0.3265, 0.5000, 0.5000, 0.8036, 0.8694])
+subj_dict['score']: tensor([0.5000, 0.5000, 0.5000, 0.8440, 0.8256, 0.5000, 0.5000, 0.5568, 0.5489,
+        0.7640, 0.7843, 0.3265, 0.5000, 0.5000, 0.8036, 0.8694])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 58, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874]}
+std_all_sets AFTER adding 58, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946]}
+truth_all_sets AFTER adding 58, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0]}
+scores before sigmoid: tensor([-0.7949, -1.0908, -0.1708, -0.0000, -0.0196, -0.6450,  0.0000,  0.0000,
+        -1.0996,  0.0000, -0.8569, -0.0966, -1.1680, -1.1758,  0.0000, -1.1289])
+scores after sigmoid: tensor([0.3111, 0.2515, 0.4574, 0.5000, 0.4951, 0.3441, 0.5000, 0.5000, 0.2498,
+        0.5000, 0.2980, 0.4759, 0.2372, 0.2358, 0.5000, 0.2444])
+subj_dict['score']: tensor([0.3111, 0.2515, 0.4574, 0.5000, 0.4951, 0.3441, 0.5000, 0.5000, 0.2498,
+        0.5000, 0.2980, 0.4759, 0.2372, 0.2358, 0.5000, 0.2444])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 60, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384]}
+std_all_sets AFTER adding 60, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946, 0.11724845319986343]}
+truth_all_sets AFTER adding 60, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0]}
+scores before sigmoid: tensor([ 0.8809,  0.0040,  0.5669, -0.3445,  0.0000,  0.0000,  0.7515,  1.1553,
+         0.6812,  1.3125,  1.9678,  0.0607,  0.0000, -0.5952,  0.0000,  0.1368])
+scores after sigmoid: tensor([0.7070, 0.5010, 0.6380, 0.4147, 0.5000, 0.5000, 0.6795, 0.7605, 0.6640,
+        0.7879, 0.8774, 0.5152, 0.5000, 0.3554, 0.5000, 0.5342])
+subj_dict['score']: tensor([0.7070, 0.5010, 0.6380, 0.4147, 0.5000, 0.5000, 0.6795, 0.7605, 0.6640,
+        0.7879, 0.8774, 0.5152, 0.5000, 0.3554, 0.5000, 0.5342])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 62, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384, 0.5896742343902588]}
+std_all_sets AFTER adding 62, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946, 0.11724845319986343, 0.14493316411972046]}
+truth_all_sets AFTER adding 62, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0]}
+scores before sigmoid: tensor([ 9.6240e-01, -3.1641e-01, -2.6880e-01,  0.0000e+00, -0.0000e+00,
+        -5.6787e-01,  1.0430e+00, -3.4027e-03, -4.8657e-01, -4.6582e-01,
+        -7.6562e-01,  6.1133e-01, -9.7656e-04,  4.4727e-01,  9.0234e-01,
+        -7.4414e-01])
+scores after sigmoid: tensor([0.7236, 0.4216, 0.4332, 0.5000, 0.5000, 0.3617, 0.7394, 0.4991, 0.3807,
+        0.3856, 0.3174, 0.6482, 0.4998, 0.6100, 0.7114, 0.3221])
+subj_dict['score']: tensor([0.7236, 0.4216, 0.4332, 0.5000, 0.5000, 0.3617, 0.7394, 0.4991, 0.3807,
+        0.3856, 0.3174, 0.6482, 0.4998, 0.6100, 0.7114, 0.3221])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 67, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384, 0.5896742343902588, 0.5033692717552185]}
+std_all_sets AFTER adding 67, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946, 0.11724845319986343, 0.14493316411972046, 0.1432834416627884]}
+truth_all_sets AFTER adding 67, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]}
+scores before sigmoid: tensor([-0.3347,  0.6411, -0.0622, -0.9863, -1.1621,  0.2064,  0.0000,  0.6880,
+        -1.0498,  0.5293, -1.0322, -1.5547,  0.0000, -1.3154, -0.0000, -0.3318])
+scores after sigmoid: tensor([0.4171, 0.6550, 0.4845, 0.2716, 0.2383, 0.5514, 0.5000, 0.6655, 0.2593,
+        0.6293, 0.2627, 0.1744, 0.5000, 0.2116, 0.5000, 0.4178])
+subj_dict['score']: tensor([0.4171, 0.6550, 0.4845, 0.2716, 0.2383, 0.5514, 0.5000, 0.6655, 0.2593,
+        0.6293, 0.2627, 0.1744, 0.5000, 0.2116, 0.5000, 0.4178])
+subj_dict['truth']: 0.0
+pred_all_sets AFTER adding 81, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384, 0.5896742343902588, 0.5033692717552185, 0.42115354537963867]}
+std_all_sets AFTER adding 81, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946, 0.11724845319986343, 0.14493316411972046, 0.1432834416627884, 0.16519100964069366]}
+truth_all_sets AFTER adding 81, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0]}
+scores before sigmoid: tensor([ 0.2335,  0.8242,  1.3232,  0.0000, -0.4758, -1.3076,  0.8921,  0.2428,
+        -0.7847, -0.4270,  1.1201, -0.9731, -0.3997, -0.4016,  1.0576,  1.1104])
+scores after sigmoid: tensor([0.5581, 0.6951, 0.7897, 0.5000, 0.3832, 0.2129, 0.7093, 0.5604, 0.3133,
+        0.3948, 0.7540, 0.2743, 0.4014, 0.4009, 0.7422, 0.7522])
+subj_dict['score']: tensor([0.5581, 0.6951, 0.7897, 0.5000, 0.3832, 0.2129, 0.7093, 0.5604, 0.3133,
+        0.3948, 0.7540, 0.2743, 0.4014, 0.4009, 0.7422, 0.7522])
+subj_dict['truth']: 0.0
+pred_all_sets AFTER adding 86, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384, 0.5896742343902588, 0.5033692717552185, 0.42115354537963867, 0.5276241302490234]}
+std_all_sets AFTER adding 86, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946, 0.11724845319986343, 0.14493316411972046, 0.1432834416627884, 0.16519100964069366, 0.19320541620254517]}
+truth_all_sets AFTER adding 86, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0]}
+scores before sigmoid: tensor([-0.3240, -0.5942, -0.0000, -0.5317,  0.0000, -0.9316,  0.6060, -0.0000,
+        -0.9341, -0.0000,  0.0000,  0.0000, -0.6914, -0.3840, -0.1566,  0.2939])
+scores after sigmoid: tensor([0.4197, 0.3557, 0.5000, 0.3701, 0.5000, 0.2826, 0.6470, 0.5000, 0.2821,
+        0.5000, 0.5000, 0.5000, 0.3337, 0.4052, 0.4609, 0.5730])
+subj_dict['score']: tensor([0.4197, 0.3557, 0.5000, 0.3701, 0.5000, 0.2826, 0.6470, 0.5000, 0.2821,
+        0.5000, 0.5000, 0.5000, 0.3337, 0.4052, 0.4609, 0.5730])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 93, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384, 0.5896742343902588, 0.5033692717552185, 0.42115354537963867, 0.5276241302490234, 0.44562196731567383]}
+std_all_sets AFTER adding 93, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946, 0.11724845319986343, 0.14493316411972046, 0.1432834416627884, 0.16519100964069366, 0.19320541620254517, 0.10220779478549957]}
+truth_all_sets AFTER adding 93, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0]}
+scores before sigmoid: tensor([ 0.8398,  2.8809,  2.9160,  0.4951,  0.0000,  1.2510,  0.0000,  0.0000,
+         1.5977,  1.3486,  2.2266,  0.3079, -0.0300,  1.0449,  0.9741,  1.5205])
+scores after sigmoid: tensor([0.6984, 0.9469, 0.9486, 0.6213, 0.5000, 0.7775, 0.5000, 0.5000, 0.8317,
+        0.7939, 0.9026, 0.5764, 0.4925, 0.7398, 0.7259, 0.8206])
+subj_dict['score']: tensor([0.6984, 0.9469, 0.9486, 0.6213, 0.5000, 0.7775, 0.5000, 0.5000, 0.8317,
+        0.7939, 0.9026, 0.5764, 0.4925, 0.7398, 0.7259, 0.8206])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 107, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384, 0.5896742343902588, 0.5033692717552185, 0.42115354537963867, 0.5276241302490234, 0.44562196731567383, 0.7110106348991394]}
+std_all_sets AFTER adding 107, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946, 0.11724845319986343, 0.14493316411972046, 0.1432834416627884, 0.16519100964069366, 0.19320541620254517, 0.10220779478549957, 0.16235411167144775]}
+truth_all_sets AFTER adding 107, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0]}
+scores before sigmoid: tensor([-0.6592, -0.2969, -1.8545, -1.1104, -0.5796, -1.5635, -0.6812, -1.6523,
+        -2.2344, -0.0000, -1.3271, -0.2900, -0.6606, -1.3750, -2.8281, -1.6094])
+scores after sigmoid: tensor([0.3409, 0.4263, 0.1353, 0.2478, 0.3590, 0.1731, 0.3360, 0.1608, 0.0967,
+        0.5000, 0.2096, 0.4280, 0.3406, 0.2018, 0.0558, 0.1667])
+subj_dict['score']: tensor([0.3409, 0.4263, 0.1353, 0.2478, 0.3590, 0.1731, 0.3360, 0.1608, 0.0967,
+        0.5000, 0.2096, 0.4280, 0.3406, 0.2018, 0.0558, 0.1667])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 114, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384, 0.5896742343902588, 0.5033692717552185, 0.42115354537963867, 0.5276241302490234, 0.44562196731567383, 0.7110106348991394, 0.26116296648979187]}
+std_all_sets AFTER adding 114, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946, 0.11724845319986343, 0.14493316411972046, 0.1432834416627884, 0.16519100964069366, 0.19320541620254517, 0.10220779478549957, 0.16235411167144775, 0.13118650019168854]}
+truth_all_sets AFTER adding 114, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0]}
+
+scores before sigmoid: tensor([-0.0000, -0.0831, -0.8706,  0.8853,  0.4172,  0.0000, -0.8413, -0.0168,
+         0.5000, -0.3328, -0.1730, -0.5054, -0.0710,  0.0000, -0.0000,  0.4609])
+scores after sigmoid: tensor([0.5000, 0.4792, 0.2951, 0.7079, 0.6028, 0.5000, 0.3013, 0.4958, 0.6225,
+        0.4176, 0.4569, 0.3763, 0.4823, 0.5000, 0.5000, 0.6132])
+subj_dict['score']: tensor([0.5000, 0.4792, 0.2951, 0.7079, 0.6028, 0.5000, 0.3013, 0.4958, 0.6225,
+        0.4176, 0.4569, 0.3763, 0.4823, 0.5000, 0.5000, 0.6132])
+subj_dict['truth']: 1.0
+pred_all_sets AFTER adding 115, subj_mode = test: {'test': [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384, 0.5896742343902588, 0.5033692717552185, 0.42115354537963867, 0.5276241302490234, 0.44562196731567383, 0.7110106348991394, 0.26116296648979187, 0.4906770586967468]}
+std_all_sets AFTER adding 115, subj_mode = test: {'test': [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946, 0.11724845319986343, 0.14493316411972046, 0.1432834416627884, 0.16519100964069366, 0.19320541620254517, 0.10220779478549957, 0.16235411167144775, 0.13118650019168854, 0.11148177832365036]}
+truth_all_sets AFTER adding 115, subj_mode = test: {'test': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0]}
+
+
+pred:
+    mean: [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384, 0.5896742343902588, 0.5033692717552185, 0.42115354537963867, 0.5276241302490234, 0.44562196731567383, 0.7110106348991394, 0.26116296648979187, 0.4906770586967468]
+    std: [0.18183057010173798, 0.12802177667617798, 0.1329147070646286, 0.1537107229232788, 0.1740030199289322, 0.20513086020946503, 0.17159388959407806, 0.17506758868694305, 0.19241565465927124, 0.14957265555858612, 0.16125211119651794, 0.13535341620445251, 0.13593415915966034, 0.16961219906806946, 0.11724845319986343, 0.14493316411972046, 0.1432834416627884, 0.16519100964069366, 0.19320541620254517, 0.10220779478549957, 0.16235411167144775, 0.13118650019168854, 0.11148177832365036]
+truth: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0]
+Truth labels (y_true): [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0]
+Predicted scores (y_pred): [0.6755117774009705, 0.30690130591392517, 0.486093133687973, 0.6041004061698914, 0.4531795084476471, 0.479410856962204, 0.34405627846717834, 0.6757199764251709, 0.5709633231163025, 0.4295156002044678, 0.2512073218822479, 0.6119763851165771, 0.5571349859237671, 0.6139453649520874, 0.38126569986343384, 0.5896742343902588, 0.5033692717552185, 0.42115354537963867, 0.5276241302490234, 0.44562196731567383, 0.7110106348991394, 0.26116296648979187, 0.4906770586967468]
+Predicted classes: [1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
+Unique labels in y_true: {0.0, 1.0}
+self.val_threshold: 0.47936657071113586
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+self.val_threshold: 0.47936657071113586
+test_Balanced_Accuracy: 0.6576923076923077
+test_Regular_Accuracy: 0.6521739130434783
+test_AUROC: 0.6769230769230768
+test_best_bal_acc: 0.6576923076923077
+test_best_threshold: 0.5
+test_gmean: 0.6563301233138936
+test_specificity: 0.7
+test_sensitivity: 0.6153846153846154
+test_f1_score: 0.6666666666666666
