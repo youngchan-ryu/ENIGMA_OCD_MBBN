@@ -1,0 +1,46 @@
+subject:2 (MC_dropout)
+outputs: 0.6755±0.1818  -  truth: 0.0
+subject:5 (MC_dropout)
+outputs: 0.3069±0.1280  -  truth: 0.0
+subject:9 (MC_dropout)
+outputs: 0.4861±0.1329  -  truth: 0.0
+subject:11 (MC_dropout)
+outputs: 0.6041±0.1537  -  truth: 0.0
+subject:14 (MC_dropout)
+outputs: 0.4532±0.1740  -  truth: 0.0
+subject:23 (MC_dropout)
+outputs: 0.4794±0.2051  -  truth: 0.0
+subject:33 (MC_dropout)
+outputs: 0.3441±0.1716  -  truth: 0.0
+subject:35 (MC_dropout)
+outputs: 0.6757±0.1751  -  truth: 1.0
+subject:38 (MC_dropout)
+outputs: 0.5710±0.1924  -  truth: 1.0
+subject:40 (MC_dropout)
+outputs: 0.4295±0.1496  -  truth: 1.0
+subject:43 (MC_dropout)
+outputs: 0.2512±0.1613  -  truth: 0.0
+subject:44 (MC_dropout)
+outputs: 0.6120±0.1354  -  truth: 1.0
+subject:46 (MC_dropout)
+outputs: 0.5571±0.1359  -  truth: 1.0
+subject:58 (MC_dropout)
+outputs: 0.6139±0.1696  -  truth: 1.0
+subject:60 (MC_dropout)
+outputs: 0.3813±0.1172  -  truth: 1.0
+subject:62 (MC_dropout)
+outputs: 0.5897±0.1449  -  truth: 1.0
+subject:67 (MC_dropout)
+outputs: 0.5034±0.1433  -  truth: 1.0
+subject:81 (MC_dropout)
+outputs: 0.4212±0.1652  -  truth: 0.0
+subject:86 (MC_dropout)
+outputs: 0.5276±0.1932  -  truth: 0.0
+subject:93 (MC_dropout)
+outputs: 0.4456±0.1022  -  truth: 1.0
+subject:107 (MC_dropout)
+outputs: 0.7110±0.1624  -  truth: 1.0
+subject:114 (MC_dropout)
+outputs: 0.2612±0.1312  -  truth: 1.0
+subject:115 (MC_dropout)
+outputs: 0.4907±0.1115  -  truth: 1.0
