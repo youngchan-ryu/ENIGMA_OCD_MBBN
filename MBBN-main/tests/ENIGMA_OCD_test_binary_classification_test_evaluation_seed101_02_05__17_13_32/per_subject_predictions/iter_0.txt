@@ -1,0 +1,598 @@
+subject:1 (MC_dropout)
+outputs: 0.6429±0.1611  -  truth: 0.0
+subject:2 (MC_dropout)
+outputs: 0.4951±0.2211  -  truth: 1.0
+subject:3 (MC_dropout)
+outputs: 0.5082±0.1999  -  truth: 1.0
+subject:16 (MC_dropout)
+outputs: 0.5423±0.1733  -  truth: 1.0
+subject:17 (MC_dropout)
+outputs: 0.3924±0.1379  -  truth: 1.0
+subject:21 (MC_dropout)
+outputs: 0.6423±0.1623  -  truth: 1.0
+subject:43 (MC_dropout)
+outputs: 0.5093±0.2209  -  truth: 0.0
+subject:63 (MC_dropout)
+outputs: 0.4152±0.1387  -  truth: 0.0
+subject:67 (MC_dropout)
+outputs: 0.4800±0.2196  -  truth: 1.0
+subject:75 (MC_dropout)
+outputs: 0.3731±0.2451  -  truth: 1.0
+subject:81 (MC_dropout)
+outputs: 0.5748±0.1948  -  truth: 0.0
+subject:82 (MC_dropout)
+outputs: 0.3726±0.1822  -  truth: 1.0
+subject:85 (MC_dropout)
+outputs: 0.5030±0.1266  -  truth: 0.0
+subject:92 (MC_dropout)
+outputs: 0.4801±0.1979  -  truth: 1.0
+subject:99 (MC_dropout)
+outputs: 0.5168±0.1464  -  truth: 0.0
+subject:105 (MC_dropout)
+outputs: 0.5242±0.2215  -  truth: 1.0
+subject:106 (MC_dropout)
+outputs: 0.6185±0.2292  -  truth: 0.0
+subject:107 (MC_dropout)
+outputs: 0.3933±0.1748  -  truth: 0.0
+subject:114 (MC_dropout)
+outputs: 0.4484±0.1258  -  truth: 1.0
+subject:121 (MC_dropout)
+outputs: 0.5713±0.1870  -  truth: 0.0
+subject:130 (MC_dropout)
+outputs: 0.4234±0.1937  -  truth: 0.0
+subject:134 (MC_dropout)
+outputs: 0.4855±0.1591  -  truth: 0.0
+subject:138 (MC_dropout)
+outputs: 0.4386±0.1650  -  truth: 0.0
+subject:153 (MC_dropout)
+outputs: 0.5590±0.2008  -  truth: 0.0
+subject:168 (MC_dropout)
+outputs: 0.5683±0.1681  -  truth: 0.0
+subject:174 (MC_dropout)
+outputs: 0.4913±0.2262  -  truth: 0.0
+subject:182 (MC_dropout)
+outputs: 0.4776±0.2222  -  truth: 0.0
+subject:185 (MC_dropout)
+outputs: 0.4526±0.1750  -  truth: 0.0
+subject:192 (MC_dropout)
+outputs: 0.4999±0.2008  -  truth: 1.0
+subject:216 (MC_dropout)
+outputs: 0.6785±0.2155  -  truth: 1.0
+subject:221 (MC_dropout)
+outputs: 0.4366±0.1917  -  truth: 1.0
+subject:222 (MC_dropout)
+outputs: 0.5361±0.2275  -  truth: 1.0
+subject:223 (MC_dropout)
+outputs: 0.5180±0.1749  -  truth: 1.0
+subject:225 (MC_dropout)
+outputs: 0.4298±0.1713  -  truth: 1.0
+subject:244 (MC_dropout)
+outputs: 0.5188±0.1725  -  truth: 1.0
+subject:254 (MC_dropout)
+outputs: 0.3031±0.1742  -  truth: 1.0
+subject:257 (MC_dropout)
+outputs: 0.5129±0.1898  -  truth: 1.0
+subject:258 (MC_dropout)
+outputs: 0.5557±0.1294  -  truth: 0.0
+subject:259 (MC_dropout)
+outputs: 0.5698±0.1768  -  truth: 0.0
+subject:264 (MC_dropout)
+outputs: 0.5521±0.1382  -  truth: 1.0
+subject:265 (MC_dropout)
+outputs: 0.5001±0.1512  -  truth: 1.0
+subject:273 (MC_dropout)
+outputs: 0.4367±0.2071  -  truth: 0.0
+subject:286 (MC_dropout)
+outputs: 0.5337±0.1919  -  truth: 1.0
+subject:299 (MC_dropout)
+outputs: 0.5432±0.1633  -  truth: 0.0
+subject:302 (MC_dropout)
+outputs: 0.4557±0.1476  -  truth: 0.0
+subject:310 (MC_dropout)
+outputs: 0.5100±0.1561  -  truth: 0.0
+subject:314 (MC_dropout)
+outputs: 0.4094±0.1572  -  truth: 1.0
+subject:330 (MC_dropout)
+outputs: 0.4504±0.2202  -  truth: 0.0
+subject:334 (MC_dropout)
+outputs: 0.5784±0.1767  -  truth: 0.0
+subject:335 (MC_dropout)
+outputs: 0.4127±0.1762  -  truth: 0.0
+subject:348 (MC_dropout)
+outputs: 0.4913±0.1981  -  truth: 0.0
+subject:367 (MC_dropout)
+outputs: 0.5966±0.1775  -  truth: 0.0
+subject:370 (MC_dropout)
+outputs: 0.5186±0.1622  -  truth: 1.0
+subject:377 (MC_dropout)
+outputs: 0.5230±0.1751  -  truth: 1.0
+subject:381 (MC_dropout)
+outputs: 0.5246±0.2423  -  truth: 1.0
+subject:389 (MC_dropout)
+outputs: 0.3809±0.1937  -  truth: 1.0
+subject:391 (MC_dropout)
+outputs: 0.5237±0.2031  -  truth: 1.0
+subject:395 (MC_dropout)
+outputs: 0.4320±0.1989  -  truth: 1.0
+subject:404 (MC_dropout)
+outputs: 0.5659±0.2115  -  truth: 1.0
+subject:411 (MC_dropout)
+outputs: 0.4435±0.1449  -  truth: 1.0
+subject:414 (MC_dropout)
+outputs: 0.4609±0.1697  -  truth: 1.0
+subject:441 (MC_dropout)
+outputs: 0.4783±0.2044  -  truth: 1.0
+subject:443 (MC_dropout)
+outputs: 0.3921±0.1905  -  truth: 0.0
+subject:447 (MC_dropout)
+outputs: 0.5311±0.1568  -  truth: 1.0
+subject:453 (MC_dropout)
+outputs: 0.5749±0.1491  -  truth: 0.0
+subject:458 (MC_dropout)
+outputs: 0.5374±0.2185  -  truth: 1.0
+subject:459 (MC_dropout)
+outputs: 0.4079±0.1912  -  truth: 0.0
+subject:460 (MC_dropout)
+outputs: 0.5776±0.1675  -  truth: 0.0
+subject:463 (MC_dropout)
+outputs: 0.4108±0.1607  -  truth: 1.0
+subject:470 (MC_dropout)
+outputs: 0.4665±0.2105  -  truth: 1.0
+subject:482 (MC_dropout)
+outputs: 0.5514±0.1896  -  truth: 0.0
+subject:483 (MC_dropout)
+outputs: 0.5234±0.1542  -  truth: 0.0
+subject:484 (MC_dropout)
+outputs: 0.4854±0.1533  -  truth: 1.0
+subject:495 (MC_dropout)
+outputs: 0.4861±0.1671  -  truth: 1.0
+subject:500 (MC_dropout)
+outputs: 0.4390±0.1865  -  truth: 0.0
+subject:502 (MC_dropout)
+outputs: 0.5239±0.1380  -  truth: 0.0
+subject:517 (MC_dropout)
+outputs: 0.5378±0.1645  -  truth: 0.0
+subject:524 (MC_dropout)
+outputs: 0.5511±0.2098  -  truth: 0.0
+subject:525 (MC_dropout)
+outputs: 0.3901±0.1557  -  truth: 0.0
+subject:532 (MC_dropout)
+outputs: 0.4915±0.1587  -  truth: 1.0
+subject:535 (MC_dropout)
+outputs: 0.5391±0.2072  -  truth: 1.0
+subject:537 (MC_dropout)
+outputs: 0.5296±0.1954  -  truth: 1.0
+subject:539 (MC_dropout)
+outputs: 0.4742±0.1707  -  truth: 0.0
+subject:541 (MC_dropout)
+outputs: 0.4510±0.1803  -  truth: 1.0
+subject:549 (MC_dropout)
+outputs: 0.6178±0.2017  -  truth: 1.0
+subject:550 (MC_dropout)
+outputs: 0.4778±0.1661  -  truth: 1.0
+subject:551 (MC_dropout)
+outputs: 0.3740±0.2255  -  truth: 0.0
+subject:554 (MC_dropout)
+outputs: 0.4675±0.1733  -  truth: 0.0
+subject:608 (MC_dropout)
+outputs: 0.6205±0.1269  -  truth: 0.0
+subject:609 (MC_dropout)
+outputs: 0.5231±0.1345  -  truth: 1.0
+subject:617 (MC_dropout)
+outputs: 0.5178±0.1885  -  truth: 1.0
+subject:619 (MC_dropout)
+outputs: 0.3559±0.1792  -  truth: 0.0
+subject:625 (MC_dropout)
+outputs: 0.5220±0.1403  -  truth: 1.0
+subject:630 (MC_dropout)
+outputs: 0.5857±0.2221  -  truth: 1.0
+subject:631 (MC_dropout)
+outputs: 0.4098±0.1189  -  truth: 0.0
+subject:633 (MC_dropout)
+outputs: 0.4591±0.1553  -  truth: 1.0
+subject:634 (MC_dropout)
+outputs: 0.4690±0.1528  -  truth: 0.0
+subject:635 (MC_dropout)
+outputs: 0.4993±0.1620  -  truth: 0.0
+subject:658 (MC_dropout)
+outputs: 0.4490±0.1692  -  truth: 0.0
+subject:663 (MC_dropout)
+outputs: 0.5619±0.1880  -  truth: 1.0
+subject:668 (MC_dropout)
+outputs: 0.5115±0.1755  -  truth: 0.0
+subject:678 (MC_dropout)
+outputs: 0.4883±0.1258  -  truth: 1.0
+subject:683 (MC_dropout)
+outputs: 0.6259±0.1407  -  truth: 1.0
+subject:708 (MC_dropout)
+outputs: 0.5490±0.1653  -  truth: 0.0
+subject:728 (MC_dropout)
+outputs: 0.5488±0.2067  -  truth: 1.0
+subject:731 (MC_dropout)
+outputs: 0.4338±0.2028  -  truth: 0.0
+subject:735 (MC_dropout)
+outputs: 0.3768±0.1996  -  truth: 1.0
+subject:738 (MC_dropout)
+outputs: 0.5885±0.1718  -  truth: 1.0
+subject:761 (MC_dropout)
+outputs: 0.5519±0.1936  -  truth: 1.0
+subject:765 (MC_dropout)
+outputs: 0.4047±0.1447  -  truth: 0.0
+subject:770 (MC_dropout)
+outputs: 0.5849±0.1661  -  truth: 1.0
+subject:774 (MC_dropout)
+outputs: 0.4940±0.1869  -  truth: 1.0
+subject:775 (MC_dropout)
+outputs: 0.5188±0.1714  -  truth: 0.0
+subject:777 (MC_dropout)
+outputs: 0.4259±0.1769  -  truth: 1.0
+subject:778 (MC_dropout)
+outputs: 0.4918±0.1608  -  truth: 1.0
+subject:783 (MC_dropout)
+outputs: 0.4814±0.1423  -  truth: 1.0
+subject:784 (MC_dropout)
+outputs: 0.5249±0.1145  -  truth: 1.0
+subject:803 (MC_dropout)
+outputs: 0.5393±0.1533  -  truth: 1.0
+subject:823 (MC_dropout)
+outputs: 0.5323±0.2423  -  truth: 0.0
+subject:828 (MC_dropout)
+outputs: 0.4650±0.2075  -  truth: 0.0
+subject:837 (MC_dropout)
+outputs: 0.5354±0.1713  -  truth: 0.0
+subject:839 (MC_dropout)
+outputs: 0.4344±0.1893  -  truth: 0.0
+subject:841 (MC_dropout)
+outputs: 0.5396±0.1724  -  truth: 0.0
+subject:850 (MC_dropout)
+outputs: 0.4735±0.1765  -  truth: 1.0
+subject:866 (MC_dropout)
+outputs: 0.5369±0.2011  -  truth: 0.0
+subject:875 (MC_dropout)
+outputs: 0.4845±0.1637  -  truth: 1.0
+subject:876 (MC_dropout)
+outputs: 0.5091±0.1652  -  truth: 1.0
+subject:877 (MC_dropout)
+outputs: 0.4918±0.2389  -  truth: 0.0
+subject:882 (MC_dropout)
+outputs: 0.5099±0.1821  -  truth: 0.0
+subject:888 (MC_dropout)
+outputs: 0.5135±0.1511  -  truth: 1.0
+subject:895 (MC_dropout)
+outputs: 0.5657±0.1749  -  truth: 1.0
+subject:903 (MC_dropout)
+outputs: 0.6135±0.1842  -  truth: 0.0
+subject:909 (MC_dropout)
+outputs: 0.5277±0.2182  -  truth: 0.0
+subject:910 (MC_dropout)
+outputs: 0.4775±0.2624  -  truth: 1.0
+subject:918 (MC_dropout)
+outputs: 0.4225±0.1710  -  truth: 0.0
+subject:920 (MC_dropout)
+outputs: 0.5529±0.1894  -  truth: 0.0
+subject:927 (MC_dropout)
+outputs: 0.4517±0.1674  -  truth: 1.0
+subject:929 (MC_dropout)
+outputs: 0.5792±0.2131  -  truth: 0.0
+subject:934 (MC_dropout)
+outputs: 0.5369±0.2264  -  truth: 1.0
+subject:935 (MC_dropout)
+outputs: 0.4467±0.1638  -  truth: 0.0
+subject:943 (MC_dropout)
+outputs: 0.4221±0.1590  -  truth: 1.0
+subject:945 (MC_dropout)
+outputs: 0.5490±0.2253  -  truth: 1.0
+subject:956 (MC_dropout)
+outputs: 0.5549±0.1809  -  truth: 0.0
+subject:960 (MC_dropout)
+outputs: 0.4212±0.2095  -  truth: 0.0
+subject:971 (MC_dropout)
+outputs: 0.5626±0.1856  -  truth: 1.0
+subject:974 (MC_dropout)
+outputs: 0.4506±0.2283  -  truth: 0.0
+subject:975 (MC_dropout)
+outputs: 0.4720±0.1608  -  truth: 0.0
+subject:987 (MC_dropout)
+outputs: 0.4908±0.1633  -  truth: 1.0
+subject:992 (MC_dropout)
+outputs: 0.4697±0.1913  -  truth: 0.0
+subject:995 (MC_dropout)
+outputs: 0.4584±0.2020  -  truth: 1.0
+subject:1012 (MC_dropout)
+outputs: 0.5080±0.1862  -  truth: 1.0
+subject:1014 (MC_dropout)
+outputs: 0.4390±0.1245  -  truth: 0.0
+subject:1016 (MC_dropout)
+outputs: 0.4537±0.1736  -  truth: 1.0
+subject:1040 (MC_dropout)
+outputs: 0.5712±0.1497  -  truth: 1.0
+subject:1043 (MC_dropout)
+outputs: 0.5019±0.1131  -  truth: 1.0
+subject:1047 (MC_dropout)
+outputs: 0.5089±0.1759  -  truth: 0.0
+subject:1059 (MC_dropout)
+outputs: 0.4844±0.1896  -  truth: 0.0
+subject:1065 (MC_dropout)
+outputs: 0.5042±0.2228  -  truth: 1.0
+subject:1079 (MC_dropout)
+outputs: 0.4541±0.1727  -  truth: 0.0
+subject:1100 (MC_dropout)
+outputs: 0.4341±0.2816  -  truth: 1.0
+subject:1102 (MC_dropout)
+outputs: 0.5810±0.2060  -  truth: 1.0
+subject:1103 (MC_dropout)
+outputs: 0.5610±0.1752  -  truth: 1.0
+subject:1104 (MC_dropout)
+outputs: 0.4964±0.1459  -  truth: 0.0
+subject:1117 (MC_dropout)
+outputs: 0.3989±0.1985  -  truth: 1.0
+subject:1124 (MC_dropout)
+outputs: 0.4904±0.2222  -  truth: 0.0
+subject:1125 (MC_dropout)
+outputs: 0.4369±0.1546  -  truth: 1.0
+subject:1127 (MC_dropout)
+outputs: 0.5300±0.1862  -  truth: 1.0
+subject:1130 (MC_dropout)
+outputs: 0.4241±0.1666  -  truth: 0.0
+subject:1144 (MC_dropout)
+outputs: 0.5330±0.1199  -  truth: 1.0
+subject:1150 (MC_dropout)
+outputs: 0.5084±0.1676  -  truth: 1.0
+subject:1151 (MC_dropout)
+outputs: 0.4659±0.1203  -  truth: 0.0
+subject:1157 (MC_dropout)
+outputs: 0.5534±0.2170  -  truth: 0.0
+subject:1164 (MC_dropout)
+outputs: 0.4786±0.1672  -  truth: 1.0
+subject:1165 (MC_dropout)
+outputs: 0.4353±0.1386  -  truth: 0.0
+subject:1179 (MC_dropout)
+outputs: 0.2926±0.1682  -  truth: 0.0
+subject:1188 (MC_dropout)
+outputs: 0.5223±0.1923  -  truth: 1.0
+subject:1192 (MC_dropout)
+outputs: 0.5652±0.2388  -  truth: 0.0
+subject:1196 (MC_dropout)
+outputs: 0.5710±0.2470  -  truth: 1.0
+subject:1205 (MC_dropout)
+outputs: 0.5480±0.2259  -  truth: 0.0
+subject:1209 (MC_dropout)
+outputs: 0.4898±0.1861  -  truth: 0.0
+subject:1213 (MC_dropout)
+outputs: 0.5424±0.1502  -  truth: 0.0
+subject:1215 (MC_dropout)
+outputs: 0.5208±0.1621  -  truth: 0.0
+subject:1218 (MC_dropout)
+outputs: 0.4898±0.1469  -  truth: 1.0
+subject:1221 (MC_dropout)
+outputs: 0.3650±0.1549  -  truth: 0.0
+subject:1229 (MC_dropout)
+outputs: 0.4223±0.2039  -  truth: 0.0
+subject:1232 (MC_dropout)
+outputs: 0.4998±0.1755  -  truth: 0.0
+subject:1233 (MC_dropout)
+outputs: 0.5741±0.1567  -  truth: 0.0
+subject:1234 (MC_dropout)
+outputs: 0.5208±0.1663  -  truth: 0.0
+subject:1237 (MC_dropout)
+outputs: 0.5361±0.1691  -  truth: 0.0
+subject:1242 (MC_dropout)
+outputs: 0.4430±0.1595  -  truth: 0.0
+subject:1246 (MC_dropout)
+outputs: 0.4256±0.1713  -  truth: 1.0
+subject:1253 (MC_dropout)
+outputs: 0.4529±0.2248  -  truth: 1.0
+subject:1267 (MC_dropout)
+outputs: 0.5841±0.1997  -  truth: 1.0
+subject:1275 (MC_dropout)
+outputs: 0.6081±0.2486  -  truth: 0.0
+subject:1300 (MC_dropout)
+outputs: 0.4827±0.1736  -  truth: 1.0
+subject:1309 (MC_dropout)
+outputs: 0.4648±0.2252  -  truth: 1.0
+subject:1317 (MC_dropout)
+outputs: 0.4809±0.1600  -  truth: 0.0
+subject:1378 (MC_dropout)
+outputs: 0.5126±0.2200  -  truth: 1.0
+subject:1379 (MC_dropout)
+outputs: 0.4084±0.1750  -  truth: 0.0
+subject:1380 (MC_dropout)
+outputs: 0.4120±0.1880  -  truth: 0.0
+subject:1390 (MC_dropout)
+outputs: 0.5750±0.1303  -  truth: 1.0
+subject:1395 (MC_dropout)
+outputs: 0.5028±0.1349  -  truth: 0.0
+subject:1407 (MC_dropout)
+outputs: 0.4352±0.1901  -  truth: 0.0
+subject:1408 (MC_dropout)
+outputs: 0.4672±0.2000  -  truth: 0.0
+subject:1416 (MC_dropout)
+outputs: 0.5844±0.2157  -  truth: 1.0
+subject:1421 (MC_dropout)
+outputs: 0.5080±0.2042  -  truth: 1.0
+subject:1431 (MC_dropout)
+outputs: 0.5559±0.1607  -  truth: 1.0
+subject:1435 (MC_dropout)
+outputs: 0.5898±0.1675  -  truth: 1.0
+subject:1443 (MC_dropout)
+outputs: 0.5534±0.1363  -  truth: 1.0
+subject:1455 (MC_dropout)
+outputs: 0.4189±0.1711  -  truth: 1.0
+subject:1457 (MC_dropout)
+outputs: 0.4975±0.2126  -  truth: 1.0
+subject:1458 (MC_dropout)
+outputs: 0.4131±0.1831  -  truth: 0.0
+subject:1471 (MC_dropout)
+outputs: 0.6264±0.2009  -  truth: 0.0
+subject:1486 (MC_dropout)
+outputs: 0.5172±0.1737  -  truth: 1.0
+subject:1491 (MC_dropout)
+outputs: 0.4707±0.2383  -  truth: 1.0
+subject:1496 (MC_dropout)
+outputs: 0.5531±0.2181  -  truth: 1.0
+subject:1500 (MC_dropout)
+outputs: 0.4833±0.1691  -  truth: 0.0
+subject:1506 (MC_dropout)
+outputs: 0.5343±0.1037  -  truth: 1.0
+subject:1511 (MC_dropout)
+outputs: 0.4828±0.1857  -  truth: 0.0
+subject:1520 (MC_dropout)
+outputs: 0.5398±0.2156  -  truth: 1.0
+subject:1524 (MC_dropout)
+outputs: 0.5524±0.2263  -  truth: 1.0
+subject:1526 (MC_dropout)
+outputs: 0.5216±0.1466  -  truth: 1.0
+subject:1527 (MC_dropout)
+outputs: 0.4543±0.1795  -  truth: 1.0
+subject:1539 (MC_dropout)
+outputs: 0.4691±0.1562  -  truth: 1.0
+subject:1540 (MC_dropout)
+outputs: 0.5038±0.1940  -  truth: 1.0
+subject:1542 (MC_dropout)
+outputs: 0.3679±0.1987  -  truth: 1.0
+subject:1543 (MC_dropout)
+outputs: 0.5793±0.1568  -  truth: 1.0
+subject:1552 (MC_dropout)
+outputs: 0.3950±0.1748  -  truth: 1.0
+subject:1561 (MC_dropout)
+outputs: 0.5470±0.1626  -  truth: 1.0
+subject:1564 (MC_dropout)
+outputs: 0.4769±0.1662  -  truth: 0.0
+subject:1568 (MC_dropout)
+outputs: 0.5210±0.2011  -  truth: 0.0
+subject:1573 (MC_dropout)
+outputs: 0.5661±0.1596  -  truth: 1.0
+subject:1584 (MC_dropout)
+outputs: 0.5516±0.1860  -  truth: 0.0
+subject:1587 (MC_dropout)
+outputs: 0.5225±0.2243  -  truth: 0.0
+subject:1594 (MC_dropout)
+outputs: 0.5584±0.0951  -  truth: 1.0
+subject:1595 (MC_dropout)
+outputs: 0.5392±0.1853  -  truth: 0.0
+subject:1610 (MC_dropout)
+outputs: 0.4848±0.2121  -  truth: 0.0
+subject:1626 (MC_dropout)
+outputs: 0.4835±0.1888  -  truth: 1.0
+subject:1632 (MC_dropout)
+outputs: 0.4348±0.1972  -  truth: 1.0
+subject:1637 (MC_dropout)
+outputs: 0.4369±0.1645  -  truth: 1.0
+subject:1641 (MC_dropout)
+outputs: 0.4137±0.1721  -  truth: 1.0
+subject:1643 (MC_dropout)
+outputs: 0.5258±0.1358  -  truth: 0.0
+subject:1650 (MC_dropout)
+outputs: 0.4999±0.2165  -  truth: 0.0
+subject:1657 (MC_dropout)
+outputs: 0.4997±0.1691  -  truth: 0.0
+subject:1668 (MC_dropout)
+outputs: 0.4805±0.1529  -  truth: 0.0
+subject:1680 (MC_dropout)
+outputs: 0.4852±0.1514  -  truth: 0.0
+subject:1696 (MC_dropout)
+outputs: 0.5473±0.2202  -  truth: 0.0
+subject:1704 (MC_dropout)
+outputs: 0.5105±0.1522  -  truth: 0.0
+subject:1705 (MC_dropout)
+outputs: 0.6133±0.1566  -  truth: 0.0
+subject:1717 (MC_dropout)
+outputs: 0.4364±0.2264  -  truth: 0.0
+subject:1719 (MC_dropout)
+outputs: 0.5489±0.2016  -  truth: 0.0
+subject:1724 (MC_dropout)
+outputs: 0.4603±0.1878  -  truth: 1.0
+subject:1726 (MC_dropout)
+outputs: 0.5112±0.1772  -  truth: 0.0
+subject:1739 (MC_dropout)
+outputs: 0.5471±0.1269  -  truth: 0.0
+subject:1747 (MC_dropout)
+outputs: 0.4736±0.1883  -  truth: 0.0
+subject:1761 (MC_dropout)
+outputs: 0.5442±0.2246  -  truth: 0.0
+subject:1774 (MC_dropout)
+outputs: 0.5540±0.1786  -  truth: 1.0
+subject:1776 (MC_dropout)
+outputs: 0.4848±0.2123  -  truth: 1.0
+subject:1784 (MC_dropout)
+outputs: 0.4658±0.2004  -  truth: 0.0
+subject:1787 (MC_dropout)
+outputs: 0.4769±0.1818  -  truth: 1.0
+subject:1805 (MC_dropout)
+outputs: 0.4451±0.1594  -  truth: 1.0
+subject:1816 (MC_dropout)
+outputs: 0.5096±0.1246  -  truth: 1.0
+subject:1831 (MC_dropout)
+outputs: 0.3967±0.1834  -  truth: 0.0
+subject:1839 (MC_dropout)
+outputs: 0.4847±0.2127  -  truth: 0.0
+subject:1859 (MC_dropout)
+outputs: 0.5938±0.1945  -  truth: 1.0
+subject:1862 (MC_dropout)
+outputs: 0.5802±0.2015  -  truth: 0.0
+subject:1867 (MC_dropout)
+outputs: 0.5220±0.1154  -  truth: 0.0
+subject:1892 (MC_dropout)
+outputs: 0.5583±0.1677  -  truth: 1.0
+subject:1898 (MC_dropout)
+outputs: 0.5086±0.1537  -  truth: 0.0
+subject:1903 (MC_dropout)
+outputs: 0.6067±0.1994  -  truth: 0.0
+subject:1904 (MC_dropout)
+outputs: 0.5018±0.1777  -  truth: 1.0
+subject:1909 (MC_dropout)
+outputs: 0.5540±0.1906  -  truth: 0.0
+subject:1910 (MC_dropout)
+outputs: 0.5007±0.1828  -  truth: 0.0
+subject:1914 (MC_dropout)
+outputs: 0.5819±0.2087  -  truth: 0.0
+subject:1925 (MC_dropout)
+outputs: 0.4530±0.1473  -  truth: 1.0
+subject:1932 (MC_dropout)
+outputs: 0.3659±0.1626  -  truth: 0.0
+subject:1954 (MC_dropout)
+outputs: 0.4338±0.1855  -  truth: 0.0
+subject:1962 (MC_dropout)
+outputs: 0.5384±0.2037  -  truth: 1.0
+subject:1971 (MC_dropout)
+outputs: 0.4966±0.1246  -  truth: 1.0
+subject:1977 (MC_dropout)
+outputs: 0.5639±0.2043  -  truth: 1.0
+subject:1981 (MC_dropout)
+outputs: 0.4492±0.2581  -  truth: 0.0
+subject:1995 (MC_dropout)
+outputs: 0.4602±0.1934  -  truth: 0.0
+subject:2002 (MC_dropout)
+outputs: 0.4470±0.1830  -  truth: 0.0
+subject:2007 (MC_dropout)
+outputs: 0.4656±0.1355  -  truth: 0.0
+subject:2015 (MC_dropout)
+outputs: 0.4981±0.1353  -  truth: 0.0
+subject:2017 (MC_dropout)
+outputs: 0.4763±0.1666  -  truth: 0.0
+subject:2051 (MC_dropout)
+outputs: 0.4871±0.1752  -  truth: 1.0
+subject:2052 (MC_dropout)
+outputs: 0.4740±0.1094  -  truth: 0.0
+subject:2054 (MC_dropout)
+outputs: 0.5046±0.1417  -  truth: 1.0
+subject:2055 (MC_dropout)
+outputs: 0.5038±0.1572  -  truth: 1.0
+subject:2056 (MC_dropout)
+outputs: 0.5209±0.1349  -  truth: 0.0
+subject:2060 (MC_dropout)
+outputs: 0.6066±0.2212  -  truth: 1.0
+subject:2066 (MC_dropout)
+outputs: 0.3969±0.1804  -  truth: 0.0
+subject:2072 (MC_dropout)
+outputs: 0.4636±0.2077  -  truth: 0.0
+subject:2078 (MC_dropout)
+outputs: 0.5878±0.2284  -  truth: 1.0
+subject:2080 (MC_dropout)
+outputs: 0.5448±0.1356  -  truth: 0.0
+subject:2082 (MC_dropout)
+outputs: 0.4378±0.2017  -  truth: 1.0
+subject:2089 (MC_dropout)
+outputs: 0.4338±0.1079  -  truth: 0.0
+subject:2090 (MC_dropout)
+outputs: 0.4623±0.1570  -  truth: 0.0
