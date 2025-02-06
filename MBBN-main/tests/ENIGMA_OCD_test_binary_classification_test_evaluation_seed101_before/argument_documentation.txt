@@ -17,7 +17,7 @@ weightwatcher: False
 weightwatcher_save_dir: None
 norm_axis: 1
 cuda: True
-log_dir: /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/runs
+log_dir: /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/yc/mc_dropout/runs
 transformer_hidden_layers: 8
 world_size: -1
 rank: 0
@@ -115,12 +115,8 @@ lr_step_phase4: 3000
 lr_warmup_phase4: 1
 sequence_length_phase4: 100
 workers_phase4: 1
-UQ: True
-UQ_method: MC_dropout
-num_forward_passes: 16
-num_ensemble_models: 5
-UQ_model_weights_path: /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_from_scratch_seed101
+num_forward_pass: 16
 gpu: 0
+loaded_model_weights_path_phase4: /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_from_scratch_seed101_1gpu/ENIGMA_OCD_mbbn_OCD_from_scratch_seed101_1gpu_epoch_9_BEST_val_ACC.pth
 experiment_folder: /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/tests/ENIGMA_OCD_test_binary_classification_test_evaluation_seed101
 experiment_title: ENIGMA_OCD_test_binary_classification_test_evaluation_seed101
-loaded_model_weights_path_phase4: /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_from_scratch_seed101/ENIGMA_OCD_mbbn_OCD_from_scratch_seed101_epoch_8_BEST_val_ACC.pth

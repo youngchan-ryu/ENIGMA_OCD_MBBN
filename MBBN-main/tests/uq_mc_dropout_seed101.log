@@ -1,0 +1,71 @@
+starting testing
+UQ enabled
+UQ : True / UQ_method : MC_dropout
+Error processing subject Seoul-SNU_sub-NOR68SDS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO27LCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR55JJU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO05HSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR68SDS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO27LCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR55JJU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO05HSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+/scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/splits/ENIGMA_OCD/ENIGMA_OCD_OCD_ROI_316_seq_len_100_split101.txt
+loading splits
+length of train_idx: 74
+length of val_idx: 15
+length of test_idx: 23
+workers: 1
+length of training generator is: 18
+workers: 1
+length of valid generator is: 3
+workers: 1
+length of test generator is: 5
+Number of training batches: 18
+Number of validation batches: 3
+Number of test batches: 5
+self.task: test
+Number of heads: 4
+loading parameters onto new model...
+Single GPU or CPU training
+self.gpu: 0
+self.device: cuda
+moved model to: cuda:0
+loaded model weights:
+model location - /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_from_scratch_seed101/ENIGMA_OCD_mbbn_OCD_from_scratch_seed101_epoch_8_BEST_val_ACC.pth
+last learning rate - 3e-05
+validation loss - 20.248568513658313
+validation AUROC - 0.6964285714285714val_threshold - 0.6005983948707581
+test
+using binary_classification loss
+using spatial_difference loss
+test
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.1, inplace=False) - p=0.1
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.3, inplace=False) - p=0.3
+Enabling MC Dropout for layer Dropout(p=0.0, inplace=False) - p=0.0
+Enabling MC Dropout for layer Dropout(p=0.0, inplace=False) - p=0.0
+Enabling MC Dropout for layer Dropout(p=0.0, inplace=False) - p=0.0
+Enabling MC Dropout for layer Dropout(p=0.6, inplace=False) - p=0.6
+calculating best thresholds with roc_curve

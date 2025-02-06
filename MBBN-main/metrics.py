@@ -72,3 +72,18 @@ class Metrics():
     def R2_score(self,truth,pred):
         R2 = r2_score(truth, pred)
         return R2
+    
+    def compute_far95(self, pred_probs, true_labels, pos_label=1, target_recall=0.95):
+        fpr, tpr, thresholds = roc_curve(true_labels, pred_probs, pos_label=pos_label)
+
+        valid_indices = np.where(tpr >= target_recall)[0]
+
+        if len(valid_indices) == 0:
+            print(f"No threshold found for target recall {target_recall}")
+            return None
+        
+        idx = valid_indices[0]
+        threshold = thresholds[idx]
+        far95 = fpr[idx]
+
+        return far95, threshold, fpr, tpr

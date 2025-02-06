@@ -1,0 +1,106 @@
+wandb: Currently logged in as: youngchanryu (youngchanryu-seoul-national-university). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.19.6 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.9
+wandb: Run data is saved locally in /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/wandb/run-20250206_075412-9yd6b7io
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ENIGMA_OCD_mbbn_OCD_from_scratch_seed102_1gpu
+wandb: ⭐️ View project at https://wandb.ai/youngchanryu-seoul-national-university/enigma-ocd_mbbn
+wandb: 🚀 View run at https://wandb.ai/youngchanryu-seoul-national-university/enigma-ocd_mbbn/runs/9yd6b7io
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:01<00:09,  1.13s/it] 22%|██▏       | 2/9 [00:01<00:03,  1.90it/s] 33%|███▎      | 3/9 [00:01<00:01,  3.00it/s] 44%|████▍     | 4/9 [00:01<00:01,  4.13it/s] 67%|██████▋   | 6/9 [00:01<00:00,  5.99it/s] 78%|███████▊  | 7/9 [00:01<00:00,  6.65it/s] 89%|████████▉ | 8/9 [00:01<00:00,  7.26it/s]100%|██████████| 9/9 [00:01<00:00,  7.74it/s]100%|██████████| 9/9 [00:01<00:00,  4.59it/s]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.50it/s]100%|██████████| 2/2 [00:00<00:00,  2.87it/s]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.94it/s]100%|██████████| 2/2 [00:00<00:00,  3.66it/s]
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:00<00:04,  1.63it/s] 22%|██▏       | 2/9 [00:00<00:02,  3.10it/s] 33%|███▎      | 3/9 [00:00<00:01,  4.47it/s] 44%|████▍     | 4/9 [00:00<00:00,  5.61it/s] 56%|█████▌    | 5/9 [00:01<00:00,  6.57it/s] 67%|██████▋   | 6/9 [00:01<00:00,  7.33it/s] 78%|███████▊  | 7/9 [00:01<00:00,  5.82it/s] 89%|████████▉ | 8/9 [00:01<00:00,  6.59it/s]100%|██████████| 9/9 [00:01<00:00,  7.33it/s]100%|██████████| 9/9 [00:01<00:00,  5.57it/s]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  2.85it/s]100%|██████████| 2/2 [00:00<00:00,  5.23it/s]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  2.62it/s]100%|██████████| 2/2 [00:00<00:00,  4.61it/s]
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:00<00:03,  2.05it/s] 22%|██▏       | 2/9 [00:00<00:02,  3.17it/s] 33%|███▎      | 3/9 [00:00<00:01,  4.44it/s] 44%|████▍     | 4/9 [00:01<00:01,  4.35it/s] 56%|█████▌    | 5/9 [00:01<00:00,  5.40it/s] 67%|██████▋   | 6/9 [00:01<00:00,  6.35it/s] 78%|███████▊  | 7/9 [00:01<00:00,  7.05it/s] 89%|████████▉ | 8/9 [00:01<00:00,  7.62it/s]100%|██████████| 9/9 [00:01<00:00,  8.15it/s]100%|██████████| 9/9 [00:01<00:00,  5.73it/s]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  2.60it/s]100%|██████████| 2/2 [00:00<00:00,  4.81it/s]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  2.35it/s]100%|██████████| 2/2 [00:00<00:00,  4.38it/s]
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:00<00:04,  1.64it/s] 22%|██▏       | 2/9 [00:00<00:02,  3.18it/s] 33%|███▎      | 3/9 [00:00<00:01,  3.87it/s] 44%|████▍     | 4/9 [00:01<00:00,  5.00it/s] 56%|█████▌    | 5/9 [00:01<00:00,  6.10it/s] 67%|██████▋   | 6/9 [00:01<00:00,  6.79it/s] 78%|███████▊  | 7/9 [00:01<00:00,  7.47it/s] 89%|████████▉ | 8/9 [00:01<00:00,  8.10it/s]100%|██████████| 9/9 [00:01<00:00,  5.84it/s]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  2.57it/s]100%|██████████| 2/2 [00:00<00:00,  3.88it/s]100%|██████████| 2/2 [00:00<00:00,  3.60it/s]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  2.72it/s]100%|██████████| 2/2 [00:00<00:00,  5.01it/s]
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 0.013 MB of 0.013 MB uploaded (0.000 MB deduped)wandb: \ 0.013 MB of 0.013 MB uploaded (0.000 MB deduped)wandb: | 0.013 MB of 0.013 MB uploaded (0.000 MB deduped)wandb: / 0.013 MB of 0.013 MB uploaded (0.000 MB deduped)wandb: - 0.013 MB of 0.013 MB uploaded (0.000 MB deduped)wandb: \ 0.013 MB of 0.013 MB uploaded (0.000 MB deduped)wandb: | 0.013 MB of 0.013 MB uploaded (0.000 MB deduped)wandb: / 0.013 MB of 0.013 MB uploaded (0.000 MB deduped)wandb: - 0.013 MB of 0.013 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run history:
+wandb:  binary_classification_test_loss_history ▁▂█▇
+wandb: binary_classification_train_loss_history ▁▆▇█
+wandb:   binary_classification_val_loss_history █▁▅▆
+wandb:                                    epoch ▁▃▆█
+wandb:                            learning_rate ▁▁▁▁
+wandb:     spatial_difference_test_loss_history █▆▃▁
+wandb:    spatial_difference_train_loss_history █▆▃▁
+wandb:      spatial_difference_val_loss_history █▆▃▁
+wandb:                               test_AUROC ▄▁▃█
+wandb:                   test_Balanced_Accuracy ▁▁▁▁
+wandb:                    test_Regular_Accuracy ▁▁▁▁
+wandb:                        test_best_bal_acc ▁▁▁▁
+wandb:                      test_best_threshold ▁▁▁▁
+wandb:                            test_f1_score ▁▁▁▁
+wandb:                               test_gmean ▁▁▁▁
+wandb:                         test_sensitivity ▁▁▁▁
+wandb:                         test_specificity ▁▁▁▁
+wandb:                  total_test_loss_history █▆▃▁
+wandb:                 total_train_loss_history ▁▇██
+wandb:                   total_val_loss_history █▅▃▁
+wandb:                              train_AUROC █▁▁▂
+wandb:                  train_Balanced_Accuracy █▁▂▄
+wandb:                   train_Regular_Accuracy █▁▁▄
+wandb:                       train_best_bal_acc █▁▂▃
+wandb:                     train_best_threshold ▇▂▁█
+wandb:                           train_f1_score █▃▄▁
+wandb:                              train_gmean █▁▂▃
+wandb:                        train_sensitivity █▄▄▁
+wandb:                        train_specificity █▁▂█
+wandb:                                val_AUROC █▁▂█
+wandb:                    val_Balanced_Accuracy ▁▁▁▁
+wandb:                     val_Regular_Accuracy ▁█▁▁
+wandb:                         val_best_bal_acc ▅▄▁█
+wandb:                       val_best_threshold ▆█▁▅
+wandb:                             val_f1_score ▂▁▁█
+wandb:                                val_gmean ▄▂▁█
+wandb:                          val_sensitivity ▃▁▃█
+wandb:                          val_specificity █▇▁█
+wandb: 
+wandb: Run summary:
+wandb:  binary_classification_test_loss_history 0.6877
+wandb: binary_classification_train_loss_history 0.69592
+wandb:   binary_classification_val_loss_history 0.68297
+wandb:                                    epoch 5
+wandb:                            learning_rate 3e-05
+wandb:     spatial_difference_test_loss_history 22.69762
+wandb:    spatial_difference_train_loss_history 22.81208
+wandb:      spatial_difference_val_loss_history 22.74608
+wandb:                               test_AUROC 0.50794
+wandb:                   test_Balanced_Accuracy 0.5
+wandb:                    test_Regular_Accuracy 0.5625
+wandb:                        test_best_bal_acc 0.5
+wandb:                      test_best_threshold 0.5
+wandb:                            test_f1_score 0.72
+wandb:                               test_gmean 0.0
+wandb:                         test_sensitivity 1.0
+wandb:                         test_specificity 0.0
+wandb:                  total_test_loss_history 23.38532
+wandb:                 total_train_loss_history 23.508
+wandb:                   total_val_loss_history 23.42905
+wandb:                              train_AUROC 0.53698
+wandb:                  train_Balanced_Accuracy 0.58655
+wandb:                   train_Regular_Accuracy 0.56944
+wandb:                       train_best_bal_acc 0.59048
+wandb:                     train_best_threshold 0.5109
+wandb:                           train_f1_score 0.53731
+wandb:                              train_gmean 0.58636
+wandb:                        train_sensitivity 0.46341
+wandb:                        train_specificity 0.74194
+wandb:                                val_AUROC 0.47619
+wandb:                    val_Balanced_Accuracy 0.5
+wandb:                     val_Regular_Accuracy 0.5625
+wandb:                         val_best_bal_acc 0.59524
+wandb:                       val_best_threshold 0.5478
+wandb:                             val_f1_score 0.46154
+wandb:                                val_gmean 0.61721
+wandb:                          val_sensitivity 0.44444
+wandb:                          val_specificity 0.85714
+wandb: 
+wandb: 🚀 View run ENIGMA_OCD_mbbn_OCD_from_scratch_seed102_1gpu at: https://wandb.ai/youngchanryu-seoul-national-university/enigma-ocd_mbbn/runs/9yd6b7io
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20250206_075412-9yd6b7io/logs

@@ -1,5 +1,6 @@
 from utils import *  #including 'init_distributed', 'weight_loader'
 from trainer import Trainer
+from uncertainty import UQTrainer
 import os
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 import sys
@@ -181,6 +182,13 @@ def get_arguments(base_path):
     parser.add_argument('--sequence_length_phase4', type=int,default=300) # ABCD 348 ABIDE 280 UKB 464
     parser.add_argument('--workers_phase4', type=int, default=4)
                         
+    ## Uncertainty Quantification
+    parser.add_argument('--UQ', action='store_true')
+    parser.add_argument('--UQ_method', type=str, default='none', choices=['MC_dropout', 'ensemble'])
+    parser.add_argument('--num_forward_passes', type=int, default=16)
+    parser.add_argument('--num_ensemble_models', type=int, default=5)
+    parser.add_argument('--UQ_model_weights_path', default=None)
+
     args = parser.parse_args()
         
     return args
@@ -230,18 +238,47 @@ def run_phase(args,loaded_model_weights_path,phase_num,phase_name):
 
 
 def test(args,phase_num,model_weights_path):
+    UQ = args.UQ
+    UQ_method = args.UQ_method
+    print(f"UQ : {UQ} / UQ_method : {UQ_method}")
+    
     experiment_folder = '{}_{}_{}'.format(args.dataset_name, 'test_{}'.format(args.fine_tune_task), args.exp_name) #, datestamp())
     experiment_folder = Path(os.path.join(args.base_path,'tests', experiment_folder))
     os.makedirs(experiment_folder,exist_ok=True)
-    setattr(args,'loaded_model_weights_path_phase' + phase_num, model_weights_path)
     
     args.experiment_folder = experiment_folder
     args.experiment_title = experiment_folder.name
-    args_logger(args)
-    args = sort_args(args.step, vars(args))
-    S = ['test']
-    trainer = Trainer(sets=S,**args)
+
+    if UQ:
+        S = [UQ_method]
+        if UQ_method == 'MC_dropout':
+            # YC : Retrieve the last checkpoint from directory
+            model_weights_list = os.listdir(model_weights_path)
+            model_weights_list = [x for x in model_weights_list if x.endswith('.pth')]
+            model_weights_list = sorted(model_weights_list)
+            if len(model_weights_list) == 0:
+                raise Exception('No model weights found')
+            loaded_model_weights_path = os.path.join(model_weights_path,model_weights_list[-1])
+            setattr(args,'loaded_model_weights_path_phase' + phase_num, loaded_model_weights_path)
+            args_logger(args)
+            args = sort_args(args.step, vars(args))
+            trainer = UQTrainer(sets=S,**args)
+
+    else:
+        # YC : Retrieve the most recent checkpoint from directory
+        model_weights_list = os.listdir(model_weights_path)
+        model_weights_list = [x for x in model_weights_list if x.endswith('.pth')]
+        model_weights_list = sorted(model_weights_list, key=lambda x: os.path.getctime(os.path.join(model_weights_path, x)))
+        loaded_model_weights_path = os.path.join(model_weights_path,model_weights_list[-1])
+        
+        setattr(args,'loaded_model_weights_path_phase' + phase_num, loaded_model_weights_path)
+        S = ['test']
+        args_logger(args)
+        args = sort_args(args.step, vars(args))
+        trainer = Trainer(sets=S,**args)
+    
     trainer.testing()
+    
 
 if __name__ == '__main__':
     base_path = os.getcwd() 
@@ -257,6 +294,11 @@ if __name__ == '__main__':
     if step == '4' :
         print(f'starting testing')
         phase_num = '4'
+        if args.UQ:
+            model_weights_path = args.UQ_model_weights_path
+            if args.UQ_method == 'none':
+                raise Exception('UQ method is not specified')
+            print('UQ enabled')
         test(args, phase_num, model_weights_path)
     else:
         print(f'starting phase{step}: {task}')
