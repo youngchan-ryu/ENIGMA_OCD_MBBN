@@ -1,0 +1,829 @@
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/condabin/conda
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/bin/conda
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/bin/conda-env
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/bin/activate
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/bin/deactivate
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/etc/profile.d/conda.sh
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/etc/fish/conf.d/conda.fish
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/shell/condabin/Conda.psm1
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/shell/condabin/conda-hook.ps1
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/lib/python3.12/site-packages/xontrib/conda.xsh
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/etc/profile.d/conda.csh
+no change     /global/homes/y/ycryu/.bashrc
+No action taken.
+starting phase2: mbbn
+saving the results at /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_from_scratch_seed101_4gpu_pm
+Error processing subject Seoul-SNU_sub-UMO15KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO68LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO33JWJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR91SJY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO17LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR79KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO59KDH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO09KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO61JCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR04JJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR108KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR95LMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR65LES: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR117CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR49YHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR64SSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR87YSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR11KYT: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO01LYH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR68SDS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR51CBD: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR56YIW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR40LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO23SJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR46LYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR38LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR112YIS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO48LDJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR36HYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO29CJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR39KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO39JHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO10YBI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR55JJU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO02KHA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR53PSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO35ISR: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO38BYU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR73KMS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO04KSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR31HKO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR45LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO45LSW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR84LJE: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO72YHY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO27LCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO47LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR66LDY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO36CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR100JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO18LKB: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR106KSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO22KMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR33SHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR62MBS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO30HWK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO05HSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR97LKH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO34KJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO55LBY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR71HRK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR15KKY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO45JJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO56KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR72KCK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR105KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR42PSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR21JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR16KYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO27KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO58PYA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR29JSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO11YSO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR114LOY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO38LTH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR109KSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR78LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR59KDW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR93BHU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO25CEG: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO03KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR85CJM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO46LYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO02LTY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO31PPS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR01LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO05JSI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO23LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR104LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO11LSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR12BJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO63KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO14PMY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO35KKK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR75LSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO15KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO68LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO33JWJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR91SJY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO17LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR79KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO59KDH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO09KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO61JCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR04JJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR108KHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR95LMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR65LES: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR117CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR49YHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR64SSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR87YSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR11KYT: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO01LYH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR68SDS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR51CBD: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR56YIW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR40LJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO23SJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR46LYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR38LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR112YIS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO48LDJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR36HYS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO29CJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR39KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO39JHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO10YBI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR55JJU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO02KHA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR53PSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO35ISR: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO38BYU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR73KMS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO04KSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR31HKO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR45LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO45LSW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR84LJE: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO72YHY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO27LCY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO47LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR66LDY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO36CSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR100JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO18LKB: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR106KSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO22KMJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR33SHJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR62MBS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO30HWK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO05HSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR97LKH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO34KJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO55LBY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR71HRK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR15KKY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO45JJH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO56KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR72KCK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR105KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR42PSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR21JHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR16KYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO27KHS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO58PYA: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR29JSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO11YSO: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR114LOY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO38LTH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR109KSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR78LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR59KDW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR93BHU: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO25CEG: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO03KHK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR85CJM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO46LYJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO02LTY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO31PPS: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR01LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO05JSI: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO23LSM: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR104LSJ: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-DNO11LSH: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR12BJW: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO63KSY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO14PMY: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-UMO35KKK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+Error processing subject Seoul-SNU_sub-NOR75LSK: operands could not be broadcast together with shapes (100,) (92,) (100,) 
+/pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/splits/ENIGMA_OCD/ENIGMA_OCD_OCD_ROI_316_seq_len_100_split101.txt
+loading splits
+length of train_idx: 1401
+length of val_idx: 298
+length of test_idx: 299
+workers: 4
+length of training generator is: 175
+workers: 4
+length of valid generator is: 37
+workers: 4
+length of test generator is: 37
+Number of training batches: 175
+Number of validation batches: 37
+Number of test batches: 37
+self.task: MBBN
+Number of heads: 4
+There are no checkpoints or weights from previous steps
+Single GPU or CPU training
+self.gpu: 0
+self.device: cuda
+moved model to: cuda:0
+mbbn
+using binary_classification loss
+using spatial_difference loss
+Starting epoch 1/100
+max allocated memory: 72.90 MB
+max cached memory: 96.00 MB
+
+______epoch summary 1/100_____
+
+binary_classification_train: 0.7813516027586801
+binary_classification_val: 0.691702659065659
+binary_classification_test: 0.6926569407050674
+spatial_difference_train: 22.307375782557894
+spatial_difference_val: 21.787468265842747
+spatial_difference_test: 21.80409184017697
+total_train: 23.08872734069824
+total_val: 22.47917092813028
+total_test: 22.496748692280537
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5031000569398214
+train_Regular_Accuracy: 0.5035714285714286
+train_AUROC: 0.5096052784642984
+train_best_bal_acc: 0.5155023255529183
+train_best_threshold: 0.48697957396507263
+train_gmean: 0.5025694655703755
+train_specificity: 0.39829302987197723
+train_sensitivity: 0.6341463414634146
+train_f1_score: 0.5650224215246636
+val_Balanced_Accuracy: 0.5765876820526868
+val_Regular_Accuracy: 0.5743243243243243
+val_AUROC: 0.621261927589828
+val_best_bal_acc: 0.6256905446742456
+val_best_threshold: 0.502685546875
+val_gmean: 0.6230296980537094
+val_specificity: 0.5234899328859061
+val_sensitivity: 0.7414965986394558
+val_f1_score: 0.6584615384615384
+test_Balanced_Accuracy: 0.5281735159817351
+test_Regular_Accuracy: 0.5236486486486487
+test_AUROC: 0.5452283105022832
+test_best_bal_acc: 0.5281735159817351
+test_best_threshold: 0.5
+test_gmean: 0.4084719269037876
+test_specificity: 0.19333333333333336
+test_sensitivity: 0.863013698630137
+test_f1_score: 0.6412213740458015
+self.rank: 0
+current_lr:3e-05
+updating best saved model with AUROC:0.621261927589828
+time taken to perform 1: 40.84
+Starting epoch 2/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 2/100_____
+
+binary_classification_train: 0.7730542297022683
+binary_classification_val: 0.6911694681322252
+binary_classification_test: 0.6924181322793703
+spatial_difference_train: 21.82081934247698
+spatial_difference_val: 21.330028688585436
+spatial_difference_test: 21.344882758888037
+total_train: 22.59387352534703
+total_val: 22.02119811805519
+total_test: 22.037300883112728
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5197430183103535
+train_Regular_Accuracy: 0.52
+train_AUROC: 0.5276563482150874
+train_best_bal_acc: 0.5254042890146042
+train_best_threshold: 0.5167173743247986
+train_gmean: 0.5149619774815815
+train_specificity: 0.6339031339031339
+train_sensitivity: 0.4183381088825215
+train_f1_score: 0.46709470304975925
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.5067567567567568
+val_AUROC: 0.6215068493150685
+val_best_bal_acc: 0.6079452054794521
+val_best_threshold: 0.47706684470176697
+val_gmean: 0.6115329939911059
+val_specificity: 0.6066666666666667
+val_sensitivity: 0.6164383561643836
+val_f1_score: 0.6
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5033783783783784
+test_AUROC: 0.5798977309044423
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+self.rank: 0
+current_lr:3e-05
+updating best saved model with AUROC:0.6215068493150685
+time taken to perform 2: 40.63
+Starting epoch 3/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 3/100_____
+
+binary_classification_train: 0.7816642672674996
+binary_classification_val: 0.698421395576752
+binary_classification_test: 0.6993556650909217
+spatial_difference_train: 21.371466449555896
+spatial_difference_val: 20.91152421418611
+spatial_difference_test: 20.923657443072344
+total_train: 22.15313068571545
+total_val: 21.609945554991025
+total_test: 21.623013109774202
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.48740997283623577
+train_Regular_Accuracy: 0.4878571428571429
+train_AUROC: 0.4900906343177731
+train_best_bal_acc: 0.48740997283623577
+train_best_threshold: 0.5
+train_gmean: 0.5033161053715268
+train_specificity: 0.40967283072546234
+train_sensitivity: 0.6183644189383071
+train_f1_score: 0.42685851318944845
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.5033783783783784
+val_AUROC: 0.6315801488380587
+val_best_bal_acc: 0.6016983974797973
+val_best_threshold: 0.3874005973339081
+val_gmean: 0.6057147681154877
+val_specificity: 0.5503355704697986
+val_sensitivity: 0.6666666666666666
+val_f1_score: 0.6193548387096774
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5067567567567568
+test_AUROC: 0.5921917808219178
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+self.rank: 0
+current_lr:3e-05
+updating best saved model with AUROC:0.6315801488380587
+time taken to perform 3: 39.71
+Starting epoch 4/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 4/100_____
+
+binary_classification_train: 0.7805318736178535
+binary_classification_val: 0.6931141687406076
+binary_classification_test: 0.6951766086591257
+spatial_difference_train: 20.961577350071497
+spatial_difference_val: 20.533375366314036
+spatial_difference_test: 20.543373881159603
+total_train: 21.742109211512975
+total_val: 21.226489518139815
+total_test: 21.238550495457005
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.4988999910203349
+train_Regular_Accuracy: 0.4992857142857143
+train_AUROC: 0.5043745255063306
+train_best_bal_acc: 0.4952754716365032
+train_best_threshold: 0.49675944447517395
+train_gmean: 0.48638807528816824
+train_specificity: 0.3988603988603988
+train_sensitivity: 0.5931232091690545
+train_f1_score: 0.5388127853881278
+val_Balanced_Accuracy: 0.5828425329863489
+val_Regular_Accuracy: 0.581081081081081
+val_AUROC: 0.6405743505455874
+val_best_bal_acc: 0.6212390996667123
+val_best_threshold: 0.5402871966362
+val_gmean: 0.6260634471793401
+val_specificity: 0.6778523489932886
+val_sensitivity: 0.5782312925170068
+val_f1_score: 0.5971223021582733
+test_Balanced_Accuracy: 0.5491485184677898
+test_Regular_Accuracy: 0.5472972972972973
+test_AUROC: 0.5994840889375884
+test_best_bal_acc: 0.5491485184677898
+test_best_threshold: 0.5
+test_gmean: 0.47591874637645465
+test_specificity: 0.27516778523489926
+test_sensitivity: 0.8231292517006803
+test_f1_score: 0.6436170212765957
+self.rank: 0
+current_lr:3e-05
+updating best saved model with AUROC:0.6405743505455874
+time taken to perform 4: 40.30
+Starting epoch 5/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 5/100_____
+
+binary_classification_train: 0.7784150856563024
+binary_classification_val: 0.6929572844827497
+binary_classification_test: 0.6970499492980339
+spatial_difference_train: 20.592044435773577
+spatial_difference_val: 20.195463747591585
+spatial_difference_test: 20.202902180439718
+total_train: 21.370459514072962
+total_val: 20.888421001949826
+total_test: 20.8999521513243
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.49389682667640833
+train_Regular_Accuracy: 0.4942857142857143
+train_AUROC: 0.5108889755117951
+train_best_bal_acc: 0.4959999265292628
+train_best_threshold: 0.5047186613082886
+train_gmean: 0.4866904724111649
+train_specificity: 0.5960170697012802
+train_sensitivity: 0.39741750358680056
+train_f1_score: 0.43914081145584727
+val_Balanced_Accuracy: 0.5506756756756757
+val_Regular_Accuracy: 0.5506756756756757
+val_AUROC: 0.6423484295105917
+val_best_bal_acc: 0.6283783783783783
+val_best_threshold: 0.6237207055091858
+val_gmean: 0.6310246516816509
+val_specificity: 0.6013513513513513
+val_sensitivity: 0.6621621621621622
+val_f1_score: 0.6381578947368421
+test_Balanced_Accuracy: 0.5522950445307148
+test_Regular_Accuracy: 0.543918918918919
+test_AUROC: 0.6039506736697876
+test_best_bal_acc: 0.5522950445307148
+test_best_threshold: 0.5
+test_gmean: 0.3664385790890539
+test_specificity: 0.13907284768211925
+test_sensitivity: 0.9655172413793104
+test_f1_score: 0.6746987951807228
+self.rank: 0
+current_lr:3e-05
+updating best saved model with AUROC:0.6423484295105917
+time taken to perform 5: 38.67
+Starting epoch 6/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 6/100_____
+
+binary_classification_train: 0.7742161228259404
+binary_classification_val: 0.6896156946549544
+binary_classification_test: 0.6962586791665705
+spatial_difference_train: 20.261005928402856
+spatial_difference_val: 19.894107380428828
+spatial_difference_test: 19.900568360680932
+total_train: 21.035222040812176
+total_val: 20.583723059645646
+total_test: 20.596827051661037
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5339342967523893
+train_Regular_Accuracy: 0.5342857142857143
+train_AUROC: 0.5513172690926976
+train_best_bal_acc: 0.5353445267362054
+train_best_threshold: 0.5025730133056641
+train_gmean: 0.52918983202648
+train_specificity: 0.6216216216216216
+train_sensitivity: 0.45050215208034433
+train_f1_score: 0.49059561128526646
+val_Balanced_Accuracy: 0.6040182648401826
+val_Regular_Accuracy: 0.6013513513513513
+val_AUROC: 0.645662100456621
+val_best_bal_acc: 0.6364383561643836
+val_best_threshold: 0.5515737533569336
+val_gmean: 0.6349414815016474
+val_specificity: 0.54
+val_sensitivity: 0.7465753424657534
+val_f1_score: 0.6645962732919255
+test_Balanced_Accuracy: 0.5465296803652968
+test_Regular_Accuracy: 0.543918918918919
+test_AUROC: 0.5997260273972602
+test_best_bal_acc: 0.5465296803652968
+test_best_threshold: 0.5
+test_gmean: 0.5112434478931721
+test_specificity: 0.3533333333333333
+test_sensitivity: 0.7397260273972602
+test_f1_score: 0.6153846153846154
+self.rank: 0
+current_lr:3e-05
+updating best saved model with AUROC:0.645662100456621
+time taken to perform 6: 38.85
+Starting epoch 7/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 7/100_____
+
+binary_classification_train: 0.7666680024351392
+binary_classification_val: 0.6890838168072424
+binary_classification_test: 0.697601966761254
+spatial_difference_train: 19.96509470569844
+spatial_difference_val: 19.625474811981082
+spatial_difference_test: 19.63150036933339
+total_train: 20.73176269686952
+total_val: 20.31455861831724
+total_test: 20.329102357842288
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5604392688919909
+train_Regular_Accuracy: 0.5607142857142857
+train_AUROC: 0.5867690756659238
+train_best_bal_acc: 0.5604351872260181
+train_best_threshold: 0.5020427107810974
+train_gmean: 0.5527098769399771
+train_specificity: 0.6581196581196581
+train_sensitivity: 0.46418338108882523
+train_f1_score: 0.5122918318794607
+val_Balanced_Accuracy: 0.5961283842396019
+val_Regular_Accuracy: 0.5945945945945946
+val_AUROC: 0.6410309090078985
+val_best_bal_acc: 0.6182942975848058
+val_best_threshold: 0.6234915256500244
+val_gmean: 0.621599088363137
+val_specificity: 0.610738255033557
+val_sensitivity: 0.6326530612244898
+val_f1_score: 0.6195286195286195
+test_Balanced_Accuracy: 0.5489658950828653
+test_Regular_Accuracy: 0.5472972972972973
+test_AUROC: 0.5983883486280418
+test_best_bal_acc: 0.5489658950828653
+test_best_threshold: 0.5
+test_gmean: 0.49028362241338797
+test_specificity: 0.30201342281879195
+test_sensitivity: 0.7959183673469388
+test_f1_score: 0.6358695652173914
+self.rank: 0
+current_lr:3e-05
+time taken to perform 7: 39.30
+Starting epoch 8/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 8/100_____
+
+binary_classification_train: 0.7611471439046519
+binary_classification_val: 0.687833456070842
+binary_classification_test: 0.6984650635638753
+spatial_difference_train: 19.70058326448713
+spatial_difference_val: 19.385791101971186
+spatial_difference_test: 19.390861292143125
+total_train: 20.461730395725795
+total_val: 20.07362454001968
+total_test: 20.089326388127095
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5697533219997919
+train_Regular_Accuracy: 0.57
+train_AUROC: 0.6033223059199047
+train_best_bal_acc: 0.5753758742507515
+train_best_threshold: 0.5248361229896545
+train_gmean: 0.5707548382691917
+train_specificity: 0.6543385490753912
+train_sensitivity: 0.49784791965566716
+train_f1_score: 0.5381026438569206
+val_Balanced_Accuracy: 0.5743243243243243
+val_Regular_Accuracy: 0.5743243243243243
+val_AUROC: 0.644060445580716
+val_best_bal_acc: 0.6351351351351351
+val_best_threshold: 0.3767378032207489
+val_gmean: 0.628705233213682
+val_specificity: 0.527027027027027
+val_sensitivity: 0.75
+val_f1_score: 0.6707317073170732
+test_Balanced_Accuracy: 0.5688127853881279
+test_Regular_Accuracy: 0.5709459459459459
+test_AUROC: 0.5998173515981735
+test_best_bal_acc: 0.5688127853881279
+test_best_threshold: 0.5
+test_gmean: 0.54647061859381
+test_specificity: 0.7266666666666667
+test_sensitivity: 0.410958904109589
+test_f1_score: 0.48582995951417
+self.rank: 0
+current_lr:3e-05
+time taken to perform 8: 38.36
+Starting epoch 9/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 9/100_____
+
+binary_classification_train: 0.7498158193202246
+binary_classification_val: 0.6889684153748704
+binary_classification_test: 0.7016167343557775
+spatial_difference_train: 19.46369378226144
+spatial_difference_val: 19.171029099473007
+spatial_difference_test: 19.175842668917085
+total_train: 20.21350959051223
+total_val: 19.85999748871491
+total_test: 19.877459448737067
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.6116918474012788
+train_Regular_Accuracy: 0.6121428571428571
+train_AUROC: 0.664309140371966
+train_best_bal_acc: 0.6130837097007904
+train_best_threshold: 0.506023108959198
+train_gmean: 0.6032941470850212
+train_specificity: 0.7268847795163584
+train_sensitivity: 0.5007173601147776
+train_f1_score: 0.5626515763945028
+val_Balanced_Accuracy: 0.5743243243243243
+val_Regular_Accuracy: 0.5743243243243243
+val_AUROC: 0.645932249817385
+val_best_bal_acc: 0.6351351351351351
+val_best_threshold: 0.32906824350357056
+val_gmean: 0.6298660100768334
+val_specificity: 0.5337837837837838
+val_sensitivity: 0.7432432432432432
+val_f1_score: 0.6687116564417178
+test_Balanced_Accuracy: 0.5578995433789954
+test_Regular_Accuracy: 0.5608108108108109
+test_AUROC: 0.6041552511415526
+test_best_bal_acc: 0.5578995433789954
+test_best_threshold: 0.5
+test_gmean: 0.5146262553041788
+test_specificity: 0.7733333333333333
+test_sensitivity: 0.3424657534246575
+test_f1_score: 0.43478260869565216
+self.rank: 0
+current_lr:3e-05
+updating best saved model with AUROC:0.645932249817385
+time taken to perform 9: 37.72
+Starting epoch 10/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 10/100_____
+
+binary_classification_train: 0.7380041502543858
+binary_classification_val: 0.6892692971873928
+binary_classification_test: 0.7015165767154178
+spatial_difference_train: 19.25096806226458
+spatial_difference_val: 18.97815306895488
+spatial_difference_test: 18.982824856526143
+total_train: 19.988972203935894
+total_val: 19.667422346166664
+total_test: 19.684341471904034
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.6408770773340735
+train_Regular_Accuracy: 0.6414285714285715
+train_AUROC: 0.700605725411283
+train_best_bal_acc: 0.6425434344712453
+train_best_threshold: 0.49979647994041443
+train_gmean: 0.6363281854804246
+train_specificity: 0.5490753911806543
+train_sensitivity: 0.7374461979913917
+train_f1_score: 0.6719056974459725
+val_Balanced_Accuracy: 0.5971232876712329
+val_Regular_Accuracy: 0.597972972972973
+val_AUROC: 0.6341095890410958
+val_best_bal_acc: 0.6050684931506849
+val_best_threshold: 0.44296780228614807
+val_gmean: 0.6078256779657475
+val_specificity: 0.5800000000000001
+val_sensitivity: 0.636986301369863
+val_f1_score: 0.6112956810631229
+test_Balanced_Accuracy: 0.5837328219878555
+test_Regular_Accuracy: 0.5844594594594594
+test_AUROC: 0.6040040177144683
+test_best_bal_acc: 0.5837328219878555
+test_best_threshold: 0.5
+test_gmean: 0.5737409270100071
+test_specificity: 0.6912751677852349
+test_sensitivity: 0.47619047619047616
+test_f1_score: 0.532319391634981
+self.rank: 0
+current_lr:3e-05
+time taken to perform 10: 38.07
+Starting epoch 11/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 11/100_____
+
+binary_classification_train: 0.7249597091953476
+binary_classification_val: 0.6915157306252885
+binary_classification_test: 0.7002356849079929
+spatial_difference_train: 19.059371618295646
+spatial_difference_val: 18.804009613299545
+spatial_difference_test: 18.808993515277084
+total_train: 19.784331322211724
+total_val: 19.49552533198926
+total_test: 19.509229233575393
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.6610951926138173
+train_Regular_Accuracy: 0.6614285714285715
+train_AUROC: 0.7373805092286467
+train_best_bal_acc: 0.6667605449840407
+train_best_threshold: 0.5157876014709473
+train_gmean: 0.6540731271083929
+train_specificity: 0.8005698005698005
+train_sensitivity: 0.5343839541547278
+train_f1_score: 0.6148760330578512
+val_Balanced_Accuracy: 0.5335798749029813
+val_Regular_Accuracy: 0.5337837837837838
+val_AUROC: 0.6058302515637128
+val_best_bal_acc: 0.5868145916084555
+val_best_threshold: 0.5848047733306885
+val_gmean: 0.5713486681111943
+val_specificity: 0.738255033557047
+val_sensitivity: 0.4421768707482993
+val_f1_score: 0.512
+test_Balanced_Accuracy: 0.590730593607306
+test_Regular_Accuracy: 0.5912162162162162
+test_AUROC: 0.6282648401826484
+test_best_bal_acc: 0.590730593607306
+test_best_threshold: 0.5
+test_gmean: 0.5896365260706907
+test_specificity: 0.6266666666666667
+test_sensitivity: 0.5547945205479452
+test_f1_score: 0.5724381625441696
+self.rank: 0
+current_lr:3e-05
+time taken to perform 11: 38.42
+Starting epoch 12/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+
+______epoch summary 12/100_____
+
+binary_classification_train: 0.7119510661846116
+binary_classification_val: 0.692564123318539
+binary_classification_test: 0.700663909718797
+spatial_difference_train: 18.886237702142626
+spatial_difference_val: 18.64673442668743
+spatial_difference_test: 18.651940912813753
+total_train: 19.598188761756532
+total_val: 19.339298540407473
+total_test: 19.352604866027832
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.6952311368984329
+train_Regular_Accuracy: 0.6957142857142857
+train_AUROC: 0.7741203409858548
+train_best_bal_acc: 0.6987628344194077
+train_best_threshold: 0.5062824487686157
+train_gmean: 0.6888844443484728
+train_specificity: 0.8207681365576103
+train_sensitivity: 0.5781922525107605
+train_f1_score: 0.6563265306122449
+val_Balanced_Accuracy: 0.592635712002922
+val_Regular_Accuracy: 0.5912162162162162
+val_AUROC: 0.6355522074601653
+val_best_bal_acc: 0.608181527644615
+val_best_threshold: 0.6186076402664185
+val_gmean: 0.6114164447742044
+val_specificity: 0.5973154362416108
+val_sensitivity: 0.6258503401360545
+val_f1_score: 0.610738255033557
+test_Balanced_Accuracy: 0.5652422042642561
+test_Regular_Accuracy: 0.5641891891891891
+test_AUROC: 0.6204629502807835
+test_best_bal_acc: 0.5652422042642561
+test_best_threshold: 0.5
+test_gmean: 0.5433329566024471
+test_specificity: 0.4093959731543624
+test_sensitivity: 0.7210884353741497
+test_f1_score: 0.6217008797653959
+self.rank: 0
+current_lr:3e-05
+time taken to perform 12: 38.65
+Starting epoch 13/100
+max allocated memory: 843.37 MB
+max cached memory: 990.00 MB
+slurmstepd: error: *** STEP 35449976.0 ON nid008461 CANCELLED AT 2025-02-05T05:22:25 ***
+slurmstepd: error: *** JOB 35449976 ON nid008461 CANCELLED AT 2025-02-05T05:22:25 ***
