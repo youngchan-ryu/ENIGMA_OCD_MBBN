@@ -3,3 +3,7 @@ MBBN-main/experiments
 MBBN-main/wandb
 MBBN-main/runs
 ENIGMA-OCD results/QC/carpet_plots
+MBBN-main/wandb
+MBBN-main/__pycache__
+MBBN-main/.ipynb_checkpoints
+*.pth
