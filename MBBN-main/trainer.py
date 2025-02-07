@@ -527,7 +527,7 @@ class Trainer():
                 elif self.fmri_dividing_type == 'three_channels':
                     output_dict = self.model(input_dict['fmri_highfreq_sequence'], input_dict['fmri_lowfreq_sequence'], input_dict['fmri_ultralowfreq_sequence'])
                 elif self.fmri_dividing_type == 'four_channels':
-                    output_dict = self.model(input_dict['fmri_imf1_sequence'], input_dict['fmri_imf2_sequence'], input_dict['fmri_imf3_sequence'], input_dict['fmri_imf4_sequence'])
+                    output_dict = self.model(input_dict['fmri_imf1_sequence'], input_dict['fmri_imf2_sequence'], input_dict['fmri_imf3_sequence'], input_dict['fmri_imf4_sequence'], input_dict['mask'])
                     
                     ### DEBUG STATEMENT ###
                     torch.cuda.synchronize()
