@@ -209,7 +209,7 @@ class Trainer():
         elif self.task.lower() == 'divfreqbert_reconstruction':
             self.model = Transformer_Reconstruction_Three_Channels (**self.kwargs)
         total_params = sum(p.numel() for p in self.model.parameters())
-        print(f"Number of parameters of the model: {total_params}")
+        
         
     def set_model_device(self):  # assigns the model to appropriate devices (e.g., GPU or CPU)
         if self.distributed:
@@ -329,9 +329,10 @@ class Trainer():
                     self.writer.save_history_to_csv()
 
                     #wandb
-                    if self.rank == 0:
+                    if self.rank == 0: # YC : Only save checkpoint for rank 0 gpu process
                         self.writer.register_wandb(epoch, lr=self.optimizer.param_groups[0]['lr'])
-                        self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)
+                        if epoch % 5 == 0:
+                            self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)
                     
                 else:
                     self.eval_epoch('val')
@@ -348,6 +349,7 @@ class Trainer():
                     print(f"self.rank: {self.rank}")
 
                     #wandb
+                    #from scratch training
                     if self.rank == 0:
                         self.writer.register_wandb(epoch, lr=self.optimizer.param_groups[0]['lr'])
                         self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)  ### DEBUGGED
@@ -373,9 +375,10 @@ class Trainer():
                 self.writer.save_history_to_csv()
 
                 #wandb
-                if self.rank == 0:
+                if self.rank == 0: # YC : Only save checkpoint for rank 0 gpu process
                     self.writer.register_wandb(epoch, lr=self.optimizer.param_groups[0]['lr'])
-                    self.save_checkpoint_(epoch, len(self.train_loader), self.scaler) 
+                    if epoch % 5 == 0:
+                        self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)
 
                 end = time.time()
 
@@ -547,6 +550,7 @@ class Trainer():
         final_loss_value = 0
         for loss_name, current_loss_dict in self.writer.losses.items():
             if current_loss_dict['is_active']:
+                # YC : find active loss functions and compute with 'compute_loss_name' function
                 loss_func = getattr(self, 'compute_' + loss_name)
                 torch.cuda.nvtx.range_push(f"{loss_name}")
                 current_loss_value = loss_func(input_dict,output_dict)

@@ -1,5 +1,6 @@
 from utils import *  #including 'init_distributed', 'weight_loader'
 from trainer import Trainer
+from uncertainty import UQTrainer
 import os
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 import sys
@@ -22,7 +23,7 @@ def get_arguments(base_path):
     parser.add_argument('--abide_path', default='/scratch/connectome/stellasybae/ABIDE_ROI') ## labserver
     parser.add_argument('--enigma_path', default='/pscratch/sd/p/pakmasha/MBBN_data') ## Perlmutter 
     parser.add_argument('--base_path', default=base_path) # where your main.py, train.py, model.py are in.
-    parser.add_argument('--step', default='1', choices=['1','2','3','4'], help='which step you want to run')
+    parser.add_argument('--step', default='1', choices=['1','2','3','4'], help='which step you want to run') # YC : Step 1 : vanilla_BERT / Step 2 : MBBN / Step 3 : divfreqBERT_reconstruction / Step 4 : test
     
     
     parser.add_argument('--target', type=str, default='OCD')
@@ -67,10 +68,10 @@ def get_arguments(base_path):
     # Nsight profiling
     parser.add_argument("--profiling", action='store_true')
     
-    # wandb related
-    parser.add_argument('--wandb_key', default='285aadcd46b8af7731dca6cf50c7051164415461', type=str,  help='default: key for Maria')
+    #wandb related
+    parser.add_argument('--wandb_key', default='d0330ca06936eecd637c3470c47af6d33e1cb277', type=str,  help='default: key for ycryu')
     parser.add_argument('--wandb_mode', default='online', type=str,  help='online|offline')
-    parser.add_argument('--wandb_entity', default='pakmasha-seoul-national-university', type=str)
+    parser.add_argument('--wandb_entity', default='youngchanryu-seoul-national-university', type=str)
     parser.add_argument('--wandb_project', default='enigma-ocd_mbbn', type=str)
 
     
@@ -106,6 +107,7 @@ def get_arguments(base_path):
     ## ablation
     parser.add_argument('--ablation', type=str, choices=['convolution', 'no_high_freq'])
     
+    ## YC : Phase means step
     ## phase 1 vanilla BERT
     parser.add_argument('--task_phase1', type=str, default='vanilla_BERT')
     parser.add_argument('--batch_size_phase1', type=int, default=8, help='for DDP, each GPU processes batch_size_pahse1 samples')
@@ -180,6 +182,13 @@ def get_arguments(base_path):
     parser.add_argument('--sequence_length_phase4', type=int,default=300) # ABCD 348 ABIDE 280 UKB 464
     parser.add_argument('--workers_phase4', type=int, default=4)
                         
+    ## Uncertainty Quantification
+    parser.add_argument('--UQ', action='store_true')
+    parser.add_argument('--UQ_method', type=str, default='none', choices=['MC_dropout', 'ensemble'])
+    parser.add_argument('--num_forward_passes', type=int, default=16)
+    parser.add_argument('--num_ensemble_models', type=int, default=5)
+    parser.add_argument('--UQ_model_weights_path', default=None)
+
     args = parser.parse_args()
         
     return args
@@ -229,18 +238,47 @@ def run_phase(args,loaded_model_weights_path,phase_num,phase_name):
 
 
 def test(args,phase_num,model_weights_path):
+    UQ = args.UQ
+    UQ_method = args.UQ_method
+    print(f"UQ : {UQ} / UQ_method : {UQ_method}")
+    
     experiment_folder = '{}_{}_{}'.format(args.dataset_name, 'test_{}'.format(args.fine_tune_task), args.exp_name) #, datestamp())
     experiment_folder = Path(os.path.join(args.base_path,'tests', experiment_folder))
     os.makedirs(experiment_folder,exist_ok=True)
-    setattr(args,'loaded_model_weights_path_phase' + phase_num, model_weights_path)
     
     args.experiment_folder = experiment_folder
     args.experiment_title = experiment_folder.name
-    args_logger(args)
-    args = sort_args(args.step, vars(args))
-    S = ['test']
-    trainer = Trainer(sets=S,**args)
+
+    if UQ:
+        S = [UQ_method]
+        if UQ_method == 'MC_dropout':
+            # YC : Retrieve the last checkpoint from directory
+            model_weights_list = os.listdir(model_weights_path)
+            model_weights_list = [x for x in model_weights_list if x.endswith('.pth')]
+            model_weights_list = sorted(model_weights_list)
+            if len(model_weights_list) == 0:
+                raise Exception('No model weights found')
+            loaded_model_weights_path = os.path.join(model_weights_path,model_weights_list[-1])
+            setattr(args,'loaded_model_weights_path_phase' + phase_num, loaded_model_weights_path)
+            args_logger(args)
+            args = sort_args(args.step, vars(args))
+            trainer = UQTrainer(sets=S,**args)
+
+    else:
+        # YC : Retrieve the most recent checkpoint from directory
+        model_weights_list = os.listdir(model_weights_path)
+        model_weights_list = [x for x in model_weights_list if x.endswith('.pth')]
+        model_weights_list = sorted(model_weights_list, key=lambda x: os.path.getctime(os.path.join(model_weights_path, x)))
+        loaded_model_weights_path = os.path.join(model_weights_path,model_weights_list[-1])
+        
+        setattr(args,'loaded_model_weights_path_phase' + phase_num, loaded_model_weights_path)
+        S = ['test']
+        args_logger(args)
+        args = sort_args(args.step, vars(args))
+        trainer = Trainer(sets=S,**args)
+    
     trainer.testing()
+    
 
 if __name__ == '__main__':
     base_path = os.getcwd() 
@@ -256,6 +294,11 @@ if __name__ == '__main__':
     if step == '4' :
         print(f'starting testing')
         phase_num = '4'
+        if args.UQ:
+            model_weights_path = args.UQ_model_weights_path
+            if args.UQ_method == 'none':
+                raise Exception('UQ method is not specified')
+            print('UQ enabled')
         test(args, phase_num, model_weights_path)
     else:
         print(f'starting phase{step}: {task}')
