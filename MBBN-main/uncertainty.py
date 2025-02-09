@@ -169,7 +169,6 @@ class UQWriter(Writer):
         }
 
         return mean, is_correct
-        ## /YC
 
     
     def accuracy_summary(self, mid_epoch, mean, std):

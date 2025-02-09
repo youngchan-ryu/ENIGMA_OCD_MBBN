@@ -253,12 +253,17 @@ def test(args,phase_num,model_weights_path):
         S = [UQ_method]
         if UQ_method == 'MC_dropout':
             # YC : Retrieve the last checkpoint from directory
-            model_weights_list = os.listdir(model_weights_path)
-            model_weights_list = [x for x in model_weights_list if x.endswith('.pth')]
-            model_weights_list = sorted(model_weights_list)
-            if len(model_weights_list) == 0:
+            file_name_and_time_lst = []
+            for f_name in os.listdir(model_weights_path):
+                if f_name.endswith('.pth'):
+                    written_time = os.path.getctime(os.path.join(model_weights_path,f_name))
+                    file_name_and_time_lst.append((f_name, written_time))
+            # Backward order of file creation time
+            sorted_file_lst = sorted(file_name_and_time_lst, key=lambda x: x[1], reverse=True)
+
+            if len(sorted_file_lst) == 0:
                 raise Exception('No model weights found')
-            loaded_model_weights_path = os.path.join(model_weights_path,model_weights_list[-1])
+            loaded_model_weights_path = os.path.join(model_weights_path,sorted_file_lst[0][0])
             setattr(args,'loaded_model_weights_path_phase' + phase_num, loaded_model_weights_path)
             args_logger(args)
             args = sort_args(args.step, vars(args))
@@ -266,11 +271,17 @@ def test(args,phase_num,model_weights_path):
 
     else:
         # YC : Retrieve the most recent checkpoint from directory
-        model_weights_list = os.listdir(model_weights_path)
-        model_weights_list = [x for x in model_weights_list if x.endswith('.pth')]
-        model_weights_list = sorted(model_weights_list, key=lambda x: os.path.getctime(os.path.join(model_weights_path, x)))
-        loaded_model_weights_path = os.path.join(model_weights_path,model_weights_list[-1])
-        
+        file_name_and_time_lst = []
+        for f_name in os.listdir(model_weights_path):
+            if f_name.endswith('.pth'):
+                written_time = os.path.getctime(os.path.join(model_weights_path,f_name))
+                file_name_and_time_lst.append((f_name, written_time))
+        # Backward order of file creation time
+        sorted_file_lst = sorted(file_name_and_time_lst, key=lambda x: x[1], reverse=True)
+
+        if len(sorted_file_lst) == 0:
+            raise Exception('No model weights found')
+        loaded_model_weights_path = os.path.join(model_weights_path,sorted_file_lst[0][0])
         setattr(args,'loaded_model_weights_path_phase' + phase_num, loaded_model_weights_path)
         S = ['test']
         args_logger(args)
