@@ -18,7 +18,7 @@
 ### EDIT!!!### ./scripts/main_experiments/01_from_scratch/train_MBBN_from_scratch-ENIGMA_OCD.sh | tee /global/homes/p/pakmasha/model/MBBN-main/failed_experiments/output_ROI_322_seq_len_100_seed
 
 ## ENIGMA-OCD - perlmutter
-python main.py --dataset_name ENIGMA_OCD --base_path /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main --enigma_path /pscratch/sd/y/ycryu/MBBN_data_mini \
+python main.py --dataset_name ENIGMA_OCD --base_path /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main --enigma_path /pscratch/sd/y/ycryu/MBBN_data \
 --step 2 --batch_size_phase2 8 --lr_init_phase2 3e-5 --lr_policy_phase2 step \
 --workers_phase2 8 --fine_tune_task binary_classification --target OCD \
 --fmri_type divided_timeseries --transformer_hidden_layers 8 \

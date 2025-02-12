@@ -111,7 +111,10 @@ def datestamp():
     return time
 
 def reproducibility(**kwargs):
-    seed = kwargs.get('seed')
+    if kwargs.get('UQ') == True and kwargs.get('UQ_method') == 'ensemble' and kwargs.get('step') == '2':
+        seed = kwargs.get('seed') + kwargs.get('model_idx')
+    else:
+        seed = kwargs.get('seed')
     cuda = kwargs.get('cuda')
     torch.manual_seed(seed)
     if cuda:

@@ -7,3 +7,8 @@ MBBN-main/wandb
 __pycache__/
 .ipynb_checkpoints/
 *.pth
+
+MBBN-main/yc/ensemble/wandb/
+MBBN-main/yc/ensemble/runs/
+MBBN-main/__pycache__/
+

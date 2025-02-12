@@ -424,7 +424,8 @@ class DataHandler():  # primary class for dataset management (initialization, pr
                 sublist = list(map(str, sublist))
                 
             print('generating step 3.. saving splits...')   # save the subject splits to a file
-            with open(f"./splits/{self.dataset_name}/{self.dataset_name}_{self.target}_ROI_{self.intermediate_vec}_seq_len_{self.seq_len}_split{self.seed}.txt", mode="w") as file:
+            print(f"saving at {self.base_path}/splits/{self.dataset_name}/{self.dataset_name}_{self.target}_ROI_{self.intermediate_vec}_seq_len_{self.seq_len}_split{self.seed}.txt")
+            with open(f"{self.base_path}/splits/{self.dataset_name}/{self.dataset_name}_{self.target}_ROI_{self.intermediate_vec}_seq_len_{self.seq_len}_split{self.seed}.txt", mode="w") as file:
                 file.write('\n'.join(sublist))   # ex) ./splits/ENIGMA_OCD/ENIGMA_OCD_OCD_ROI_400_seq_len_280_split1.txt
 
         print(self.current_split)
