@@ -81,7 +81,7 @@ def get_arguments(base_path):
     parser.add_argument('--divide_by_lorentzian', action='store_true')
     parser.add_argument('--use_raw_knee', action='store_true')
     parser.add_argument('--seq_part', type=str, default='head')
-    parser.add_argument('--fmri_dividing_type', default='three_channels', choices=['two_channels', 'three_channels', 'four_channels'])
+    parser.add_argument('--fmri_dividing_type', default='three_channels', choices=['two_channels', 'three_channels', 'four_channels', 'five_channels'])
     
     # Dropouts
     parser.add_argument('--transformer_dropout_rate', type=float, default=0.3) 

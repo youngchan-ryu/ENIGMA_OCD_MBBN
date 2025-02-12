@@ -63,6 +63,14 @@ class LrHandler():
             scheduler = lr_scheduler.StepLR(optimizer, step_size=self.step_size, gamma=self.gamma)
         
         elif self.lr_policy == 'SGDR':
+
+            ### DEBUG ###
+            # Enforce that warmup is strictly less than first_cycle_steps (T₀)
+            if self.warmup >= self.T_0:
+                # Option: set warmup to 10% of T₀ (or any fraction that you prefer)
+                self.warmup = max(1, int(self.T_0 * 0.1))
+            #############
+            
             # warmup을 위해 초기 시작 lr 을 0으로 지정.
             # https://gaussian37.github.io/dl-pytorch-lr_scheduler/ 참고
             for param_group in optimizer.param_groups:
