@@ -30,7 +30,8 @@ class Spatial_Difference_Loss(nn.Module):
         self.spat_diff_loss = 0.0
         self.spat_diff_loss_type = kwargs.get('spat_diff_loss_type')
         self.fmri_dividing_type = kwargs.get('fmri_dividing_type')
-    def forward(self, h, l, u, z):
+
+    def forward(self, h, l, u, z=None, k=None):
         '''
         h, l, u is attention map
         h : (batch, ROI, ROI)
@@ -39,20 +40,41 @@ class Spatial_Difference_Loss(nn.Module):
         #loss = nn.MSELoss()
         if self.spat_diff_loss_type == 'minus_log':
             # current SOTA #
-            if self.fmri_dividing_type == 'four_channels':
+            if self.fmri_dividing_type == 'five_channels':
+                self.spat_diff_loss = -torch.log((loss(h, l)+loss(h, u)+loss(h, z)+loss(h, k)+
+                                                  loss(l, u)+loss(l, z)+loss(l, k)+
+                                                  loss(u, z)+loss(u, k)+
+                                                  loss(z, k)))
+            elif self.fmri_dividing_type == 'four_channels':
                 self.spat_diff_loss = -torch.log((loss(h, l)+loss(h, u)+loss(h, z)+loss(l, u)+loss(l, z)+loss(u, z)))
             elif self.fmri_dividing_type == 'three_channels':
                 self.spat_diff_loss = -torch.log((loss(h, l)+loss(h, u)+loss(l, u)))
             elif self.fmri_dividing_type == 'two_channels':
                 self.spat_diff_loss = -torch.log(loss(l, u))
         elif self.spat_diff_loss_type == 'reciprocal_log':
-            self.spat_diff_loss = torch.tensor(1/(torch.log((loss(h, l)+loss(h, u)+loss(l, u)))))
+            if self.fmri_dividing_type == 'four_channels':
+                self.spat_diff_loss = torch.tensor(1/(torch.log((loss(h, l)+loss(h, u)+loss(h, z)+
+                                                                 loss(l, u)+loss(l, z)+loss(u, z)))))
+            elif self.fmri_dividing_type == 'three_channels':
+                self.spat_diff_loss = torch.tensor(1/(torch.log((loss(h, l)+loss(h, u)+loss(l, u)))))
         elif self.spat_diff_loss_type == 'exp_minus':
-            self.spat_diff_loss = torch.tensor((torch.exp(-loss(h, l)) + torch.exp(-loss(h, u)) + torch.exp(-loss(l, u))))
+            if self.fmri_dividing_type == 'four_channels':
+                self.spat_diff_loss = torch.tensor((torch.exp(-loss(h, l)) + torch.exp(-loss(h, u)) + torch.exp(-loss(h, z)) +
+                                                    torch.exp(-loss(l, u)) + torch.exp(-loss(l, z)) + torch.exp(-loss(u, z))))
+            elif self.fmri_dividing_type == 'three_channels':
+                self.spat_diff_loss = torch.tensor((torch.exp(-loss(h, l)) + torch.exp(-loss(h, u)) + torch.exp(-loss(l, u))))
         elif self.spat_diff_loss_type == 'log_loss':
-            self.spat_diff_loss = (torch.log(loss(h,l)) + torch.log(loss(h,u)) + torch.log(loss(l,u)))/3
+            if self.fmri_dividing_type == 'four_channels':
+                self.spat_diff_loss = (torch.log(loss(h,l)) + torch.log(loss(h,u)) + torch.log(loss(h,z)) +
+                                       torch.log(loss(l,u)) + torch.log(loss(l,z)) + torch.log(loss(u,z))) / 6
+            elif self.fmri_dividing_type == 'three_channels':
+                self.spat_diff_loss = (torch.log(loss(h,l)) + torch.log(loss(h,u)) + torch.log(loss(l,u))) / 3
         elif self.spat_diff_loss_type == 'exp_whole':
-            self.spat_diff_loss = torch.exp(-1 * (loss(h, l)+loss(h, u)+loss(l, u)))
+            if self.fmri_dividing_type == 'four_channels':
+                self.spat_diff_loss = torch.exp(-1 * (loss(h, l)+loss(h, u)+loss(h, z)+
+                                                      loss(l, u)+loss(l, z)+loss(u, z)))
+            elif self.fmri_dividing_type == 'three_channels':
+                self.spat_diff_loss = torch.exp(-1 * (loss(h, l)+loss(h, u)+loss(l, u)))
         self.spat_diff_loss.requires_grad_(True)
         self.spat_diff_loss.retain_grad()
         

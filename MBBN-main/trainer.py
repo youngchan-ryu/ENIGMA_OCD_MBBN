@@ -197,10 +197,12 @@ class Trainer():
 
         #elif self.task.lower() == 'divfreqbert':
         elif self.task.lower() == 'mbbn':
-            if self.fmri_dividing_type == 'four_channels':       
-                self.model = Transformer_Finetune_Four_Channels(**self.kwargs)
-            elif self.fmri_dividing_type == 'three_channels':                
+            if self.fmri_dividing_type == 'three_channels':                
                 self.model = Transformer_Finetune_Three_Channels(**self.kwargs)
+            elif self.fmri_dividing_type == 'four_channels':       
+                self.model = Transformer_Finetune_Four_Channels(**self.kwargs)
+            elif self.fmri_dividing_type == 'five_channels':                
+                self.model = Transformer_Finetune_Five_Channels(**self.kwargs)
                 
         elif self.task.lower() == 'mbbn_pretraining':
             if self.fmri_dividing_type == 'three_channels':
@@ -404,15 +406,6 @@ class Trainer():
 
         times = []
         for batch_idx, input_dict in enumerate(tqdm(self.train_loader,position=0,leave=True)): 
-            
-            ### DEBUG STATEMENT ###
-            # print(f"Processing batch {batch_idx + 1}/{len(self.train_loader)}")
-            # print(f"Input batch keys: {input_dict.keys()}")
-            # print(f"Batch size: {len(input_dict['fmri_highfreq_sequence']), len(input_dict['fmri_lowfreq_sequence']), len(input_dict['fmri_ultralowfreq_sequence'])}")
-            #######################
-            
-            ### training ###
-            #start_time = time.time()
 
             torch.cuda.nvtx.range_push("training steps")
             self.writer.total_train_steps += 1
@@ -442,18 +435,8 @@ class Trainer():
                     self.lr_handler.schedule_check_and_update(self.optimizer) 
             else:
                 loss_dict, loss = self.forward_pass(input_dict)
-                
-                ### DEBUG STATEMENT ###
-                # print("Running backward pass")
-                #######################
-                
                 loss.backward()
-                self.optimizer.step()
-                
-                ### DEBUG STATEMENT ###
-                # print("Optimizer step completed")
-                #######################
-                
+                self.optimizer.step()                
                 self.lr_handler.schedule_check_and_update(self.optimizer)
                 
             self.writer.write_losses(loss_dict, set='train')
@@ -514,26 +497,35 @@ class Trainer():
                     output_dict = self.model(input_dict['fmri_highfreq_sequence'], input_dict['fmri_lowfreq_sequence'], input_dict['fmri_ultralowfreq_sequence'])
                 elif self.fmri_dividing_type == 'four_channels':
                     output_dict = self.model(input_dict['fmri_imf1_sequence'], input_dict['fmri_imf2_sequence'], input_dict['fmri_imf3_sequence'], input_dict['fmri_imf4_sequence'])
-  
+            
         
         #### train & valid ####
         else:
             if self.fmri_type in ['timeseries', 'frequency', 'time_domain_high', 'time_domain_low', 'time_domain_ultralow', 'frequency_domain_low', 'frequency_domain_ultralow', 'frequency_domain_high']:
-                output_dict = self.model(input_dict['fmri_sequence'])
-                # print(f"self.fmri_type: {self.fmri_type}, output_dict.keys: {output_dict.keys()}")
+                output_dict = self.model(input_dict['fmri_sequence'], input_dict['mask'])
+
             elif self.fmri_type == 'divided_timeseries':
                 if self.fmri_dividing_type == 'two_channels':
                     output_dict = self.model(input_dict['fmri_lowfreq_sequence'], input_dict['fmri_ultralowfreq_sequence'])
                 elif self.fmri_dividing_type == 'three_channels':
-                    output_dict = self.model(input_dict['fmri_highfreq_sequence'], input_dict['fmri_lowfreq_sequence'], input_dict['fmri_ultralowfreq_sequence'])
+                    output_dict = self.model(input_dict['fmri_highfreq_sequence'], input_dict['fmri_lowfreq_sequence'], 
+                                             input_dict['fmri_ultralowfreq_sequence'], 
+                                             input_dict['mask'])
                 elif self.fmri_dividing_type == 'four_channels':
-                    output_dict = self.model(input_dict['fmri_imf1_sequence'], input_dict['fmri_imf2_sequence'], input_dict['fmri_imf3_sequence'], input_dict['fmri_imf4_sequence'], input_dict['mask'])
+                    output_dict = self.model(input_dict['fmri_imf1_sequence'], input_dict['fmri_imf2_sequence'], 
+                                             input_dict['fmri_imf3_sequence'], input_dict['fmri_imf4_sequence'], 
+                                             input_dict['mask'])
+                elif self.fmri_dividing_type == 'five_channels':
+                    # Add before model call:
+                    output_dict = self.model(input_dict['fmri_imf1_sequence'], input_dict['fmri_imf2_sequence'], 
+                                             input_dict['fmri_imf3_sequence'], input_dict['fmri_imf4_sequence'], 
+                                             input_dict['fmri_imf5_sequence'], 
+                                             input_dict['mask'])
                     
                     ### DEBUG STATEMENT ###
                     torch.cuda.synchronize()
                     #######################
                                
-            
         torch.cuda.nvtx.range_push("aggregate_losses")
         loss_dict, loss = self.aggregate_losses(input_dict, output_dict)
         
@@ -771,10 +763,12 @@ class Trainer():
     def compute_spatial_difference(self,input_dict,output_dict):
         if self.task.lower() == 'vanilla_bert':
             spatial_difference_loss = torch.tensor(0.0, device=self.device)
-        elif self.fmri_dividing_type == 'four_channels':
-            spatial_difference_loss = self.spatial_difference_loss_func(output_dict['imf1_spatial_attention'], output_dict['imf2_spatial_attention'], output_dict['imf3_spatial_attention'],  output_dict['imf4_spatial_attention'])
         elif self.fmri_dividing_type == 'three_channels':
             spatial_difference_loss = self.spatial_difference_loss_func(output_dict['high_spatial_attention'], output_dict['low_spatial_attention'], output_dict['ultralow_spatial_attention'], 0)
+        elif self.fmri_dividing_type == 'four_channels':
+            spatial_difference_loss = self.spatial_difference_loss_func(output_dict['imf1_spatial_attention'], output_dict['imf2_spatial_attention'], output_dict['imf3_spatial_attention'],  output_dict['imf4_spatial_attention'])
+        elif self.fmri_dividing_type == 'five_channels':
+            spatial_difference_loss = self.spatial_difference_loss_func(output_dict['imf1_spatial_attention'], output_dict['imf2_spatial_attention'], output_dict['imf3_spatial_attention'],  output_dict['imf4_spatial_attention'],  output_dict['imf5_spatial_attention'])
 
         return spatial_difference_loss
    
