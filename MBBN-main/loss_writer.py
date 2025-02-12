@@ -165,16 +165,7 @@ class Writer():
             
             if self.fine_tune_task == 'binary_classification':
                 
-                ### DEBUG STATEMENT ###
-                # print(f"scores before sigmoid: {subj_dict['score'].float()}")
-                #######################
-                
                 subj_dict['score'] = torch.sigmoid(subj_dict['score'].float())
-                
-                ### DEBUG STATEMENT ###
-                # print(f"scores after sigmoid: {subj_dict['score']}")
-                #######################
-
 
             # subj_dict['score'] denotes the logits for sequences for a subject
             subj_pred = subj_dict['score'].mean().item() 
@@ -182,32 +173,16 @@ class Writer():
 
             subj_truth = subj_dict['truth'].item()
             subj_mode = subj_dict['mode'] # train, val, test
-            
-            
-            ### DEBUG STATEMENT ###
-            # print(f"subj_dict['score']: {subj_dict['score']}")
-            # print(f"subj_dict['truth']: {subj_dict['truth']}")
-            #######################
 
             with open(os.path.join(self.per_subject_predictions,'iter_{}.txt'.format(self.eval_iter)),'a+') as f:
                 f.write('subject:{} ({})\noutputs: {:.4f}\u00B1{:.4f}  -  truth: {}\n'.format(subj_name,subj_mode,subj_pred,subj_error,subj_truth))
             pred_all_sets[subj_mode].append(subj_pred) # don't use std in computing AUROC, ACC
             truth_all_sets[subj_mode].append(subj_truth)
             
-            ### DEBUG STATEMENT ###
-            # print(f"pred_all_sets AFTER adding {subj_name}, subj_mode = {subj_mode}: {pred_all_sets}")
-            # print(f"truth_all_sets AFTER adding {subj_name}, subj_mode = {subj_mode}: {truth_all_sets}")
-            #######################
-            
 
         for (name,pred),(_,truth) in zip(pred_all_sets.items(),truth_all_sets.items()):
             if len(pred) == 0:
                 continue
-            
-            ### DEBUG STATEMENT ###
-            # print(f"pred: {pred}")
-            # print(f"truth: {truth}")
-            #######################
             
             if self.fine_tune_task == 'regression':
                 ## return to original scale ##
@@ -222,26 +197,9 @@ class Writer():
             else:
                 metrics[name + '_Balanced_Accuracy'] = self.metrics.BAC(truth,[x>0.5 for x in torch.Tensor(pred)])
                 metrics[name + '_Regular_Accuracy'] = self.metrics.RAC(truth,[x>0.5 for x in torch.Tensor(pred)]) # Stella modified it
-                                
-                ### DEBUG STATEMENT ###
-                # print(f"Truth labels (y_true): {truth}")
-                # print(f"Predicted scores (y_pred): {pred}")
-                # print(f"Predicted classes: {[1 if p > 0.5 else 0 for p in pred]}")
-                # print(f"Unique labels in y_true: {set(truth)}")
-                # if len(truth) != len(pred):
-                #     print(f"Length mismatch! y_true: {len(truth)}, y_pred: {len(pred)}")
-                # if len(set(truth)) < 2:
-                #     print("Skipping AUROC calculation. Only one class present in y_true.")
-                #     return None
-                # print(f"self.val_threshold: {self.val_threshold}")
-                #######################
-                
                 metrics[name + '_AUROC'] = self.metrics.AUROC(truth,pred)             
                 metrics[name +'_best_bal_acc'], metrics[name + '_best_threshold'],metrics[name + '_gmean'],metrics[name + '_specificity'],metrics[name + '_sensitivity'],metrics[name + '_f1_score'] = self.metrics.ROC_CURVE(truth,pred,name,self.val_threshold)
 
-                ##### DEBUG STATEMENT #####
-                # print(f"self.val_threshold: {self.val_threshold}")
-                ###########################
             self.current_metrics = metrics
             
             

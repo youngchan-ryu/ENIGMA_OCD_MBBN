@@ -139,12 +139,11 @@ class DataHandler():  # primary class for dataset management (initialization, pr
                     file = np.load(filename)[20:20+self.seq_len].T
                 elif self.dataset_name == 'ENIGMA_OCD':
                     if self.intermediate_vec == 316:
-                        if self.fmri_dividing_type == 'four_channels' or self.fmri_type == 'timeseries':
+                        if self.fmri_type in {"divided_timeseries", "timeseries"}:
+                            # filename = os.path.join(kwargs.get('enigma_path'), i+'/'+i+'_filtered_0.01_0.1.npy')  # band-pass-filtered data
                             filename = os.path.join(kwargs.get('enigma_path'), i+'/'+i+'.npy')  # unfiltered data
-                        elif self.fmri_dividing_type == 'three_channels':
-                            filename = os.path.join(kwargs.get('enigma_path'), i+'/'+i+'_filtered_0.01_0.1.npy')  # band-pass-filtered data
                         else:
-                            raise ValueError("Filename is not defined for this fmri_dividing_type")
+                            raise ValueError("Filename is not defined for this fMRI type")
 
                         file = np.load(filename)[20:20+self.seq_len].T 
                         site = filename.split('/')[-2].split('_')[-2]      
@@ -476,10 +475,10 @@ class DataHandler():  # primary class for dataset management (initialization, pr
         if self.kwargs.get('distributed'):  # distributed training (data distribution across multiple GPUs)
             print('distributed')
             train_sampler = DistributedSampler(train_dataset, shuffle=True)
-            print('length of train sampler is:', len(train_sampler)) # 22
+            print('length of train sampler is:', len(train_sampler)) 
             if self.target != 'reconstruction':   
                 valid_sampler = DistributedSampler(val_dataset, shuffle=False)
-                print('length of valid sampler is:', len(valid_sampler)) # 5
+                print('length of valid sampler is:', len(valid_sampler)) 
                 test_sampler = DistributedSampler(test_dataset, shuffle=False)
                 print('length of test sampler is:', len(test_sampler))
         else:
