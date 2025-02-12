@@ -30,7 +30,7 @@ from nitime.analysis import SpectralAnalyzer, FilterAnalyzer, NormalizationAnaly
 
 from sktime.libs.vmdpy import VMD  # ADDED
 from joblib import Parallel, delayed # ADDED
-from time_series_utils import *
+from time_series_utils import *  # ADDED
 
 def lorentzian_function(x, s0, corner):
     return (s0*corner**2) / (x**2 + corner**2)
@@ -71,14 +71,8 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
         self.register_args(**kwargs)
         self.data_dir = kwargs.get('enigma_path')
         self.meta_data = pd.read_csv(os.path.join(kwargs.get('base_path'),'data','metadata','ENIGMA_QC_final_subject_list.csv'))
-        #self.site_meta_data = pd.read_csv(os.path.join(kwargs.get('base_path'),'data','metadata','ABIDE1_pheno_and_sites.csv'))
-        self.subject_names = os.listdir(self.data_dir)   ###### ENIGMA-OCD DATA DIRECTORY ######
+        self.subject_names = os.listdir(self.data_dir)  
         self.subject_folders = []
-        #self.sex = kwargs.get('sex')
-        
-        ### DEBUG STATEMENT ###
-        self.processed_count = 0  # Tracks the number of subjects fetched
-        #######################
         
         # removing samples whose target value is NaN.
         if self.target == 'OCD':         
@@ -92,25 +86,11 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
         data_list = []
 
         for sub in os.listdir(self.data_dir):
-            if self.fmri_dividing_type == 'four_channels' or self.fmri_type == 'timeseries':
-                data_list.append(os.path.join(self.data_dir, sub, sub+'.npy'))  # unfiltered data
-            elif self.fmri_dividing_type == 'three_channels':
-                data_list.append(os.path.join(self.data_dir, sub, sub+'_filtered_0.01_0.1.npy'))  # band-pass-filtered data
+            if self.fmri_type in {"divided_timeseries", "timeseries"}:
+                # data_list.append(os.path.join(self.data_dir, sub, sub+'_filtered_0.01_0.1.npy'))  # band-pass-filtered data
+                data_list.append(os.path.join(self.data_dir, sub, sub+'.npy'))  # unfiltered data 
             else:
-                raise ValueError("Filename is not defined for this fmri_dividing_type")
-             
-            
-            ### DEBUG STATEMENT ###
-            if self.fmri_dividing_type == 'four_channels' or self.fmri_type == 'timeseries':
-                filepath = os.path.join(self.data_dir, sub, sub + '.npy')
-            elif self.fmri_dividing_type == 'three_channels':
-                filepath = os.path.join(self.data_dir, sub, sub + '_filtered_0.01_0.1.npy')
-            else:
-                raise ValueError("Filename is not defined for this fmri_dividing_type")
-
-            if not os.path.exists(filepath):
-                print(f"Missing file for subject: {sub}")
-            #######################
+                raise ValueError("Filename is not defined for this fMRI type")
         
         unified_name_list = [i for i in os.listdir(self.data_dir)]
         valid_sub = set(subjects) & set(unified_name_list)  # find valid subjects (subjects = list of subjects from the meta-data, unified_name_list: list of subjects with time-series data)
@@ -177,10 +157,6 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
         return N
 
     def __getitem__(self, index):  # retrieves a single data sample from the dataset based on the specified index
-        ### DEBUG STATEMENT ###
-        self.processed_count += 1
-        # print(f"Processed subjects: {self.processed_count}")
-        #######################
         
         subj, subj_name, path_to_fMRIs, target, site = self.index_l[index]
 
@@ -195,212 +171,221 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
         
         ts_length = y.shape[1]   # temporal padding
         pad = self.sequence_length-ts_length
-        
+               
         if self.transfer_learning or self.finetune_test or self.finetune:
             # standard length : 464 (UKB) - because I pretrained divfreqBERT with UKB!
             pad = 464 - self.sequence_length
             
         TR = repetition_time(site)
  
-        if self.lorentzian:  # Lorentzian-based frequence filtering
-            ### DEBUG STATEMENT ###
-            try: 
-            #######################    
+        # if self.lorentzian:  # Lorentzian-based frequence filtering
+        #     ### DEBUG STATEMENT ###
+        #     try: 
+        #     #######################    
 
-                '''
-                get knee frequency
-                '''
+        #         '''
+        #         get knee frequency
+        #         '''
 
-                sample_whole = np.zeros(self.sequence_length,) # originally self.sequence_length   ## aggregates time-series data across ROIs
-                # print(f"sample_whole.shape: {sample_whole.shape}")
-                for i in range(self.intermediate_vec):
-                    sample_whole+=y[i]
-                # print(f"y[i].shape: {y[i].shape}")
-                sample_whole /= self.intermediate_vec    # averages the time-series signals (y) across a set number of ROIs
-                # print(f"sample_whole.shape after averaging: {sample_whole.shape}")
+        #         sample_whole = np.zeros(self.sequence_length,) # originally self.sequence_length   ## aggregates time-series data across ROIs
+        #         # print(f"sample_whole.shape: {sample_whole.shape}")
+        #         for i in range(self.intermediate_vec):
+        #             sample_whole+=y[i]
+        #         # print(f"y[i].shape: {y[i].shape}")
+        #         sample_whole /= self.intermediate_vec    # averages the time-series signals (y) across a set number of ROIs
+        #         # print(f"sample_whole.shape after averaging: {sample_whole.shape}")
 
-                T = TimeSeries(sample_whole, sampling_interval=TR)  # computes power spectral density (PSD) of the averaged time-series signal
-                S_original = SpectralAnalyzer(T)
+        #         T = TimeSeries(sample_whole, sampling_interval=TR)  # computes power spectral density (PSD) of the averaged time-series signal
+        #         S_original = SpectralAnalyzer(T)
 
-                # Lorentzian function fitting (dividing ultralow ~ low)  ## extracts the PSD data
-                xdata = np.array(S_original.spectrum_fourier[0][1:])  # xdata = frequency values  
-                ydata = np.abs(S_original.spectrum_fourier[1][1:])    # ydata = corresponding power values
+        #         # Lorentzian function fitting (dividing ultralow ~ low)  ## extracts the PSD data
+        #         xdata = np.array(S_original.spectrum_fourier[0][1:])  # xdata = frequency values  
+        #         ydata = np.abs(S_original.spectrum_fourier[1][1:])    # ydata = corresponding power values
 
-                # initial parameter setting
-                p0 = [0, 0.006]   
-                param_bounds = ([-np.inf, 0], [np.inf, 1])
+        #         # initial parameter setting
+        #         p0 = [0, 0.006]   
+        #         param_bounds = ([-np.inf, 0], [np.inf, 1])
 
-                # fitting Lorentzian function
-                popt, pcov = curve_fit(lorentzian_function, xdata, ydata, p0=p0, maxfev = 5000, bounds=param_bounds)   # popt = optimal parameters
+        #         # fitting Lorentzian function
+        #         popt, pcov = curve_fit(lorentzian_function, xdata, ydata, p0=p0, maxfev = 5000, bounds=param_bounds)   # popt = optimal parameters
 
-                f1 = popt[1]
-                # print(f"f1: {f1}")
+        #         f1 = popt[1]
+        #         # print(f"f1: {f1}")
 
-                knee = round(popt[1]/(1/(sample_whole.shape[0]*TR)))   # calculates knee frequency 
+        #         knee = round(popt[1]/(1/(sample_whole.shape[0]*TR)))   # calculates knee frequency 
 
-                if knee <= 0:
-                    knee = 1
+        #         if knee <= 0:
+        #             knee = 1
 
-                # divide low ~ high
-                if self.fmri_dividing_type == 'three_channels':  # optional multi-fractal function fitting
-                    # initial parameter setting
-                    p1 = [2, 1, 23, 25, 0.16]
+        #         # divide low ~ high
+        #         if self.fmri_dividing_type == 'three_channels':  # optional multi-fractal function fitting
+        #             # initial parameter setting
+        #             p1 = [2, 1, 23, 25, 0.16]
 
-                    # fitting multifractal function
-                    popt_mo, pcov = curve_fit(multi_fractal_function, xdata[knee:], ydata[knee:], p0=p1, maxfev = 50000)   # fits a multi-fractal model to the high-frequency range (above the knee)
-                    pink = round(popt_mo[-1]/(1/(sample_whole.shape[0]*TR)))   # pink = an additional boundary
-                    f2 = popt_mo[-1]
-                    # print(f"f2: {f2}")
+        #             # fitting multifractal function
+        #             popt_mo, pcov = curve_fit(multi_fractal_function, xdata[knee:], ydata[knee:], p0=p1, maxfev = 50000)   # fits a multi-fractal model to the high-frequency range (above the knee)
+        #             pink = round(popt_mo[-1]/(1/(sample_whole.shape[0]*TR)))   # pink = an additional boundary
+        #             f2 = popt_mo[-1]
+        #             # print(f"f2: {f2}")
 
-                    # if f1 > f2:
-                        # print(f"f1: {f1}, f2: {f2}")
+        #             # if f1 > f2:
+        #                 # print(f"f1: {f1}, f2: {f2}")
 
-                    ### DEBUG STATEMENT ###
-                    # Validate the knee value
-                    if knee > xdata.shape[0] or knee > ydata.shape[0]:
-                        # print(f"Skipping subject due to invalid knee value 2: {knee}, xdata length: {xdata.shape[0]}, ydata length: {ydata.shape[0]}")
-                        return None  # Skip this subject
-            except Exception as e:
-                # print(f"Error computing knee frequency 2: {e}")
-                return None  # Skip the subject if an error occurs
-            ############################
+        #             ### DEBUG STATEMENT ###
+        #             # Validate the knee value
+        #             if knee > xdata.shape[0] or knee > ydata.shape[0]:
+        #                 # print(f"Skipping subject due to invalid knee value 2: {knee}, xdata length: {xdata.shape[0]}, ydata length: {ydata.shape[0]}")
+        #                 return None  # Skip this subject
+        #     except Exception as e:
+        #         # print(f"Error computing knee frequency 2: {e}")
+        #         return None  # Skip the subject if an error occurs
+        #     ############################
 
-        # don't use Lorentzian function to divide frequencies   ## in this case, random frequencies are used for spectrum division
-        else:   
-            if self.fmri_type == 'timeseries':
-                pass
-            elif self.fmri_dividing_type == 'four_channels':
-                pass
-            else:
-                ## don't use raw knee frequency!
-                sample_whole = np.zeros(self.sequence_length,)
-                for i in range(self.intermediate_vec):
-                    sample_whole+=y[i]
+        # # don't use Lorentzian function to divide frequencies   ## in this case, random frequencies are used for spectrum division
+        # else:   
+        #     if self.fmri_type == 'timeseries':
+        #         pass
+        #     elif self.fmri_dividing_type == 'four_channels':
+        #         pass
+        #     else:
+        #         ## don't use raw knee frequency!
+        #         sample_whole = np.zeros(self.sequence_length,)
+        #         for i in range(self.intermediate_vec):
+        #             sample_whole+=y[i]
 
-                sample_whole /= self.intermediate_vec     # average the fMRI signals across ROIs, as in the Lorentzian case
+        #         sample_whole /= self.intermediate_vec     # average the fMRI signals across ROIs, as in the Lorentzian case
 
-                T = TimeSeries(sample_whole, sampling_interval=TR)  # compute power spectral density (PSD), as in the Lorentzian case
-                S_original = SpectralAnalyzer(T)
+        #         T = TimeSeries(sample_whole, sampling_interval=TR)  # compute power spectral density (PSD), as in the Lorentzian case
+        #         S_original = SpectralAnalyzer(T)
 
-                # random frequencies
-                xdata = np.array(S_original.spectrum_fourier[0][1:])
-                frequency_range = list(range(xdata.shape[0]))
-                import random
-                if self.fmri_dividing_type == 'three_channels':
-                    a,b = random.sample(frequency_range, 2)   # randomly select two frequencies (a and b) to define the division points (knee and pink)
-                    knee = min(a,b)
-                    if knee == 0:
-                        knee = 1
-                    pink = max(a,b)
-                    if pink == len(frequency_range)-1:
-                        pink = len(frequency_range)-2
-                elif self.fmri_dividing_type == 'two_channels':
-                    knee = random.sample(frequency_range, 1)[0]   # randomly select one frequence (knee) for the division point
-                    if knee == 0:
-                        knee = 1        
+        #         # random frequencies
+        #         xdata = np.array(S_original.spectrum_fourier[0][1:])
+        #         frequency_range = list(range(xdata.shape[0]))
+        #         import random
+        #         if self.fmri_dividing_type == 'three_channels':
+        #             a,b = random.sample(frequency_range, 2)   # randomly select two frequencies (a and b) to define the division points (knee and pink)
+        #             knee = min(a,b)
+        #             if knee == 0:
+        #                 knee = 1
+        #             pink = max(a,b)
+        #             if pink == len(frequency_range)-1:
+        #                 pink = len(frequency_range)-2
+        #         elif self.fmri_dividing_type == 'two_channels':
+        #             knee = random.sample(frequency_range, 1)[0]   # randomly select one frequence (knee) for the division point
+        #             if knee == 0:
+        #                 knee = 1        
         
         if self.fmri_type == 'timeseries':   # processes the raw time-series data
             y = scipy.stats.zscore(y, axis=1)  # standardizes the data using z-scores across ROIs (axis=1)
-            y = torch.from_numpy(y).T.float()  # converts the standardized data to a PyTorch tensor
-            ans_dict = {'fmri_sequence':y,'subject':subj,'subject_name':subj_name, self.target:target}    # creates the output dictionary with the processed time-series and meta-data
-
-        elif self.fmri_type == 'frequency':   # transforms the time-domain signal into the frequency domain
-            T = TimeSeries(y, sampling_interval=TR)
-            S_original = SpectralAnalyzer(T)  # computes the power spectrum of the input signal
-            y = scipy.stats.zscore(np.abs(S_original.spectrum_fourier[1]), axis=None)   # normalizes the magnitude of the Fourier coefficients using z-scores
-            y = torch.from_numpy(y).T.float()
-            ans_dict = {'fmri_sequence':y,'subject':subj,'subject_name':subj_name, self.target:target} 
-
-        elif self.fmri_type == 'time_domain_low':  # focuses on low-frequency components
-            if self.fmri_dividing_type == 'three_channels':
-                # 01 high ~ (low+ultralow)
-                T1 = TimeSeries(y, sampling_interval=TR)
-                S_original1 = SpectralAnalyzer(T1)
-                FA1 = FilterAnalyzer(T1, lb= S_original1.spectrum_fourier[0][pink])   # extracts and separates frequency components
-                ultralow_low = FA1.data-FA1.filtered_boxcar.data
-
-                # 02 low ~ ultralow
-                T2 = TimeSeries(ultralow_low, sampling_interval=TR)
-                S_original2 = SpectralAnalyzer(T2)
-                if self.use_raw_knee:
-                    FA2 = FilterAnalyzer(T2, lb=raw_knee)  # extracts and separates frequency components
-                else:    
-                    FA2 = FilterAnalyzer(T2, lb= S_original2.spectrum_fourier[0][knee])
-                    
-                if self.filtering_type == 'FIR':
-                    low = scipy.stats.zscore(FA2.fir.data, axis=1)
-                elif self.filtering_type == 'Boxcar':
-                    low = scipy.stats.zscore(FA2.filtered_boxcar.data, axis=1)
-                
-                low = torch.from_numpy(low).T.float()
-            
+            intermediate_vec = y.shape[0]
+            # y = torch.from_numpy(y).T.float()  # converts the standardized data to a PyTorch tensor
+            y = F.pad(torch.from_numpy(y), (0, pad), "constant", 0).T.float()  ## FOR SEQUENCE LENGTH PADDING
+            if self.sequence_length > ts_length:
+                mask = (y != 0).float()  # Create mask where 1 means valid and 0 means padding
             else:
-                T = TimeSeries(y, sampling_interval=TR)
-                S_original = SpectralAnalyzer(T)
-                if self.use_raw_knee:
-                    FA = FilterAnalyzer(T, lb=raw_knee)   # filters the signal directly at the knee frequency
-                else:    
-                    FA = FilterAnalyzer(T, lb= S_original.spectrum_fourier[0][knee])
+                mask = torch.ones(self.sequence_length, intermediate_vec)
+            ans_dict = {'fmri_sequence':y,'subject':subj,'subject_name':subj_name, self.target:target, 'mask':mask}    # creates the output dictionary with the processed time-series and meta-data
 
-                if self.filtering_type == 'FIR':
-                    low = scipy.stats.zscore(FA.fir.data, axis=1)
-                elif self.filtering_type == 'Boxcar':
-                    low = scipy.stats.zscore(FA.filtered_boxcar.data, axis=1)
+        # elif self.fmri_type == 'frequency':   # transforms the time-domain signal into the frequency domain
+        #     T = TimeSeries(y, sampling_interval=TR)
+        #     S_original = SpectralAnalyzer(T)  # computes the power spectrum of the input signal
+        #     y = scipy.stats.zscore(np.abs(S_original.spectrum_fourier[1]), axis=None)   # normalizes the magnitude of the Fourier coefficients using z-scores
+        #     y = torch.from_numpy(y).T.float()
+        #     ans_dict = {'fmri_sequence':y,'subject':subj,'subject_name':subj_name, self.target:target} 
 
-                low = torch.from_numpy(low).T.float()  
-                
-            ans_dict = {'fmri_sequence':low,'subject':subj,'subject_name':subj_name, self.target:target}
+        # elif self.fmri_type == 'time_domain_low':  # focuses on low-frequency components
+        #     if self.fmri_dividing_type == 'three_channels':
+        #         # 01 high ~ (low+ultralow)
+        #         T1 = TimeSeries(y, sampling_interval=TR)
+        #         S_original1 = SpectralAnalyzer(T1)
+        #         FA1 = FilterAnalyzer(T1, lb= S_original1.spectrum_fourier[0][pink])   # extracts and separates frequency components
+        #         ultralow_low = FA1.data-FA1.filtered_boxcar.data
 
-        elif self.fmri_type == 'time_domain_ultralow':   # focuses on ultralow frequencies
-            if self.fmri_dividing_type == 'three_channels':
-                # 01 high ~ (low+ultralow)
-                T1 = TimeSeries(y, sampling_interval=TR)
-                S_original1 = SpectralAnalyzer(T1)
-                FA1 = FilterAnalyzer(T1, lb= S_original1.spectrum_fourier[0][pink])
-                ultralow_low = FA1.data-FA1.filtered_boxcar.data
-
-                # 02 low ~ ultralow
-                T2 = TimeSeries(ultralow_low, sampling_interval=TR)
-                S_original2 = SpectralAnalyzer(T2)
-                if self.use_raw_knee:
-                    FA2 = FilterAnalyzer(T2, lb=raw_knee)
-                else:    
-                    FA2 = FilterAnalyzer(T2, lb= S_original2.spectrum_fourier[0][knee])
+        #         # 02 low ~ ultralow
+        #         T2 = TimeSeries(ultralow_low, sampling_interval=TR)
+        #         S_original2 = SpectralAnalyzer(T2)
+        #         if self.use_raw_knee:
+        #             FA2 = FilterAnalyzer(T2, lb=raw_knee)  # extracts and separates frequency components
+        #         else:    
+        #             FA2 = FilterAnalyzer(T2, lb= S_original2.spectrum_fourier[0][knee])
                     
-                if self.filtering_type == 'FIR':
-                    ultralow = scipy.stats.zscore(FA2.data-FA2.fir.data, axis=1)
-                elif self.filtering_type == 'Boxcar':
-                    ultralow = scipy.stats.zscore(FA2.data-FA2.filtered_boxcar.data, axis=1)
+        #         if self.filtering_type == 'FIR':
+        #             low = scipy.stats.zscore(FA2.fir.data, axis=1)
+        #         elif self.filtering_type == 'Boxcar':
+        #             low = scipy.stats.zscore(FA2.filtered_boxcar.data, axis=1)
                 
-                ultralow = torch.from_numpy(ultralow).T.float()
+        #         low = torch.from_numpy(low).T.float()
             
-            else:
-                T = TimeSeries(y, sampling_interval=TR)
-                S_original = SpectralAnalyzer(T)
-                if self.use_raw_knee:
-                    FA = FilterAnalyzer(T, lb=raw_knee)
-                else:    
-                    FA = FilterAnalyzer(T, lb= S_original.spectrum_fourier[0][knee])
+        #     else:
+        #         T = TimeSeries(y, sampling_interval=TR)
+        #         S_original = SpectralAnalyzer(T)
+        #         if self.use_raw_knee:
+        #             FA = FilterAnalyzer(T, lb=raw_knee)   # filters the signal directly at the knee frequency
+        #         else:    
+        #             FA = FilterAnalyzer(T, lb= S_original.spectrum_fourier[0][knee])
 
-                if self.filtering_type == 'FIR':
-                    ultralow = scipy.stats.zscore(FA.data-FA.fir.data, axis=1)
-                elif self.filtering_type == 'Boxcar':
-                    ultralow = scipy.stats.zscore(FA.data-FA.filtered_boxcar.data, axis=1)
+        #         if self.filtering_type == 'FIR':
+        #             low = scipy.stats.zscore(FA.fir.data, axis=1)
+        #         elif self.filtering_type == 'Boxcar':
+        #             low = scipy.stats.zscore(FA.filtered_boxcar.data, axis=1)
 
-                ultralow = torch.from_numpy(ultralow).T.float()
-            ans_dict = {'fmri_sequence':ultralow,'subject':subj,'subject_name':subj_name, self.target:target}
+        #         low = torch.from_numpy(low).T.float()  
+                
+        #     ans_dict = {'fmri_sequence':low,'subject':subj,'subject_name':subj_name, self.target:target}
+
+        # elif self.fmri_type == 'time_domain_ultralow':   # focuses on ultralow frequencies
+        #     if self.fmri_dividing_type == 'three_channels':
+        #         # 01 high ~ (low+ultralow)
+        #         T1 = TimeSeries(y, sampling_interval=TR)
+        #         S_original1 = SpectralAnalyzer(T1)
+        #         FA1 = FilterAnalyzer(T1, lb= S_original1.spectrum_fourier[0][pink])
+        #         ultralow_low = FA1.data-FA1.filtered_boxcar.data
+
+        #         # 02 low ~ ultralow
+        #         T2 = TimeSeries(ultralow_low, sampling_interval=TR)
+        #         S_original2 = SpectralAnalyzer(T2)
+        #         if self.use_raw_knee:
+        #             FA2 = FilterAnalyzer(T2, lb=raw_knee)
+        #         else:    
+        #             FA2 = FilterAnalyzer(T2, lb= S_original2.spectrum_fourier[0][knee])
+                    
+        #         if self.filtering_type == 'FIR':
+        #             ultralow = scipy.stats.zscore(FA2.data-FA2.fir.data, axis=1)
+        #         elif self.filtering_type == 'Boxcar':
+        #             ultralow = scipy.stats.zscore(FA2.data-FA2.filtered_boxcar.data, axis=1)
+                
+        #         ultralow = torch.from_numpy(ultralow).T.float()
+            
+        #     else:
+        #         T = TimeSeries(y, sampling_interval=TR)
+        #         S_original = SpectralAnalyzer(T)
+        #         if self.use_raw_knee:
+        #             FA = FilterAnalyzer(T, lb=raw_knee)
+        #         else:    
+        #             FA = FilterAnalyzer(T, lb= S_original.spectrum_fourier[0][knee])
+
+        #         if self.filtering_type == 'FIR':
+        #             ultralow = scipy.stats.zscore(FA.data-FA.fir.data, axis=1)
+        #         elif self.filtering_type == 'Boxcar':
+        #             ultralow = scipy.stats.zscore(FA.data-FA.filtered_boxcar.data, axis=1)
+
+        #         ultralow = torch.from_numpy(ultralow).T.float()
+        #     ans_dict = {'fmri_sequence':ultralow,'subject':subj,'subject_name':subj_name, self.target:target}
         
-        elif self.fmri_type == 'time_domain_high':
-            T1 = TimeSeries(y, sampling_interval=TR)
-            S_original1 = SpectralAnalyzer(T1)
-            FA1 = FilterAnalyzer(T1, lb= S_original1.spectrum_fourier[0][pink])
-            high = scipy.stats.zscore(FA1.filtered_boxcar.data, axis=1)
-            high = torch.from_numpy(high).T.float()
-            ans_dict = {'fmri_sequence':high,'subject':subj,'subject_name':subj_name, self.target:target}
+        # elif self.fmri_type == 'time_domain_high':
+        #     T1 = TimeSeries(y, sampling_interval=TR)
+        #     S_original1 = SpectralAnalyzer(T1)
+        #     FA1 = FilterAnalyzer(T1, lb= S_original1.spectrum_fourier[0][pink])
+        #     high = scipy.stats.zscore(FA1.filtered_boxcar.data, axis=1)
+        #     high = torch.from_numpy(high).T.float()
+        #     ans_dict = {'fmri_sequence':high,'subject':subj,'subject_name':subj_name, self.target:target}
             
         elif self.fmri_type == 'divided_timeseries':   # divides the time series into frequency bands
 
-            if self.fmri_dividing_type == 'four_channels':
+            if self.fmri_dividing_type == 'five_channels':
+                """
+                VMD for each subject
+                """
 
                 # average the time series across ROIs
                 sample_whole = np.zeros(ts_length,)
@@ -414,9 +399,94 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 # VMD setting
                 f = sample_whole
                 f = (f - np.mean(f)) / np.std(f)  # z-score normalization
-                K = 4             # number of modes modes
-                DC = 0             # no DC part imposed
-                init = 0           # initialize omegas uniformly
+                K = 5             # number of modes
+                DC = 0            # no DC part imposed
+                init = 0          # initialize omegas uniformly
+                tol = 1e-7        # convergence tolerance
+                alpha = 100
+                tau = 3.5
+
+                # VMD
+                u, _, _ = VMD(f, alpha, tau, K, DC, init, tol)
+
+                band_cutoffs = compute_imf_bandwidths(u, 1/TR)
+                
+                if band_cutoffs['imf1_lb'] > band_cutoffs['imf1_hb']:
+                    raise ValueError(f"band_cutoffs['imf1_lb'] {band_cutoffs['imf1_lb']} is larger than band_cutoffs['imf1_hb'] {band_cutoffs['imf1_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf1_lb'] == band_cutoffs['imf1_hb']:
+                    imf1 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf1 = bandpass_filter_2d(y, band_cutoffs['imf1_lb'], band_cutoffs['imf1_hb'], 1/TR)
+                    imf1 = stats.zscore(imf1, axis=1)
+
+                if band_cutoffs['imf2_lb'] > band_cutoffs['imf2_hb']:
+                    raise ValueError(f"band_cutoffs['imf2_lb'] {band_cutoffs['imf2_lb']} is larger than band_cutoffs['imf2_hb'] {band_cutoffs['imf2_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf2_lb'] == band_cutoffs['imf2_hb']:
+                    imf2 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf2 = bandpass_filter_2d(y, band_cutoffs['imf2_lb'], band_cutoffs['imf2_hb'], 1/TR)
+                    imf2 = stats.zscore(imf2, axis=1)
+
+                if band_cutoffs['imf3_lb'] > band_cutoffs['imf3_hb']:
+                    raise ValueError(f"band_cutoffs['imf3_lb'] {band_cutoffs['imf3_lb']} is larger than band_cutoffs['imf3_hb'] {band_cutoffs['imf3_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf3_lb'] == band_cutoffs['imf3_hb']:
+                    imf3 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf3 = bandpass_filter_2d(y, band_cutoffs['imf3_lb'], band_cutoffs['imf3_hb'], 1/TR)
+                    imf3 = stats.zscore(imf3, axis=1)
+
+                if band_cutoffs['imf4_lb'] > band_cutoffs['imf4_hb']:
+                    raise ValueError(f"band_cutoffs['imf4_lb'] {band_cutoffs['imf4_lb']} is larger than band_cutoffs['imf4_hb'] {band_cutoffs['imf4_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf4_lb'] == band_cutoffs['imf4_hb']:
+                    imf4 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf4 = bandpass_filter_2d(y, band_cutoffs['imf4_lb'], band_cutoffs['imf4_hb'], 1/TR)
+                    imf4 = stats.zscore(imf4, axis=1)
+
+                if band_cutoffs['imf5_lb'] > band_cutoffs['imf5_hb']:
+                    raise ValueError(f"band_cutoffs['imf5_lb'] {band_cutoffs['imf5_lb']} is larger than band_cutoffs['imf5_hb'] {band_cutoffs['imf5_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf5_lb'] == band_cutoffs['imf5_hb']:
+                    imf5 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf5 = bandpass_filter_2d(y, band_cutoffs['imf5_lb'], band_cutoffs['imf5_hb'], 1/TR)
+                    imf5 = stats.zscore(imf5, axis=1)
+
+                imf1 = F.pad(torch.from_numpy(imf1), (0, pad), "constant", 0).T.float()
+                imf2 = F.pad(torch.from_numpy(imf2), (0, pad), "constant", 0).T.float()
+                imf3 = F.pad(torch.from_numpy(imf3), (0, pad), "constant", 0).T.float()
+                imf4 = F.pad(torch.from_numpy(imf4), (0, pad), "constant", 0).T.float()
+                imf5 = F.pad(torch.from_numpy(imf5), (0, pad), "constant", 0).T.float()
+
+                if self.sequence_length > ts_length:
+                    mask = (imf1 != 0).float()  # Create mask where 1 means valid and 0 means padding
+                else:
+                    mask = torch.ones(self.sequence_length, intermediate_vec)
+                    
+                ans_dict= {'fmri_imf1_sequence':imf1, 'fmri_imf2_sequence':imf2,
+                           'fmri_imf3_sequence':imf3, 'fmri_imf4_sequence':imf4, 'fmri_imf5_sequence':imf5,
+                           'subject':subj, 'subject_name':subj_name, self.target:target, 'mask':mask}
+
+            elif self.fmri_dividing_type == 'four_channels':
+
+                """
+                VMD for each subject
+                """
+
+                # average the time series across ROIs
+                sample_whole = np.zeros(ts_length,)
+                intermediate_vec = y.shape[0]
+
+                for i in range(intermediate_vec):
+                    sample_whole+=y[i]
+
+                sample_whole /= intermediate_vec 
+
+                # VMD setting
+                f = sample_whole
+                f = (f - np.mean(f)) / np.std(f)  # z-score normalization
+                K = 4             # number of modes
+                DC = 0            # no DC part imposed
+                init = 0          # initialize omegas uniformly
                 tol = 1e-7        # convergence tolerance
                 alpha = 100
                 tau = 3.5
@@ -458,65 +528,10 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                     imf4 = bandpass_filter_2d(y, band_cutoffs['imf1_lb'], band_cutoffs['imf1_hb'], 1/TR)
                     imf4 = stats.zscore(imf4, axis=1)
 
-                """
-                VMD for each subject
-                """
-                # # average the time series across ROIs
-                # sample_whole = np.zeros(ts_length,)
-                # intermediate_vec = y.shape[0]
-
-                # for i in range(intermediate_vec):
-                #     sample_whole+=y[i]
-
-                # sample_whole /= intermediate_vec 
-
-                # # VMD setting
-                # f = sample_whole
-                # f = (f - np.mean(f)) / np.std(f)  # z-score normalization
-                # K = 4             # number of modes modes
-                # DC = 0             # no DC part imposed
-                # init = 0           # initialize omegas uniformly
-                # tol = 1e-7        # convergence tolerance
-                # alpha = 100
-                # tau = 3.5
-
-                # # VMD
-                # u, _, omega = VMD(f, alpha, tau, K, DC, init, tol)
-
-                # band_cutoffs = compute_imf_bandwidths(u, 1/TR)
-                
-                # if band_cutoffs['imf4_lb'] > band_cutoffs['imf4_hb']:
-                #     raise ValueError(f"band_cutoffs['imf4_lb'] {band_cutoffs['imf4_lb']} is larger than band_cutoffs['imf4_hb'] {band_cutoffs['imf4_hb']} for subject {subj_name}")
-                # elif band_cutoffs['imf4_lb'] == band_cutoffs['imf4_hb']:
-                #     imf1 = np.zeros((y.shape[0], y.shape[1]))
-                # else:
-                #     imf1 = bandpass_filter_2d(y, band_cutoffs['imf4_lb'], band_cutoffs['imf4_hb'], 1/TR)
-                #     imf1 = stats.zscore(imf1, axis=1)
-
-                # if band_cutoffs['imf3_lb'] > band_cutoffs['imf3_hb']:
-                #     raise ValueError(f"band_cutoffs['imf3_lb'] {band_cutoffs['imf3_lb']} is larger than band_cutoffs['imf3_hb'] {band_cutoffs['imf3_hb']} for subject {subj_name}")
-                # elif band_cutoffs['imf3_lb'] == band_cutoffs['imf3_hb']:
-                #     imf2 = np.zeros((y.shape[0], y.shape[1]))
-                # else:
-                #     imf2 = bandpass_filter_2d(y, band_cutoffs['imf3_lb'], band_cutoffs['imf3_hb'], 1/TR)
-                #     imf2 = stats.zscore(imf2, axis=1)
-
-                # if band_cutoffs['imf2_lb'] > band_cutoffs['imf2_hb']:
-                #     raise ValueError(f"band_cutoffs['imf2_lb'] {band_cutoffs['imf2_lb']} is larger than band_cutoffs['imf2_hb'] {band_cutoffs['imf2_hb']} for subject {subj_name}")
-                # elif band_cutoffs['imf2_lb'] == band_cutoffs['imf2_hb']:
-                #     imf3 = np.zeros((y.shape[0], y.shape[1]))
-                # else:
-                #     imf3 = bandpass_filter_2d(y, band_cutoffs['imf2_lb'], band_cutoffs['imf2_hb'], 1/TR)
-                #     imf3 = stats.zscore(imf3, axis=1)
-
-                # if band_cutoffs['imf1_lb'] > band_cutoffs['imf1_hb']:
-                #     raise ValueError(f"band_cutoffs['imf1_lb'] {band_cutoffs['imf1_lb']} is larger than band_cutoffs['imf1_hb'] {band_cutoffs['imf1_hb']} for subject {subj_name}")
-                # elif band_cutoffs['imf1_lb'] == band_cutoffs['imf1_hb']:
-                #     imf4 = np.zeros((y.shape[0], y.shape[1]))
-                # else:
-                #     imf4 = bandpass_filter_2d(y, band_cutoffs['imf1_lb'], band_cutoffs['imf1_hb'], 1/TR)
-                #     imf4 = stats.zscore(imf4, axis=1)
-
+                imf1 = F.pad(torch.from_numpy(imf1), (0, pad), "constant", 0).T.float()
+                imf2 = F.pad(torch.from_numpy(imf2), (0, pad), "constant", 0).T.float()
+                imf3 = F.pad(torch.from_numpy(imf3), (0, pad), "constant", 0).T.float()
+                imf4 = F.pad(torch.from_numpy(imf4), (0, pad), "constant", 0).T.float()
 
                 """
                 VMD with fixed cutoffs
@@ -560,49 +575,53 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 # FA1 = FilterAnalyzer(T1, lb = lower_bound, ub = upper_bound)  # filters the time-series data T1 by applying the lower and upper bounds
                 # imf4 = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
 
+                # imf1 = F.pad(torch.from_numpy(imf1), (0, pad), "constant", 0).T.float()
+                # imf2 = F.pad(torch.from_numpy(imf2), (0, pad), "constant", 0).T.float()
+                # imf3 = F.pad(torch.from_numpy(imf3), (0, pad), "constant", 0).T.float()
+                # imf4 = F.pad(torch.from_numpy(imf4), (0, pad), "constant", 0).T.float()
 
                 """
                 VMD for each ROI
                 """
-                # num_of_rois = y.shape[0]
+                # intermediate_vec = y.shape[0]
 
                 # # VMD parameters
-                # K = 4             # modes
-                # DC = 0             # no DC part imposed
-                # init = 0           # initialize omegas uniformly
+                # K = 4             # number of modes
+                # DC = 0            # no DC part imposed
+                # init = 0          # initialize omegas uniformly
                 # tol = 1e-7        # convergence tolerance
                 # alpha = 100       # tuned before training based on reconstruction performance
                 # tau = 3.5         # tuned before training based on reconstruction performance
 
                 # # Initialize IMFs
-                # imf1 = np.zeros((y.shape[0], y.shape[1]))
-                # imf2 = np.zeros((y.shape[0], y.shape[1]))
-                # imf3 = np.zeros((y.shape[0], y.shape[1]))
-                # imf4 = np.zeros((y.shape[0], y.shape[1]))
+                # imf1 = np.zeros((y.shape[0], self.sequence_length))
+                # imf2 = np.zeros((y.shape[0], self.sequence_length))
+                # imf3 = np.zeros((y.shape[0], self.sequence_length))
+                # imf4 = np.zeros((y.shape[0], self.sequence_length))
 
-                # for roi in range(num_of_rois):
+                # for roi in range(intermediate_vec):
 
-                #     f = y[roi,:] # ROI time series
+                #     f = y[roi,:ts_length] # ROI time series
                 #     f = (f - np.mean(f)) / np.std(f)  # z-score normalization
                     
+                #     if len(f)%2:
+                #         f = f[:-1]
+
                 #     # Run actual VMD code
-                #     u, u_hat, omega = VMD(f, alpha, tau, K, DC, init, tol)
+                #     u, _, _ = VMD(f, alpha, tau, K, DC, init, tol)
 
                 #     # add the ROI modes to the total IMFs
-                #     imf1[roi, :] = u[0, :]
-                #     imf2[roi, :] = u[1, :]
-                #     imf3[roi, :] = u[2, :]
-                #     imf4[roi, :] = u[3, :]
+                #     imf1[roi, :len(f)] = u[0, :]
+                #     imf2[roi, :len(f)] = u[1, :]
+                #     imf3[roi, :len(f)] = u[2, :]
+                #     imf4[roi, :len(f)] = u[3, :]
 
-                # DO PADDING ALWAYS
-                # imf1 = F.pad(torch.from_numpy(imf1), (pad//2, pad//2), "constant", 0).T.float()
-                # imf2 = F.pad(torch.from_numpy(imf2), (pad//2, pad//2), "constant", 0).T.float()
-                # imf3 = F.pad(torch.from_numpy(imf3), (pad//2, pad//2), "constant", 0).T.float()
-                # imf4 = F.pad(torch.from_numpy(imf4), (pad//2, pad//2), "constant", 0).T.float()
-                imf1 = F.pad(torch.from_numpy(imf1), (0, pad), "constant", 0).T.float()
-                imf2 = F.pad(torch.from_numpy(imf2), (0, pad), "constant", 0).T.float()
-                imf3 = F.pad(torch.from_numpy(imf3), (0, pad), "constant", 0).T.float()
-                imf4 = F.pad(torch.from_numpy(imf4), (0, pad), "constant", 0).T.float()
+                # imf1 = torch.from_numpy(imf1).T.float()
+                # imf2 = torch.from_numpy(imf2).T.float()
+                # imf3 = torch.from_numpy(imf3).T.float()
+                # imf4 = torch.from_numpy(imf4).T.float()
+                """
+                """
 
                 if self.sequence_length > ts_length:
                     mask = (imf1 != 0).float()  # Create mask where 1 means valid and 0 means padding
@@ -615,60 +634,120 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
 
 
             elif self.fmri_dividing_type == 'three_channels':
-                # 01 high ~ (low+ultralow)    # extracts the high-frequency components
-                T1 = TimeSeries(y, sampling_interval=TR)  # creates a time-series object from y
-                S_original1 = SpectralAnalyzer(T1)  # creates a spectral analyzer object for the time-series data T1
-                if self.use_raw_knee:
-                    FA1 = FilterAnalyzer(T1, lb = f2)  # filters the time-series data T1 by applying a lower bound f2
-                else:
-                    FA1 = FilterAnalyzer(T1, lb = S_original1.spectrum_fourier[0][pink])
-                high = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
-                ultralow_low = FA1.data-FA1.filtered_boxcar.data
-                    
-                # 02 low ~ ultralow   # extracts the low and ultralow-frequency components
-                T2 = TimeSeries(ultralow_low, sampling_interval=TR)  # creates a time-series object from ultralow_low
-                S_original2 = SpectralAnalyzer(T2)  # creates a spectral analyzer object for the time-series data T2
-                if self.use_raw_knee:
-                    FA2 = FilterAnalyzer(T2, lb=f1)  # filters the time-series data T2 by applying a lower bound f1
-                else:    
-                    FA2 = FilterAnalyzer(T2, lb= S_original2.spectrum_fourier[0][knee])
-                if self.filtering_type == 'FIR':
-                    low = stats.zscore(FA2.fir.data, axis=1)
-                    ultralow = stats.zscore(FA2.data-FA2.fir.data, axis=1)
-                elif self.filtering_type == 'Boxcar':
-                    low = stats.zscore(FA2.filtered_boxcar.data, axis=1)
-                    ultralow = stats.zscore(FA2.data-FA2.filtered_boxcar.data, axis=1)
-                    
-                # DO PADDING ALWAYS
+                """
+                VMD for each subject
+                """
+
+                # average the time series across ROIs
+                sample_whole = np.zeros(ts_length,)
+                intermediate_vec = y.shape[0]
+
+                for i in range(intermediate_vec):
+                    sample_whole+=y[i]
+
+                sample_whole /= intermediate_vec 
+
+                # VMD setting
+                f = sample_whole
+                f = (f - np.mean(f)) / np.std(f)  # z-score normalization
+                K = 3             # number of modes
+                DC = 0            # no DC part imposed
+                init = 0          # initialize omegas uniformly
+                tol = 1e-7        # convergence tolerance
+                alpha = 100
+                tau = 3.5
+
+                # VMD
+                u, _, _ = VMD(f, alpha, tau, K, DC, init, tol)
+
+                band_cutoffs = compute_imf_bandwidths(u, 1/TR)
                 
-                ##### DEBUG STATEMENT #####
-                # print(f"Seq_length before temporal padding: {high.shape}")
-                ###########################
-
-                high = F.pad(torch.from_numpy(high), (pad//2, pad//2), "constant", 0).T.float()
-                low = F.pad(torch.from_numpy(low), (pad//2, pad//2), "constant", 0).T.float()
-                ultralow = F.pad(torch.from_numpy(ultralow), (pad//2, pad//2), "constant", 0).T.float()
-
-                ##### DEBUG STATEMENT #####
-                # print(f"Seq_length after temporal padding: {high.shape}")
-                ###########################
-                    
-#                 if self.transfer_learning or self.finetune_test:
-#                     # do padding! high : (ROI, time length)
-#                     high = F.pad(torch.from_numpy(high), (pad//2, pad//2), "constant", 0).T.float()
-#                     low = F.pad(torch.from_numpy(low), (pad//2, pad//2), "constant", 0).T.float()
-#                     ultralow = F.pad(torch.from_numpy(ultralow), (pad//2, pad//2), "constant", 0).T.float()
-
-                    
-#                 else: 
-#                     high = torch.from_numpy(high).T.float()
-#                     low = torch.from_numpy(low).T.float()
-#                     ultralow = torch.from_numpy(ultralow).T.float()
-                
-                if self.use_high_freq:
-                    ans_dict= {'fmri_highfreq_sequence':high, 'fmri_lowfreq_sequence':low, 'fmri_ultralowfreq_sequence':ultralow, 'subject':subj, 'subject_name':subj_name, self.target:target}
+                if band_cutoffs['imf1_lb'] > band_cutoffs['imf1_hb']:
+                    raise ValueError(f"band_cutoffs['imf1_lb'] {band_cutoffs['imf1_lb']} is larger than band_cutoffs['imf1_hb'] {band_cutoffs['imf1_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf1_lb'] == band_cutoffs['imf1_hb']:
+                    imf1 = np.zeros((y.shape[0], y.shape[1]))
                 else:
-                    ans_dict= {'fmri_lowfreq_sequence':low, 'fmri_ultralowfreq_sequence':ultralow, 'subject':subj, 'subject_name':subj_name, self.target:target}
+                    imf1 = bandpass_filter_2d(y, band_cutoffs['imf1_lb'], band_cutoffs['imf1_hb'], 1/TR)
+                    imf1 = stats.zscore(imf1, axis=1)
+
+                if band_cutoffs['imf2_lb'] > band_cutoffs['imf2_hb']:
+                    raise ValueError(f"band_cutoffs['imf2_lb'] {band_cutoffs['imf2_lb']} is larger than band_cutoffs['imf2_hb'] {band_cutoffs['imf2_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf2_lb'] == band_cutoffs['imf2_hb']:
+                    imf2 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf2 = bandpass_filter_2d(y, band_cutoffs['imf2_lb'], band_cutoffs['imf2_hb'], 1/TR)
+                    imf2 = stats.zscore(imf2, axis=1)
+
+                if band_cutoffs['imf3_lb'] > band_cutoffs['imf3_hb']:
+                    raise ValueError(f"band_cutoffs['imf3_lb'] {band_cutoffs['imf3_lb']} is larger than band_cutoffs['imf3_hb'] {band_cutoffs['imf3_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf3_lb'] == band_cutoffs['imf3_hb']:
+                    imf3 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf3 = bandpass_filter_2d(y, band_cutoffs['imf3_lb'], band_cutoffs['imf3_hb'], 1/TR)
+                    imf3 = stats.zscore(imf3, axis=1)
+
+                imf1 = F.pad(torch.from_numpy(imf1), (0, pad), "constant", 0).T.float()
+                imf2 = F.pad(torch.from_numpy(imf2), (0, pad), "constant", 0).T.float()
+                imf3 = F.pad(torch.from_numpy(imf3), (0, pad), "constant", 0).T.float()
+
+                if self.sequence_length > ts_length:
+                    mask = (imf1 != 0).float()  # Create mask where 1 means valid and 0 means padding
+                else:
+                    mask = torch.ones(self.sequence_length, intermediate_vec)
+                    
+                ans_dict= {'fmri_highfreq_sequence':imf1, 'fmri_lowfreq_sequence':imf2,
+                           'fmri_ultralowfreq_sequence':imf3, 'subject':subj,
+                           'subject_name':subj_name, self.target:target, 'mask':mask}
+
+                """
+                Original MBBN frequency band division
+                """
+#                 # 01 high ~ (low+ultralow)    # extracts the high-frequency components
+#                 T1 = TimeSeries(y, sampling_interval=TR)  # creates a time-series object from y
+#                 S_original1 = SpectralAnalyzer(T1)  # creates a spectral analyzer object for the time-series data T1
+#                 if self.use_raw_knee:
+#                     FA1 = FilterAnalyzer(T1, lb = f2)  # filters the time-series data T1 by applying a lower bound f2
+#                 else:
+#                     FA1 = FilterAnalyzer(T1, lb = S_original1.spectrum_fourier[0][pink])
+#                 high = stats.zscore(FA1.filtered_boxcar.data, axis=1)  # z-score normalization along the rows (i.e., for each ROI) on the filtered time-series data ((x - mean) / sd)
+#                 ultralow_low = FA1.data-FA1.filtered_boxcar.data
+                    
+#                 # 02 low ~ ultralow   # extracts the low and ultralow-frequency components
+#                 T2 = TimeSeries(ultralow_low, sampling_interval=TR)  # creates a time-series object from ultralow_low
+#                 S_original2 = SpectralAnalyzer(T2)  # creates a spectral analyzer object for the time-series data T2
+#                 if self.use_raw_knee:
+#                     FA2 = FilterAnalyzer(T2, lb=f1)  # filters the time-series data T2 by applying a lower bound f1
+#                 else:    
+#                     FA2 = FilterAnalyzer(T2, lb= S_original2.spectrum_fourier[0][knee])
+#                 if self.filtering_type == 'FIR':
+#                     low = stats.zscore(FA2.fir.data, axis=1)
+#                     ultralow = stats.zscore(FA2.data-FA2.fir.data, axis=1)
+#                 elif self.filtering_type == 'Boxcar':
+#                     low = stats.zscore(FA2.filtered_boxcar.data, axis=1)
+#                     ultralow = stats.zscore(FA2.data-FA2.filtered_boxcar.data, axis=1)
+                    
+#                 # DO PADDING ALWAYS
+#                 high = F.pad(torch.from_numpy(high), (pad//2, pad//2), "constant", 0).T.float()
+#                 low = F.pad(torch.from_numpy(low), (pad//2, pad//2), "constant", 0).T.float()
+#                 ultralow = F.pad(torch.from_numpy(ultralow), (pad//2, pad//2), "constant", 0).T.float()
+
+                    
+# #                 if self.transfer_learning or self.finetune_test:
+# #                     # do padding! high : (ROI, time length)
+# #                     high = F.pad(torch.from_numpy(high), (pad//2, pad//2), "constant", 0).T.float()
+# #                     low = F.pad(torch.from_numpy(low), (pad//2, pad//2), "constant", 0).T.float()
+# #                     ultralow = F.pad(torch.from_numpy(ultralow), (pad//2, pad//2), "constant", 0).T.float()
+
+                    
+# #                 else: 
+# #                     high = torch.from_numpy(high).T.float()
+# #                     low = torch.from_numpy(low).T.float()
+# #                     ultralow = torch.from_numpy(ultralow).T.float()
+                
+#                 if self.use_high_freq:
+#                     ans_dict= {'fmri_highfreq_sequence':high, 'fmri_lowfreq_sequence':low, 'fmri_ultralowfreq_sequence':ultralow, 'subject':subj, 'subject_name':subj_name, self.target:target}
+#                 else:
+#                     ans_dict= {'fmri_lowfreq_sequence':low, 'fmri_ultralowfreq_sequence':ultralow, 'subject':subj, 'subject_name':subj_name, self.target:target}
             
             else: # two channels
                 T = TimeSeries(y, sampling_interval=TR)
@@ -693,46 +772,46 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
 
        
             
-        elif self.fmri_type == 'frequency_domain_low':   # focuses on the low-frequency band in the frequency domain
-            T = TimeSeries(y, sampling_interval=TR)
-            S_original = SpectralAnalyzer(T)
-            FA = FilterAnalyzer(T, lb= S_original.spectrum_fourier[0][knee])
-            T1 = TimeSeries((FA.fir.data), sampling_interval=TR)
-            S_original1 = SpectralAnalyzer(T1)
+        # elif self.fmri_type == 'frequency_domain_low':   # focuses on the low-frequency band in the frequency domain
+        #     T = TimeSeries(y, sampling_interval=TR)
+        #     S_original = SpectralAnalyzer(T)
+        #     FA = FilterAnalyzer(T, lb= S_original.spectrum_fourier[0][knee])
+        #     T1 = TimeSeries((FA.fir.data), sampling_interval=TR)
+        #     S_original1 = SpectralAnalyzer(T1)
             
-            # complex number -> real number (amplitude)
-            low = np.abs(S_original1.spectrum_fourier[1].T[1:].T)
-            pad_l = self.sequence_length//2 - low.shape[1]
+        #     # complex number -> real number (amplitude)
+        #     low = np.abs(S_original1.spectrum_fourier[1].T[1:].T)
+        #     pad_l = self.sequence_length//2 - low.shape[1]
             
-            low = torch.from_numpy(low).T.float()
-            ans_dict = {'fmri_sequence':low,'subject':subj,'subject_name':subj_name, self.target:target}
+        #     low = torch.from_numpy(low).T.float()
+        #     ans_dict = {'fmri_sequence':low,'subject':subj,'subject_name':subj_name, self.target:target}
 
-        elif self.fmri_type == 'frequency_domain_ultralow':    # focuses on the ultralow-frequency band in the frequency domain
-            T = TimeSeries(y, sampling_interval=TR)
-            S_original = SpectralAnalyzer(T)
-            FA = FilterAnalyzer(T, lb= S_original.spectrum_fourier[0][knee])
+        # elif self.fmri_type == 'frequency_domain_ultralow':    # focuses on the ultralow-frequency band in the frequency domain
+        #     T = TimeSeries(y, sampling_interval=TR)
+        #     S_original = SpectralAnalyzer(T)
+        #     FA = FilterAnalyzer(T, lb= S_original.spectrum_fourier[0][knee])
 
-            T1 = TimeSeries((FA.data-FA.fir.data), sampling_interval=TR)
-            S_original1 = SpectralAnalyzer(T1)
+        #     T1 = TimeSeries((FA.data-FA.fir.data), sampling_interval=TR)
+        #     S_original1 = SpectralAnalyzer(T1)
 
-            ultralow = np.abs(S_original1.spectrum_fourier[1].T[1:].T)
-            ultralow = torch.from_numpy(ultralow).T.float() 
+        #     ultralow = np.abs(S_original1.spectrum_fourier[1].T[1:].T)
+        #     ultralow = torch.from_numpy(ultralow).T.float() 
 
-            ans_dict = {'fmri_sequence':ultralow,'subject':subj,'subject_name':subj_name, self.target:target}
+        #     ans_dict = {'fmri_sequence':ultralow,'subject':subj,'subject_name':subj_name, self.target:target}
         
-        elif self.fmri_type == 'frequency_domain_high':    # focuses on the high-frequency band in the frequency domain
-            T = TimeSeries(y, sampling_interval=TR)
-            S_original = SpectralAnalyzer(T)
-            FA = FilterAnalyzer(T, lb= S_original.spectrum_fourier[0][pink])
-            T1 = TimeSeries((FA.fir.data), sampling_interval=TR)
-            S_original1 = SpectralAnalyzer(T1)
+        # elif self.fmri_type == 'frequency_domain_high':    # focuses on the high-frequency band in the frequency domain
+        #     T = TimeSeries(y, sampling_interval=TR)
+        #     S_original = SpectralAnalyzer(T)
+        #     FA = FilterAnalyzer(T, lb= S_original.spectrum_fourier[0][pink])
+        #     T1 = TimeSeries((FA.fir.data), sampling_interval=TR)
+        #     S_original1 = SpectralAnalyzer(T1)
             
-            # complex number -> real number (amplitude)
-            high = np.abs(S_original1.spectrum_fourier[1].T[1:].T)
-            pad_h = self.sequence_length//2 - high.shape[1]
+        #     # complex number -> real number (amplitude)
+        #     high = np.abs(S_original1.spectrum_fourier[1].T[1:].T)
+        #     pad_h = self.sequence_length//2 - high.shape[1]
             
-            high = torch.from_numpy(high).T.float()
-            ans_dict = {'fmri_sequence':high,'subject':subj,'subject_name':subj_name, self.target:target}
+        #     high = torch.from_numpy(high).T.float()
+        #     ans_dict = {'fmri_sequence':high,'subject':subj,'subject_name':subj_name, self.target:target}
         
         ### DEBUG STATEMENT ###
         # print(f"Returning data for subject: {subj}")
