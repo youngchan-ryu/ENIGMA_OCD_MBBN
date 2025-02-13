@@ -1,0 +1,4082 @@
+
+Statistics for sample 1
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5302369594573975
+Variance: 0.010784585028886795
+Class 0: 90.0% CI = [0.344460591673851, 0.6690635979175568]
+Class 1: 90.0% CI = [0.33093637228012085, 0.655539408326149]
+Class 0: 95.0% CI = [0.34017788618803024, 0.6714497357606888]
+Class 1: 95.0% CI = [0.32855023443698883, 0.6598221138119698]
+
+
+Statistics for sample 2
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6313357949256897
+Variance: 0.014434066601097584
+Class 0: 90.0% CI = [0.19976645708084106, 0.5127445608377457]
+Class 1: 90.0% CI = [0.48725541681051254, 0.8002335429191589]
+Class 0: 95.0% CI = [0.19051480293273926, 0.5190567150712013]
+Class 1: 95.0% CI = [0.4809432737529278, 0.8094851970672607]
+
+
+Statistics for sample 3
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6911945343017578
+Variance: 0.02144763059914112
+Class 0: 90.0% CI = [0.12873254716396332, 0.5212135314941406]
+Class 1: 90.0% CI = [0.478786438703537, 0.8712674528360367]
+Class 0: 95.0% CI = [0.12204694002866745, 0.5448745489120483]
+Class 1: 95.0% CI = [0.4551254212856293, 0.8779530599713326]
+
+
+Statistics for sample 4
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5892442464828491
+Variance: 0.01393788494169712
+Class 0: 90.0% CI = [0.435691773891449, 0.8279287666082382]
+Class 1: 90.0% CI = [0.17207122221589088, 0.564308226108551]
+Class 0: 95.0% CI = [0.43465670943260193, 0.8314373418688774]
+Class 1: 95.0% CI = [0.16856265254318714, 0.5653432905673981]
+
+
+Statistics for sample 9
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.606191873550415
+Variance: 0.0383438877761364
+Class 0: 90.0% CI = [0.14211738109588623, 0.681991845369339]
+Class 1: 90.0% CI = [0.318008154630661, 0.8578826189041138]
+Class 0: 95.0% CI = [0.1354307234287262, 0.6961594074964523]
+Class 1: 95.0% CI = [0.30384059250354767, 0.8645692765712738]
+
+
+Statistics for sample 11
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7524203062057495
+Variance: 0.03298019617795944
+Class 0: 90.0% CI = [0.4763180613517761, 0.9703744500875473]
+Class 1: 90.0% CI = [0.029625570867210627, 0.5236819386482239]
+Class 0: 95.0% CI = [0.44079515337944036, 0.9716026112437248]
+Class 1: 95.0% CI = [0.028397402027621865, 0.5592048466205597]
+
+
+Statistics for sample 18
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5207870602607727
+Variance: 0.02995450608432293
+Class 0: 90.0% CI = [0.27997761964797974, 0.7367156893014908]
+Class 1: 90.0% CI = [0.2632843106985092, 0.7200223803520203]
+Class 0: 95.0% CI = [0.2645297050476074, 0.7746428623795509]
+Class 1: 95.0% CI = [0.2253571376204491, 0.7354702949523926]
+
+
+Statistics for sample 27
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6523445844650269
+Variance: 0.01282757893204689
+Class 0: 90.0% CI = [0.223880261182785, 0.5208601653575897]
+Class 1: 90.0% CI = [0.4791398271918297, 0.776119738817215]
+Class 0: 95.0% CI = [0.19207315146923068, 0.5521504133939743]
+Class 1: 95.0% CI = [0.4478495679795742, 0.8079268485307693]
+
+
+Statistics for sample 29
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5690144896507263
+Variance: 0.021161040291190147
+Class 0: 90.0% CI = [0.2030072063207626, 0.601632297039032]
+Class 1: 90.0% CI = [0.39836771786212916, 0.7969927936792374]
+Class 0: 95.0% CI = [0.16425033658742907, 0.6693005859851837]
+Class 1: 95.0% CI = [0.33069940656423574, 0.835749663412571]
+
+
+Statistics for sample 34
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.569901704788208
+Variance: 0.025440946221351624
+Class 0: 90.0% CI = [0.25979183614254, 0.7696160525083542]
+Class 1: 90.0% CI = [0.23038393631577492, 0.74020816385746]
+Class 0: 95.0% CI = [0.2370770797133446, 0.7812006697058678]
+Class 1: 95.0% CI = [0.21879932470619678, 0.7629229202866554]
+
+
+Statistics for sample 45
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5273596048355103
+Variance: 0.03460277244448662
+Class 0: 90.0% CI = [0.21017639338970184, 0.7922986447811127]
+Class 1: 90.0% CI = [0.20770136266946793, 0.7898236066102982]
+Class 0: 95.0% CI = [0.19543030112981796, 0.7937400192022324]
+Class 1: 95.0% CI = [0.20625999942421913, 0.804569698870182]
+
+
+Statistics for sample 51
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6143145561218262
+Variance: 0.03277208283543587
+Class 0: 90.0% CI = [0.3913153111934662, 0.8856775015592575]
+Class 1: 90.0% CI = [0.11432250216603278, 0.6086846888065338]
+Class 0: 95.0% CI = [0.34944061934947973, 0.9119574055075645]
+Class 1: 95.0% CI = [0.08804260753095153, 0.6505593806505203]
+
+
+Statistics for sample 56
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.7523549795150757
+Variance: 0.01355691533535719
+Class 0: 90.0% CI = [0.10724657773971556, 0.45125094056129456]
+Class 1: 90.0% CI = [0.5487490594387054, 0.8927534222602844]
+Class 0: 95.0% CI = [0.09175825119018556, 0.4756254702806473]
+Class 1: 95.0% CI = [0.5243745297193527, 0.9082417488098145]
+
+
+Statistics for sample 60
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5220399498939514
+Variance: 0.014575428329408169
+Class 0: 90.0% CI = [0.34805719554424286, 0.6594759225845337]
+Class 1: 90.0% CI = [0.34052410349249834, 0.6519428044557571]
+Class 0: 95.0% CI = [0.3431764468550682, 0.7194828391075134]
+Class 1: 95.0% CI = [0.28051718138158327, 0.6568235531449318]
+
+
+Statistics for sample 67
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6226169466972351
+Variance: 0.022979123517870903
+Class 0: 90.0% CI = [0.3802953213453293, 0.8463656604290009]
+Class 1: 90.0% CI = [0.1536343451589346, 0.6197046786546707]
+Class 0: 95.0% CI = [0.37423690408468246, 0.8689940720796585]
+Class 1: 95.0% CI = [0.13100594189018014, 0.6257630959153175]
+
+
+Statistics for sample 68
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5547966957092285
+Variance: 0.021508730947971344
+Class 0: 90.0% CI = [0.35476864874362946, 0.7412208169698715]
+Class 1: 90.0% CI = [0.2587791755795479, 0.6452313512563705]
+Class 0: 95.0% CI = [0.3490552082657814, 0.7745682522654533]
+Class 1: 95.0% CI = [0.2254317291080952, 0.6509447917342186]
+
+
+Statistics for sample 75
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5524864196777344
+Variance: 0.02448756992816925
+Class 0: 90.0% CI = [0.33882740139961237, 0.7981655150651932]
+Class 1: 90.0% CI = [0.2018344700336456, 0.6611725986003876]
+Class 0: 95.0% CI = [0.28556878864765173, 0.831751711666584]
+Class 1: 95.0% CI = [0.16824827343225482, 0.7144312113523483]
+
+
+Statistics for sample 82
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.7351884245872498
+Variance: 0.025709541514515877
+Class 0: 90.0% CI = [0.47426533699035645, 0.9308062195777893]
+Class 1: 90.0% CI = [0.06919379532337187, 0.5257346630096436]
+Class 0: 95.0% CI = [0.43566334247589117, 0.9445552229881287]
+Class 1: 95.0% CI = [0.05544478073716165, 0.5643366575241089]
+
+
+Statistics for sample 84
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5730129480361938
+Variance: 0.018621835857629776
+Class 0: 90.0% CI = [0.2426997721195221, 0.614997610449791]
+Class 1: 90.0% CI = [0.38500236719846725, 0.7573002278804779]
+Class 0: 95.0% CI = [0.22038196027278903, 0.6502630934119225]
+Class 1: 95.0% CI = [0.3497368954122067, 0.779618039727211]
+
+
+Statistics for sample 92
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.8061007261276245
+Variance: 0.009304514154791832
+Class 0: 90.0% CI = [0.057572111487388604, 0.34533408284187317]
+Class 1: 90.0% CI = [0.6546659171581268, 0.9424278885126114]
+Class 0: 95.0% CI = [0.04940109699964524, 0.3483225554227829]
+Class 1: 95.0% CI = [0.6516774445772171, 0.9505989030003548]
+
+
+Statistics for sample 93
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6337424516677856
+Variance: 0.008547539822757244
+Class 0: 90.0% CI = [0.18576781451702118, 0.49441568553447723]
+Class 1: 90.0% CI = [0.5055843144655228, 0.8142321854829788]
+Class 0: 95.0% CI = [0.18438833206892014, 0.4972078427672386]
+Class 1: 95.0% CI = [0.5027921572327614, 0.8156116679310799]
+
+
+Statistics for sample 99
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5709616541862488
+Variance: 0.03033405914902687
+Class 0: 90.0% CI = [0.3061933219432831, 0.8018762022256851]
+Class 1: 90.0% CI = [0.1981237754225731, 0.6938066780567169]
+Class 0: 95.0% CI = [0.30132193863391876, 0.8162351623177528]
+Class 1: 95.0% CI = [0.18376482650637627, 0.6986780613660812]
+
+
+Statistics for sample 105
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5005970597267151
+Variance: 0.015475896187126637
+Class 0: 90.0% CI = [0.3358277529478073, 0.6804305911064148]
+Class 1: 90.0% CI = [0.3195694237947464, 0.6641722470521927]
+Class 0: 95.0% CI = [0.2867903336882592, 0.7237115204334259]
+Class 1: 95.0% CI = [0.27628847211599356, 0.7132096663117409]
+
+
+Statistics for sample 126
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.54647296667099
+Variance: 0.009330833330750465
+Class 0: 90.0% CI = [0.3247036188840866, 0.5683714747428894]
+Class 1: 90.0% CI = [0.43162854015827173, 0.6752963811159134]
+Class 0: 95.0% CI = [0.31864171475172043, 0.6327840983867645]
+Class 1: 95.0% CI = [0.36721589416265493, 0.6813582852482796]
+
+
+Statistics for sample 131
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5559930801391602
+Variance: 0.02155183255672455
+Class 0: 90.0% CI = [0.36761772632598877, 0.8299540728330612]
+Class 1: 90.0% CI = [0.170045904815197, 0.6323822736740112]
+Class 0: 95.0% CI = [0.32774284482002264, 0.8325172588229179]
+Class 1: 95.0% CI = [0.16748273000121117, 0.6722571551799774]
+
+
+Statistics for sample 133
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7297223806381226
+Variance: 0.04062709957361221
+Class 0: 90.0% CI = [0.48244708776474, 0.9636479914188385]
+Class 1: 90.0% CI = [0.036352030467242, 0.51755291223526]
+Class 0: 95.0% CI = [0.45611771941185, 0.9691383391618729]
+Class 1: 95.0% CI = [0.03086167084984482, 0.54388228058815]
+
+
+Statistics for sample 135
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5972673892974854
+Variance: 0.029301926493644714
+Class 0: 90.0% CI = [0.17774352431297302, 0.6231518685817719]
+Class 1: 90.0% CI = [0.3768481314182281, 0.822256475687027]
+Class 0: 95.0% CI = [0.16808904707431793, 0.7457664161920547]
+Class 1: 95.0% CI = [0.25423359870910656, 0.8319109529256821]
+
+
+Statistics for sample 148
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5663384795188904
+Variance: 0.031190358102321625
+Class 0: 90.0% CI = [0.20038123428821564, 0.7490285485982895]
+Class 1: 90.0% CI = [0.2509714290499687, 0.7996187657117844]
+Class 0: 95.0% CI = [0.1879596784710884, 0.7517005428671837]
+Class 1: 95.0% CI = [0.24829944595694542, 0.8120403215289116]
+
+
+Statistics for sample 152
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5819055438041687
+Variance: 0.017396733164787292
+Class 0: 90.0% CI = [0.2513483911752701, 0.5743497759103775]
+Class 1: 90.0% CI = [0.42565022408962244, 0.7486516088247299]
+Class 0: 95.0% CI = [0.24200350791215897, 0.6858744397759438]
+Class 1: 95.0% CI = [0.31412557512521755, 0.757996492087841]
+
+
+Statistics for sample 189
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6299275159835815
+Variance: 0.03271755576133728
+Class 0: 90.0% CI = [0.3645630180835724, 0.8624641597270966]
+Class 1: 90.0% CI = [0.13753585517406464, 0.6354369819164276]
+Class 0: 95.0% CI = [0.33481942117214203, 0.8652549535036087]
+Class 1: 95.0% CI = [0.1347450613975525, 0.665180578827858]
+
+
+Statistics for sample 196
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6185740232467651
+Variance: 0.02158236876130104
+Class 0: 90.0% CI = [0.4379115104675293, 0.794804036617279]
+Class 1: 90.0% CI = [0.20519594475626943, 0.5620884895324707]
+Class 0: 95.0% CI = [0.3881036043167115, 0.822075754404068]
+Class 1: 95.0% CI = [0.17792424373328689, 0.6118963956832886]
+
+
+Statistics for sample 203
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.643357515335083
+Variance: 0.016112813726067543
+Class 0: 90.0% CI = [0.12109768390655518, 0.5046060681343079]
+Class 1: 90.0% CI = [0.49539393186569214, 0.8789023160934448]
+Class 0: 95.0% CI = [0.11224183440208436, 0.5115151703357697]
+Class 1: 95.0% CI = [0.48848482966423035, 0.8877581655979156]
+
+
+Statistics for sample 207
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.7186221480369568
+Variance: 0.016184745356440544
+Class 0: 90.0% CI = [0.1216578334569931, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8783421665430069]
+Class 0: 95.0% CI = [0.11135687679052354, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8886431232094765]
+
+
+Statistics for sample 208
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6893935799598694
+Variance: 0.015590467490255833
+Class 0: 90.0% CI = [0.14425578713417053, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8557442128658295]
+Class 0: 95.0% CI = [0.13466058671474457, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8653394132852554]
+
+
+Statistics for sample 213
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6760787963867188
+Variance: 0.014510218054056168
+Class 0: 90.0% CI = [0.1903054118156433, 0.5201177448034286]
+Class 1: 90.0% CI = [0.47988225519657135, 0.8096945881843567]
+Class 0: 95.0% CI = [0.18306317925453186, 0.5502943620085716]
+Class 1: 95.0% CI = [0.4497056379914284, 0.8169368207454681]
+
+
+Statistics for sample 216
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.617347240447998
+Variance: 0.017809253185987473
+Class 0: 90.0% CI = [0.17767150700092316, 0.6444884985685349]
+Class 1: 90.0% CI = [0.35551150143146515, 0.8223284929990768]
+Class 0: 95.0% CI = [0.17660481482744217, 0.6565221175551414]
+Class 1: 95.0% CI = [0.34347788244485855, 0.8233951851725578]
+
+
+Statistics for sample 221
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6422675251960754
+Variance: 0.024852335453033447
+Class 0: 90.0% CI = [0.37597130239009857, 0.8790504038333893]
+Class 1: 90.0% CI = [0.12094957567751406, 0.6240286976099014]
+Class 0: 95.0% CI = [0.36896248906850815, 0.9053187519311905]
+Class 1: 95.0% CI = [0.09468124154955151, 0.6310375109314919]
+
+
+Statistics for sample 231
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6638361811637878
+Variance: 0.015220750123262405
+Class 0: 90.0% CI = [0.48517748713493347, 0.8147548884153366]
+Class 1: 90.0% CI = [0.18524510413408277, 0.5148225128650665]
+Class 0: 95.0% CI = [0.4629437178373337, 0.8684086129069328]
+Class 1: 95.0% CI = [0.13159139826893812, 0.5370562821626663]
+
+
+Statistics for sample 250
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6536268591880798
+Variance: 0.020279625430703163
+Class 0: 90.0% CI = [0.1656568497419357, 0.556244507431984]
+Class 1: 90.0% CI = [0.4437554702162742, 0.8343431502580643]
+Class 0: 95.0% CI = [0.13787236064672473, 0.6214123740792274]
+Class 1: 95.0% CI = [0.3785876147449017, 0.8621276393532753]
+
+
+Statistics for sample 252
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7793424129486084
+Variance: 0.030762121081352234
+Class 0: 90.0% CI = [0.5, 0.9448451548814774]
+Class 1: 90.0% CI = [0.05515486001968384, 0.5]
+Class 0: 95.0% CI = [0.5, 0.947719968855381]
+Class 1: 95.0% CI = [0.05228005163371563, 0.5]
+
+
+Statistics for sample 258
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6020702123641968
+Variance: 0.03475829213857651
+Class 0: 90.0% CI = [0.34478403627872467, 0.8492406159639359]
+Class 1: 90.0% CI = [0.15075941011309624, 0.6552159637212753]
+Class 0: 95.0% CI = [0.30457121878862387, 0.8545699194073677]
+Class 1: 95.0% CI = [0.14543010108172894, 0.6954287812113762]
+
+
+Statistics for sample 264
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5786275267601013
+Variance: 0.02508312277495861
+Class 0: 90.0% CI = [0.3397182822227478, 0.7833912670612335]
+Class 1: 90.0% CI = [0.21660875156521797, 0.6602817177772522]
+Class 0: 95.0% CI = [0.3392256498336792, 0.7884887605905533]
+Class 1: 95.0% CI = [0.21151124127209187, 0.6607743501663208]
+
+
+Statistics for sample 277
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6351795792579651
+Variance: 0.02417859248816967
+Class 0: 90.0% CI = [0.1394399106502533, 0.6351433098316193]
+Class 1: 90.0% CI = [0.36485668271780014, 0.8605600893497467]
+Class 0: 95.0% CI = [0.1375647336244583, 0.6404668241739273]
+Class 1: 95.0% CI = [0.3595331571996212, 0.8624352663755417]
+
+
+Statistics for sample 287
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.634093701839447
+Variance: 0.016918405890464783
+Class 0: 90.0% CI = [0.13809281587600708, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8619071841239929]
+Class 0: 95.0% CI = [0.12389928102493288, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8761007189750671]
+
+
+Statistics for sample 297
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6139676570892334
+Variance: 0.012151872739195824
+Class 0: 90.0% CI = [0.24165514111518857, 0.532912939786911]
+Class 1: 90.0% CI = [0.467087060213089, 0.7583448588848114]
+Class 0: 95.0% CI = [0.19798372685909277, 0.5571377128362656]
+Class 1: 95.0% CI = [0.44286228716373444, 0.8020162731409073]
+
+
+Statistics for sample 303
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6574916243553162
+Variance: 0.030980167910456657
+Class 0: 90.0% CI = [0.12031146883964539, 0.6463075131177902]
+Class 1: 90.0% CI = [0.3536924868822098, 0.8796885311603546]
+Class 0: 95.0% CI = [0.11350102722644806, 0.6632746085524559]
+Class 1: 95.0% CI = [0.3367253914475441, 0.8864989727735519]
+
+
+Statistics for sample 305
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6616998314857483
+Variance: 0.04596291109919548
+Class 0: 90.0% CI = [0.35192398726940155, 0.9363388419151306]
+Class 1: 90.0% CI = [0.06366114877164362, 0.6480760127305984]
+Class 0: 95.0% CI = [0.33840080350637436, 0.9525974988937378]
+Class 1: 95.0% CI = [0.04740248899906875, 0.6615991964936256]
+
+
+Statistics for sample 308
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.667827844619751
+Variance: 0.016870751976966858
+Class 0: 90.0% CI = [0.18219400942325592, 0.5116542875766754]
+Class 1: 90.0% CI = [0.4883457198739052, 0.8178059905767441]
+Class 0: 95.0% CI = [0.1620939150452614, 0.5291357189416885]
+Class 1: 95.0% CI = [0.47086429968476295, 0.8379060849547386]
+
+
+Statistics for sample 314
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5927321910858154
+Variance: 0.027144644409418106
+Class 0: 90.0% CI = [0.15389199554920197, 0.6018445789813995]
+Class 1: 90.0% CI = [0.39815540611743927, 0.846108004450798]
+Class 0: 95.0% CI = [0.1439363732933998, 0.6064392477273941]
+Class 1: 95.0% CI = [0.3935607597231865, 0.8560636267066002]
+
+
+Statistics for sample 325
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5047482252120972
+Variance: 0.038095105439424515
+Class 0: 90.0% CI = [0.2599315196275711, 0.837639331817627]
+Class 1: 90.0% CI = [0.16236069425940514, 0.7400684803724289]
+Class 0: 95.0% CI = [0.2572665885090828, 0.8480010628700256]
+Class 1: 95.0% CI = [0.151998957619071, 0.7427334114909172]
+
+
+Statistics for sample 349
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5247913599014282
+Variance: 0.03148368373513222
+Class 0: 90.0% CI = [0.3223858028650284, 0.8557954132556915]
+Class 1: 90.0% CI = [0.14420457556843758, 0.6776141971349716]
+Class 0: 95.0% CI = [0.2897953763604164, 0.8611900955438614]
+Class 1: 95.0% CI = [0.13880989886820316, 0.7102046236395836]
+
+
+Statistics for sample 362
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7044209241867065
+Variance: 0.029839111492037773
+Class 0: 90.0% CI = [0.4355514049530029, 0.9066140353679657]
+Class 1: 90.0% CI = [0.09338595718145368, 0.5644485950469971]
+Class 0: 95.0% CI = [0.33887851238250744, 0.9398764222860336]
+Class 1: 95.0% CI = [0.0601235777139664, 0.6611214876174927]
+
+
+Statistics for sample 369
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6867329478263855
+Variance: 0.03191713988780975
+Class 0: 90.0% CI = [0.35076962411403656, 0.8939773589372635]
+Class 1: 90.0% CI = [0.1060226447880268, 0.6492303758859634]
+Class 0: 95.0% CI = [0.33905764669179916, 0.9109978750348091]
+Class 1: 95.0% CI = [0.08900213427841665, 0.6609423533082008]
+
+
+Statistics for sample 370
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5918624997138977
+Variance: 0.020847762003540993
+Class 0: 90.0% CI = [0.20959880948066711, 0.6016162782907486]
+Class 1: 90.0% CI = [0.3983837217092514, 0.7904011905193329]
+Class 0: 95.0% CI = [0.18382157385349276, 0.6378870084881783]
+Class 1: 95.0% CI = [0.3621129915118218, 0.8161784261465073]
+
+
+Statistics for sample 371
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.57651686668396
+Variance: 0.02092226967215538
+Class 0: 90.0% CI = [0.3934023678302765, 0.8198998421430588]
+Class 1: 90.0% CI = [0.18010016158223152, 0.6065976321697235]
+Class 0: 95.0% CI = [0.3835248202085495, 0.8282271847128868]
+Class 1: 95.0% CI = [0.17177280224859715, 0.6164751797914505]
+
+
+Statistics for sample 384
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6173856854438782
+Variance: 0.03405826911330223
+Class 0: 90.0% CI = [0.17670020461082458, 0.6697628647089005]
+Class 1: 90.0% CI = [0.3302371576428413, 0.8232997953891754]
+Class 0: 95.0% CI = [0.15294151008129123, 0.7653587833046913]
+Class 1: 95.0% CI = [0.23464122787117966, 0.8470584899187088]
+
+
+Statistics for sample 387
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5016127228736877
+Variance: 0.039034899324178696
+Class 0: 90.0% CI = [0.24259456992149353, 0.8282347768545151]
+Class 1: 90.0% CI = [0.17176522873342034, 0.7574054300785065]
+Class 0: 95.0% CI = [0.22291363775730136, 0.8695489093661308]
+Class 1: 95.0% CI = [0.13045108225196603, 0.7770863622426987]
+
+
+Statistics for sample 389
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5997101664543152
+Variance: 0.025329753756523132
+Class 0: 90.0% CI = [0.18350172042846677, 0.6327052414417267]
+Class 1: 90.0% CI = [0.3672947734594345, 0.8164982795715332]
+Class 0: 95.0% CI = [0.13942560553550726, 0.6741143018007278]
+Class 1: 95.0% CI = [0.3258856907486916, 0.8605743944644928]
+
+
+Statistics for sample 404
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6022301912307739
+Variance: 0.02150695025920868
+Class 0: 90.0% CI = [0.17019136250019073, 0.6261463016271591]
+Class 1: 90.0% CI = [0.37385372072458267, 0.8298086374998093]
+Class 0: 95.0% CI = [0.16575581580400467, 0.6371950134634972]
+Class 1: 95.0% CI = [0.36280499771237373, 0.8342441841959953]
+
+
+Statistics for sample 410
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5717432498931885
+Variance: 0.044204868376255035
+Class 0: 90.0% CI = [0.327666774392128, 0.8722394406795502]
+Class 1: 90.0% CI = [0.12776054441928864, 0.672333225607872]
+Class 0: 95.0% CI = [0.3166302219033241, 0.8837896138429642]
+Class 1: 95.0% CI = [0.11621037125587465, 0.6833697780966759]
+
+
+Statistics for sample 418
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.690730631351471
+Variance: 0.026086464524269104
+Class 0: 90.0% CI = [0.0899098217487335, 0.5333616584539413]
+Class 1: 90.0% CI = [0.46663833409547806, 0.9100901782512665]
+Class 0: 95.0% CI = [0.07185475528240205, 0.5506490990519524]
+Class 1: 95.0% CI = [0.44935088232159615, 0.928145244717598]
+
+
+Statistics for sample 425
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.564916729927063
+Variance: 0.017537495121359825
+Class 0: 90.0% CI = [0.4080257713794708, 0.804199606180191]
+Class 1: 90.0% CI = [0.19580037146806717, 0.5919742286205292]
+Class 0: 95.0% CI = [0.39255376160144806, 0.8266484886407852]
+Class 1: 95.0% CI = [0.17335150018334392, 0.6074462383985519]
+
+
+Statistics for sample 426
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5770931243896484
+Variance: 0.03584768623113632
+Class 0: 90.0% CI = [0.36069159209728235, 0.854869082570076]
+Class 1: 90.0% CI = [0.14513093791902065, 0.6393084079027176]
+Class 0: 95.0% CI = [0.29390894621610647, 0.8721029236912727]
+Class 1: 95.0% CI = [0.1278970828279853, 0.7060910537838936]
+
+
+Statistics for sample 438
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5601352453231812
+Variance: 0.041207291185855865
+Class 0: 90.0% CI = [0.35609152913093567, 0.9149681627750397]
+Class 1: 90.0% CI = [0.08503182232379913, 0.6439084708690643]
+Class 0: 95.0% CI = [0.35286764800548553, 0.9274407476186752]
+Class 1: 95.0% CI = [0.07255923748016359, 0.6471323519945145]
+
+
+Statistics for sample 440
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5010432600975037
+Variance: 0.023856155574321747
+Class 0: 90.0% CI = [0.28474205732345576, 0.7147934883832932]
+Class 1: 90.0% CI = [0.28520651161670685, 0.7152579426765442]
+Class 0: 95.0% CI = [0.21857616305351263, 0.7550669237971306]
+Class 1: 95.0% CI = [0.24493307620286944, 0.7814238369464874]
+
+
+Statistics for sample 442
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6064220070838928
+Variance: 0.016064301133155823
+Class 0: 90.0% CI = [0.19934532046318054, 0.5429730117321014]
+Class 1: 90.0% CI = [0.45702700316905975, 0.8006546795368195]
+Class 0: 95.0% CI = [0.18730045855045319, 0.5497766584157944]
+Class 1: 95.0% CI = [0.45022333413362503, 0.8126995414495468]
+
+
+Statistics for sample 444
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.7160458564758301
+Variance: 0.017538489773869514
+Class 0: 90.0% CI = [0.09974531829357147, 0.5]
+Class 1: 90.0% CI = [0.5, 0.9002546817064285]
+Class 0: 95.0% CI = [0.0983109399676323, 0.5]
+Class 1: 95.0% CI = [0.5, 0.9016890600323677]
+
+
+Statistics for sample 466
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6221920251846313
+Variance: 0.03432731330394745
+Class 0: 90.0% CI = [0.35134226083755493, 0.8439906686544418]
+Class 1: 90.0% CI = [0.15600935742259026, 0.6486577391624451]
+Class 0: 95.0% CI = [0.3493843376636505, 0.8470431789755821]
+Class 1: 95.0% CI = [0.15295684151351452, 0.6506156623363495]
+
+
+Statistics for sample 468
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5033668875694275
+Variance: 0.022202255204319954
+Class 0: 90.0% CI = [0.30617497861385345, 0.6964143216609955]
+Class 1: 90.0% CI = [0.303585696965456, 0.6938250213861465]
+Class 0: 95.0% CI = [0.29908212274312973, 0.736094519495964]
+Class 1: 95.0% CI = [0.26390548236668115, 0.7009178772568703]
+
+
+Statistics for sample 474
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5680214166641235
+Variance: 0.02310735546052456
+Class 0: 90.0% CI = [0.33338139951229095, 0.7560348808765411]
+Class 1: 90.0% CI = [0.24396514520049092, 0.666618600487709]
+Class 0: 95.0% CI = [0.3058190867304802, 0.7923482805490494]
+Class 1: 95.0% CI = [0.2076517399400473, 0.6941809132695198]
+
+
+Statistics for sample 478
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5061110258102417
+Variance: 0.022823994979262352
+Class 0: 90.0% CI = [0.3166104108095169, 0.7267833203077316]
+Class 1: 90.0% CI = [0.2732166573405266, 0.6833895891904831]
+Class 0: 95.0% CI = [0.3009912148118019, 0.7372917458415031]
+Class 1: 95.0% CI = [0.26270824298262596, 0.6990087851881981]
+
+
+Statistics for sample 487
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.8389681577682495
+Variance: 0.009569903835654259
+Class 0: 90.0% CI = [0.6844605207443237, 0.9665447473526001]
+Class 1: 90.0% CI = [0.03345523914322257, 0.31553947925567627]
+Class 0: 95.0% CI = [0.6546060144901276, 0.9708968997001648]
+Class 1: 95.0% CI = [0.029103105654940013, 0.34539398550987244]
+
+
+Statistics for sample 510
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6826740503311157
+Variance: 0.017511246725916862
+Class 0: 90.0% CI = [0.15119969844818115, 0.5733921527862549]
+Class 1: 90.0% CI = [0.4266078621149063, 0.8488003015518188]
+Class 0: 95.0% CI = [0.13760018348693848, 0.5839128494262695]
+Class 1: 95.0% CI = [0.41608714312314987, 0.8623998165130615]
+
+
+Statistics for sample 521
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.7107160091400146
+Variance: 0.013355865143239498
+Class 0: 90.0% CI = [0.10669444501399994, 0.47634220123291016]
+Class 1: 90.0% CI = [0.5236577987670898, 0.8933055549860001]
+Class 0: 95.0% CI = [0.10586061328649521, 0.4881711006164551]
+Class 1: 95.0% CI = [0.5118288993835449, 0.8941393867135048]
+
+
+Statistics for sample 524
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6036978960037231
+Variance: 0.026736803352832794
+Class 0: 90.0% CI = [0.16472120583057404, 0.6299352496862411]
+Class 1: 90.0% CI = [0.37006477266550064, 0.835278794169426]
+Class 0: 95.0% CI = [0.1613827720284462, 0.6335959061980247]
+Class 1: 95.0% CI = [0.36640410497784615, 0.8386172279715538]
+
+
+Statistics for sample 530
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5895402431488037
+Variance: 0.020054403692483902
+Class 0: 90.0% CI = [0.41259895265102386, 0.8064152300357819]
+Class 1: 90.0% CI = [0.1935847699642181, 0.5874010473489761]
+Class 0: 95.0% CI = [0.391298346221447, 0.8361038416624069]
+Class 1: 95.0% CI = [0.1638961583375931, 0.608701653778553]
+
+
+Statistics for sample 531
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6498589515686035
+Variance: 0.020030217245221138
+Class 0: 90.0% CI = [0.46164463460445404, 0.8883810937404633]
+Class 1: 90.0% CI = [0.11161892488598824, 0.538355365395546]
+Class 0: 95.0% CI = [0.41656159609556204, 0.8954953402280807]
+Class 1: 95.0% CI = [0.1045046616345644, 0.583438403904438]
+
+
+Statistics for sample 539
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7377830743789673
+Variance: 0.024003881961107254
+Class 0: 90.0% CI = [0.4964323192834854, 0.9189756810665131]
+Class 1: 90.0% CI = [0.08102430962026118, 0.5035676807165146]
+Class 0: 95.0% CI = [0.49108079820871353, 0.9364708811044693]
+Class 1: 95.0% CI = [0.06352910678833724, 0.5089192017912865]
+
+
+Statistics for sample 543
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.7703378796577454
+Variance: 0.01855175942182541
+Class 0: 90.0% CI = [0.10814961791038513, 0.46758395433425903]
+Class 1: 90.0% CI = [0.532416045665741, 0.8918503820896149]
+Class 0: 95.0% CI = [0.10695652663707733, 0.5221225619316101]
+Class 1: 95.0% CI = [0.47787743806838995, 0.8930434733629227]
+
+
+Statistics for sample 551
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6925500631332397
+Variance: 0.0366329699754715
+Class 0: 90.0% CI = [0.42912457883358, 0.9117051810026169]
+Class 1: 90.0% CI = [0.0882948264479637, 0.57087542116642]
+Class 0: 95.0% CI = [0.39944734424352646, 0.9274218305945396]
+Class 1: 95.0% CI = [0.07257818803191186, 0.6005526557564735]
+
+
+Statistics for sample 558
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.7786502838134766
+Variance: 0.01806589402258396
+Class 0: 90.0% CI = [0.07076764106750488, 0.417247012257576]
+Class 1: 90.0% CI = [0.582752987742424, 0.9292323589324951]
+Class 0: 95.0% CI = [0.06064265966415406, 0.458623506128788]
+Class 1: 95.0% CI = [0.541376493871212, 0.939357340335846]
+
+
+Statistics for sample 563
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6574085354804993
+Variance: 0.020767835900187492
+Class 0: 90.0% CI = [0.4986162781715393, 0.8589730262756348]
+Class 1: 90.0% CI = [0.1410269681364298, 0.5013837218284607]
+Class 0: 95.0% CI = [0.49654069542884827, 0.8760480582714081]
+Class 1: 95.0% CI = [0.12395192775875331, 0.5034593045711517]
+
+
+Statistics for sample 564
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5357769727706909
+Variance: 0.026313621550798416
+Class 0: 90.0% CI = [0.3176169991493225, 0.7998715043067932]
+Class 1: 90.0% CI = [0.2001284770667553, 0.6823830008506775]
+Class 0: 95.0% CI = [0.2923213541507721, 0.8005153238773346]
+Class 1: 95.0% CI = [0.19948467426002026, 0.7076786458492279]
+
+
+Statistics for sample 575
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5592358112335205
+Variance: 0.021004455164074898
+Class 0: 90.0% CI = [0.3343173414468765, 0.7284897714853287]
+Class 1: 90.0% CI = [0.27151025086641306, 0.6656826585531235]
+Class 0: 95.0% CI = [0.2987688854336739, 0.8182284608483315]
+Class 1: 95.0% CI = [0.18177155777812012, 0.7012311145663261]
+
+
+Statistics for sample 579
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5519949197769165
+Variance: 0.04748091846704483
+Class 0: 90.0% CI = [0.30420921742916107, 0.8711931258440018]
+Class 1: 90.0% CI = [0.1288068573921919, 0.6957907825708389]
+Class 0: 95.0% CI = [0.3010437414050102, 0.8799759522080421]
+Class 1: 95.0% CI = [0.12002402823418379, 0.6989562585949898]
+
+
+Statistics for sample 587
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6832461357116699
+Variance: 0.020252201706171036
+Class 0: 90.0% CI = [0.14333260059356687, 0.5101248621940613]
+Class 1: 90.0% CI = [0.4898751378059387, 0.8566673994064331]
+Class 0: 95.0% CI = [0.11316338181495669, 0.5253121554851532]
+Class 1: 95.0% CI = [0.4746878445148468, 0.8868366181850433]
+
+
+Statistics for sample 593
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5551370978355408
+Variance: 0.02246195264160633
+Class 0: 90.0% CI = [0.3631802499294281, 0.7874532490968704]
+Class 1: 90.0% CI = [0.21254674345254895, 0.6368197500705719]
+Class 0: 95.0% CI = [0.3560236245393753, 0.816315270960331]
+Class 1: 95.0% CI = [0.18368473276495936, 0.6439763754606247]
+
+
+Statistics for sample 596
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5106838345527649
+Variance: 0.024449968710541725
+Class 0: 90.0% CI = [0.20963160693645477, 0.7305162250995636]
+Class 1: 90.0% CI = [0.2694837749004364, 0.7903683930635452]
+Class 0: 95.0% CI = [0.20938902348279953, 0.7697452753782272]
+Class 1: 95.0% CI = [0.2302547246217728, 0.7906109765172005]
+
+
+Statistics for sample 618
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6480197310447693
+Variance: 0.016605708748102188
+Class 0: 90.0% CI = [0.13732053339481354, 0.5223404765129089]
+Class 1: 90.0% CI = [0.47765952348709106, 0.8626794666051865]
+Class 0: 95.0% CI = [0.13013214617967606, 0.5558511912822723]
+Class 1: 95.0% CI = [0.44414880871772766, 0.8698678538203239]
+
+
+Statistics for sample 624
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5233397483825684
+Variance: 0.02613547444343567
+Class 0: 90.0% CI = [0.2848421633243561, 0.7001671493053436]
+Class 1: 90.0% CI = [0.2998328283429146, 0.7151578366756439]
+Class 0: 95.0% CI = [0.24731774628162387, 0.7422430962324142]
+Class 1: 95.0% CI = [0.2577568925917149, 0.7526822537183762]
+
+
+Statistics for sample 626
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5028119087219238
+Variance: 0.021678730845451355
+Class 0: 90.0% CI = [0.3337366431951523, 0.7100137919187546]
+Class 1: 90.0% CI = [0.28998618572950363, 0.6662633568048477]
+Class 0: 95.0% CI = [0.3227912411093712, 0.7198631092905998]
+Class 1: 95.0% CI = [0.2801368795335293, 0.6772087588906288]
+
+
+Statistics for sample 634
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5556693077087402
+Variance: 0.013756024651229382
+Class 0: 90.0% CI = [0.30433523654937744, 0.5662667900323868]
+Class 1: 90.0% CI = [0.43373320996761316, 0.6956647634506226]
+Class 0: 95.0% CI = [0.2859673798084259, 0.665666975080967]
+Class 1: 95.0% CI = [0.33433301001787197, 0.7140326201915741]
+
+
+Statistics for sample 637
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5421544313430786
+Variance: 0.014455324038863182
+Class 0: 90.0% CI = [0.2628946602344513, 0.6615890562534332]
+Class 1: 90.0% CI = [0.3384109139442444, 0.7371053397655487]
+Class 0: 95.0% CI = [0.2572711855173111, 0.6722929030656815]
+Class 1: 95.0% CI = [0.32770706713199615, 0.7427288144826889]
+
+
+Statistics for sample 642
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5068760514259338
+Variance: 0.02195782959461212
+Class 0: 90.0% CI = [0.2871614098548889, 0.7584996223449707]
+Class 1: 90.0% CI = [0.2415003813803196, 0.7128385901451111]
+Class 0: 95.0% CI = [0.27718913555145264, 0.7609035074710846]
+Class 1: 95.0% CI = [0.23909650184214115, 0.7228108644485474]
+
+
+Statistics for sample 657
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5595586895942688
+Variance: 0.02393752709031105
+Class 0: 90.0% CI = [0.20928850769996643, 0.6696872115135193]
+Class 1: 90.0% CI = [0.3303127586841583, 0.7907114923000336]
+Class 0: 95.0% CI = [0.19821058213710785, 0.6770810782909393]
+Class 1: 95.0% CI = [0.3229188919067383, 0.8017894178628922]
+
+
+Statistics for sample 658
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6210014820098877
+Variance: 0.05599963292479515
+Class 0: 90.0% CI = [0.2882792204618454, 0.9072323590517044]
+Class 1: 90.0% CI = [0.09276765398681164, 0.7117207795381546]
+Class 0: 95.0% CI = [0.2535577341914177, 0.912119098007679]
+Class 1: 95.0% CI = [0.08788090106099844, 0.7464422658085823]
+
+
+Statistics for sample 667
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.7137770652770996
+Variance: 0.01247101929038763
+Class 0: 90.0% CI = [0.1592586040496826, 0.47390393912792206]
+Class 1: 90.0% CI = [0.5260960608720779, 0.8407413959503174]
+Class 0: 95.0% CI = [0.09801402688026434, 0.48695196956396103]
+Class 1: 95.0% CI = [0.513048030436039, 0.9019859731197357]
+
+
+Statistics for sample 677
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5521705150604248
+Variance: 0.02306494303047657
+Class 0: 90.0% CI = [0.32108892500400543, 0.7471040040254593]
+Class 1: 90.0% CI = [0.2528959698975086, 0.6789110749959946]
+Class 0: 95.0% CI = [0.3198930397629738, 0.7594737485051155]
+Class 1: 95.0% CI = [0.24052623100578785, 0.6801069602370262]
+
+
+Statistics for sample 681
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.717919111251831
+Variance: 0.014035481959581375
+Class 0: 90.0% CI = [0.5594610422849655, 0.8946123421192169]
+Class 1: 90.0% CI = [0.10538764484226701, 0.4405389577150345]
+Class 0: 95.0% CI = [0.5297305211424828, 0.9317930787801743]
+Class 1: 95.0% CI = [0.0682069128379226, 0.47026947885751724]
+
+
+Statistics for sample 700
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6333523988723755
+Variance: 0.031297940760850906
+Class 0: 90.0% CI = [0.17623300850391388, 0.6209598481655121]
+Class 1: 90.0% CI = [0.3790401667356491, 0.8237669914960861]
+Class 0: 95.0% CI = [0.15607587248086932, 0.6365452259778976]
+Class 1: 95.0% CI = [0.36345476657152176, 0.8439241275191307]
+
+
+Statistics for sample 703
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5376120805740356
+Variance: 0.03405408933758736
+Class 0: 90.0% CI = [0.17201796174049377, 0.7281230092048645]
+Class 1: 90.0% CI = [0.271876972168684, 0.8279820382595062]
+Class 0: 95.0% CI = [0.1555316299200058, 0.7459796369075775]
+Class 1: 95.0% CI = [0.25402036122977734, 0.8444683700799942]
+
+
+Statistics for sample 705
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7122195959091187
+Variance: 0.03282864764332771
+Class 0: 90.0% CI = [0.42871880531311035, 0.9379176646471024]
+Class 1: 90.0% CI = [0.062082326970994466, 0.5712811946868896]
+Class 0: 95.0% CI = [0.3947165310382843, 0.9510184898972511]
+Class 1: 95.0% CI = [0.04898151149973275, 0.6052834689617157]
+
+
+Statistics for sample 720
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6242637634277344
+Variance: 0.01567005179822445
+Class 0: 90.0% CI = [0.48616379499435425, 0.8229872286319733]
+Class 1: 90.0% CI = [0.1770127862691879, 0.5138362050056458]
+Class 0: 95.0% CI = [0.4654094874858856, 0.8508591800928116]
+Class 1: 95.0% CI = [0.14914083480834964, 0.5345905125141144]
+
+
+Statistics for sample 721
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.610938549041748
+Variance: 0.024130776524543762
+Class 0: 90.0% CI = [0.44805343449115753, 0.8586909621953964]
+Class 1: 90.0% CI = [0.14130902476608753, 0.5519465655088425]
+Class 0: 95.0% CI = [0.4190903380513191, 0.8810778185725212]
+Class 1: 95.0% CI = [0.1189221711829305, 0.5809096619486809]
+
+
+Statistics for sample 735
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5666146278381348
+Variance: 0.020684272050857544
+Class 0: 90.0% CI = [0.25205785036087036, 0.688143402338028]
+Class 1: 90.0% CI = [0.31185659766197205, 0.7479421496391296]
+Class 0: 95.0% CI = [0.24096933007240295, 0.6953877359628677]
+Class 1: 95.0% CI = [0.30461226403713226, 0.759030669927597]
+
+
+Statistics for sample 759
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5644680261611938
+Variance: 0.027002640068531036
+Class 0: 90.0% CI = [0.20917344093322754, 0.6677911579608917]
+Class 1: 90.0% CI = [0.3322088122367859, 0.7908265590667725]
+Class 0: 95.0% CI = [0.2058083415031433, 0.679383710026741]
+Class 1: 95.0% CI = [0.3206162601709366, 0.7941916584968567]
+
+
+Statistics for sample 760
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7542791962623596
+Variance: 0.028106380254030228
+Class 0: 90.0% CI = [0.5, 0.97130186855793]
+Class 1: 90.0% CI = [0.028698116075247526, 0.5]
+Class 0: 95.0% CI = [0.5, 0.9740077927708626]
+Class 1: 95.0% CI = [0.02599221072159708, 0.5]
+
+
+Statistics for sample 763
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.655855119228363
+Variance: 0.01773465797305107
+Class 0: 90.0% CI = [0.15590329468250272, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8440967053174973]
+Class 0: 95.0% CI = [0.11348847299814227, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8865115270018578]
+
+
+Statistics for sample 765
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6966314315795898
+Variance: 0.013233983889222145
+Class 0: 90.0% CI = [0.1389804184436798, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8610195815563202]
+Class 0: 95.0% CI = [0.13212983310222626, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8678701668977737]
+
+
+Statistics for sample 768
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5531237125396729
+Variance: 0.012468556873500347
+Class 0: 90.0% CI = [0.27720384299755096, 0.5890118628740311]
+Class 1: 90.0% CI = [0.4109881371259689, 0.722796157002449]
+Class 0: 95.0% CI = [0.25970473140478134, 0.6418644562363625]
+Class 1: 95.0% CI = [0.3581355437636376, 0.7402952685952187]
+
+
+Statistics for sample 775
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6152135133743286
+Variance: 0.026996787637472153
+Class 0: 90.0% CI = [0.1922027766704559, 0.6467211246490479]
+Class 1: 90.0% CI = [0.35327888280153275, 0.8077972233295441]
+Class 0: 95.0% CI = [0.14797569811344152, 0.6767595410346985]
+Class 1: 95.0% CI = [0.323240477591753, 0.8520243018865585]
+
+
+Statistics for sample 788
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5220906734466553
+Variance: 0.020116357132792473
+Class 0: 90.0% CI = [0.37933020293712616, 0.7422447800636292]
+Class 1: 90.0% CI = [0.2577552124857902, 0.6206697970628738]
+Class 0: 95.0% CI = [0.36139103025197983, 0.8252688944339752]
+Class 1: 95.0% CI = [0.17473109439015394, 0.6386089697480202]
+
+
+Statistics for sample 796
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.7212485074996948
+Variance: 0.021218648180365562
+Class 0: 90.0% CI = [0.5, 0.9371519237756729]
+Class 1: 90.0% CI = [0.0628480976447463, 0.5]
+Class 0: 95.0% CI = [0.5, 0.9451263323426247]
+Class 1: 95.0% CI = [0.0548736765049398, 0.5]
+
+
+Statistics for sample 822
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5812994241714478
+Variance: 0.018763337284326553
+Class 0: 90.0% CI = [0.21396295726299283, 0.6410996615886688]
+Class 1: 90.0% CI = [0.3589003384113312, 0.7860370427370071]
+Class 0: 95.0% CI = [0.18119000643491748, 0.6451723724603653]
+Class 1: 95.0% CI = [0.3548276275396347, 0.8188099935650826]
+
+
+Statistics for sample 827
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6542677879333496
+Variance: 0.019268019124865532
+Class 0: 90.0% CI = [0.16997747123241425, 0.5791919678449631]
+Class 1: 90.0% CI = [0.4208080396056175, 0.8300225287675858]
+Class 0: 95.0% CI = [0.16163649410009384, 0.6155505403876305]
+Class 1: 95.0% CI = [0.3844494782388211, 0.8383635058999062]
+
+
+Statistics for sample 836
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.7320705056190491
+Variance: 0.020489871501922607
+Class 0: 90.0% CI = [0.10767665505409241, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8923233449459076]
+Class 0: 95.0% CI = [0.10463301837444305, 0.5]
+Class 1: 95.0% CI = [0.5, 0.895366981625557]
+
+
+Statistics for sample 840
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7675132155418396
+Variance: 0.021673375740647316
+Class 0: 90.0% CI = [0.5239769816398621, 0.9374135732650757]
+Class 1: 90.0% CI = [0.0625864267349243, 0.47602304071187973]
+Class 0: 95.0% CI = [0.511988490819931, 0.9577326476573944]
+Class 1: 95.0% CI = [0.04226733930408956, 0.48801152035593987]
+
+
+Statistics for sample 842
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5310778021812439
+Variance: 0.019410796463489532
+Class 0: 90.0% CI = [0.28252966701984406, 0.6696363091468811]
+Class 1: 90.0% CI = [0.33036369457840914, 0.717470332980156]
+Class 0: 95.0% CI = [0.27751896530389786, 0.7400576174259186]
+Class 1: 95.0% CI = [0.2599423918873072, 0.7224810346961021]
+
+
+Statistics for sample 846
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7423591613769531
+Variance: 0.04432627186179161
+Class 0: 90.0% CI = [0.38152076303958893, 0.9762654304504395]
+Class 1: 90.0% CI = [0.023734593763947487, 0.6184792369604111]
+Class 0: 95.0% CI = [0.3696563020348549, 0.9777899980545044]
+Class 1: 95.0% CI = [0.022210026159882545, 0.6303436979651451]
+
+
+Statistics for sample 854
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6099101305007935
+Variance: 0.015427215956151485
+Class 0: 90.0% CI = [0.1729766875505447, 0.5195822715759277]
+Class 1: 90.0% CI = [0.48041772842407227, 0.8270233124494553]
+Class 0: 95.0% CI = [0.14476970583200457, 0.5489556789398193]
+Class 1: 95.0% CI = [0.45104432106018066, 0.8552302941679955]
+
+
+Statistics for sample 860
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6314019560813904
+Variance: 0.010090244933962822
+Class 0: 90.0% CI = [0.21893619000911713, 0.5]
+Class 1: 90.0% CI = [0.5, 0.7810638099908829]
+Class 0: 95.0% CI = [0.20355548709630966, 0.5]
+Class 1: 95.0% CI = [0.5, 0.7964445129036903]
+
+
+Statistics for sample 865
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.7133489847183228
+Variance: 0.019699733704328537
+Class 0: 90.0% CI = [0.09812793135643004, 0.5]
+Class 1: 90.0% CI = [0.5, 0.90187206864357]
+Class 0: 95.0% CI = [0.08247013390064241, 0.5]
+Class 1: 95.0% CI = [0.5, 0.9175298660993576]
+
+
+Statistics for sample 866
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5280182361602783
+Variance: 0.016209108754992485
+Class 0: 90.0% CI = [0.28769655525684357, 0.6613127440214157]
+Class 1: 90.0% CI = [0.3386872559785843, 0.7123034447431564]
+Class 0: 95.0% CI = [0.27822301536798477, 0.6643386110663414]
+Class 1: 95.0% CI = [0.3356613889336586, 0.7217769846320152]
+
+
+Statistics for sample 871
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5630419850349426
+Variance: 0.012161727994680405
+Class 0: 90.0% CI = [0.274603933095932, 0.5803799778223038]
+Class 1: 90.0% CI = [0.4196200296282768, 0.725396066904068]
+Class 0: 95.0% CI = [0.24106983840465548, 0.6129176095128059]
+Class 1: 95.0% CI = [0.38708240911364555, 0.7589301615953445]
+
+
+Statistics for sample 890
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5753411054611206
+Variance: 0.03392970189452171
+Class 0: 90.0% CI = [0.30974359810352325, 0.8550449162721634]
+Class 1: 90.0% CI = [0.14495508186519146, 0.6902564018964767]
+Class 0: 95.0% CI = [0.26920820027589804, 0.8789986744523048]
+Class 1: 95.0% CI = [0.12100132089108231, 0.730791799724102]
+
+
+Statistics for sample 899
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.7188674211502075
+Variance: 0.021359553560614586
+Class 0: 90.0% CI = [0.48570428788661957, 0.894902765750885]
+Class 1: 90.0% CI = [0.10509721934795378, 0.5142957121133804]
+Class 0: 95.0% CI = [0.4642607197165489, 0.914529025554657]
+Class 1: 95.0% CI = [0.08547095954418184, 0.5357392802834511]
+
+
+Statistics for sample 904
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6613265872001648
+Variance: 0.025881478562951088
+Class 0: 90.0% CI = [0.13724049925804138, 0.5812455415725708]
+Class 1: 90.0% CI = [0.41875446587800974, 0.8627595007419586]
+Class 0: 95.0% CI = [0.1327735036611557, 0.6420918107032776]
+Class 1: 95.0% CI = [0.35790820792317396, 0.8672264963388443]
+
+
+Statistics for sample 909
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6656522750854492
+Variance: 0.019339120015501976
+Class 0: 90.0% CI = [0.46582700312137604, 0.8410997539758682]
+Class 1: 90.0% CI = [0.15890023484826085, 0.534172996878624]
+Class 0: 95.0% CI = [0.41456750780344015, 0.8690376654267311]
+Class 1: 95.0% CI = [0.13096232898533347, 0.5854324921965599]
+
+
+Statistics for sample 912
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.599902331829071
+Variance: 0.025446036830544472
+Class 0: 90.0% CI = [0.42868940532207483, 0.8540862053632736]
+Class 1: 90.0% CI = [0.14591379836201668, 0.5713105946779251]
+Class 0: 95.0% CI = [0.3261179551482202, 0.8572863265872002]
+Class 1: 95.0% CI = [0.14271368272602558, 0.6738820448517799]
+
+
+Statistics for sample 915
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6478553414344788
+Variance: 0.017577672377228737
+Class 0: 90.0% CI = [0.19058227539062494, 0.503518134355545]
+Class 1: 90.0% CI = [0.49648187309503555, 0.809417724609375]
+Class 0: 95.0% CI = [0.1155615150928498, 0.5087953358888626]
+Class 1: 95.0% CI = [0.4912046827375889, 0.8844384849071503]
+
+
+Statistics for sample 917
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.7639715075492859
+Variance: 0.023112807422876358
+Class 0: 90.0% CI = [0.08010880649089813, 0.5]
+Class 1: 90.0% CI = [0.5, 0.9198911935091019]
+Class 0: 95.0% CI = [0.07533418387174606, 0.5]
+Class 1: 95.0% CI = [0.5, 0.9246658161282539]
+
+
+Statistics for sample 920
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7014616131782532
+Variance: 0.021818846464157104
+Class 0: 90.0% CI = [0.43854518234729767, 0.8700946718454361]
+Class 1: 90.0% CI = [0.1299053318798542, 0.5614548176527023]
+Class 0: 95.0% CI = [0.43737343698740005, 0.8713296726346016]
+Class 1: 95.0% CI = [0.12867031432688236, 0.5626265630126]
+
+
+Statistics for sample 934
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5228819251060486
+Variance: 0.024908151477575302
+Class 0: 90.0% CI = [0.313776433467865, 0.7689414322376251]
+Class 1: 90.0% CI = [0.23105856031179428, 0.686223566532135]
+Class 0: 95.0% CI = [0.278799444437027, 0.7897101789712906]
+Class 1: 95.0% CI = [0.21028982475399974, 0.721200555562973]
+
+
+Statistics for sample 955
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.688545286655426
+Variance: 0.02342788688838482
+Class 0: 90.0% CI = [0.4792881906032562, 0.9615616798400879]
+Class 1: 90.0% CI = [0.03843833785504103, 0.5207118093967438]
+Class 0: 95.0% CI = [0.44822047650814056, 0.9639225602149963]
+Class 1: 95.0% CI = [0.036077439319342375, 0.5517795234918594]
+
+
+Statistics for sample 958
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.7032206058502197
+Variance: 0.0059128706343472
+Class 0: 90.0% CI = [0.2030630260705948, 0.41581225395202637]
+Class 1: 90.0% CI = [0.5841877460479736, 0.7969369739294052]
+Class 0: 95.0% CI = [0.19971323758363724, 0.42525675892829895]
+Class 1: 95.0% CI = [0.574743241071701, 0.8002867624163628]
+
+
+Statistics for sample 963
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.7437836527824402
+Variance: 0.01050372514873743
+Class 0: 90.0% CI = [0.13473796844482422, 0.38865023851394653]
+Class 1: 90.0% CI = [0.6113497614860535, 0.8652620315551758]
+Class 0: 95.0% CI = [0.13262242078781128, 0.44432511925697327]
+Class 1: 95.0% CI = [0.5556748807430267, 0.8673775792121887]
+
+
+Statistics for sample 966
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7511013150215149
+Variance: 0.0312332846224308
+Class 0: 90.0% CI = [0.4798525273799896, 0.9727969765663147]
+Class 1: 90.0% CI = [0.02720303786918521, 0.5201474726200104]
+Class 0: 95.0% CI = [0.44963131844997406, 0.9733703434467316]
+Class 1: 95.0% CI = [0.026629670290276408, 0.5503686815500259]
+
+
+Statistics for sample 969
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6082086563110352
+Variance: 0.014418050646781921
+Class 0: 90.0% CI = [0.43647849559783936, 0.7630442380905151]
+Class 1: 90.0% CI = [0.23695573583245275, 0.5635215044021606]
+Class 0: 95.0% CI = [0.3992160856723786, 0.7979127764701843]
+Class 1: 95.0% CI = [0.20208720304071906, 0.6007839143276215]
+
+
+Statistics for sample 972
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7393327951431274
+Variance: 0.014314097352325916
+Class 0: 90.0% CI = [0.5394953489303589, 0.8822280317544937]
+Class 1: 90.0% CI = [0.11777196824550627, 0.4605046734213829]
+Class 0: 95.0% CI = [0.5197476744651794, 0.914313443005085]
+Class 1: 95.0% CI = [0.08568655326962474, 0.48025233671069145]
+
+
+Statistics for sample 978
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6219243407249451
+Variance: 0.015444854274392128
+Class 0: 90.0% CI = [0.1642882376909256, 0.5382538139820099]
+Class 1: 90.0% CI = [0.4617462158203125, 0.8357117623090744]
+Class 0: 95.0% CI = [0.15784604102373123, 0.5408008843660355]
+Class 1: 95.0% CI = [0.4591991454362869, 0.8421539589762688]
+
+
+Statistics for sample 987
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.53482985496521
+Variance: 0.028553461655974388
+Class 0: 90.0% CI = [0.32000425457954407, 0.747306227684021]
+Class 1: 90.0% CI = [0.25269376859068865, 0.6799957454204559]
+Class 0: 95.0% CI = [0.2800327688455582, 0.802775114774704]
+Class 1: 95.0% CI = [0.19722487591207033, 0.7199672311544418]
+
+
+Statistics for sample 993
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6217470169067383
+Variance: 0.023563163354992867
+Class 0: 90.0% CI = [0.22034737467765808, 0.5889025032520294]
+Class 1: 90.0% CI = [0.41109749674797047, 0.7796526253223419]
+Class 0: 95.0% CI = [0.21884243190288544, 0.7222562581300735]
+Class 1: 95.0% CI = [0.27774372696876537, 0.7811575680971146]
+
+
+Statistics for sample 998
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6850074529647827
+Variance: 0.017587944865226746
+Class 0: 90.0% CI = [0.12864460051059723, 0.5130292773246765]
+Class 1: 90.0% CI = [0.4869707226753235, 0.8713553994894028]
+Class 0: 95.0% CI = [0.11738900095224382, 0.5325731933116913]
+Class 1: 95.0% CI = [0.4674268066883087, 0.8826109990477562]
+
+
+Statistics for sample 1004
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5407369136810303
+Variance: 0.03915246203541756
+Class 0: 90.0% CI = [0.31636928021907806, 0.9014780223369598]
+Class 1: 90.0% CI = [0.09852198138833045, 0.6836307197809219]
+Class 0: 95.0% CI = [0.31621091812849045, 0.927636131644249]
+Class 1: 95.0% CI = [0.07236386276781562, 0.6837890818715096]
+
+
+Statistics for sample 1005
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6698265671730042
+Variance: 0.026655154302716255
+Class 0: 90.0% CI = [0.4162478595972061, 0.8653110563755035]
+Class 1: 90.0% CI = [0.1346889492124319, 0.5837521404027939]
+Class 0: 95.0% CI = [0.36906702071428305, 0.8838744014501572]
+Class 1: 95.0% CI = [0.11612559016793968, 0.630932979285717]
+
+
+Statistics for sample 1010
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5706872940063477
+Variance: 0.03937409073114395
+Class 0: 90.0% CI = [0.199317917227745, 0.7745739817619324]
+Class 1: 90.0% CI = [0.2254260145127773, 0.8006820827722549]
+Class 0: 95.0% CI = [0.13175027817487722, 0.8141824305057526]
+Class 1: 95.0% CI = [0.18581756018102172, 0.8682497218251228]
+
+
+Statistics for sample 1021
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5369982719421387
+Variance: 0.01159358024597168
+Class 0: 90.0% CI = [0.33524206280708313, 0.6003830432891846]
+Class 1: 90.0% CI = [0.39961698651313776, 0.6647579371929169]
+Class 0: 95.0% CI = [0.3350788503885269, 0.6612101793289185]
+Class 1: 95.0% CI = [0.338789850473404, 0.6649211496114731]
+
+
+Statistics for sample 1033
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5570980906486511
+Variance: 0.03461301326751709
+Class 0: 90.0% CI = [0.2346510738134384, 0.7933399975299835]
+Class 1: 90.0% CI = [0.20666000619530678, 0.7653489261865616]
+Class 0: 95.0% CI = [0.1932158395648003, 0.8024333566427231]
+Class 1: 95.0% CI = [0.19756665267050266, 0.8067841604351997]
+
+
+Statistics for sample 1036
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6107894778251648
+Variance: 0.01786014251410961
+Class 0: 90.0% CI = [0.22580629587173462, 0.5663106739521027]
+Class 1: 90.0% CI = [0.4336893334984779, 0.7741937041282654]
+Class 0: 95.0% CI = [0.20947682857513428, 0.6657766848802567]
+Class 1: 95.0% CI = [0.33422333374619495, 0.7905231714248657]
+
+
+Statistics for sample 1046
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6200025081634521
+Variance: 0.01825525425374508
+Class 0: 90.0% CI = [0.21310113370418546, 0.5917997807264328]
+Class 1: 90.0% CI = [0.4082002267241478, 0.7868988662958145]
+Class 0: 95.0% CI = [0.17399548739194873, 0.5989160165190697]
+Class 1: 95.0% CI = [0.4010840021073818, 0.8260045126080513]
+
+
+Statistics for sample 1059
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7517980933189392
+Variance: 0.03280795365571976
+Class 0: 90.0% CI = [0.4774232655763626, 0.9599850475788116]
+Class 1: 90.0% CI = [0.040014938451349735, 0.5225767344236374]
+Class 0: 95.0% CI = [0.4435581639409065, 0.9634495228528976]
+Class 1: 95.0% CI = [0.03655045898631215, 0.5564418360590935]
+
+
+Statistics for sample 1062
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.725752055644989
+Variance: 0.009015172719955444
+Class 0: 90.0% CI = [0.14847883582115173, 0.397270530462265]
+Class 1: 90.0% CI = [0.6027294769883156, 0.8515211641788483]
+Class 0: 95.0% CI = [0.14838625490665436, 0.4536242336034775]
+Class 1: 95.0% CI = [0.546375785022974, 0.8516137450933456]
+
+
+Statistics for sample 1063
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5220978856086731
+Variance: 0.03471914678812027
+Class 0: 90.0% CI = [0.22897587716579437, 0.8222676217556]
+Class 1: 90.0% CI = [0.17773236334323883, 0.7710241228342056]
+Class 0: 95.0% CI = [0.21713604778051376, 0.836368128657341]
+Class 1: 95.0% CI = [0.1636318787932396, 0.7828639522194862]
+
+
+Statistics for sample 1071
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5046299695968628
+Variance: 0.03921584039926529
+Class 0: 90.0% CI = [0.24251973628997803, 0.754436269402504]
+Class 1: 90.0% CI = [0.24556372687220573, 0.757480263710022]
+Class 0: 95.0% CI = [0.2356824278831482, 0.7685493603348732]
+Class 1: 95.0% CI = [0.23145063035190105, 0.7643175721168518]
+
+
+Statistics for sample 1075
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6179137825965881
+Variance: 0.009637147188186646
+Class 0: 90.0% CI = [0.19288571178913116, 0.5106249302625656]
+Class 1: 90.0% CI = [0.4893750697374344, 0.8071142882108688]
+Class 0: 95.0% CI = [0.1915789619088173, 0.526562325656414]
+Class 1: 95.0% CI = [0.47343767434358597, 0.8084210380911827]
+
+
+Statistics for sample 1076
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5566542148590088
+Variance: 0.04137593135237694
+Class 0: 90.0% CI = [0.2418050467967987, 0.8204225152730942]
+Class 1: 90.0% CI = [0.1795774884521961, 0.7581949532032013]
+Class 0: 95.0% CI = [0.24066613614559174, 0.8760669752955437]
+Class 1: 95.0% CI = [0.12393301166594034, 0.7593338638544083]
+
+
+Statistics for sample 1080
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5964940190315247
+Variance: 0.009867518208920956
+Class 0: 90.0% CI = [0.2645495980978012, 0.5]
+Class 1: 90.0% CI = [0.5, 0.7354504019021988]
+Class 0: 95.0% CI = [0.2591128274798393, 0.5]
+Class 1: 95.0% CI = [0.5, 0.7408871725201607]
+
+
+Statistics for sample 1087
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.7244724631309509
+Variance: 0.03341822326183319
+Class 0: 90.0% CI = [0.5, 0.9632688611745834]
+Class 1: 90.0% CI = [0.03673113649711012, 0.5]
+Class 0: 95.0% CI = [0.5, 0.9734643623232841]
+Class 1: 95.0% CI = [0.026535631855949766, 0.5]
+
+
+Statistics for sample 1098
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6819045543670654
+Variance: 0.012282336130738258
+Class 0: 90.0% CI = [0.16187594830989835, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8381240516901016]
+Class 0: 95.0% CI = [0.13236000388860705, 0.5]
+Class 1: 95.0% CI = [0.5, 0.867639996111393]
+
+
+Statistics for sample 1117
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.587444007396698
+Variance: 0.030626611784100533
+Class 0: 90.0% CI = [0.39184823632240295, 0.8813438564538956]
+Class 1: 90.0% CI = [0.1186561360955238, 0.608151763677597]
+Class 0: 95.0% CI = [0.3694159835577011, 0.9147491827607155]
+Class 1: 95.0% CI = [0.08525080233812335, 0.6305840164422989]
+
+
+Statistics for sample 1119
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6294484734535217
+Variance: 0.03642468899488449
+Class 0: 90.0% CI = [0.3927500247955322, 0.8896605372428894]
+Class 1: 90.0% CI = [0.11033946834504604, 0.6072499752044678]
+Class 0: 95.0% CI = [0.3684864938259125, 0.9008136987686157]
+Class 1: 95.0% CI = [0.09918629284948112, 0.6315135061740875]
+
+
+Statistics for sample 1123
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.518213152885437
+Variance: 0.020714761689305305
+Class 0: 90.0% CI = [0.32466623187065125, 0.7409985065460205]
+Class 1: 90.0% CI = [0.2590014934539795, 0.6753337681293488]
+Class 0: 95.0% CI = [0.32306312024593353, 0.7814509570598602]
+Class 1: 95.0% CI = [0.2185490429401398, 0.6769368797540665]
+
+
+Statistics for sample 1125
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5677033066749573
+Variance: 0.02103443071246147
+Class 0: 90.0% CI = [0.24444933235645291, 0.6627209484577179]
+Class 1: 90.0% CI = [0.3372790515422821, 0.7555506676435471]
+Class 0: 95.0% CI = [0.19520739465951925, 0.6696704179048538]
+Class 1: 95.0% CI = [0.3303295820951462, 0.8047926053404808]
+
+
+Statistics for sample 1128
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6408435106277466
+Variance: 0.01839003898203373
+Class 0: 90.0% CI = [0.12686671316623688, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8731332868337631]
+Class 0: 95.0% CI = [0.1091243699193001, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8908756300806999]
+
+
+Statistics for sample 1129
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.685316264629364
+Variance: 0.03353921324014664
+Class 0: 90.0% CI = [0.4399382472038269, 0.9489612877368927]
+Class 1: 90.0% CI = [0.051038722041994326, 0.5600617527961731]
+Class 0: 95.0% CI = [0.4313703775405884, 0.9596005827188492]
+Class 1: 95.0% CI = [0.04039940820075572, 0.5686296224594116]
+
+
+Statistics for sample 1135
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6139426231384277
+Variance: 0.02953791432082653
+Class 0: 90.0% CI = [0.1769595742225647, 0.6880230754613876]
+Class 1: 90.0% CI = [0.3119768984615802, 0.8230404257774353]
+Class 0: 95.0% CI = [0.17006906867027283, 0.7413634285330772]
+Class 1: 95.0% CI = [0.2586365509778262, 0.8299309313297272]
+
+
+Statistics for sample 1142
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5166516304016113
+Variance: 0.0530216209590435
+Class 0: 90.0% CI = [0.22059926390647888, 0.8642644584178925]
+Class 1: 90.0% CI = [0.13573553785681725, 0.7794007360935211]
+Class 0: 95.0% CI = [0.20641757547855377, 0.8788799494504929]
+Class 1: 95.0% CI = [0.1211200635880232, 0.7935824245214462]
+
+
+Statistics for sample 1146
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.528923511505127
+Variance: 0.013966517522931099
+Class 0: 90.0% CI = [0.3518332242965698, 0.71194788813591]
+Class 1: 90.0% CI = [0.28805211186408997, 0.6481667757034302]
+Class 0: 95.0% CI = [0.34692755341529846, 0.744031086564064]
+Class 1: 95.0% CI = [0.255968913435936, 0.6530724465847015]
+
+
+Statistics for sample 1151
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.510012149810791
+Variance: 0.013385173864662647
+Class 0: 90.0% CI = [0.34406106173992157, 0.664177194237709]
+Class 1: 90.0% CI = [0.33582280576229095, 0.6559389382600784]
+Class 0: 95.0% CI = [0.32649024575948715, 0.667230911552906]
+Class 1: 95.0% CI = [0.33276908844709396, 0.6735097542405128]
+
+
+Statistics for sample 1152
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.536025881767273
+Variance: 0.03284098580479622
+Class 0: 90.0% CI = [0.23040038347244263, 0.7530390620231628]
+Class 1: 90.0% CI = [0.24696093797683716, 0.7695996165275574]
+Class 0: 95.0% CI = [0.22988146543502808, 0.7706482112407684]
+Class 1: 95.0% CI = [0.2293517887592316, 0.7701185345649719]
+
+
+Statistics for sample 1159
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6466070413589478
+Variance: 0.013874855823814869
+Class 0: 90.0% CI = [0.20249921083450315, 0.5231243818998337]
+Class 1: 90.0% CI = [0.4768756181001663, 0.7975007891654968]
+Class 0: 95.0% CI = [0.17118245363235476, 0.5351127609610558]
+Class 1: 95.0% CI = [0.46488723903894424, 0.8288175463676453]
+
+
+Statistics for sample 1162
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6806575059890747
+Variance: 0.01956206187605858
+Class 0: 90.0% CI = [0.08326518535614014, 0.5]
+Class 1: 90.0% CI = [0.5, 0.9167348146438599]
+Class 0: 95.0% CI = [0.07540595531463623, 0.5]
+Class 1: 95.0% CI = [0.5, 0.9245940446853638]
+
+
+Statistics for sample 1171
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6875358819961548
+Variance: 0.02074008621275425
+Class 0: 90.0% CI = [0.4769967198371887, 0.8863612413406372]
+Class 1: 90.0% CI = [0.11363877542316912, 0.5230032801628113]
+Class 0: 95.0% CI = [0.4452369511127472, 0.9067304730415344]
+Class 1: 95.0% CI = [0.09326952416449787, 0.5547630488872528]
+
+
+Statistics for sample 1175
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5605410933494568
+Variance: 0.01686398684978485
+Class 0: 90.0% CI = [0.268212154507637, 0.6154325008392334]
+Class 1: 90.0% CI = [0.3845675140619278, 0.731787845492363]
+Class 0: 95.0% CI = [0.25476134568452835, 0.6501118540763855]
+Class 1: 95.0% CI = [0.3498881384730339, 0.7452386543154716]
+
+
+Statistics for sample 1177
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.802400529384613
+Variance: 0.03587273508310318
+Class 0: 90.0% CI = [0.46529118716716766, 0.9573592990636826]
+Class 1: 90.0% CI = [0.04264069348573685, 0.5347088128328323]
+Class 0: 95.0% CI = [0.4132279679179192, 0.9632251784205437]
+Class 1: 95.0% CI = [0.036774825304746635, 0.5867720320820808]
+
+
+Statistics for sample 1188
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6907896399497986
+Variance: 0.014476807788014412
+Class 0: 90.0% CI = [0.16891531646251678, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8310846835374832]
+Class 0: 95.0% CI = [0.15299253910779953, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8470074608922005]
+
+
+Statistics for sample 1195
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6009581685066223
+Variance: 0.025381335988640785
+Class 0: 90.0% CI = [0.19557639956474304, 0.5751730054616928]
+Class 1: 90.0% CI = [0.42482699453830713, 0.804423600435257]
+Class 0: 95.0% CI = [0.1829041689634323, 0.687932513654232]
+Class 1: 95.0% CI = [0.3120675012469293, 0.8170958310365677]
+
+
+Statistics for sample 1199
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6461359858512878
+Variance: 0.012836750596761703
+Class 0: 90.0% CI = [0.2474018633365631, 0.5360078662633896]
+Class 1: 90.0% CI = [0.4639921337366104, 0.7525981366634369]
+Class 0: 95.0% CI = [0.24213548004627228, 0.586632214486599]
+Class 1: 95.0% CI = [0.4133677855134011, 0.7578645199537277]
+
+
+Statistics for sample 1200
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5307188034057617
+Variance: 0.043255072087049484
+Class 0: 90.0% CI = [0.18896113336086273, 0.8060354739427567]
+Class 1: 90.0% CI = [0.19396450743079185, 0.8110388666391373]
+Class 0: 95.0% CI = [0.18518465012311935, 0.8256702497601509]
+Class 1: 95.0% CI = [0.17432974837720397, 0.8148153498768806]
+
+
+Statistics for sample 1208
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.563268780708313
+Variance: 0.026195498183369637
+Class 0: 90.0% CI = [0.318106472492218, 0.7660109847784042]
+Class 1: 90.0% CI = [0.23398898914456365, 0.681893527507782]
+Class 0: 95.0% CI = [0.30891311168670654, 0.8261172994971275]
+Class 1: 95.0% CI = [0.17388268001377588, 0.6910868883132935]
+
+
+Statistics for sample 1211
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5118570327758789
+Variance: 0.02972320094704628
+Class 0: 90.0% CI = [0.30879318714141846, 0.7884940356016159]
+Class 1: 90.0% CI = [0.2115059718489647, 0.6912068128585815]
+Class 0: 95.0% CI = [0.2602679133415223, 0.790318451821804]
+Class 1: 95.0% CI = [0.20968156680464745, 0.7397320866584778]
+
+
+Statistics for sample 1226
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6055576801300049
+Variance: 0.048690780997276306
+Class 0: 90.0% CI = [0.253438338637352, 0.9044853448867798]
+Class 1: 90.0% CI = [0.0955146551132202, 0.746561661362648]
+Class 0: 95.0% CI = [0.23705824464559555, 0.9220888614654541]
+Class 1: 95.0% CI = [0.07791114971041681, 0.7629417553544044]
+
+
+Statistics for sample 1228
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6511408686637878
+Variance: 0.0127949770539999
+Class 0: 90.0% CI = [0.17191903293132782, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8280809670686722]
+Class 0: 95.0% CI = [0.1675487980246544, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8324512019753456]
+
+
+Statistics for sample 1233
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5478723645210266
+Variance: 0.04062037914991379
+Class 0: 90.0% CI = [0.3059326112270355, 0.8857196122407913]
+Class 1: 90.0% CI = [0.1142803821712732, 0.6940673887729645]
+Class 0: 95.0% CI = [0.2800818830728531, 0.9185215309262276]
+Class 1: 95.0% CI = [0.08147847745567563, 0.7199181169271469]
+
+
+Statistics for sample 1237
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5845984220504761
+Variance: 0.021998388692736626
+Class 0: 90.0% CI = [0.272104874253273, 0.7207800447940826]
+Class 1: 90.0% CI = [0.27921997010707855, 0.727895125746727]
+Class 0: 95.0% CI = [0.23893973976373675, 0.7597191482782364]
+Class 1: 95.0% CI = [0.24028084427118304, 0.7610602602362633]
+
+
+Statistics for sample 1254
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5717129111289978
+Variance: 0.021304570138454437
+Class 0: 90.0% CI = [0.24373303353786469, 0.695588544011116]
+Class 1: 90.0% CI = [0.30441145598888397, 0.7562669664621353]
+Class 0: 95.0% CI = [0.23020341247320175, 0.7464149072766304]
+Class 1: 95.0% CI = [0.25358509272336965, 0.7697965875267982]
+
+
+Statistics for sample 1267
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5699313282966614
+Variance: 0.02240702323615551
+Class 0: 90.0% CI = [0.25223806500434875, 0.6318868547677994]
+Class 1: 90.0% CI = [0.36811316385865206, 0.7477619349956512]
+Class 0: 95.0% CI = [0.2271830588579178, 0.7132953181862831]
+Class 1: 95.0% CI = [0.2867046836763621, 0.7728169411420822]
+
+
+Statistics for sample 1273
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5008759498596191
+Variance: 0.027067847549915314
+Class 0: 90.0% CI = [0.27081695199012756, 0.7735670357942581]
+Class 1: 90.0% CI = [0.22643297165632245, 0.7291830480098724]
+Class 0: 95.0% CI = [0.2254618257284165, 0.8147091045975685]
+Class 1: 95.0% CI = [0.185290914028883, 0.7745381742715836]
+
+
+Statistics for sample 1275
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7677655220031738
+Variance: 0.02255389466881752
+Class 0: 90.0% CI = [0.49387088418006897, 0.9385142922401428]
+Class 1: 90.0% CI = [0.06148569192737341, 0.506129115819931]
+Class 0: 95.0% CI = [0.4846772104501724, 0.9436209499835968]
+Class 1: 95.0% CI = [0.056379055138677366, 0.5153227895498276]
+
+
+Statistics for sample 1291
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6629868149757385
+Variance: 0.010049324482679367
+Class 0: 90.0% CI = [0.21093225479125977, 0.5161093324422836]
+Class 1: 90.0% CI = [0.48389068990945816, 0.7890677452087402]
+Class 0: 95.0% CI = [0.20971667766571045, 0.5208684429526329]
+Class 1: 95.0% CI = [0.479131568223238, 0.7902833223342896]
+
+
+Statistics for sample 1293
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6310685873031616
+Variance: 0.015226206742227077
+Class 0: 90.0% CI = [0.19442933797836304, 0.5211715549230576]
+Class 1: 90.0% CI = [0.47882844507694244, 0.805570662021637]
+Class 0: 95.0% CI = [0.1723536849021912, 0.5529288873076439]
+Class 1: 95.0% CI = [0.4470711126923561, 0.8276463150978088]
+
+
+Statistics for sample 1309
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6683194637298584
+Variance: 0.017238246276974678
+Class 0: 90.0% CI = [0.1598449349403381, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8401550650596619]
+Class 0: 95.0% CI = [0.12378245592117312, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8762175440788269]
+
+
+Statistics for sample 1311
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6248639822006226
+Variance: 0.02559029683470726
+Class 0: 90.0% CI = [0.4244716465473175, 0.8785817176103592]
+Class 1: 90.0% CI = [0.12141828611493108, 0.5755283534526825]
+Class 0: 95.0% CI = [0.4242032915353775, 0.9229959920048714]
+Class 1: 95.0% CI = [0.07700401358306412, 0.5757967084646225]
+
+
+Statistics for sample 1312
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.7589612007141113
+Variance: 0.029828719794750214
+Class 0: 90.0% CI = [0.5191407799720764, 0.9604853093624115]
+Class 1: 90.0% CI = [0.039514681324362755, 0.4808592423796654]
+Class 0: 95.0% CI = [0.5095703899860382, 0.9647001773118973]
+Class 1: 95.0% CI = [0.0352998161688447, 0.4904296211898327]
+
+
+Statistics for sample 1313
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5225411653518677
+Variance: 0.0296191293746233
+Class 0: 90.0% CI = [0.251600906252861, 0.7337240874767303]
+Class 1: 90.0% CI = [0.26627590879797935, 0.748399093747139]
+Class 0: 95.0% CI = [0.2149917706847191, 0.7682171612977982]
+Class 1: 95.0% CI = [0.23178282938897612, 0.7850082293152809]
+
+
+Statistics for sample 1318
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5432462692260742
+Variance: 0.014592034742236137
+Class 0: 90.0% CI = [0.35142530500888824, 0.7123283445835114]
+Class 1: 90.0% CI = [0.28767167776823044, 0.6485746949911118]
+Class 0: 95.0% CI = [0.3495919480919838, 0.7342529445886612]
+Class 1: 95.0% CI = [0.2657470665872097, 0.6504080519080162]
+
+
+Statistics for sample 1330
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6458678245544434
+Variance: 0.011725728400051594
+Class 0: 90.0% CI = [0.21377959847450256, 0.5]
+Class 1: 90.0% CI = [0.5, 0.7862204015254974]
+Class 0: 95.0% CI = [0.1911813169717789, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8088186830282211]
+
+
+Statistics for sample 1342
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.578590989112854
+Variance: 0.028252391144633293
+Class 0: 90.0% CI = [0.3017629235982895, 0.7476324290037155]
+Class 1: 90.0% CI = [0.2523675933480263, 0.6982370764017105]
+Class 0: 95.0% CI = [0.28883617371320724, 0.7776982709765434]
+Class 1: 95.0% CI = [0.2223017401993275, 0.7111638262867928]
+
+
+Statistics for sample 1351
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.597038745880127
+Variance: 0.015563782304525375
+Class 0: 90.0% CI = [0.2443753033876419, 0.6003808677196503]
+Class 1: 90.0% CI = [0.39961912482976913, 0.7556246966123581]
+Class 0: 95.0% CI = [0.2370416298508644, 0.64168880879879]
+Class 1: 95.0% CI = [0.3583111725747586, 0.7629583701491356]
+
+
+Statistics for sample 1355
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5091044902801514
+Variance: 0.023429401218891144
+Class 0: 90.0% CI = [0.31816138327121735, 0.7642792016267776]
+Class 1: 90.0% CI = [0.23572082445025444, 0.6818386167287827]
+Class 0: 95.0% CI = [0.29693789035081863, 0.7829523161053658]
+Class 1: 95.0% CI = [0.21704770438373092, 0.7030621096491814]
+
+
+Statistics for sample 1367
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6593838930130005
+Variance: 0.026305219158530235
+Class 0: 90.0% CI = [0.1834600865840912, 0.5790283679962158]
+Class 1: 90.0% CI = [0.4209716320037841, 0.8165399134159088]
+Class 0: 95.0% CI = [0.16686905920505524, 0.6975709199905396]
+Class 1: 95.0% CI = [0.30242909491062175, 0.8331309407949448]
+
+
+Statistics for sample 1373
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.7057947516441345
+Variance: 0.024851936846971512
+Class 0: 90.0% CI = [0.48840643465518946, 0.9035947173833847]
+Class 1: 90.0% CI = [0.09640530124306677, 0.5115935429930687]
+Class 0: 95.0% CI = [0.4176397696137429, 0.9275943860411644]
+Class 1: 95.0% CI = [0.07240563072264197, 0.5823602192103863]
+
+
+Statistics for sample 1390
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6090811491012573
+Variance: 0.02795364335179329
+Class 0: 90.0% CI = [0.1846071183681488, 0.6869706511497498]
+Class 1: 90.0% CI = [0.31302931904792786, 0.8153928816318512]
+Class 0: 95.0% CI = [0.17880786955356598, 0.6919805705547333]
+Class 1: 95.0% CI = [0.30801939964294434, 0.821192130446434]
+
+
+Statistics for sample 1397
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6353296041488647
+Variance: 0.05187302827835083
+Class 0: 90.0% CI = [0.2617079168558121, 0.9080194532871246]
+Class 1: 90.0% CI = [0.09198054112493992, 0.7382920831441879]
+Class 0: 95.0% CI = [0.22546458989381793, 0.9187299162149429]
+Class 1: 95.0% CI = [0.08127006981521846, 0.7745354101061821]
+
+
+Statistics for sample 1399
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.629338800907135
+Variance: 0.021583842113614082
+Class 0: 90.0% CI = [0.20443835854530332, 0.6309757232666016]
+Class 1: 90.0% CI = [0.3690243065357208, 0.7955616414546967]
+Class 0: 95.0% CI = [0.1739929169416428, 0.6409989595413208]
+Class 1: 95.0% CI = [0.3590010702610016, 0.8260070830583572]
+
+
+Statistics for sample 1407
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5417174696922302
+Variance: 0.01452453900128603
+Class 0: 90.0% CI = [0.3920903205871582, 0.7338211089372635]
+Class 1: 90.0% CI = [0.2661788985133171, 0.6079096794128418]
+Class 0: 95.0% CI = [0.3794534504413605, 0.7427346482872963]
+Class 1: 95.0% CI = [0.2572653703391552, 0.6205465495586395]
+
+
+Statistics for sample 1431
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6088265180587769
+Variance: 0.03438716009259224
+Class 0: 90.0% CI = [0.29990802705287933, 0.8566794246435165]
+Class 1: 90.0% CI = [0.1433205995708704, 0.7000919729471207]
+Class 0: 95.0% CI = [0.2865472063422203, 0.8809170946478844]
+Class 1: 95.0% CI = [0.11908292118459943, 0.7134527936577797]
+
+
+Statistics for sample 1438
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6269235014915466
+Variance: 0.028848227113485336
+Class 0: 90.0% CI = [0.3703228831291198, 0.822976216673851]
+Class 1: 90.0% CI = [0.17702380195260045, 0.6296771168708801]
+Class 0: 95.0% CI = [0.28551858663558966, 0.8499108478426933]
+Class 1: 95.0% CI = [0.15008917637169364, 0.7144814133644104]
+
+
+Statistics for sample 1450
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5432276725769043
+Variance: 0.023980919271707535
+Class 0: 90.0% CI = [0.2948957681655884, 0.7475196421146393]
+Class 1: 90.0% CI = [0.2524803392589092, 0.7051042318344116]
+Class 0: 95.0% CI = [0.24509134888648992, 0.7607955485582352]
+Class 1: 95.0% CI = [0.23920444957911968, 0.7549086511135101]
+
+
+Statistics for sample 1452
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6270788908004761
+Variance: 0.00864311121404171
+Class 0: 90.0% CI = [0.21478445827960968, 0.5]
+Class 1: 90.0% CI = [0.5, 0.7852155417203903]
+Class 0: 95.0% CI = [0.20845625549554825, 0.5]
+Class 1: 95.0% CI = [0.5, 0.7915437445044518]
+
+
+Statistics for sample 1456
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7861753106117249
+Variance: 0.024340415373444557
+Class 0: 90.0% CI = [0.5281032770872116, 0.9374392330646515]
+Class 1: 90.0% CI = [0.06256075855344534, 0.4718967229127884]
+Class 0: 95.0% CI = [0.453568421304226, 0.9479107111692429]
+Class 1: 95.0% CI = [0.052089279051870115, 0.5464315786957741]
+
+
+Statistics for sample 1462
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6614257097244263
+Variance: 0.013897672295570374
+Class 0: 90.0% CI = [0.1753800958395004, 0.5048803389072418]
+Class 1: 90.0% CI = [0.4951196685433388, 0.8246199041604996]
+Class 0: 95.0% CI = [0.127868764102459, 0.5122008472681046]
+Class 1: 95.0% CI = [0.48779917135834694, 0.872131235897541]
+
+
+Statistics for sample 1471
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5592756867408752
+Variance: 0.015227475203573704
+Class 0: 90.0% CI = [0.26453903317451477, 0.6259138584136963]
+Class 1: 90.0% CI = [0.3740861490368843, 0.7354609668254852]
+Class 0: 95.0% CI = [0.2573591619729996, 0.6710166335105896]
+Class 1: 95.0% CI = [0.32898338511586195, 0.7426408380270004]
+
+
+Statistics for sample 1479
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6594860553741455
+Variance: 0.029988864436745644
+Class 0: 90.0% CI = [0.43338169157505035, 0.9335858970880508]
+Class 1: 90.0% CI = [0.06641408801078795, 0.5666183084249496]
+Class 0: 95.0% CI = [0.4196800962090492, 0.9532083347439766]
+Class 1: 95.0% CI = [0.04679165966808797, 0.5803199037909508]
+
+
+Statistics for sample 1485
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.7126381397247314
+Variance: 0.01345682330429554
+Class 0: 90.0% CI = [0.10721680521965025, 0.45846880972385406]
+Class 1: 90.0% CI = [0.5415311902761459, 0.8927831947803497]
+Class 0: 95.0% CI = [0.09349940717220308, 0.47923440486192703]
+Class 1: 95.0% CI = [0.520765595138073, 0.9065005928277969]
+
+
+Statistics for sample 1527
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5166827440261841
+Variance: 0.02719607762992382
+Class 0: 90.0% CI = [0.27897013723850245, 0.7071355283260345]
+Class 1: 90.0% CI = [0.2928644679486751, 0.7210298627614975]
+Class 0: 95.0% CI = [0.19063741713762292, 0.78848035633564]
+Class 1: 95.0% CI = [0.21151963435113436, 0.8093625828623772]
+
+
+Statistics for sample 1543
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6537286043167114
+Variance: 0.012794655747711658
+Class 0: 90.0% CI = [0.17741931974887848, 0.5058132112026215]
+Class 1: 90.0% CI = [0.49418678134679794, 0.8225806802511215]
+Class 0: 95.0% CI = [0.15496692806482318, 0.5145330280065536]
+Class 1: 95.0% CI = [0.48546695336699486, 0.8450330719351768]
+
+
+Statistics for sample 1546
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6440153121948242
+Variance: 0.024580152705311775
+Class 0: 90.0% CI = [0.4526650905609131, 0.9030533283948898]
+Class 1: 90.0% CI = [0.09694669209420678, 0.5473349094390869]
+Class 0: 95.0% CI = [0.4400010406970978, 0.937362514436245]
+Class 1: 95.0% CI = [0.06263750139623883, 0.5599989593029022]
+
+
+Statistics for sample 1548
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5724021196365356
+Variance: 0.021323226392269135
+Class 0: 90.0% CI = [0.23647458851337433, 0.6454211622476578]
+Class 1: 90.0% CI = [0.35457886010408396, 0.7635254114866257]
+Class 0: 95.0% CI = [0.2353530004620552, 0.7276496663689613]
+Class 1: 95.0% CI = [0.2723503448069096, 0.7646469995379448]
+
+
+Statistics for sample 1564
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5993257761001587
+Variance: 0.020623505115509033
+Class 0: 90.0% CI = [0.3710254430770874, 0.7469941228628159]
+Class 1: 90.0% CI = [0.25300588086247444, 0.6289745569229126]
+Class 0: 95.0% CI = [0.32133170962333685, 0.7623159512877464]
+Class 1: 95.0% CI = [0.23768405802547932, 0.6786682903766632]
+
+
+Statistics for sample 1565
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5576571822166443
+Variance: 0.0455213226377964
+Class 0: 90.0% CI = [0.19352395832538605, 0.8134244531393051]
+Class 1: 90.0% CI = [0.18657555058598518, 0.806476041674614]
+Class 0: 95.0% CI = [0.18995753675699234, 0.8185183927416801]
+Class 1: 95.0% CI = [0.1814816165715456, 0.8100424632430077]
+
+
+Statistics for sample 1566
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5940960049629211
+Variance: 0.03480833023786545
+Class 0: 90.0% CI = [0.36128585040569305, 0.8414929807186127]
+Class 1: 90.0% CI = [0.15850703790783882, 0.638714149594307]
+Class 0: 95.0% CI = [0.3372477814555168, 0.8429509848356247]
+Class 1: 95.0% CI = [0.15704901702702045, 0.6627522185444832]
+
+
+Statistics for sample 1574
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5440019965171814
+Variance: 0.024436719715595245
+Class 0: 90.0% CI = [0.274222657084465, 0.6815311759710312]
+Class 1: 90.0% CI = [0.31846883147954935, 0.725777342915535]
+Class 0: 95.0% CI = [0.2574986144900322, 0.790326289832592]
+Class 1: 95.0% CI = [0.2096737287938596, 0.7425013855099678]
+
+
+Statistics for sample 1584
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7361515760421753
+Variance: 0.03284716606140137
+Class 0: 90.0% CI = [0.5, 0.9583411812782288]
+Class 1: 90.0% CI = [0.04165881313383579, 0.5]
+Class 0: 95.0% CI = [0.5, 0.9623758494853973]
+Class 1: 95.0% CI = [0.03762415889650583, 0.5]
+
+
+Statistics for sample 1585
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6524025201797485
+Variance: 0.018892941996455193
+Class 0: 90.0% CI = [0.16963005065917966, 0.5165496170520782]
+Class 1: 90.0% CI = [0.48345039039850235, 0.8303699493408203]
+Class 0: 95.0% CI = [0.1290673613548279, 0.5413740426301956]
+Class 1: 95.0% CI = [0.4586259759962559, 0.8709326386451721]
+
+
+Statistics for sample 1587
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6891445517539978
+Variance: 0.011356989853084087
+Class 0: 90.0% CI = [0.1519164144992828, 0.4569074660539627]
+Class 1: 90.0% CI = [0.5430925339460373, 0.8480835855007172]
+Class 0: 95.0% CI = [0.11775352060794833, 0.4990217462182045]
+Class 1: 95.0% CI = [0.5009782537817955, 0.8822464793920517]
+
+
+Statistics for sample 1610
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5097904205322266
+Variance: 0.019369835034012794
+Class 0: 90.0% CI = [0.2989341914653778, 0.7056024074554443]
+Class 1: 90.0% CI = [0.29439757764339447, 0.7010658085346222]
+Class 0: 95.0% CI = [0.2561556845903397, 0.710364043712616]
+Class 1: 95.0% CI = [0.28963596373796463, 0.7438443154096603]
+
+
+Statistics for sample 1611
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5415316820144653
+Variance: 0.022069625556468964
+Class 0: 90.0% CI = [0.17737360298633573, 0.612424224615097]
+Class 1: 90.0% CI = [0.38757579028606415, 0.8226263970136642]
+Class 0: 95.0% CI = [0.1335734203457833, 0.6333282440900803]
+Class 1: 95.0% CI = [0.36667174845933914, 0.8664265796542168]
+
+
+Statistics for sample 1625
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6969423294067383
+Variance: 0.04180745780467987
+Class 0: 90.0% CI = [0.45386914908885956, 0.9222335964441299]
+Class 1: 90.0% CI = [0.077766390517354, 0.5461308509111404]
+Class 0: 95.0% CI = [0.40297975391149526, 0.9357641115784645]
+Class 1: 95.0% CI = [0.06423587817698719, 0.5970202460885048]
+
+
+Statistics for sample 1633
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.513556957244873
+Variance: 0.02842806652188301
+Class 0: 90.0% CI = [0.2645150125026703, 0.7518864870071411]
+Class 1: 90.0% CI = [0.24811349064111707, 0.7354849874973297]
+Class 0: 95.0% CI = [0.23650805652141574, 0.8071770071983337]
+Class 1: 95.0% CI = [0.19282298162579542, 0.7634919434785843]
+
+
+Statistics for sample 1646
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6143338680267334
+Variance: 0.024808300659060478
+Class 0: 90.0% CI = [0.2011089026927948, 0.6133116036653519]
+Class 1: 90.0% CI = [0.3866883888840675, 0.7988910973072052]
+Class 0: 95.0% CI = [0.18368889391422272, 0.7058278098702431]
+Class 1: 95.0% CI = [0.29417217150330555, 0.8163111060857773]
+
+
+Statistics for sample 1649
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6206449270248413
+Variance: 0.02608759142458439
+Class 0: 90.0% CI = [0.16207566857337952, 0.6127577126026154]
+Class 1: 90.0% CI = [0.3872422575950622, 0.8379243314266205]
+Class 0: 95.0% CI = [0.14378456771373752, 0.6663661748170853]
+Class 1: 95.0% CI = [0.3336337953805924, 0.8562154322862625]
+
+
+Statistics for sample 1657
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5863381028175354
+Variance: 0.01508851908147335
+Class 0: 90.0% CI = [0.22944191098213196, 0.5454052090644836]
+Class 1: 90.0% CI = [0.4545947909355163, 0.770558089017868]
+Class 0: 95.0% CI = [0.21137075126171115, 0.6135130226612091]
+Class 1: 95.0% CI = [0.38648697733879095, 0.7886292487382889]
+
+
+Statistics for sample 1663
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5514267086982727
+Variance: 0.028090599924325943
+Class 0: 90.0% CI = [0.27674829959869385, 0.7645497918128967]
+Class 1: 90.0% CI = [0.23545022308826447, 0.7232517004013062]
+Class 0: 95.0% CI = [0.2675371468067169, 0.777378261089325]
+Class 1: 95.0% CI = [0.22262175381183624, 0.7324628531932831]
+
+
+Statistics for sample 1674
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6321539282798767
+Variance: 0.019917836412787437
+Class 0: 90.0% CI = [0.21668483316898346, 0.5569696873426437]
+Class 1: 90.0% CI = [0.4430303126573562, 0.7833151668310165]
+Class 0: 95.0% CI = [0.19999293237924576, 0.6424242183566093]
+Class 1: 95.0% CI = [0.3575757816433907, 0.8000070676207542]
+
+
+Statistics for sample 1676
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5915744304656982
+Variance: 0.018081888556480408
+Class 0: 90.0% CI = [0.47922883927822113, 0.8351155817508698]
+Class 1: 90.0% CI = [0.16488439962267873, 0.5207711607217789]
+Class 0: 95.0% CI = [0.4480720981955528, 0.877738431096077]
+Class 1: 95.0% CI = [0.12226156704127791, 0.5519279018044472]
+
+
+Statistics for sample 1678
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5437638759613037
+Variance: 0.017450852319598198
+Class 0: 90.0% CI = [0.312688872218132, 0.6984292715787888]
+Class 1: 90.0% CI = [0.30157075077295303, 0.687311127781868]
+Class 0: 95.0% CI = [0.3108041509985924, 0.7196770831942558]
+Class 1: 95.0% CI = [0.28032292798161507, 0.6891958490014076]
+
+
+Statistics for sample 1688
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.8103256821632385
+Variance: 0.02362903393805027
+Class 0: 90.0% CI = [0.5, 0.9607575088739395]
+Class 1: 90.0% CI = [0.03924247389659285, 0.5]
+Class 0: 95.0% CI = [0.5, 0.9697959497570992]
+Class 1: 95.0% CI = [0.030204046284779913, 0.5]
+
+
+Statistics for sample 1701
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6161983609199524
+Variance: 0.014123883098363876
+Class 0: 90.0% CI = [0.19060973823070523, 0.505328357219696]
+Class 1: 90.0% CI = [0.49467165768146515, 0.8093902617692947]
+Class 0: 95.0% CI = [0.14348741620779043, 0.5126685798168182]
+Class 1: 95.0% CI = [0.48733141273260117, 0.8565125837922096]
+
+
+Statistics for sample 1705
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6565438508987427
+Variance: 0.011782031506299973
+Class 0: 90.0% CI = [0.17671497166156766, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8232850283384323]
+Class 0: 95.0% CI = [0.14977676421403888, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8502232357859612]
+
+
+Statistics for sample 1712
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.786754846572876
+Variance: 0.02350802905857563
+Class 0: 90.0% CI = [0.5, 0.952302873134613]
+Class 1: 90.0% CI = [0.04769712965935469, 0.5]
+Class 0: 95.0% CI = [0.5, 0.952962338924408]
+Class 1: 95.0% CI = [0.04703766806051135, 0.5]
+
+
+Statistics for sample 1713
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6980720162391663
+Variance: 0.008104265667498112
+Class 0: 90.0% CI = [0.18786346912384033, 0.4575195759534836]
+Class 1: 90.0% CI = [0.5424804240465164, 0.8121365308761597]
+Class 0: 95.0% CI = [0.1767282783985138, 0.4787597879767418]
+Class 1: 95.0% CI = [0.5212402120232582, 0.8232717216014862]
+
+
+Statistics for sample 1714
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7796648740768433
+Variance: 0.027203042060136795
+Class 0: 90.0% CI = [0.5, 0.9505545049905777]
+Class 1: 90.0% CI = [0.04944547265768051, 0.5]
+Class 0: 95.0% CI = [0.5, 0.9541544988751411]
+Class 1: 95.0% CI = [0.04584548436105251, 0.5]
+
+
+Statistics for sample 1715
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5023924112319946
+Variance: 0.027416789904236794
+Class 0: 90.0% CI = [0.22160328924655914, 0.6855784207582474]
+Class 1: 90.0% CI = [0.314421571791172, 0.7783967107534409]
+Class 0: 95.0% CI = [0.2214769795536995, 0.6905616298317909]
+Class 1: 95.0% CI = [0.3094383515417576, 0.7785230204463005]
+
+
+Statistics for sample 1726
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5302602648735046
+Variance: 0.02989809401333332
+Class 0: 90.0% CI = [0.23510897159576416, 0.7767480313777924]
+Class 1: 90.0% CI = [0.22325198352336884, 0.7648910284042358]
+Class 0: 95.0% CI = [0.23458263278007507, 0.8024966567754745]
+Class 1: 95.0% CI = [0.19750333577394488, 0.7654173672199249]
+
+
+Statistics for sample 1730
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6429578065872192
+Variance: 0.013853486627340317
+Class 0: 90.0% CI = [0.15249811112880707, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8475018888711929]
+Class 0: 95.0% CI = [0.14495741575956345, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8550425842404366]
+
+
+Statistics for sample 1731
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6201632022857666
+Variance: 0.019351841881871223
+Class 0: 90.0% CI = [0.45407992601394653, 0.8240801244974136]
+Class 1: 90.0% CI = [0.17591989040374756, 0.5459200739860535]
+Class 0: 95.0% CI = [0.43775635957717896, 0.8462863340973854]
+Class 1: 95.0% CI = [0.15371368080377582, 0.562243640422821]
+
+
+Statistics for sample 1741
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5701459050178528
+Variance: 0.025699498131871223
+Class 0: 90.0% CI = [0.23270975053310394, 0.7479792535305023]
+Class 1: 90.0% CI = [0.252020750194788, 0.7672902494668961]
+Class 0: 95.0% CI = [0.20815169066190722, 0.7687688320875168]
+Class 1: 95.0% CI = [0.231231177225709, 0.7918483093380928]
+
+
+Statistics for sample 1745
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.7112440466880798
+Variance: 0.015836501494050026
+Class 0: 90.0% CI = [0.14680951833724976, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8531904816627502]
+Class 0: 95.0% CI = [0.13593745231628418, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8640625476837158]
+
+
+Statistics for sample 1749
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6598193645477295
+Variance: 0.015210608951747417
+Class 0: 90.0% CI = [0.13945943117141724, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8605405688285828]
+Class 0: 95.0% CI = [0.11946481466293336, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8805351853370667]
+
+
+Statistics for sample 1753
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.712530255317688
+Variance: 0.03204092010855675
+Class 0: 90.0% CI = [0.4748357683420181, 0.9261206537485123]
+Class 1: 90.0% CI = [0.07387935742735861, 0.5251642316579819]
+Class 0: 95.0% CI = [0.4370894208550454, 0.9526182189583778]
+Class 1: 95.0% CI = [0.04738178849220279, 0.5629105791449547]
+
+
+Statistics for sample 1757
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5548486709594727
+Variance: 0.04492683336138725
+Class 0: 90.0% CI = [0.16897276043891904, 0.7745222449302673]
+Class 1: 90.0% CI = [0.22547776252031324, 0.8310272395610809]
+Class 0: 95.0% CI = [0.13972197473049167, 0.8274542987346649]
+Class 1: 95.0% CI = [0.17254571244120603, 0.8602780252695084]
+
+
+Statistics for sample 1762
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7508430480957031
+Variance: 0.0417366586625576
+Class 0: 90.0% CI = [0.3790993243455887, 0.9666566103696823]
+Class 1: 90.0% CI = [0.03334340499714017, 0.6209006756544113]
+Class 0: 95.0% CI = [0.3695128634572029, 0.9717957004904747]
+Class 1: 95.0% CI = [0.028204315574839715, 0.6304871365427971]
+
+
+Statistics for sample 1769
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6575846672058105
+Variance: 0.013683025725185871
+Class 0: 90.0% CI = [0.20385342836380005, 0.5249211192131042]
+Class 1: 90.0% CI = [0.47507888078689575, 0.7961465716362]
+Class 0: 95.0% CI = [0.19445765018463135, 0.5491206347942352]
+Class 1: 95.0% CI = [0.45087936520576477, 0.8055423498153687]
+
+
+Statistics for sample 1776
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5877922177314758
+Variance: 0.025032253935933113
+Class 0: 90.0% CI = [0.2367511540651321, 0.724065363407135]
+Class 1: 90.0% CI = [0.2759346589446068, 0.7632488459348679]
+Class 0: 95.0% CI = [0.2088623717427254, 0.7297585308551788]
+Class 1: 95.0% CI = [0.27024148032069206, 0.7911376282572746]
+
+
+Statistics for sample 1815
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6834150552749634
+Variance: 0.01934736967086792
+Class 0: 90.0% CI = [0.07964125275611877, 0.5]
+Class 1: 90.0% CI = [0.5, 0.9203587472438812]
+Class 0: 95.0% CI = [0.07371719181537628, 0.5]
+Class 1: 95.0% CI = [0.5, 0.9262828081846237]
+
+
+Statistics for sample 1820
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6567712426185608
+Variance: 0.01714516244828701
+Class 0: 90.0% CI = [0.4628998935222625, 0.8231143653392792]
+Class 1: 90.0% CI = [0.17688565328717232, 0.5371001288294792]
+Class 0: 95.0% CI = [0.38564918935298925, 0.8314241617918015]
+Class 1: 95.0% CI = [0.1685758400708437, 0.6143508218228817]
+
+
+Statistics for sample 1824
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5881629586219788
+Variance: 0.039172492921352386
+Class 0: 90.0% CI = [0.339854285120964, 0.8344994485378265]
+Class 1: 90.0% CI = [0.16550055518746373, 0.660145714879036]
+Class 0: 95.0% CI = [0.28556054085493093, 0.8859125226736069]
+Class 1: 95.0% CI = [0.11408746428787714, 0.7144394591450691]
+
+
+Statistics for sample 1828
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6120935678482056
+Variance: 0.031037863343954086
+Class 0: 90.0% CI = [0.16056665778160092, 0.6446709185838699]
+Class 1: 90.0% CI = [0.3553290590643883, 0.839433342218399]
+Class 0: 95.0% CI = [0.13125659525394442, 0.6728340461850166]
+Class 1: 95.0% CI = [0.3271659426391125, 0.8687434047460556]
+
+
+Statistics for sample 1829
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6438578367233276
+Variance: 0.020846331492066383
+Class 0: 90.0% CI = [0.4402102679014206, 0.843194380402565]
+Class 1: 90.0% CI = [0.1568056009709835, 0.5597897320985794]
+Class 0: 95.0% CI = [0.40317331999540335, 0.8573892787098885]
+Class 1: 95.0% CI = [0.1426106970757246, 0.5968266800045967]
+
+
+Statistics for sample 1830
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6179772615432739
+Variance: 0.021370526403188705
+Class 0: 90.0% CI = [0.1844748705625534, 0.6276029050350189]
+Class 1: 90.0% CI = [0.3723970949649811, 0.8155251294374466]
+Class 0: 95.0% CI = [0.17937230318784714, 0.6648623198270798]
+Class 1: 95.0% CI = [0.3351376801729203, 0.8206276968121529]
+
+
+Statistics for sample 1838
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6854380369186401
+Variance: 0.01923227682709694
+Class 0: 90.0% CI = [0.12188804149627686, 0.5049184262752533]
+Class 1: 90.0% CI = [0.4950815811753273, 0.8781119585037231]
+Class 0: 95.0% CI = [0.11209636926651002, 0.5122960656881332]
+Class 1: 95.0% CI = [0.48770395293831825, 0.88790363073349]
+
+
+Statistics for sample 1840
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5194731950759888
+Variance: 0.018220191821455956
+Class 0: 90.0% CI = [0.3264111131429672, 0.676334485411644]
+Class 1: 90.0% CI = [0.32366552948951716, 0.6735888868570328]
+Class 0: 95.0% CI = [0.30809231847524643, 0.7747205719351768]
+Class 1: 95.0% CI = [0.22527943551540383, 0.6919076815247536]
+
+
+Statistics for sample 1851
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5822492837905884
+Variance: 0.020959649235010147
+Class 0: 90.0% CI = [0.2484607994556427, 0.6387667208909988]
+Class 1: 90.0% CI = [0.3612333051860332, 0.7515392005443573]
+Class 0: 95.0% CI = [0.2453332096338272, 0.7023552134633064]
+Class 1: 95.0% CI = [0.29764480702579027, 0.7546667903661728]
+
+
+Statistics for sample 1857
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.7313815355300903
+Variance: 0.029009170830249786
+Class 0: 90.0% CI = [0.4782977104187011, 0.9652548730373383]
+Class 1: 90.0% CI = [0.03474511485546827, 0.5217022895812988]
+Class 0: 95.0% CI = [0.4252873361110688, 0.9698691219091415]
+Class 1: 95.0% CI = [0.030130858998745683, 0.5747126638889313]
+
+
+Statistics for sample 1861
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.52116459608078
+Variance: 0.03090658038854599
+Class 0: 90.0% CI = [0.3085017055273056, 0.8041209876537323]
+Class 1: 90.0% CI = [0.1958790197968483, 0.6914982944726944]
+Class 0: 95.0% CI = [0.2739255055785179, 0.8284056633710861]
+Class 1: 95.0% CI = [0.1715943552553654, 0.7260744944214821]
+
+
+Statistics for sample 1863
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6616063117980957
+Variance: 0.02244478277862072
+Class 0: 90.0% CI = [0.44865517318248743, 0.8712228834629059]
+Class 1: 90.0% CI = [0.12877712212502956, 0.5513448268175125]
+Class 0: 95.0% CI = [0.3716379329562188, 0.8824519962072372]
+Class 1: 95.0% CI = [0.1175479954108596, 0.6283620670437813]
+
+
+Statistics for sample 1869
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6962141990661621
+Variance: 0.019366130232810974
+Class 0: 90.0% CI = [0.13021251559257507, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8697874844074249]
+Class 0: 95.0% CI = [0.12130878865718843, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8786912113428116]
+
+
+Statistics for sample 1872
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6899275779724121
+Variance: 0.01115212868899107
+Class 0: 90.0% CI = [0.12422071397304532, 0.4177198112010956]
+Class 1: 90.0% CI = [0.5822801887989044, 0.8757792860269547]
+Class 0: 95.0% CI = [0.08681299537420276, 0.4530854970216751]
+Class 1: 95.0% CI = [0.5469145029783249, 0.9131870046257973]
+
+
+Statistics for sample 1879
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6066886186599731
+Variance: 0.014252498745918274
+Class 0: 90.0% CI = [0.4764799177646637, 0.7811140716075897]
+Class 1: 90.0% CI = [0.21888593956828117, 0.5235200822353363]
+Class 0: 95.0% CI = [0.4411997944116593, 0.7858221977949142]
+Class 1: 95.0% CI = [0.2141778077930212, 0.5588002055883408]
+
+
+Statistics for sample 1887
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.8427237272262573
+Variance: 0.022166658192873
+Class 0: 90.0% CI = [0.5, 0.9680698066949844]
+Class 1: 90.0% CI = [0.03193018166348338, 0.5]
+Class 0: 95.0% CI = [0.5, 0.9728918150067329]
+Class 1: 95.0% CI = [0.027108183829113845, 0.5]
+
+
+Statistics for sample 1889
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6259546279907227
+Variance: 0.024418605491518974
+Class 0: 90.0% CI = [0.14476244151592255, 0.6710641980171204]
+Class 1: 90.0% CI = [0.32893581688404083, 0.8552375584840775]
+Class 0: 95.0% CI = [0.1368628665804863, 0.6811765730381012]
+Class 1: 95.0% CI = [0.3188234195113182, 0.8631371334195137]
+
+
+Statistics for sample 1890
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6176016926765442
+Variance: 0.030216770246624947
+Class 0: 90.0% CI = [0.19931448996067047, 0.6476360261440277]
+Class 1: 90.0% CI = [0.35236395895481104, 0.8006855100393295]
+Class 0: 95.0% CI = [0.18553457409143448, 0.7156467884778976]
+Class 1: 95.0% CI = [0.284353218972683, 0.8144654259085655]
+
+
+Statistics for sample 1891
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6381115317344666
+Variance: 0.015279890038073063
+Class 0: 90.0% CI = [0.16857503354549408, 0.5295799076557159]
+Class 1: 90.0% CI = [0.47042009234428406, 0.8314249664545059]
+Class 0: 95.0% CI = [0.16317983716726303, 0.5739497691392899]
+Class 1: 95.0% CI = [0.4260502308607102, 0.836820162832737]
+
+
+Statistics for sample 1905
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.7367990016937256
+Variance: 0.019664360210299492
+Class 0: 90.0% CI = [0.07429617643356323, 0.5]
+Class 1: 90.0% CI = [0.5, 0.9257038235664368]
+Class 0: 95.0% CI = [0.07154172658920288, 0.5]
+Class 1: 95.0% CI = [0.5, 0.9284582734107971]
+
+
+Statistics for sample 1908
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.552145779132843
+Variance: 0.021019620820879936
+Class 0: 90.0% CI = [0.3826601505279541, 0.8012217432260513]
+Class 1: 90.0% CI = [0.19877823442220688, 0.6173398494720459]
+Class 0: 95.0% CI = [0.37067505717277527, 0.8036561384797096]
+Class 1: 95.0% CI = [0.19634385034441948, 0.6293249428272247]
+
+
+Statistics for sample 1909
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6736584305763245
+Variance: 0.03814438730478287
+Class 0: 90.0% CI = [0.35451339185237885, 0.8858693242073059]
+Class 1: 90.0% CI = [0.11413069441914558, 0.6454866081476212]
+Class 0: 95.0% CI = [0.34216832369565964, 0.8892159163951874]
+Class 1: 95.0% CI = [0.11078408546745777, 0.6578316763043404]
+
+
+Statistics for sample 1910
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6536951661109924
+Variance: 0.025940725579857826
+Class 0: 90.0% CI = [0.4486115127801895, 0.8797930479049683]
+Class 1: 90.0% CI = [0.12020696513354778, 0.5513884872198105]
+Class 0: 95.0% CI = [0.44231656938791275, 0.8890126049518585]
+Class 1: 95.0% CI = [0.11098740529268981, 0.5576834306120872]
+
+
+Statistics for sample 1912
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5745003819465637
+Variance: 0.022263748571276665
+Class 0: 90.0% CI = [0.3628057390451431, 0.7852184921503067]
+Class 1: 90.0% CI = [0.2147815190255642, 0.6371942609548569]
+Class 0: 95.0% CI = [0.34207961708307266, 0.7970964089035988]
+Class 1: 95.0% CI = [0.20290359668433666, 0.6579203829169273]
+
+
+Statistics for sample 1915
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6847424507141113
+Variance: 0.01999334618449211
+Class 0: 90.0% CI = [0.5, 0.9182268232107162]
+Class 1: 90.0% CI = [0.08177315443754195, 0.5]
+Class 0: 95.0% CI = [0.5, 0.9466195032000542]
+Class 1: 95.0% CI = [0.05338047444820407, 0.5]
+
+
+Statistics for sample 1916
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6381189823150635
+Variance: 0.04671866074204445
+Class 0: 90.0% CI = [0.34497663378715515, 0.898879200220108]
+Class 1: 90.0% CI = [0.10112082213163376, 0.6550233662128448]
+Class 0: 95.0% CI = [0.333804652094841, 0.9100476056337357]
+Class 1: 95.0% CI = [0.08995241671800615, 0.666195347905159]
+
+
+Statistics for sample 1922
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6176562905311584
+Variance: 0.012813841924071312
+Class 0: 90.0% CI = [0.2247675061225891, 0.53924959897995]
+Class 1: 90.0% CI = [0.46075037121772766, 0.7752324938774109]
+Class 0: 95.0% CI = [0.20714432001113894, 0.5555977523326874]
+Class 1: 95.0% CI = [0.44440221786499023, 0.7928556799888611]
+
+
+Statistics for sample 1935
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.7353891134262085
+Variance: 0.013001766055822372
+Class 0: 90.0% CI = [0.0965360701084137, 0.3962421119213104]
+Class 1: 90.0% CI = [0.6037578880786896, 0.9034639298915863]
+Class 0: 95.0% CI = [0.09081755578517914, 0.41358380019664764]
+Class 1: 95.0% CI = [0.5864161998033524, 0.9091824442148209]
+
+
+Statistics for sample 1936
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6912508010864258
+Variance: 0.016008907929062843
+Class 0: 90.0% CI = [0.12692424654960632, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8730757534503937]
+Class 0: 95.0% CI = [0.12599481642246246, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8740051835775375]
+
+
+Statistics for sample 1941
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.539910078048706
+Variance: 0.03019222617149353
+Class 0: 90.0% CI = [0.2824241816997528, 0.7833651304244995]
+Class 1: 90.0% CI = [0.2166348546743393, 0.7175758183002472]
+Class 0: 95.0% CI = [0.23687593638896948, 0.7844191491603851]
+Class 1: 95.0% CI = [0.21558083593845367, 0.7631240636110306]
+
+
+Statistics for sample 1948
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5158355832099915
+Variance: 0.04716348275542259
+Class 0: 90.0% CI = [0.2654711455106735, 0.8013318628072739]
+Class 1: 90.0% CI = [0.19866811856627462, 0.7345288544893265]
+Class 0: 95.0% CI = [0.252588115632534, 0.856255792081356]
+Class 1: 95.0% CI = [0.14374420605599886, 0.747411884367466]
+
+
+Statistics for sample 1951
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.629073441028595
+Variance: 0.06004362180829048
+Class 0: 90.0% CI = [0.32553012669086456, 0.9604151099920273]
+Class 1: 90.0% CI = [0.03958489000797272, 0.6744698733091354]
+Class 0: 95.0% CI = [0.3197377398610115, 0.9627671167254448]
+Class 1: 95.0% CI = [0.037232888862490654, 0.6802622601389885]
+
+
+Statistics for sample 1954
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5905867218971252
+Variance: 0.014717367477715015
+Class 0: 90.0% CI = [0.2799268960952759, 0.6557984948158264]
+Class 1: 90.0% CI = [0.3442015126347542, 0.7200731039047241]
+Class 0: 95.0% CI = [0.2672642767429352, 0.6822576820850372]
+Class 1: 95.0% CI = [0.31774233654141426, 0.7327357232570648]
+
+
+Statistics for sample 1962
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6817138195037842
+Variance: 0.014997435733675957
+Class 0: 90.0% CI = [0.15159861743450165, 0.5]
+Class 1: 90.0% CI = [0.5, 0.8484013825654984]
+Class 0: 95.0% CI = [0.14290305227041245, 0.5]
+Class 1: 95.0% CI = [0.5, 0.8570969477295876]
+
+
+Statistics for sample 1967
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5435044169425964
+Variance: 0.016421018168330193
+Class 0: 90.0% CI = [0.2722247838973999, 0.6095697730779648]
+Class 1: 90.0% CI = [0.39043023437261576, 0.7277752161026001]
+Class 0: 95.0% CI = [0.24695613980293277, 0.6689659282565117]
+Class 1: 95.0% CI = [0.33103409036993986, 0.7530438601970673]
+
+
+Statistics for sample 1968
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.5471928715705872
+Variance: 0.027471326291561127
+Class 0: 90.0% CI = [0.22831428050994873, 0.7455528974533081]
+Class 1: 90.0% CI = [0.2544470839202404, 0.7716857194900513]
+Class 0: 95.0% CI = [0.21864965558052063, 0.7764308452606201]
+Class 1: 95.0% CI = [0.22356915287673476, 0.7813503444194794]
+
+
+Statistics for sample 1970
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6683931350708008
+Variance: 0.0116127273067832
+Class 0: 90.0% CI = [0.17591314017772675, 0.5013122111558914]
+Class 1: 90.0% CI = [0.4986877888441086, 0.8240868598222733]
+Class 0: 95.0% CI = [0.161305271089077, 0.5032805278897285]
+Class 1: 95.0% CI = [0.49671947211027145, 0.838694728910923]
+
+
+Statistics for sample 1984
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5085713863372803
+Variance: 0.03707690164446831
+Class 0: 90.0% CI = [0.28907807171344757, 0.7894376218318939]
+Class 1: 90.0% CI = [0.21056240051984787, 0.7109219282865524]
+Class 0: 95.0% CI = [0.2476659491658211, 0.797611340880394]
+Class 1: 95.0% CI = [0.2023886702954769, 0.7523340508341789]
+
+
+Statistics for sample 1989
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6373215317726135
+Variance: 0.01630084030330181
+Class 0: 90.0% CI = [0.4822078198194504, 0.8181370049715042]
+Class 1: 90.0% CI = [0.18186301365494728, 0.5177921801805496]
+Class 0: 95.0% CI = [0.45551954954862595, 0.8433705344796181]
+Class 1: 95.0% CI = [0.1566294897347689, 0.544480450451374]
+
+
+Statistics for sample 1996
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6815391778945923
+Variance: 0.025695398449897766
+Class 0: 90.0% CI = [0.4938768446445465, 0.9497250318527222]
+Class 1: 90.0% CI = [0.05027495045214891, 0.5061231553554535]
+Class 0: 95.0% CI = [0.4926968961954117, 0.956820547580719]
+Class 1: 95.0% CI = [0.04317944729700685, 0.5073031038045883]
+
+
+Statistics for sample 2017
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5394217371940613
+Variance: 0.01841859333217144
+Class 0: 90.0% CI = [0.35067035257816315, 0.7518557608127594]
+Class 1: 90.0% CI = [0.2481442540884018, 0.6493296474218369]
+Class 0: 95.0% CI = [0.3372924104332924, 0.7551831752061844]
+Class 1: 95.0% CI = [0.24481681734323502, 0.6627075895667076]
+
+
+Statistics for sample 2019
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6471483707427979
+Variance: 0.020116671919822693
+Class 0: 90.0% CI = [0.1896914690732956, 0.553985208272934]
+Class 1: 90.0% CI = [0.446014791727066, 0.8103085309267044]
+Class 0: 95.0% CI = [0.1803763136267662, 0.6352507323026657]
+Class 1: 95.0% CI = [0.36474926769733435, 0.8196236863732338]
+
+
+Statistics for sample 2024
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6043810248374939
+Variance: 0.03759949654340744
+Class 0: 90.0% CI = [0.30332517623901367, 0.8352746516466141]
+Class 1: 90.0% CI = [0.16472532413899896, 0.6966748237609863]
+Class 0: 95.0% CI = [0.2952464520931244, 0.867551214993]
+Class 1: 95.0% CI = [0.13244876917451623, 0.7047535479068756]
+
+
+Statistics for sample 2028
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6974691152572632
+Variance: 0.022114258259534836
+Class 0: 90.0% CI = [0.48955686390399933, 0.8867225795984268]
+Class 1: 90.0% CI = [0.11327742598950861, 0.5104431360960007]
+Class 0: 95.0% CI = [0.4738921597599983, 0.9002765193581581]
+Class 1: 95.0% CI = [0.09972349461168052, 0.5261078402400017]
+
+
+Statistics for sample 2030
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6758806109428406
+Variance: 0.03165818005800247
+Class 0: 90.0% CI = [0.0806218832731247, 0.5623858571052551]
+Class 1: 90.0% CI = [0.43761411309242243, 0.9193781167268753]
+Class 0: 95.0% CI = [0.06761126965284349, 0.6297912895679474]
+Class 1: 95.0% CI = [0.3702086806297303, 0.9323887303471565]
+
+
+Statistics for sample 2034
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.631586492061615
+Variance: 0.026659345254302025
+Class 0: 90.0% CI = [0.1319475919008255, 0.5772102326154709]
+Class 1: 90.0% CI = [0.4227897897362709, 0.8680524080991745]
+Class 0: 95.0% CI = [0.12217632681131364, 0.5794646069407463]
+Class 1: 95.0% CI = [0.4205354042351246, 0.8778236731886864]
+
+
+Statistics for sample 2042
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.5679144859313965
+Variance: 0.017239078879356384
+Class 0: 90.0% CI = [0.23281341791152954, 0.5791912525892258]
+Class 1: 90.0% CI = [0.42080874741077423, 0.7671865820884705]
+Class 0: 95.0% CI = [0.22937098145484924, 0.5930196270346642]
+Class 1: 95.0% CI = [0.40698037296533585, 0.7706290185451508]
+
+
+Statistics for sample 2043
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.6212805509567261
+Variance: 0.036085862666368484
+Class 0: 90.0% CI = [0.3992665559053421, 0.8922562897205353]
+Class 1: 90.0% CI = [0.10774371400475499, 0.6007334440946579]
+Class 0: 95.0% CI = [0.3727933540940285, 0.926567330956459]
+Class 1: 95.0% CI = [0.07343268208205703, 0.6272066459059715]
+
+
+Statistics for sample 2044
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.6120047569274902
+Variance: 0.014265944249927998
+Class 0: 90.0% CI = [0.2193513810634613, 0.5428925305604935]
+Class 1: 90.0% CI = [0.4571074917912483, 0.7806486189365387]
+Class 0: 95.0% CI = [0.20948563516139984, 0.5580465868115425]
+Class 1: 95.0% CI = [0.4419534243643284, 0.7905143648386002]
+
+
+Statistics for sample 2045
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5968000292778015
+Variance: 0.03699249029159546
+Class 0: 90.0% CI = [0.29399169981479645, 0.8659240454435349]
+Class 1: 90.0% CI = [0.13407597690820694, 0.7060083001852036]
+Class 0: 95.0% CI = [0.2618498280644417, 0.8835757300257683]
+Class 1: 95.0% CI = [0.11642428115010263, 0.7381501719355583]
+
+
+Statistics for sample 2047
+No. of forward passes: 16
+Final prediction: 1
+True label: 0.0
+Correct: False
+Prediction probability: 0.6707163453102112
+Variance: 0.01842867210507393
+Class 0: 90.0% CI = [0.15720082819461823, 0.5134366601705551]
+Class 1: 90.0% CI = [0.4865633398294449, 0.8427991718053818]
+Class 0: 95.0% CI = [0.1444099321961403, 0.5335916504263878]
+Class 1: 95.0% CI = [0.4664083495736122, 0.8555900678038597]
+
+
+Statistics for sample 2048
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.5735763311386108
+Variance: 0.04080003872513771
+Class 0: 90.0% CI = [0.3081135004758835, 0.87260901927948]
+Class 1: 90.0% CI = [0.12739100493490696, 0.6918864995241165]
+Class 0: 95.0% CI = [0.3070608898997307, 0.8754616379737854]
+Class 1: 95.0% CI = [0.12453837785869837, 0.6929391101002693]
+
+
+Statistics for sample 2049
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5812855958938599
+Variance: 0.019991807639598846
+Class 0: 90.0% CI = [0.3022911846637726, 0.7553776949644089]
+Class 1: 90.0% CI = [0.24462227895855904, 0.6977088153362274]
+Class 0: 95.0% CI = [0.2837049514055252, 0.7634385153651237]
+Class 1: 95.0% CI = [0.2365614641457796, 0.7162950485944748]
+
+
+Statistics for sample 2061
+No. of forward passes: 16
+Final prediction: 0
+True label: 1.0
+Correct: False
+Prediction probability: 0.5288209915161133
+Variance: 0.03843355551362038
+Class 0: 90.0% CI = [0.2727573662996292, 0.8107885122299194]
+Class 1: 90.0% CI = [0.18921147659420967, 0.7272426337003708]
+Class 0: 95.0% CI = [0.23950559645891192, 0.8139628171920776]
+Class 1: 95.0% CI = [0.18603717721998692, 0.7604944035410881]
+
+
+Statistics for sample 2062
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.633512020111084
+Variance: 0.035436201840639114
+Class 0: 90.0% CI = [0.12484353780746459, 0.6346675902605057]
+Class 1: 90.0% CI = [0.36533240601420397, 0.8751564621925354]
+Class 0: 95.0% CI = [0.10926079750061037, 0.7172114327549934]
+Class 1: 95.0% CI = [0.28278855793178087, 0.8907392024993896]
+
+
+Statistics for sample 2063
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.6137105226516724
+Variance: 0.03304735943675041
+Class 0: 90.0% CI = [0.25622397661209106, 0.8506651669740677]
+Class 1: 90.0% CI = [0.149334829300642, 0.7437760233879089]
+Class 0: 95.0% CI = [0.2474314272403717, 0.8530168607831001]
+Class 1: 95.0% CI = [0.14698312990367413, 0.7525685727596283]
+
+
+Statistics for sample 2073
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.630827784538269
+Variance: 0.024145767092704773
+Class 0: 90.0% CI = [0.1868187040090561, 0.5680468082427979]
+Class 1: 90.0% CI = [0.4319531843066215, 0.8131812959909439]
+Class 0: 95.0% CI = [0.18231480568647385, 0.6701170206069946]
+Class 1: 95.0% CI = [0.329882960766554, 0.8176851943135262]
+
+
+Statistics for sample 2074
+No. of forward passes: 16
+Final prediction: 0
+True label: 0.0
+Correct: True
+Prediction probability: 0.8649889230728149
+Variance: 0.005672838073223829
+Class 0: 90.0% CI = [0.7396361380815506, 0.9635895490646362]
+Class 1: 90.0% CI = [0.03641046583652496, 0.2603638395667076]
+Class 0: 95.0% CI = [0.7360183075070381, 0.9669990837574005]
+Class 1: 95.0% CI = [0.033000919967889786, 0.263981681317091]
+
+
+Statistics for sample 2078
+No. of forward passes: 16
+Final prediction: 1
+True label: 1.0
+Correct: True
+Prediction probability: 0.601472020149231
+Variance: 0.01930795982480049
+Class 0: 90.0% CI = [0.17871740460395813, 0.6080677807331085]
+Class 1: 90.0% CI = [0.39193224161863327, 0.8212825953960419]
+Class 0: 95.0% CI = [0.16831593215465546, 0.6238456517457962]
+Class 1: 95.0% CI = [0.3761543594300747, 0.8316840678453445]
+

@@ -38,7 +38,6 @@ class UQTrainer(Trainer):
     def __init__(self, sets, **kwargs):
         super().__init__(sets, **kwargs)
         self.writer = UQWriter(sets, self.val_threshold, **kwargs)
-        print(f"model_idx: {self.model_idx}")
     
     ## YC : CHANGED
     def save_checkpoint_(self, epoch, batch_idx, scaler):
@@ -127,7 +126,6 @@ class UQTrainer(Trainer):
                 pass
 
     def set_model_device(self):  # assigns the model to appropriate devices (e.g., GPU or CPU)
-        print(f"DEBUG : self.UQ : {self.UQ} / self.UQ_method : {self.UQ_method} / self.model_idx : {self.model_idx} / self.device_id : {self.device_id} / self.distributed : {self.distributed} / self.rank : {self.rank}")
         if self.distributed:
             # For multiprocessing distributed, DistributedDataParallel constructor
             # should always set the single device scope, otherwise,
@@ -162,6 +160,7 @@ class UQTrainer(Trainer):
 
         # manual GPU assignment for ensemble model training
         elif self.UQ and self.UQ_method == 'ensemble' and self.model_idx is not None and self.device_id is not None:
+            print(f"DEBUG : self.UQ : {self.UQ} / self.UQ_method : {self.UQ_method} / self.model_idx : {self.model_idx} / self.device_id : {self.device_id} / self.distributed : {self.distributed} / self.rank : {self.rank}")
             self.gpu = self.device_id
             self.device = torch.device('cuda:{}'.format(self.device_id))
 
@@ -291,27 +290,41 @@ class UQTrainer(Trainer):
                 
         return loss_dict, loss
         
+    def move_batch_to_cpu(self, batch_dict):
+        new_dict = {}
+        for key, value in batch_dict.items():
+            if torch.is_tensor(value):
+                new_dict[key] = value.detach().cpu()
+            else:
+                new_dict[key] = value
+        return new_dict
 
     def eval_single_UQ_epoch(self,set):  # evaluates the model for a single epoch
         loader = self.test_loader
         subset_indices = list(range(len(self.test_loader.dataset))) * self.num_forward_passes
         subset = Subset(self.test_loader.dataset, subset_indices)
-        loader = DataLoader(subset, batch_size=8, shuffle=False, num_workers=0)
-        subject_names = [data['subject_name'] for data in loader.dataset]
+        loader = DataLoader(subset, batch_size=8, shuffle=False, num_workers=8)
+        # subject_names = [data['subject_name'] for data in loader.dataset] # YC : not used but consuming TOO MUCH TIME!
 
         self.eval(set)
-        input_batches = []
-        output_batches = []
+        # input_batches = []
+        # output_batches = []
         with torch.no_grad():
             for batch_idx, input_dict in enumerate(tqdm(loader, position=0, leave=True)):
                 with autocast():
                     ## YC : fixed into model_forward_pass
                     input_dict, output_dict = self.model_forward_pass(input_dict)
-                    input_batches.append(input_dict)
-                    output_batches.append(output_dict)
+                    ## Memory issue in GPU, moved to CPU -> No just not use it, directly do compute_accuracy every batch
+                    # input_dict = self.move_batch_to_cpu(input_dict)
+                    # output_dict = self.move_batch_to_cpu(output_dict)
+                    # input_batches.append(input_dict)
+                    # output_batches.append(output_dict)
+                    self.compute_accuracy(input_dict, output_dict)
+
 
         self.finish_eval(set)
-        return input_batches, output_batches
+        # return input_batches, output_batches
+        return input_dict, output_dict
 
     def testing(self):  # manages the testing phase of the model
         # options = ['MC_dropout']
@@ -325,13 +338,15 @@ class UQTrainer(Trainer):
         if os.path.exists(samp_stat_save_path):
             os.remove(samp_stat_save_path)
 
-        input_batches, output_batches = self.eval_single_UQ_epoch('MC_dropout')
-        inputs = self.concat_batch_results(input_batches)
-        outputs = self.concat_batch_results(output_batches)
+        # input_batches, output_batches = self.eval_single_UQ_epoch('MC_dropout')
+        self.eval_single_UQ_epoch('MC_dropout')
+        # inputs = self.concat_batch_results(input_batches)
+        # outputs = self.concat_batch_results(output_batches)
 
-        self.compute_accuracy(inputs, outputs)
+        # self.compute_accuracy(inputs, outputs)
         self.writer.accuracy_summary(mid_epoch=False, mean=None, std=None)
         self.writer.compute_confidence(self.writer.confidence_list, self.writer.is_correct_list)
+        print(torch.cuda.memory_summary(device=self.device, abbreviated=False))
 
 def get_arguments(base_path):
     """
@@ -629,6 +644,7 @@ def run_phase(args,loaded_model_weights_path,phase_num,phase_name, model_idx = N
 
     if args.UQ and model_idx is not None and device_id is not None:
         trainer = UQTrainer(sets=S,**kwargs)
+        print(f"model_idx: {model_idx}")
         trainer.training()
     else:
         trainer = Trainer(sets=S,**kwargs)

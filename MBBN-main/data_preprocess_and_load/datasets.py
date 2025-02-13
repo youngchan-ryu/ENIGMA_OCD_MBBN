@@ -467,7 +467,6 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                            'subject':subj, 'subject_name':subj_name, self.target:target, 'mask':mask}
 
             elif self.fmri_dividing_type == 'four_channels':
-
                 """
                 VMD for each subject
                 """
