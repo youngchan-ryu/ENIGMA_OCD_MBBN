@@ -585,8 +585,8 @@ def run_disributed_phase(args,loaded_model_weights_path,phase_num,phase_name):
         for slot, model_idx in enumerate(batch_indices):
             # For assignment, rotate across GPUs. Adjust if you want a different scheduling.
             device_id = slot % num_gpus
-            # if device_id != 0:
-            #     args.wandb_mode = 'disabled'
+            if device_id != 0:
+                args.wandb_mode = 'disabled'
             print(f"##slot: {slot} / device_id: {device_id} / model_idx: {model_idx}")
             p = mp.Process(
                 target=train_single_model,

@@ -46,6 +46,13 @@
 ## 1. TypeError: 'NoneType' object is not subscriptable at File "/pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/trainer.py", line 406, in train_epoch
 ##   - Delete split, experiment file, and re-run with 1 model to generate split, and then re-run with ensemble training.
 ##   - If error occurs, delete pycache files in the directory.
+## 2. Training would not work properly due to the multiprocessing issues.
+##    You should check all num_ensemble_models are initiated properly.
+##    If not, you should re-run the training.
+##    Training would not properly initiated at some GPU nodes
+##    In my case train 1 model at node for test, ensure working properly -> 16 model training at once, with 16 model training all initiated properly.
+########################
+
 ## ENIGMA-OCD - labserver
 python main.py --dataset_name ENIGMA_OCD --base_path /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main --enigma_path /scratch/connectome/ycryu/MBBN_data \
 --step 2 --batch_size_phase2 8 --lr_init_phase2 3e-5 --lr_policy_phase2 step \
@@ -83,3 +90,14 @@ python main.py --dataset_name ENIGMA_OCD --base_path /pscratch/sd/y/ycryu/ENIGMA
 --UQ --UQ_method ensemble --num_ensemble_models 16 --ensemble_models_per_gpu 4 --num_UQ_gpus 4  \
 2> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error_from_scratch_seed101_real_error.log \
 > /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error_from_scratch_seed101_real_output.log
+
+python main.py --dataset_name ENIGMA_OCD --base_path /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main --enigma_path /pscratch/sd/y/ycryu/MBBN_data \
+--step 2 --batch_size_phase2 8 --lr_init_phase2 3e-5 --lr_policy_phase2 step \
+--workers_phase2 0 --fine_tune_task binary_classification --target OCD \
+--fmri_type divided_timeseries --transformer_hidden_layers 8 \
+--seq_part head --fmri_dividing_type four_channels \
+--spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
+--exp_name ensemble_four_ch_seed11 --seed 11 --sequence_length_phase2 100 \
+--intermediate_vec 316 --nEpochs_phase2 100 --num_heads 4 \
+--UQ --UQ_method ensemble --num_ensemble_models 16 --ensemble_models_per_gpu 4 --num_UQ_gpus 4  \
+2> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error_four_ensemble_11.log
