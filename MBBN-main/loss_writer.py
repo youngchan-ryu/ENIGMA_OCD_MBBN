@@ -168,10 +168,17 @@ class Writer():
                 subj_dict['score'] = torch.sigmoid(subj_dict['score'].float())
 
             # subj_dict['score'] denotes the logits for sequences for a subject
-            subj_pred = subj_dict['score'].mean().item() 
-            subj_error = subj_dict['score'].std().item()
 
-            subj_truth = subj_dict['truth'].item()
+            ##### for speed up #####  
+            # subj_pred = subj_dict['score'].mean().item() 
+            # subj_error = subj_dict['score'].std().item()
+            # subj_truth = subj_dict['truth'].item()
+            
+            subj_pred = float(subj_dict['score'].mean())
+            subj_error = float(subj_dict['score'].std())
+            subj_truth = float(subj_dict['truth'])
+            ########################
+
             subj_mode = subj_dict['mode'] # train, val, test
 
             with open(os.path.join(self.per_subject_predictions,'iter_{}.txt'.format(self.eval_iter)),'a+') as f:
@@ -261,7 +268,8 @@ class Writer():
                       'spatial_difference':
                            {'is_active':False,'criterion':Spatial_Difference_Loss(**kwargs),'factor':self.spatial_loss_factor}}  #changed from L1Loss to MSELoss and changed to L1loss again
         print(kwargs.get('task').lower())
-        if 'reconstruction' in kwargs.get('task').lower():
+        # if 'reconstruction' in kwargs.get('task').lower(): 
+        if 'pretraining' in kwargs.get('task').lower():
             if kwargs.get('use_recon_loss'):
                 self.losses['reconstruction']['is_active'] = True
             if kwargs.get('use_mask_loss'):

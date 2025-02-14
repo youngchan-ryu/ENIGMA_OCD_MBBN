@@ -274,7 +274,7 @@ class DataHandler():  # primary class for dataset management (initialization, pr
                         
             # 02 select subjects with target and split file
             print('generating step 2')
-            if self.target == 'reconstruction':  # not used?
+            if self.target == 'reconstruction':
                 sublist = ['train_subjects']+list(valid_sub)+['val_subjects']+['test_subjects']+[' ']
             else:
                 if self.dataset_name == 'ABCD':
@@ -507,11 +507,11 @@ class DataHandler():  # primary class for dataset management (initialization, pr
             test_generator = None
         
         
-        ### DEBUG STATEMENT ###
-        print(f"Number of training batches: {len(training_generator)}")
-        print(f"Number of validation batches: {len(val_generator)}")
-        print(f"Number of test batches: {len(test_generator)}")
-        #######################
+        # ### DEBUG STATEMENT ###
+        # print(f"Number of training batches: {len(training_generator)}")
+        # print(f"Number of validation batches: {len(val_generator)}")
+        # print(f"Number of test batches: {len(test_generator)}")
+        # #######################
         
                    
         if self.fine_tune_task == 'regression':

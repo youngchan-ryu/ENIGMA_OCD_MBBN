@@ -14,10 +14,11 @@ import args
 
 def get_arguments(base_path = os.getcwd()):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--ROI_num', type=int,default=400, choices=[180, 400])
+    parser.add_argument('--ROI_num', type=int,default=400, choices=[180, 316, 400])
     parser.add_argument('--ukb_path', default='/scratch/connectome/stellasybae/UKB_ROI') ## labserver
     parser.add_argument('--abcd_path', default='/storage/bigdata/ABCD/fmriprep/1.rs_fmri/5.ROI_DATA') ## labserver
-    parser.add_argument('--dataset_name', type=str, choices=['ABCD', 'UKB'], default="ABCD")
+    parser.add_argument('--enigma_path', default='/pscratch/sd/p/pakmasha/MBBN_data') ## Perlmutter
+    parser.add_argument('--dataset_name', type=str, choices=['ABCD', 'UKB', 'ENIGMA_OCD'], default="ABCD")
     parser.add_argument('--base_path', type=str, default=os.getcwd())
     args = parser.parse_args()
         
@@ -30,7 +31,7 @@ def wavelet_corr_mat(signal):
     coeffs = pywt.dwt(signal, 'db1')  # 'db1' =  Daubechies wavelet
     cA, cD = coeffs  # cA: Approximation Coefficients, cD: etail Coefficients
 
-    return np.corrcoef(cA)
+    return np.corrcoef(cA)  # compute correlation matrix using approximation coefficients
 
 def create_network(correlation_matrix, threshold=0.2):
     # Generate graph whose size is equivalent to correlation matrix
@@ -63,6 +64,16 @@ elif args.dataset_name == 'UKB':
     subject.remove('val_subjects')
     subject.remove('test_subjects')
 
+elif args.dataset_name == 'ENIGMA_OCD':
+    data_dir = args.enigma_path
+    TR = 0.735
+    seq_len = 464
+    subject = open(f'{args.base_path}/splits/UKB/UKB_reconstruction_ROI_{args.ROI_num}_seq_len_{seq_len}_split1.txt', 'r').readlines()
+    subject = [x[:-1] for x in subject]
+    subject.remove('train_subjects')
+    subject.remove('val_subjects')
+    subject.remove('test_subjects')
+
 if args.ROI_num == 400:
     ROI_name = 'Schaefer400'
 elif args.ROI_num == 180:
@@ -74,9 +85,10 @@ num_processes = cpu_count()
 print('number of processes', num_processes)
 
 n = args.ROI_num
-high_comm_mat_whole = np.zeros((n, n))
-low_comm_mat_whole = np.zeros((n, n))
-ultralow_comm_mat_whole = np.zeros((n, n))
+imf1_comm_mat_whole = np.zeros((n, n))
+imf2_comm_mat_whole = np.zeros((n, n))
+imf3_comm_mat_whole = np.zeros((n, n))
+imf4_comm_mat_whole = np.zeros((n, n))
 
 
 def main(sub):

@@ -24,8 +24,8 @@ python3 main.py --dataset_name ENIGMA_OCD --base_path /pscratch/sd/p/pakmasha/EN
 --fmri_type divided_timeseries --transformer_hidden_layers 8 \
 --seq_part head --fmri_dividing_type five_channels \
 --spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
---exp_name vmd_five_ch_700_seed2 --seed 2 --sequence_length_phase2 700 \
---intermediate_vec 316 --nEpochs_phase2 150 --num_heads 4 \
+--exp_name vmd_five_ch_700_checkrun_seed1 --seed 1 --sequence_length_phase2 700 \
+--intermediate_vec 316 --nEpochs_phase2 5 --num_heads 4 \
 2> /pscratch/sd/p/pakmasha/ENIGMA_OCD_MBBN_git/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error.log
 
 # Lab server: 
