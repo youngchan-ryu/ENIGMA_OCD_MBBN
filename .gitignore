@@ -1,18 +1,9 @@
 MBBN-main/mbbn
-# MBBN-main/experiments
+MBBN-main/experiments
 MBBN-main/wandb
 MBBN-main/runs
 MBBN-main/slurm
-# MBBN-main/failed_experiments
+MBBN-main/failed_experiments
 ENIGMA-OCD results/QC/carpet_plots
 ENIGMA-OCD results/QC/ENIGMA_QC_FC_data.csv
 ENIGMA-OCD results/QC/Nothing.ipynb
-MBBN-main/wandb
-__pycache__/
-.ipynb_checkpoints/
-*.pth
-
-MBBN-main/yc/ensemble/wandb/
-MBBN-main/yc/ensemble/runs/
-MBBN-main/__pycache__/
-
