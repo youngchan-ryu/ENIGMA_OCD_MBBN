@@ -191,6 +191,10 @@ class Trainer():
                     self.model = Transformer_Finetune_Three_Channels(**self.kwargs)
                 elif self.fmri_dividing_type == 'two_channels':
                     self.model = Transformer_Finetune_Two_Channels(**self.kwargs)
+                elif self.fmri_dividing_type == 'four_channels':       
+                    self.model = Transformer_Finetune_Four_Channels(**self.kwargs)
+                elif self.fmri_dividing_type == 'five_channels':                
+                    self.model = Transformer_Finetune_Five_Channels(**self.kwargs)
 
         elif self.task.lower() == 'vanilla_bert':
             self.model = Transformer_Finetune(**self.kwargs)
