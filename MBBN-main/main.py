@@ -6,6 +6,8 @@ os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 import sys
 from pathlib import Path
 
+import torch
+import torch.multiprocessing as mp
 
 def get_arguments(base_path):
     """
@@ -185,9 +187,11 @@ def get_arguments(base_path):
     ## Uncertainty Quantification
     parser.add_argument('--UQ', action='store_true')
     parser.add_argument('--UQ_method', type=str, default='none', choices=['MC_dropout', 'ensemble'])
-    parser.add_argument('--num_forward_passes', type=int, default=16)
-    parser.add_argument('--num_ensemble_models', type=int, default=5)
+    parser.add_argument('--num_forward_passes', type=int, default=0) # for MC_dropout
+    parser.add_argument('--num_ensemble_models', type=int, default=0) # for ensemble, should use same number when training and testing
+    parser.add_argument('--ensemble_models_per_gpu', type=int, default=1)
     parser.add_argument('--UQ_model_weights_path', default=None)
+    parser.add_argument('--num_UQ_gpus', type=int, default=1)
 
     args = parser.parse_args()
         
@@ -199,7 +203,65 @@ def setup_folders(base_path):
     os.makedirs(os.path.join(base_path, 'splits'), exist_ok=True)
     return None
 
-def run_phase(args,loaded_model_weights_path,phase_num,phase_name):
+def train_single_model(args, loaded_model_weights_path, phase_num, phase_name, model_idx, device_id):
+    # Set the current GPU for this process
+    torch.cuda.set_device(device_id)
+    args.device = f"cuda:{device_id}"
+    args.model_idx = model_idx
+    args.device_id = device_id
+    print(f"Starting training for model {model_idx} on GPU {device_id}")
+
+    # Call the original run_phase
+    model_path = run_phase(args, loaded_model_weights_path, phase_num, phase_name, model_idx, device_id)
+    print(f"Completed training for model {model_idx}, saved to {model_path}")
+
+def run_disributed_phase(args,loaded_model_weights_path,phase_num,phase_name):
+    if "WORLD_SIZE" in os.environ: # for torchrun
+        args.world_size = int(os.environ["WORLD_SIZE"])
+    elif 'SLURM_NTASKS' in os.environ: # for slurm scheduler
+        args.world_size = int(os.environ['SLURM_NTASKS'])
+    else:
+        pass
+        
+    args.distributed = args.world_size > 1 # default: world_size = -1 
+    
+    num_gpus = args.num_UQ_gpus
+    if args.num_UQ_gpus > torch.cuda.device_count():
+        raise ValueError(f"num_UQ_gpus({args.num_UQ_gpus}) > torch.cuda.device_count({torch.cuda.device_count()})")
+    
+    # Determine how many ensemble models to train concurrently per GPU.
+    # e.g. 4 GPUs * 2 models/GPU = 8 models concurrently.
+    models_per_gpu = args.ensemble_models_per_gpu
+    concurrent_models = min(num_gpus * models_per_gpu, args.num_ensemble_models)
+
+    # List all ensemble model indices (for example: [0, 1, 2, ..., args.num_ensemble_models-1])
+    ensemble_indices = list(range(args.num_ensemble_models))
+
+    # Iterate over ensemble indices in batches of 'concurrent_models'
+    for batch_start in range(0, args.num_ensemble_models, concurrent_models):
+        processes = []
+        batch_indices = ensemble_indices[batch_start: batch_start + concurrent_models]
+        print(f"#Training batch models: {batch_indices}")
+        for slot, model_idx in enumerate(batch_indices):
+            # Assign each model in each GPU to run concurrently by a separate process.
+            device_id = slot % num_gpus
+            if device_id != 0:
+                args.wandb_mode = 'disabled'
+            print(f"##slot: {slot} / device_id: {device_id} / model_idx: {model_idx}")
+            p = mp.Process(
+                target=train_single_model,
+                args=(args, loaded_model_weights_path, phase_num, phase_name, model_idx, device_id)
+            )
+            p.start()
+            processes.append(p)
+        # Wait for this batch of models to finish training.
+        for p in processes:
+            p.join()
+        print(f"Finished training batch models: {batch_indices}")
+
+    print("All ensemble models trained.")
+
+def run_phase(args,loaded_model_weights_path,phase_num,phase_name, model_idx = None, device_id = None):
     """
     main process that runs each training phase
     :return path to model weights (pytorch file .pth) aquried by the current training phase
@@ -208,7 +270,13 @@ def run_phase(args,loaded_model_weights_path,phase_num,phase_name):
     experiment_folder = Path(os.path.join(args.base_path,'experiments',experiment_folder))
     os.makedirs(experiment_folder, exist_ok=True)
     setattr(args,'loaded_model_weights_path_phase' + phase_num,loaded_model_weights_path)
-    args.experiment_folder = experiment_folder
+    # experiment folder changed into {experiment_folder}/model_{model_idx} if model_idx is not None (which means doing UQ deep-ensemble training)
+    if model_idx is not None:
+        model_experiment_folder = Path(os.path.join(experiment_folder, f'model_{model_idx}'))
+        os.makedirs(model_experiment_folder, exist_ok=True)
+        args.experiment_folder = model_experiment_folder
+    else:
+        args.experiment_folder = experiment_folder
     args.experiment_title = experiment_folder.name
     
     print(f'saving the results at {args.experiment_folder}')
@@ -223,8 +291,14 @@ def run_phase(args,loaded_model_weights_path,phase_num,phase_name):
     else:
         S = ['train','val','test']
 
-    trainer = Trainer(sets=S,**kwargs)
-    trainer.training()
+    # UQ deep ensemble training
+    if args.UQ and model_idx is not None and device_id is not None:
+        trainer = UQTrainer(sets=S,**kwargs)
+        print(f"model_idx: {model_idx}")
+        trainer.training()
+    else:
+        trainer = Trainer(sets=S,**kwargs)
+        trainer.training()
 
     #S = ['train','val']
 
@@ -253,37 +327,83 @@ def test(args,phase_num,model_weights_path):
         S = [UQ_method]
         if UQ_method == 'MC_dropout':
             # YC : Retrieve the last checkpoint from directory
-            model_weights_list = os.listdir(model_weights_path)
-            model_weights_list = [x for x in model_weights_list if x.endswith('.pth')]
-            model_weights_list = sorted(model_weights_list)
-            if len(model_weights_list) == 0:
+            file_name_and_time_lst = []
+            for f_name in os.listdir(model_weights_path):
+                if f_name.endswith('.pth'):
+                    written_time = os.path.getctime(os.path.join(model_weights_path,f_name))
+                    file_name_and_time_lst.append((f_name, written_time))
+            # Backward order of file creation time
+            sorted_file_lst = sorted(file_name_and_time_lst, key=lambda x: x[1], reverse=True)
+
+            if len(sorted_file_lst) == 0:
                 raise Exception('No model weights found')
-            loaded_model_weights_path = os.path.join(model_weights_path,model_weights_list[-1])
+            loaded_model_weights_path = os.path.join(model_weights_path,sorted_file_lst[0][0])
             setattr(args,'loaded_model_weights_path_phase' + phase_num, loaded_model_weights_path)
             args_logger(args)
             args = sort_args(args.step, vars(args))
             trainer = UQTrainer(sets=S,**args)
 
+        elif UQ_method == 'ensemble':
+            # No need to assign loaded_model_weights_path for ensemble method - it will be loaded in the trainer
+            loaded_model_weights_path = None
+            setattr(args,'loaded_model_weights_path_phase' + phase_num, loaded_model_weights_path)
+            args_logger(args)
+            args = sort_args(args.step, vars(args))
+            trainer = UQTrainer(sets=S,**args)
+        
+        trainer.testing(UQ_method)
+
     else:
         # YC : Retrieve the most recent checkpoint from directory
-        model_weights_list = os.listdir(model_weights_path)
-        model_weights_list = [x for x in model_weights_list if x.endswith('.pth')]
-        model_weights_list = sorted(model_weights_list, key=lambda x: os.path.getctime(os.path.join(model_weights_path, x)))
-        loaded_model_weights_path = os.path.join(model_weights_path,model_weights_list[-1])
-        
+        file_name_and_time_lst = []
+        for f_name in os.listdir(model_weights_path):
+            if f_name.endswith('.pth'):
+                written_time = os.path.getctime(os.path.join(model_weights_path,f_name))
+                file_name_and_time_lst.append((f_name, written_time))
+        # Backward order of file creation time
+        sorted_file_lst = sorted(file_name_and_time_lst, key=lambda x: x[1], reverse=True)
+
+        if len(sorted_file_lst) == 0:
+            raise Exception('No model weights found')
+        loaded_model_weights_path = os.path.join(model_weights_path,sorted_file_lst[0][0])
         setattr(args,'loaded_model_weights_path_phase' + phase_num, loaded_model_weights_path)
         S = ['test']
         args_logger(args)
         args = sort_args(args.step, vars(args))
         trainer = Trainer(sets=S,**args)
-    
-    trainer.testing()
+        trainer.testing()
     
 
 if __name__ == '__main__':
     base_path = os.getcwd() 
     setup_folders(base_path) 
     args = get_arguments(base_path)
+
+    # UQ condition check
+    if args.UQ:
+        if args.UQ_method == 'none':
+            raise Exception('UQ method is not specified')
+        elif args.UQ_method == 'MC_dropout':
+            if args.num_forward_passes == 0:
+                raise Exception('num_forward_passes is not specified')
+            elif args.num_ensemble_models != 0:
+                raise Exception('num_ensemble_models should not be set for MC_dropout')
+            if args.step != '4':
+                raise Exception('MC_dropout is only available for testing')
+        elif args.UQ_method == 'ensemble':
+            if args.num_ensemble_models == 0:
+                raise Exception('num_ensemble_models is not specified')
+            elif args.num_forward_passes != 0:
+                raise Exception('num_forward_passes should not be set for ensemble')
+        
+        print(f'UQ enabled - method : {args.UQ_method} | step : {args.step}')
+        if args.UQ_method == 'ensemble':
+            print(f'num_ensemble_models : {args.num_ensemble_models}')
+            if args.step == '2':
+                args.distributed = False
+                print('distributed set False due to manual distributed setting in ensemble method')
+        elif args.UQ_method == 'MC_dropout':
+            print(f'num_forward_passes : {args.num_forward_passes}')
 
     # DDP initialization
     init_distributed(args)
@@ -296,11 +416,16 @@ if __name__ == '__main__':
         phase_num = '4'
         if args.UQ:
             model_weights_path = args.UQ_model_weights_path
-            if args.UQ_method == 'none':
-                raise Exception('UQ method is not specified')
-            print('UQ enabled')
         test(args, phase_num, model_weights_path)
     else:
         print(f'starting phase{step}: {task}')
-        run_phase(args,model_weights_path,step,task)
+        # Initiating UQ deep ensemble training
+        if args.UQ and args.UQ_method == 'ensemble':
+            if args.UQ_model_weights_path is not None:
+                model_weights_path = args.UQ_model_weights_path
+                print(f'UQ ensemble model weights loaded from {model_weights_path}')    
+            mp.set_start_method("spawn", force=True)
+            run_disributed_phase(args,model_weights_path,step,task)
+        else:
+            run_phase(args,model_weights_path,step,task)
         print(f'finishing phase{step}: {task}')
