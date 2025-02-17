@@ -6,7 +6,4 @@ MBBN-main/slurm
 MBBN-main/failed_experiments
 ENIGMA-OCD results/QC/carpet_plots
 ENIGMA-OCD results/QC/ENIGMA_QC_FC_data.csv
-MBBN-main/wandb
-__pycache__/
-.ipynb_checkpoints/
-*.pth
+ENIGMA-OCD results/QC/Nothing.ipynb

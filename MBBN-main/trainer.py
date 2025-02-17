@@ -206,7 +206,10 @@ class Trainer():
                 
         elif self.task.lower() == 'mbbn_pretraining':
             if self.fmri_dividing_type == 'three_channels':
-                self.model = Transformer_Finetune_Three_Channels(**self.kwargs)
+                # self.model = Transformer_Finetune_Three_Channels(**self.kwargs)
+                self.model = Transformer_Reconstruction_Three_Channels(**self.kwargs)  # DEBUG
+            elif self.fmri_dividing_type == 'four_channels':       
+                self.model = Transformer_Reconstruction_Four_Channels(**self.kwargs)
          
         elif self.task.lower() == 'divfreqbert_reconstruction':
             self.model = Transformer_Reconstruction_Three_Channels (**self.kwargs)
@@ -412,7 +415,8 @@ class Trainer():
             self.optimizer.zero_grad()
             if self.amp:
                 torch.cuda.nvtx.range_push("forward pass")
-                with autocast():
+                # with autocast():
+                with torch.autocast(device_type="cuda", dtype=torch.bfloat16):  # for speed up
                     loss_dict, loss = self.forward_pass(input_dict)
                 torch.cuda.nvtx.range_pop()
                 loss = loss / self.accumulation_steps # gradient accumulation
@@ -427,10 +431,18 @@ class Trainer():
                         # print('executing gradient clipping')
                         torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=1, error_if_nonfinite=False)
 
+                    # self.scaler.step(self.optimizer)
+                    # scale = self.scaler.get_scale()
+                    # self.scaler.update()
+                    # skip_lr_sched = (scale > self.scaler.get_scale())
+
+                    ##### for speed up #####
+                    scale_before_update = self.scaler.get_scale() 
                     self.scaler.step(self.optimizer)
-                    scale = self.scaler.get_scale()
                     self.scaler.update()
-                    skip_lr_sched = (scale > self.scaler.get_scale())
+                    skip_lr_sched = (scale_before_update > self.scaler.get_scale())
+                    ########################
+
                 if not skip_lr_sched:
                     self.lr_handler.schedule_check_and_update(self.optimizer) 
             else:
@@ -453,7 +465,8 @@ class Trainer():
                 # print(f"Batch {batch_idx + 1}/{len(loader)} class distribution: {dict(zip(*np.unique(y_true, return_counts=True)))}")
                 #######################
                 
-                with autocast():
+                # with autocast():
+                with torch.autocast(device_type="cuda", dtype=torch.bfloat16): # for speed up
                     loss_dict, _ = self.forward_pass(input_dict)
                 self.writer.write_losses(loss_dict, set=set)
                 if self.profiling == True:
@@ -473,9 +486,8 @@ class Trainer():
         
         ### DEBUT STATEMENT ###
         input_dict = {
-            k: (
-                v.to(self.device) if (self.cuda and torch.is_tensor(v)) else v
-            ) for k, v in input_dict.items()
+            k: (v.to(self.device).to(dtype=torch.bfloat16) if (self.cuda and torch.is_tensor(v)) else v) 
+            for k, v in input_dict.items()
         }
         for k, v in input_dict.items():
             if torch.is_tensor(v):
@@ -565,7 +577,8 @@ class Trainer():
                     
                 lamda = current_loss_dict['factor']
                 factored_loss = current_loss_value * lamda
-                final_loss_dict[loss_name] = factored_loss.item()
+                # final_loss_dict[loss_name] = factored_loss.item()
+                final_loss_dict[loss_name] = float(factored_loss.detach())  # for speed up
                 final_loss_value += factored_loss
                 
         ### DEBUG STATEMENT ###
@@ -573,7 +586,8 @@ class Trainer():
         # print(f"Weighted {loss_name}: {factored_loss.item()}")
         #######################
         
-        final_loss_dict['total'] = final_loss_value.item()
+        # final_loss_dict['total'] = final_loss_value.item()
+        final_loss_dict['total'] = float(final_loss_value.detach())  # for speed up
         
         ### DEBUG STATEMENT ###
         # print(f"Total aggregated loss: {final_loss_value.item()}")
@@ -739,7 +753,7 @@ class Trainer():
                                                                     output_dict['reconstructed_imf4_fmri_sequence'])
             
                     
-            reconstruction_loss = reconstruction_loss_high + reconstruction_loss_low + reconstruction_loss_ultralow
+            reconstruction_loss = reconstruction_loss_imf1 + reconstruction_loss_imf2 + reconstruction_loss_imf3 + reconstruction_loss_imf4
 
         elif self.fmri_dividing_type == 'three_channels':
             fmri_highfreq_sequence = input_dict['fmri_highfreq_sequence']
@@ -773,6 +787,7 @@ class Trainer():
         return spatial_difference_loss
    
     def compute_mask(self, input_dict, output_dict):
+        
         if self.fmri_dividing_type == 'four_channels':    
             fmri_imf1_sequence = input_dict['fmri_imf1_sequence']
             fmri_imf2_sequence = input_dict['fmri_imf2_sequence']          
@@ -964,7 +979,8 @@ class Trainer():
             # print(f"i: {i}, subj: {subj}")
             #######################
             
-            subject = str(subj.item())
+            # subject = str(subj.item())
+            subject = f"{subj.detach()}"  # for speed up
             
             ### DEGUB STATEMENT ###
             # print(f"compute_accuracy subject:{subject}")

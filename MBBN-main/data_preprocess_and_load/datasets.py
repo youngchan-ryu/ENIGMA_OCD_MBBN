@@ -73,16 +73,17 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
         self.meta_data = pd.read_csv(os.path.join(kwargs.get('base_path'),'data','metadata','ENIGMA_QC_final_subject_list.csv'))
         self.subject_names = os.listdir(self.data_dir)  
         self.subject_folders = []
+
+        valid_sub = os.listdir(kwargs.get('enigma_path'))
         
         # removing samples whose target value is NaN.
         if self.target == 'OCD':         
             non_na = self.meta_data[['Unique_ID', 'OCD']].dropna(axis=0)
             subjects = list(non_na['Unique_ID'])
             subjects = list(map(str, subjects))    # convert subject IDs to strings
-                
-        else:
-            non_na = self.meta_data[['Unique_ID', self.target]].dropna(axis=0)
-            
+        elif self.target == 'reconstruction':
+            subjects = valid_sub
+        
         data_list = []
 
         for sub in os.listdir(self.data_dir):
@@ -106,9 +107,13 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
             if subid in valid_sub:
                 if self.target == 'OCD':
                     target = non_na.loc[non_na['Unique_ID']==subid, 'OCD'].values[0]
-                target = 0.0 if target == 2 else 1.0
-                target = torch.tensor(target)
-                
+                    target = 0.0 if target == 2 else 1.0
+                    # target = torch.tensor(target)
+                    target = torch.tensor(target, dtype=torch.bfloat16)  # for speed up
+                elif self.target == 'reconstruction':
+                    # target = torch.tensor(0)
+                    target = torch.tensor(0, dtype=torch.bfloat16)  # for speed up
+
                 # ################################################################
                 # ######################## DEBUG STATEMENT #######################
                 # TR = repetition_time(site)
@@ -164,7 +169,8 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
             y = np.load(path_to_fMRIs)[-self.sequence_length:].T # [ROI, seq_len]   # takes the last sequence_length frames
         elif self.seq_part=='head':
             # y = np.load(path_to_fMRIs)[20:20+self.sequence_length].T # [ROI, seq_len]   # takes a sequence starting from index 20
-            y = np.load(path_to_fMRIs)[20:].T  # FOR SEQUENCE LENGTH PADDING EXPERIMENT
+            # y = np.load(path_to_fMRIs)[20:].T  # FOR SEQUENCE LENGTH PADDING EXPERIMENT
+            y = np.load(path_to_fMRIs, mmap_mode="r")[20:].T   # for speed up
         
         if y.shape[1] > self.sequence_length:
             y = y[:, :self.sequence_length]
@@ -407,9 +413,9 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 tau = 3.5
 
                 # VMD
-                u, _, _ = VMD(f, alpha, tau, K, DC, init, tol)
+                u, _, omega = VMD(f, alpha, tau, K, DC, init, tol)
 
-                band_cutoffs = compute_imf_bandwidths(u, 1/TR)
+                band_cutoffs = compute_imf_bandwidths(u, omega, 1/TR)
                 
                 if band_cutoffs['imf1_lb'] > band_cutoffs['imf1_hb']:
                     raise ValueError(f"band_cutoffs['imf1_lb'] {band_cutoffs['imf1_lb']} is larger than band_cutoffs['imf1_hb'] {band_cutoffs['imf1_hb']} for subject {subj_name}")
@@ -492,46 +498,53 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 tau = 3.5
 
                 # VMD
-                u, _, _ = VMD(f, alpha, tau, K, DC, init, tol)
+                u, _, omega = VMD(f, alpha, tau, K, DC, init, tol)
 
-                band_cutoffs = compute_imf_bandwidths(u, 1/TR)
+                band_cutoffs = compute_imf_bandwidths(u, omega, 1/TR)
                 
-                if band_cutoffs['imf4_lb'] > band_cutoffs['imf4_hb']:
-                    raise ValueError(f"band_cutoffs['imf4_lb'] {band_cutoffs['imf4_lb']} is larger than band_cutoffs['imf4_hb'] {band_cutoffs['imf4_hb']} for subject {subj_name}")
-                elif band_cutoffs['imf4_lb'] == band_cutoffs['imf4_hb']:
+                if band_cutoffs['imf1_lb'] > band_cutoffs['imf1_hb']:
+                    raise ValueError(f"band_cutoffs['imf1_lb'] {band_cutoffs['imf1_lb']} is larger than band_cutoffs['imf1_hb'] {band_cutoffs['imf1_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf1_lb'] == band_cutoffs['imf1_hb']:
                     imf1 = np.zeros((y.shape[0], y.shape[1]))
                 else:
-                    imf1 = bandpass_filter_2d(y, band_cutoffs['imf4_lb'], band_cutoffs['imf4_hb'], 1/TR)
+                    imf1 = bandpass_filter_2d(y, band_cutoffs['imf1_lb'], band_cutoffs['imf1_hb'], 1/TR)
                     imf1 = stats.zscore(imf1, axis=1)
-
-                if band_cutoffs['imf3_lb'] > band_cutoffs['imf3_hb']:
-                    raise ValueError(f"band_cutoffs['imf3_lb'] {band_cutoffs['imf3_lb']} is larger than band_cutoffs['imf3_hb'] {band_cutoffs['imf3_hb']} for subject {subj_name}")
-                elif band_cutoffs['imf3_lb'] == band_cutoffs['imf3_hb']:
-                    imf2 = np.zeros((y.shape[0], y.shape[1]))
-                else:
-                    imf2 = bandpass_filter_2d(y, band_cutoffs['imf3_lb'], band_cutoffs['imf3_hb'], 1/TR)
-                    imf2 = stats.zscore(imf2, axis=1)
 
                 if band_cutoffs['imf2_lb'] > band_cutoffs['imf2_hb']:
                     raise ValueError(f"band_cutoffs['imf2_lb'] {band_cutoffs['imf2_lb']} is larger than band_cutoffs['imf2_hb'] {band_cutoffs['imf2_hb']} for subject {subj_name}")
                 elif band_cutoffs['imf2_lb'] == band_cutoffs['imf2_hb']:
+                    imf2 = np.zeros((y.shape[0], y.shape[1]))
+                else:
+                    imf2 = bandpass_filter_2d(y, band_cutoffs['imf2_lb'], band_cutoffs['imf2_hb'], 1/TR)
+                    imf2 = stats.zscore(imf2, axis=1)
+
+                if band_cutoffs['imf3_lb'] > band_cutoffs['imf3_hb']:
+                    raise ValueError(f"band_cutoffs['imf3_lb'] {band_cutoffs['imf3_lb']} is larger than band_cutoffs['imf3_hb'] {band_cutoffs['imf3_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf3_lb'] == band_cutoffs['imf3_hb']:
                     imf3 = np.zeros((y.shape[0], y.shape[1]))
                 else:
-                    imf3 = bandpass_filter_2d(y, band_cutoffs['imf2_lb'], band_cutoffs['imf2_hb'], 1/TR)
+                    imf3 = bandpass_filter_2d(y, band_cutoffs['imf3_lb'], band_cutoffs['imf3_hb'], 1/TR)
                     imf3 = stats.zscore(imf3, axis=1)
 
-                if band_cutoffs['imf1_lb'] > band_cutoffs['imf1_hb']:
-                    raise ValueError(f"band_cutoffs['imf1_lb'] {band_cutoffs['imf1_lb']} is larger than band_cutoffs['imf1_hb'] {band_cutoffs['imf1_hb']} for subject {subj_name}")
-                elif band_cutoffs['imf1_lb'] == band_cutoffs['imf1_hb']:
+                if band_cutoffs['imf4_lb'] > band_cutoffs['imf4_hb']:
+                    raise ValueError(f"band_cutoffs['imf4_lb'] {band_cutoffs['imf4_lb']} is larger than band_cutoffs['imf4_hb'] {band_cutoffs['imf4_hb']} for subject {subj_name}")
+                elif band_cutoffs['imf4_lb'] == band_cutoffs['imf4_hb']:
                     imf4 = np.zeros((y.shape[0], y.shape[1]))
                 else:
-                    imf4 = bandpass_filter_2d(y, band_cutoffs['imf1_lb'], band_cutoffs['imf1_hb'], 1/TR)
+                    imf4 = bandpass_filter_2d(y, band_cutoffs['imf4_lb'], band_cutoffs['imf4_hb'], 1/TR)
                     imf4 = stats.zscore(imf4, axis=1)
 
-                imf1 = F.pad(torch.from_numpy(imf1), (0, pad), "constant", 0).T.float()
-                imf2 = F.pad(torch.from_numpy(imf2), (0, pad), "constant", 0).T.float()
-                imf3 = F.pad(torch.from_numpy(imf3), (0, pad), "constant", 0).T.float()
-                imf4 = F.pad(torch.from_numpy(imf4), (0, pad), "constant", 0).T.float()
+                # imf1 = F.pad(torch.from_numpy(imf1), (0, pad), "constant", 0).T.float()
+                # imf2 = F.pad(torch.from_numpy(imf2), (0, pad), "constant", 0).T.float()
+                # imf3 = F.pad(torch.from_numpy(imf3), (0, pad), "constant", 0).T.float()
+                # imf4 = F.pad(torch.from_numpy(imf4), (0, pad), "constant", 0).T.float()
+
+                ##### for speed up ##### 
+                imf1 = F.pad(torch.from_numpy(imf1), (0, pad), "constant", 0).T.to(dtype=torch.bfloat16)
+                imf2 = F.pad(torch.from_numpy(imf2), (0, pad), "constant", 0).T.to(dtype=torch.bfloat16)
+                imf3 = F.pad(torch.from_numpy(imf3), (0, pad), "constant", 0).T.to(dtype=torch.bfloat16)
+                imf4 = F.pad(torch.from_numpy(imf4), (0, pad), "constant", 0).T.to(dtype=torch.bfloat16)
+                ########################
 
                 """
                 VMD with fixed cutoffs
@@ -608,13 +621,19 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 #         f = f[:-1]
 
                 #     # Run actual VMD code
-                #     u, _, _ = VMD(f, alpha, tau, K, DC, init, tol)
+                #     u, _, omega = VMD(f, alpha, tau, K, DC, init, tol)
+
+                #     # Extract final center frequencies from last iteration
+                #     sorted_indices = np.argsort(omega[-1])  # Sorting indices in ascending order
+
+                #     # Reorder IMFs according to sorted omega
+                #     u_sorted = u[sorted_indices, :]
 
                 #     # add the ROI modes to the total IMFs
-                #     imf1[roi, :len(f)] = u[0, :]
-                #     imf2[roi, :len(f)] = u[1, :]
-                #     imf3[roi, :len(f)] = u[2, :]
-                #     imf4[roi, :len(f)] = u[3, :]
+                #     imf1[roi, :len(f)] = u_sorted[0, :]
+                #     imf2[roi, :len(f)] = u_sorted[1, :]
+                #     imf3[roi, :len(f)] = u_sorted[2, :]
+                #     imf4[roi, :len(f)] = u_sorted[3, :]
 
                 # imf1 = torch.from_numpy(imf1).T.float()
                 # imf2 = torch.from_numpy(imf2).T.float()
@@ -658,9 +677,9 @@ class ENIGMA_OCD_fMRI_timeseries(BaseDataset):
                 tau = 3.5
 
                 # VMD
-                u, _, _ = VMD(f, alpha, tau, K, DC, init, tol)
+                u, _, omega = VMD(f, alpha, tau, K, DC, init, tol)
 
-                band_cutoffs = compute_imf_bandwidths(u, 1/TR)
+                band_cutoffs = compute_imf_bandwidths(u, omega, 1/TR)
                 
                 if band_cutoffs['imf1_lb'] > band_cutoffs['imf1_hb']:
                     raise ValueError(f"band_cutoffs['imf1_lb'] {band_cutoffs['imf1_lb']} is larger than band_cutoffs['imf1_hb'] {band_cutoffs['imf1_hb']} for subject {subj_name}")
