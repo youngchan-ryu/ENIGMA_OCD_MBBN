@@ -8,7 +8,6 @@ from trainer import Trainer
 import os
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 from pathlib import Path
-from uncertainty import UQWriter
 
 ## YC : CHANGED
 import torch
@@ -21,6 +20,7 @@ from pathlib import Path
 import argparse
 import sys
 
+from uncertainty import UQWriter
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve
 from tqdm import tqdm
@@ -82,7 +82,7 @@ class UQTrainer(Trainer):
 
         return model
 
-    ## YC : CHANGED
+    ## YC : CHANGED --- 
     def save_checkpoint_(self, epoch, batch_idx, scaler):
         model_idx = self.model_idx
 
@@ -94,6 +94,7 @@ class UQTrainer(Trainer):
         val_MAE = self.get_last_MAE()
         val_threshold = self.get_last_val_threshold()
 
+        # Okay not to be implemented - check at __init__ of Trainer
         if self.UQ_method == 'ensemble':
             if model_idx is None:
                 raise ValueError("model_idx must be provided for ensemble method.")
@@ -336,14 +337,14 @@ class UQTrainer(Trainer):
                 
         return loss_dict, loss
         
-    def move_batch_to_cpu(self, batch_dict):
-        new_dict = {}
-        for key, value in batch_dict.items():
-            if torch.is_tensor(value):
-                new_dict[key] = value.detach().cpu()
-            else:
-                new_dict[key] = value
-        return new_dict
+    # def move_batch_to_cpu(self, batch_dict):
+    #     new_dict = {}
+    #     for key, value in batch_dict.items():
+    #         if torch.is_tensor(value):
+    #             new_dict[key] = value.detach().cpu()
+    #         else:
+    #             new_dict[key] = value
+    #     return new_dict
 
     def eval_UQ_epoch(self,set):  # evaluates the model for a single epoch
         loader = self.test_loader

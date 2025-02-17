@@ -1,4 +1,0 @@
-==========All samples evaluated==========
-Expected Calibration Error: 0.03068626971001842
-Maximum Calibration Error: 0.04176662365595496
-False Acceptance Rate at 95% Recall: 0.9419354838709677 (threshold: 0.5021622776985168)

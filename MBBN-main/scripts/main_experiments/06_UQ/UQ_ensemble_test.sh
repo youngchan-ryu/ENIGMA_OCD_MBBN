@@ -1,27 +1,18 @@
 #!/bin/bash
 
 ######## parameters info ########
-## --step : should be set to 4 if it is test - UQ is test either / 2 for training MBBN
+## --step : should be set to 4 if it is test - UQ is test either. 
 ## --lr_warmup_phase4 : may some error occurs if it is big
-## Required for UQ
 ## --UQ : enable UQ
 ## --UQ_method : MC_dropout or ensemble
-##
 ## If UQ_method == MC_dropout, step == 4
-## --num_forward_pass : number of forward pass for MC dropout (Should not set for ensemble)
+## --num_forward_pass : number of forward pass for MC dropout
 ## --UQ_model_weights_path : retrieve most recent checkpoint from path directory if doing UQ-dropout.
 ##     If you need to specify a specific checkpoint, please store only the checkpoint file in the directory and specify the directory path.
-##
-## If UQ_method == ensemble, step == 4
-## --num_ensemble_models : number of ensemble models (Should not set )
-## --UQ_model_weights_path : directory of saving checkpoint at training UQ-ensemble.
-##     Please specify the experiment directory which contains model_0, model_1, ... and model_{i} contains the checkpoint file.
-## --ensemble_models_per_gpu : number of ensemble models doing forward pass in one GPU at once.
-## Inference of ensemble is only done in one GPU
-## 
 ## If UQ_method == ensemble, step == 2
-## --num_ensemble_models : number of ensemble models (Should not set )
-## --UQ_model_weights_path : directory of saving checkpoint at training UQ-ensemble. Required. 
+## --num_ensemble_models : number of ensemble models
+## --UQ_model_weights_path : directory of saving checkpoint at training UQ-ensemble.
+##     Defaulted by experiment directory.
 ## --ensemble_models_per_gpu : number of ensemble models trained in one GPU at once. 
 ##     If the GPU usage is high, reduce this number, if low, increase this number for faster training.
 ## --num_UQ_gpus : number of GPUs used for training UQ-ensemble.
@@ -36,12 +27,7 @@
 ## Checkpoints of each model is saved in the experiment directory with model_{model_idx}/ directory.
 #############################
 
-######## NOTICE ########
-## 1. If you train ensemble UQ model, all models use same dataset split seed as the given seed. 
-## For model initialization seed (which is torch.seed) is different for each model.
-## model_idx = [0, 1, ..., num_ensemble_models - 1] and seed = seed + model_idx
-########################
-
+## IMPORTANT!!!
 ######## CAVEATS ########
 ## 1. If there are no split file, training with multiple GPU/processes cause error. 
 ## First use single model training to generate split files, and then use ensemble training.
@@ -49,6 +35,12 @@
 ## 2. While training multiple models, if workers_phase != 0 it may cause error - which is training is not executed at first batch training.
 ## Set workers_phase2 to 0 to avoid this error.
 ##     (May caused by multiprocessing issues)
+########################
+ 
+######## INFO ########
+## 1. If you train ensemble UQ model, all models use same dataset split seed as the given seed. 
+## For model initialization seed (which is torch.seed) is different for each model.
+## model_idx = [0, 1, ..., num_ensemble_models - 1] and seed = seed + model_idx
 ########################
 
 ######## Debugs ########
@@ -70,9 +62,9 @@ python main.py --dataset_name ENIGMA_OCD --base_path /pscratch/sd/y/ycryu/ENIGMA
 --fmri_type divided_timeseries --transformer_hidden_layers 8 \
 --seq_part head --fmri_dividing_type four_channels \
 --spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
---exp_name fourfreq_evaluation_seed11_ensemble_test --seed 11 \
+--exp_name fourfreq_evaluation_seed12_ensemble_test --seed 11 \
 --intermediate_vec 316 --num_heads 4 \
 --sequence_length_phase4 100 --lr_warmup_phase4 1 --workers_phase4 1 \
---UQ --UQ_method ensemble --num_ensemble_models 16 --UQ_model_weights_path /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_ensemble_four_ch_seed11 --ensemble_models_per_gpu 8 \
+--UQ --UQ_method ensemble --num_ensemble_models 16 --UQ_model_weights_path /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_ensemble_four_ch_seed12 --ensemble_models_per_gpu 8 \
 --wandb_mode disabled \
-2> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/uq_ensemble_seed11.log
+2> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/uq_ensemble_seed12.log
