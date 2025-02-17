@@ -11,10 +11,12 @@ from torch.cuda.amp import autocast
 from torch.utils.data import Subset, DataLoader
 from torch import nn
 
+from model import *
 from utils import *
 from trainer import Trainer
 from loss_writer import Writer
 from metrics import Metrics
+import math
 
 
 class UQWriter(Writer):
@@ -169,7 +171,6 @@ class UQWriter(Writer):
         }
 
         return mean, is_correct
-        ## /YC
 
     
     def accuracy_summary(self, mid_epoch, mean, std):
@@ -246,14 +247,131 @@ class UQWriter(Writer):
 
 
 class UQTrainer(Trainer):
-
+    # Overriding the __init__ method to include UQWriter
     def __init__(self, sets, **kwargs):
         super().__init__(sets, **kwargs)
         self.writer = UQWriter(sets, self.val_threshold, **kwargs)
+
+        # model_idx verification if ensemble training
+        if self.UQ_method == 'ensemble' and self.step == '2':
+            if self.model_idx is None:
+                raise ValueError("model_idx must be provided for ensemble method.")
+
+    # Same codebase from trainer.py/create_model but not setting self.model but returning the new model instance
+    def create_model_instance(self):
+        if self.task.lower() == 'test':
+            if self.fmri_type in ['timeseries','frequency', 'time_domain_low', 'time_domain_ultralow', 'time_domain_high', 'frequency_domain_low', 'frequency_domain_ultralow']:
+                model = Transformer_Finetune(**self.kwargs)
+            elif self.fmri_type == 'divided_timeseries':
+                if self.fmri_dividing_type == 'three_channels':                   
+                    model = Transformer_Finetune_Three_Channels(**self.kwargs)
+                elif self.fmri_dividing_type == 'two_channels':
+                    model = Transformer_Finetune_Two_Channels(**self.kwargs)
+                elif self.fmri_dividing_type == 'four_channels':       
+                    model = Transformer_Finetune_Four_Channels(**self.kwargs)
+                elif self.fmri_dividing_type == 'five_channels':                
+                    model = Transformer_Finetune_Five_Channels(**self.kwargs)
+
+        elif self.task.lower() == 'vanilla_bert':
+            model = Transformer_Finetune(**self.kwargs)
+
+        #elif self.task.lower() == 'divfreqbert':
+        elif self.task.lower() == 'mbbn':
+            if self.fmri_dividing_type == 'three_channels':                
+                model = Transformer_Finetune_Three_Channels(**self.kwargs)
+            elif self.fmri_dividing_type == 'four_channels':       
+                model = Transformer_Finetune_Four_Channels(**self.kwargs)
+            elif self.fmri_dividing_type == 'five_channels':                
+                model = Transformer_Finetune_Five_Channels(**self.kwargs)
+                
+        elif self.task.lower() == 'mbbn_pretraining':
+            if self.fmri_dividing_type == 'three_channels':
+                model = Transformer_Finetune_Three_Channels(**self.kwargs)
+         
+        elif self.task.lower() == 'divfreqbert_reconstruction':
+            model = Transformer_Reconstruction_Three_Channels (**self.kwargs)
+        total_params = sum(p.numel() for p in model.parameters())
+
+        return model
     
+    # Overriding the set_model_device method to include ensemble training
+    def set_model_device(self):  # assigns the model to appropriate devices (e.g., GPU or CPU)
+        if self.distributed:
+            # For multiprocessing distributed, DistributedDataParallel constructor
+            # should always set the single device scope, otherwise,
+            # DistributedDataParallel will use all available devices.
+            
+            ### DEBUG STATEMENT ###
+            print(f"self.gpu: {self.gpu}")
+            if self.gpu is None:
+                print("self.gpu is None")
+            #######################
+            
+            if self.gpu is not None:
+                print('id of gpu is:', self.gpu)
+                self.device = torch.device('cuda:{}'.format(self.gpu))
+                torch.cuda.set_device(self.gpu)
+                self.model.cuda(self.gpu)
+                self.model = torch.nn.parallel.DistributedDataParallel(self.model, device_ids=[self.gpu], broadcast_buffers=False, find_unused_parameters=True) 
+                net_without_ddp = self.model.module
+            else:
+                
+                ### DEBUG STATEMENT ###
+                print("Distributed training without specific GPU assignment")
+                #######################
+                
+                self.device = torch.device("cuda" if self.cuda else "cpu")
+                self.model.cuda()
+                if 'reconstruction' in self.task.lower():
+                    self.model = torch.nn.parallel.DistributedDataParallel(self.model) 
+                else: # having unused parameter (classifier token)
+                    self.model = torch.nn.parallel.DistributedDataParallel(self.model,find_unused_parameters=True) 
+                model_without_ddp = self.model.module
+
+        # manual GPU assignment for ensemble model training
+        # at ensemble training, self.distribution is False (main.py/__main__)
+        elif self.UQ and self.UQ_method == 'ensemble' and self.step == '2': # model_idx, device_id only occurs in ensemble training
+            if self.model_idx is not None and self.device_id is not None:
+                self.gpu = self.device_id
+                self.device = torch.device('cuda:{}'.format(self.device_id))
+
+                torch.cuda.set_device(self.gpu)
+                self.model = self.model.to(self.device)
+                ### DEBUG STATEMENT ###
+                print(f"ensemble device set")
+                print(f"self.model_idx: {self.model_idx}")
+                print(f"self.gpu: {self.gpu}")
+                print(f"self.device: {self.device}")
+                #######################
+            
+        else:
+            
+            ### DEBUG STATEMENT ###
+            print("Single GPU or CPU training")
+            #######################
+            
+            self.device = torch.device("cuda" if self.cuda else "cpu")
+            
+            ### DEBUG STATEMENT ###
+            print(f"self.gpu: {self.gpu}")
+            print(f"self.device: {self.device}")
+            #######################
+            
+            #self.model = DataParallel(self.model).to(self.device)
+            
+            ### DEBUG STATEMENT ###
+            self.device = torch.device("cuda:0")   # added for debugging
+            self.model = self.model.to(self.device)  
+            #######################
+            
+            ### DEBUG STATEMENT ###
+            print(f"moved model to: {self.device}")
+            #######################
+
+    # Overriding the eval method to include MC_dropout and ensemble training
     def eval(self,set):
         ## If set == 'MC_dropout', then set dropout to True
-        if set not in ['MC_dropout', 'train', 'val', 'test']:
+        if set not in ['MC_dropout', 'ensemble', 'train', 'val', 'test']:
             raise ValueError(f"Invalid set: {set}")
         self.mode = set
         if set == 'MC_dropout':
@@ -261,33 +379,22 @@ class UQTrainer(Trainer):
                 if isinstance(layer, nn.Dropout):
                     print(f"Enabling MC Dropout for layer {layer} - p={layer.p}")
                     layer.train()
-        else:
+
+        # each model in ensemble training is set model.eval() at model create time (at UQTrainer/eval_UQ_epoch)
+        elif set != 'ensemble':
             self.model = self.model.eval()
 
+    # Actually doing nothing, but just for the sake of completion
     def finish_eval(self, set):
-        if set not in ['MC_dropout', 'train', 'val', 'test']:
+        if set not in ['MC_dropout', 'ensemble', 'train', 'val', 'test']:
             raise ValueError(f"Invalid set: {set}")
         if set == 'MC_dropout':
             self.model = self.model.eval()
-
-    def concat_batch_results(self, inout_batches: list):
-        inout_keys = inout_batches[0].keys()
-        concat_inout = dict()
-        for inout in inout_batches:
-            for key in inout_keys:
-                if key not in concat_inout:
-                    concat_inout[key] = inout[key]
-                else:
-                    if isinstance(inout[key], list):
-                        concat_inout[key] += inout[key]
-                    elif isinstance(inout[key], torch.Tensor):
-                        concat_inout[key] = torch.cat((concat_inout[key], inout[key]), dim=0)
-                    else:
-                        raise ValueError(f"Invalid inout type: {type(inout[key])}")
-        
-        return concat_inout
+        if set == 'ensemble':
+            self.model = self.model.eval()
     
-    def forward_pass(self,input_dict): 
+    # Defined to get intermediate input and output of the model to calculate uncertainty
+    def model_forward_pass(self,input_dict):
         input_dict = {
             k: (
                 v.to(self.device) if (self.cuda and torch.is_tensor(v)) else v
@@ -326,28 +433,135 @@ class UQTrainer(Trainer):
                                 
         return input_dict, output_dict
 
-    def eval_epoch(self,set):  # evaluates the model for a single epoch
+    # Overriding the forward_pass method seperating model_forward_pass
+    def forward_pass(self,input_dict): 
+        input_dict, output_dict = self.model_forward_pass(input_dict)
+        
+        torch.cuda.nvtx.range_push("aggregate_losses")
+        loss_dict, loss = self.aggregate_losses(input_dict, output_dict)
+        
+        torch.cuda.nvtx.range_pop()
+        if self.task.lower() in ['vanilla_bert', 'mbbn', 'mbbn_pretraining', 'test']:
+            if self.target != 'reconstruction':
+                self.compute_accuracy(input_dict, output_dict)
+                
+        return loss_dict, loss
+
+    # Defined eval_UQ_epoch not to interfere with the original eval_epoch
+    def eval_UQ_epoch(self,set):
         loader = self.test_loader
-        subset_indices = list(range(len(self.test_loader.dataset))) * self.num_forward_passes
-        subset = Subset(self.test_loader.dataset, subset_indices)
-        loader = DataLoader(subset, batch_size=8, shuffle=False, num_workers=0)
-        subject_names = [data['subject_name'] for data in loader.dataset]
 
-        self.eval(set)
-        input_batches = []
-        output_batches = []
-        with torch.no_grad():
-            for batch_idx, input_dict in enumerate(tqdm(loader, position=0, leave=True)):
-                with autocast():
-                    input_dict, output_dict = self.forward_pass(input_dict)
-                    input_batches.append(input_dict)
-                    output_batches.append(output_dict)
+        if set == 'MC_dropout':
+            # make dataset to be repeated for num_forward_passes times
+            subset_indices = list(range(len(self.test_loader.dataset))) * self.num_forward_passes
+            subset = Subset(self.test_loader.dataset, subset_indices)
+            loader = DataLoader(subset, batch_size=8, shuffle=False, num_workers=8)
 
-        self.finish_eval(set)
-        return input_batches, output_batches
+            # and then just regular evaluation
+            self.eval(set)
+            with torch.no_grad():
+                for batch_idx, input_dict in enumerate(tqdm(loader, position=0, leave=True)):
+                    with autocast():
+                        input_dict, output_dict = self.model_forward_pass(input_dict)
+                        self.compute_accuracy(input_dict, output_dict)
+            self.finish_eval(set)
+        
+        elif set == 'ensemble':
+            base_dir = self.UQ_model_weights_path
+            num_ensemble_models = self.num_ensemble_models
+            num_models_per_gpu = self.ensemble_models_per_gpu
 
-    def testing(self):  # manages the testing phase of the model
-        # options = ['MC_dropout']
+            # get model weights path of num_ensemble_models models
+            checkpoint_dirs = []
+            model_index_dirs = [os.path.join(base_dir, f'{idx}') for idx in next(os.walk(base_dir))[1]]
+            model_index_dirs = sorted(model_index_dirs, key=lambda x: int(x.split('_')[-1]))
+            for idx_dir in model_index_dirs:
+                temp_checkpoints = []
+                for f in os.listdir(idx_dir):
+                    if f.endswith('.pth'):
+                        path = os.path.join(idx_dir, f)
+                        written_time = os.path.getctime(path)
+                        temp_checkpoints.append((path, written_time))
+                temp_checkpoints = sorted(temp_checkpoints, key=lambda x: x[1], reverse=True)
+                checkpoint_dirs.append(temp_checkpoints[0][0])
+            
+            # model weights validation check
+            if len(checkpoint_dirs) == 0:
+                raise Exception('No model weights found')
+            elif len(checkpoint_dirs) < num_ensemble_models:
+                raise Exception(f'Not enough models found - num_ensemble_models: {num_ensemble_models} / found: {len(checkpoint_dirs)}')
+            elif len(checkpoint_dirs) > num_ensemble_models:
+                print(f'Too many models found - num_ensemble_models: {num_ensemble_models} / found: {len(checkpoint_dirs)}')
+                checkpoint_dirs = checkpoint_dirs[:num_ensemble_models]
+
+            print(f"Using {len(checkpoint_dirs)} models for ensemble training")
+            for checkpoint_dir in checkpoint_dirs:
+                print(checkpoint_dir)
+            
+            # evaluation set - actually do nothing
+            self.eval(set)
+
+            # load dataset
+            loader = self.test_loader
+            num_groups = math.ceil(num_ensemble_models / num_models_per_gpu)
+
+            # iterate {num_group} times with {num_models_per_gpu} models in parallel
+            for group_idx in range(num_groups):
+                start_idx = group_idx * num_models_per_gpu
+                end_idx = min((group_idx + 1) * num_models_per_gpu, num_ensemble_models)
+                print(f"Testing using ensemble models {start_idx} to {end_idx - 1}")
+
+                # load 
+                group_models = []
+                for idx in range(start_idx, end_idx):
+                    model = self.create_model_instance()
+                    state_dict = torch.load(checkpoint_dirs[idx], map_location='cpu')
+
+                    # YC : I don't know why this code needed but it was defined like this at trainer.py
+                    if self.transfer_learning:
+                        model.load_partial_state_dict(state_dict['model_state_dict'], load_cls_embedding=False)
+                    else:
+                        model.load_state_dict(state_dict['model_state_dict'])
+                    model.loaded_model_weights_path = checkpoint_dirs[idx]
+                    model = model.to(self.device)
+                    model = model.eval()
+                    group_models.append(model)
+
+                # inferencing {num_models_per_gpu} models in parallel in a single GPU using stream
+                streams = [torch.cuda.Stream(device=self.device) for _ in range(len(group_models))]
+                
+                with torch.no_grad():
+                    for batch_idx, input_dict in enumerate(tqdm(loader, position=0, leave=True)):
+                        for idx, model in enumerate(group_models):
+                            with torch.cuda.stream(streams[idx]):
+                                with autocast():
+                                    input_dict, output_dict = self.model_forward_pass(input_dict)
+                                    self.compute_accuracy(input_dict, output_dict)
+
+                        for stream in streams:
+                            stream.synchronize()
+
+                # free gpu memory after inference
+                for model in group_models:
+                    model.to('cpu')
+                torch.cuda.empty_cache()
+
+            # Validation check (if all num_ensemble_models forward passes are done) and remove invalid keys (that are not evaluated fully)
+            invalid_keys = []
+            for key in self.writer.subject_accuracy.keys():
+                if self.writer.subject_accuracy[key]['count'] != num_ensemble_models:
+                    invalid_keys.append(key)
+            for key in invalid_keys:
+                del self.writer.subject_accuracy[key]
+            
+            self.finish_eval(set)
+
+
+    # Overriding the testing method for UQ evaluation
+    def testing(self, method):  # manages the testing phase of the model
+        # method_options = ['MC_dropout', 'ensemble'] # valid check in self.eval()
+        
+        # Initialize files
         roc_save_path = os.path.join(self.kwargs.get("experiment_folder"), 'roc_curve.png')
         stat_save_path = os.path.join(self.kwargs.get("experiment_folder"), 'statistics.txt')
         samp_stat_save_path = os.path.join(self.kwargs.get("experiment_folder"), 'sample_statistics.txt')
@@ -358,10 +572,8 @@ class UQTrainer(Trainer):
         if os.path.exists(samp_stat_save_path):
             os.remove(samp_stat_save_path)
 
-        input_batches, output_batches = self.eval_epoch('MC_dropout')
-        inputs = self.concat_batch_results(input_batches)
-        outputs = self.concat_batch_results(output_batches)
+        self.eval_UQ_epoch(method)
 
-        self.compute_accuracy(inputs, outputs)
+        # Calculate statistics and save results to the files above
         self.writer.accuracy_summary(mid_epoch=False, mean=None, std=None)
         self.writer.compute_confidence(self.writer.confidence_list, self.writer.is_correct_list)
