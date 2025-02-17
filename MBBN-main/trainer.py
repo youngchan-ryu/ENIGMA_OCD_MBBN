@@ -340,8 +340,7 @@ class Trainer():
                     #wandb
                     if self.rank == 0: # YC : Only save checkpoint for rank 0 gpu process
                         self.writer.register_wandb(epoch, lr=self.optimizer.param_groups[0]['lr'])
-                        if epoch % 5 == 0:
-                            self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)
+                        self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)
                     
                 else:
                     self.eval_epoch('val')
@@ -386,8 +385,7 @@ class Trainer():
                 #wandb
                 if self.rank == 0: # YC : Only save checkpoint for rank 0 gpu process
                     self.writer.register_wandb(epoch, lr=self.optimizer.param_groups[0]['lr'])
-                    if epoch % 5 == 0:
-                        self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)
+                    self.save_checkpoint_(epoch, len(self.train_loader), self.scaler)
 
                 end = time.time()
 
