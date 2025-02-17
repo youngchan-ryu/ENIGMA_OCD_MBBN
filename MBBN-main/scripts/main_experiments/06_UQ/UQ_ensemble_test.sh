@@ -1,18 +1,27 @@
 #!/bin/bash
 
 ######## parameters info ########
-## --step : should be set to 4 if it is test - UQ is test either. 
+## --step : should be set to 4 if it is test - UQ is test either / 2 for training MBBN
 ## --lr_warmup_phase4 : may some error occurs if it is big
+## Required for UQ
 ## --UQ : enable UQ
 ## --UQ_method : MC_dropout or ensemble
+##
 ## If UQ_method == MC_dropout, step == 4
-## --num_forward_pass : number of forward pass for MC dropout
+## --num_forward_pass : number of forward pass for MC dropout (Should not set for ensemble)
 ## --UQ_model_weights_path : retrieve most recent checkpoint from path directory if doing UQ-dropout.
 ##     If you need to specify a specific checkpoint, please store only the checkpoint file in the directory and specify the directory path.
-## If UQ_method == ensemble, step == 2
-## --num_ensemble_models : number of ensemble models
+##
+## If UQ_method == ensemble, step == 4
+## --num_ensemble_models : number of ensemble models (Should not set )
 ## --UQ_model_weights_path : directory of saving checkpoint at training UQ-ensemble.
-##     Defaulted by experiment directory.
+##     Please specify the experiment directory which contains model_0, model_1, ... and model_{i} contains the checkpoint file.
+## --ensemble_models_per_gpu : number of ensemble models doing forward pass in one GPU at once.
+## Inference of ensemble is only done in one GPU
+## 
+## If UQ_method == ensemble, step == 2
+## --num_ensemble_models : number of ensemble models (Should not set )
+## --UQ_model_weights_path : directory of saving checkpoint at training UQ-ensemble. Required. 
 ## --ensemble_models_per_gpu : number of ensemble models trained in one GPU at once. 
 ##     If the GPU usage is high, reduce this number, if low, increase this number for faster training.
 ## --num_UQ_gpus : number of GPUs used for training UQ-ensemble.
@@ -54,38 +63,16 @@
 ########################
 
 ## ENIGMA-OCD - labserver
-python main.py --dataset_name ENIGMA_OCD --base_path /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main --enigma_path /scratch/connectome/ycryu/MBBN_data \
---step 2 --batch_size_phase2 8 --lr_init_phase2 3e-5 --lr_policy_phase2 step \
---workers_phase2 0 --fine_tune_task binary_classification --target OCD \
---fmri_type divided_timeseries --transformer_hidden_layers 8 \
---divide_by_lorentzian --seq_part head --use_raw_knee --fmri_dividing_type three_channels --use_high_freq \
---spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
---exp_name ensemble_training_from_scratch_seed101 --seed 101 --sequence_length_phase2 100 \
---intermediate_vec 316 --nEpochs_phase2 10 --num_heads 4 \
---UQ --UQ_method ensemble --num_ensemble_models 16 --ensemble_models_per_gpu 2 --num_UQ_gpus 8  \
-2> /scratch/connectome/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error_from_scratch_seed101.log
 
 ## ENIGMA-OCD - perlmutter
-# salloc -A m4750_g -C gpu -q interactive -t 1:00:00 -N 1 --gpus 4
 python main.py --dataset_name ENIGMA_OCD --base_path /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main --enigma_path /pscratch/sd/y/ycryu/MBBN_data \
---step 2 --batch_size_phase2 8 --lr_init_phase2 3e-5 --lr_policy_phase2 step \
---workers_phase2 0 --fine_tune_task binary_classification --target OCD \
---fmri_type divided_timeseries --transformer_hidden_layers 8 \
---divide_by_lorentzian --seq_part head --use_raw_knee --fmri_dividing_type three_channels --use_high_freq \
---spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
---exp_name ensemble_training_from_scratch_seed101 --seed 101 --sequence_length_phase2 100 \
---intermediate_vec 316 --nEpochs_phase2 10 --num_heads 4 \
---UQ --UQ_method ensemble --num_ensemble_models 4 --ensemble_models_per_gpu 1 --num_UQ_gpus 4 \
-2> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error_ensemble_from_scratch_seed101.log
-
-## Full version
-python main.py --dataset_name ENIGMA_OCD --base_path /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main --enigma_path /pscratch/sd/y/ycryu/MBBN_data \
---step 2 --batch_size_phase2 8 --lr_init_phase2 3e-5 --lr_policy_phase2 step \
---workers_phase2 0 --fine_tune_task binary_classification --target OCD \
+--step 4 --fine_tune_task binary_classification --target OCD \
 --fmri_type divided_timeseries --transformer_hidden_layers 8 \
 --seq_part head --fmri_dividing_type four_channels \
 --spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
---exp_name ensemble_four_ch_seed11 --seed 11 --sequence_length_phase2 100 \
---intermediate_vec 316 --nEpochs_phase2 100 --num_heads 4 \
---UQ --UQ_method ensemble --num_ensemble_models 16 --ensemble_models_per_gpu 4 --num_UQ_gpus 4  \
-2> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error_four_ensemble_11.log
+--exp_name fourfreq_evaluation_seed11_ensemble_test --seed 11 \
+--intermediate_vec 316 --num_heads 4 \
+--sequence_length_phase4 100 --lr_warmup_phase4 1 --workers_phase4 1 \
+--UQ --UQ_method ensemble --num_ensemble_models 16 --UQ_model_weights_path /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_ensemble_four_ch_seed11 --ensemble_models_per_gpu 8 \
+--wandb_mode disabled \
+2> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/uq_ensemble_seed11.log

@@ -64,6 +64,6 @@ python main.py --dataset_name ENIGMA_OCD --base_path /pscratch/sd/y/ycryu/ENIGMA
 --fmri_type divided_timeseries --transformer_hidden_layers 8 \
 --seq_part head --fmri_dividing_type four_channels \
 --spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
---exp_name vmd_four_ch_seed1 --seed 11 --sequence_length_phase2 100 \
+--exp_name vmd_four_ch_seed11_test --seed 11 --sequence_length_phase2 100 \
 --intermediate_vec 316 --nEpochs_phase2 100 --num_heads 4 \
 2> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/failed_experiments/enigma_ocd_error_four_11.log
