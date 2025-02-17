@@ -78,7 +78,7 @@ def repetition_time(site):
     return TR
 
 
-def compute_imf_bandwidths(u, fs, threshold=0.05):
+def compute_imf_bandwidths(u, omega, fs, threshold=0.05):
     """
     Compute the bandwidths of IMFs using the Fourier spectrum directly from VMD output.
     
@@ -99,9 +99,15 @@ def compute_imf_bandwidths(u, fs, threshold=0.05):
     positive_freqs = freqs[:N//2]  # Keep only positive frequencies
     band_cutoffs = {}
 
+    # Extract the final center frequencies and sort them in ascending order
+    sorted_indices = np.argsort(omega[-1])  # Sorting indices for ascending order
+
+    # Reorder IMFs
+    u_sorted = u[sorted_indices, :] 
+
     for k in range(K):
-        # Compute the Fourier Transform of the IMF
-        U_k = np.fft.fft(u[k, :])
+        # Compute the Fourier Transform of the ordered IMF
+        U_k = np.fft.fft(u_sorted[k, :])
         power_spectrum = np.abs(U_k) ** 2
 
         # Normalize power and apply threshold
