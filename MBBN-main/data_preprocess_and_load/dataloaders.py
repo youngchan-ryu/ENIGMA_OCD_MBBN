@@ -31,7 +31,8 @@ class DataHandler():  # primary class for dataset management (initialization, pr
         self.finetune = kwargs.get('finetune')  ## ADDED
         self.seq_len = kwargs.get('sequence_length')
         self.intermediate_vec = kwargs.get('intermediate_vec')  # dimentionality of intermediate vectors (e.g., number of ROIs)
-        self.seed = kwargs.get('seed')  # random seed for reproducibility
+        # self.seed = kwargs.get('seed')  # random seed for reproducibility
+        self.seed = 1
         self.fmri_dividing_type = kwargs.get('fmri_dividing_type')  # ADDED
         self.fmri_type = kwargs.get('fmri_type')  # ADDED
         reproducibility(**self.kwargs)

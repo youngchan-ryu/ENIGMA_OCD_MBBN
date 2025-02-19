@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EXP_NAME="train_16_model_seed_201_ensemble_4gpu"
+EXP_NAME="train_16_model_seed_301_data_1"
 
 module load conda
 module load cudnn/9.1.0
@@ -16,8 +16,8 @@ python main.py --dataset_name ENIGMA_OCD --base_path /pscratch/sd/y/ycryu/ENIGMA
 --fmri_type divided_timeseries --transformer_hidden_layers 8 \
 --seq_part head --fmri_dividing_type four_channels \
 --spatiotemporal --spat_diff_loss_type minus_log --spatial_loss_factor 4.0 \
---exp_name ${EXP_NAME} --seed 201 --sequence_length_phase2 100 \
+--exp_name ${EXP_NAME} --seed 301 --sequence_length_phase2 100 \
 --intermediate_vec 316 --nEpochs_phase2 250 --num_heads 4 \
 --UQ --UQ_method ensemble --num_ensemble_models 16 --ensemble_models_per_gpu 4 --num_UQ_gpus 4  \
-2> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/scripts/main_experiments/11_training_1_models/${EXP_NAME}_error.log \
-> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/scripts/main_experiments/11_training_1_models/${EXP_NAME}_output.log
+2> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/scripts/main_experiments/12_training_exp_2/${EXP_NAME}_error.log \
+> /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/scripts/main_experiments/12_training_exp_2/${EXP_NAME}_output.log
