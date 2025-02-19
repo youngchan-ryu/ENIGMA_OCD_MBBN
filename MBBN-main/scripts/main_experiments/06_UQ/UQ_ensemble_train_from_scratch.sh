@@ -41,6 +41,9 @@
 ## 1. If you train ensemble UQ model, all models use same dataset split seed as the given seed. 
 ## For model initialization seed (which is torch.seed) is different for each model.
 ## model_idx = [0, 1, ..., num_ensemble_models - 1] and seed = seed + model_idx
+## 2. If you use slurm job scheduler, 
+## use --ntasks-per-node=4 --gpus-per-task=1 for DDP training,
+## use --ntasks-per-node=1 --gpus-per-task=4 (or number of gpus) for ensemble training. 
 ########################
 
 ######## Debugs ########

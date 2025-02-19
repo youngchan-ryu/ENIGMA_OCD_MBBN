@@ -26,3 +26,9 @@ python main.py --dataset_name ENIGMA_OCD --base_path /global/homes/p/pakmasha/mo
 2> /global/homes/p/pakmasha/model/MBBN-main/failed_experiments/enigma_ocd_error.log
 
 #--prepare_visualization
+
+
+pretraining weight + gaussian small var -> initial
+
+
+torch.seed(101) -> torch.seed(102) -> 103 ... 116

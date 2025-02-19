@@ -1,0 +1,567 @@
+starting phase2: mbbn
+saving the results at /pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/experiments/ENIGMA_OCD_mbbn_OCD_train_1_model_seed_101_ddp_4gpu_test
+/pscratch/sd/y/ycryu/ENIGMA_OCD_MBBN/MBBN-main/splits/ENIGMA_OCD/ENIGMA_OCD_OCD_ROI_316_seq_len_100_split101.txt
+loading splits
+length of train_idx: 1467
+length of val_idx: 312
+length of test_idx: 314
+distributed
+length of train sampler is: 367
+length of valid sampler is: 78
+length of test sampler is: 79
+workers: 8
+length of training generator is: 11
+workers: 8
+length of valid generator is: 2
+workers: 8
+length of test generator is: 2
+self.task: MBBN
+Number of heads: 4
+There are no checkpoints or weights from previous steps
+self.gpu: 0
+id of gpu is: 0
+mbbn
+using binary_classification loss
+using spatial_difference loss
+Starting epoch 1/250
+max allocated memory: 146.20 MB
+max cached memory: 170.00 MB
+
+______epoch summary 1/250_____
+
+binary_classification_train: 0.7443714196031744
+binary_classification_val: 0.6922971606254578
+binary_classification_test: 0.6929628849029541
+spatial_difference_train: 20.08210702375932
+spatial_difference_val: 19.966453552246094
+spatial_difference_test: 19.959150314331055
+total_train: 20.826478611339223
+total_val: 20.658750534057617
+total_test: 20.652113914489746
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.4903508771929824
+train_Regular_Accuracy: 0.4939759036144578
+train_AUROC: 0.5291747888239116
+train_best_bal_acc: 0.5234892787524367
+train_best_threshold: 0.49884033203125
+train_gmean: 0.5233967133620105
+train_specificity: 0.45925925925925926
+train_sensitivity: 0.5964912280701754
+train_f1_score: 0.5275590551181102
+val_Balanced_Accuracy: 0.47619047619047616
+val_Regular_Accuracy: 0.5
+val_AUROC: 0.4862155388471178
+val_best_bal_acc: 0.5225563909774436
+val_best_threshold: 0.4954606592655182
+val_gmean: 0.5484084971070817
+val_specificity: 0.5714285714285714
+val_sensitivity: 0.5263157894736842
+val_f1_score: 0.4864864864864865
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5862068965517241
+test_AUROC: 0.4632352941176471
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+self.rank: 0
+current_lr:3e-05
+updating best saved model with AUROC:0.4862155388471178
+time taken to perform
+______epoch summary 2/250_____
+
+binary_classification_train: 0.7340699244629253
+bi
+______epoc
+______epoch summary 2/250_____
+
+binary_classification_train: 0.7809801887382161
+binary_classification_val: 0.6924385130405426
+binary_classification_test: 0.6981633752584457
+spatial_difference_train: 20.025444811040703
+spatial_difference_val: 19.90828847885132
+spatial_difference_test: 19.901764392852783
+total_train: 20.806425181302156
+total_val: 20.60072660446167
+total_test: 20.599928379058838
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.44274549779136935
+train_Regular_Accuracy: 0.45081967213114754
+train_AUROC: 0.41165477404009515
+train_best_bal_acc: 0.489704383282365
+train_best_threshold: 0.44987592101097107
+train_gmean: 0.47442223029637676
+train_specificity: 0.3555555555555555
+train_sensitivity: 0.6330275229357798
+train_f1_score: 0.5151515151515151
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.45454545454545453
+val_AUROC: 0.5555555555555556
+val_best_bal_acc: 0.5611111111111111
+val_best_threshold: 0.4407099485397339
+val_gmean: 0.5773502691896258
+val_specificity: 0.6666666666666667
+val_sensitivity: 0.5
+val_f1_score: 0.4827586206896552
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.48484848484848486
+test_AUROC: 0.5055147058823529
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+self.rank: 0
+cu
+______epoch summary 3/250_____
+
+binary_classification_train: 0.747766045006838
+______epoch summary 3/250_____
+
+binary_classification_train: 0.7521050247279081
+binary_classification_val: 0.7052556475003561
+binary_classification_test: 0.688294917345047
+spatial_difference_train: 19.970222877733637
+spatial_difference_val: 19.87976837158203
+spatial_difference_test: 19.89520327250163
+total_train: 20.722327897042938
+total_val: 20.58502419789632
+total_test: 20.58349831899007
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5479923753305048
+train_Regular_Accuracy: 0.5546875
+train_AUROC: 0.5815962614523766
+train_best_bal_acc: 0.5633032035909733
+train_best_threshold: 0.49343904852867126
+train_gmean: 0.567413269461242
+train_specificity: 0.5539568345323741
+train_sensitivity: 0.5811965811965812
+train_f1_score: 0.5447154471544715
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.35294117647058826
+val_AUROC: 0.40909090909090906
+val_best_bal_acc: 0.5037878787878788
+val_best_threshold: 0.4277552366256714
+val_gmean: 0.5149286505444373
+val_specificity: 0.41666666666666663
+val_sensitivity: 0.6363636363636364
+val_f1_score: 0.6190476190476191
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5483870967741935
+test_AUROC: 0.7394957983193278
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+self.rank: 2
+time taken to perform 3: 14.33
+St
+______epoch summary 4/250_____
+
+binary_classification_train: 0.7569767277349125
+b
+______epoch summary 4/250_____
+
+binary_classification_train: 0.7559151961044832
+binary_classification_val: 0.7
+______epoch summary 4/250_____
+
+binary_classification_train: 0.7711687304756858
+binary_classification_val: 0.6927350237965584
+binary_classification_test: 0.7004530280828476
+spatial_difference_train: 19.90553296696056
+spatial_difference_val: 19.791606664657593
+spatial_difference_test: 19.78636860847473
+total_train: 20.676701805808328
+total_val: 20.484341382980347
+total_test: 20.48682188987732
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5108784893267653
+train_Regular_Accuracy: 0.512396694214876
+train_AUROC: 0.5113574165298304
+train_best_bal_acc: 0.52292008757526
+train_best_threshold: 0.47833988070487976
+train_gmean: 0.5239214688559615
+train_specificity: 0.46825396825396826
+train_sensitivity: 0.5862068965517241
+train_f1_score: 0.536
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.5405405405405406
+val_AUROC: 0.5852941176470589
+val_best_bal_acc: 0.5852941176470587
+val_best_threshold: 0.45374804735183716
+val_gmean: 0.6087595874350707
+val_specificity: 0.7
+val_sensitivity: 0.5294117647058824
+val_f1_score: 0.5161290322580645
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5454545454545454
+test_AUROC: 0.5907407407407407
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.
+______epoch summary 5/250_____
+
+b
+______epoch summary 5/250_____
+
+binary_classification_train: 0.7606217947873202
+binary_classification_val: 0.7077929615974426
+binary_classification_test: 0.6874209940433502
+spatial_difference_train: 19.854496938532048
+spatial_difference_val: 19.766552543640138
+spatial_difference_test: 19.779095268249513
+total_train: 20.615118754993784
+total_val: 20.474345397949218
+total_test: 20.466516494750977
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5031012404961985
+train_Regular_Accuracy: 0.4859437751004016
+train_AUROC: 0.47982526343870885
+train_best_bal_acc: 0.5046018407362944
+train_best_threshold: 0.5014044046401978
+train_gmean: 0.4980956130060557
+train_specificity: 0.607843137254902
+train_sensitivity: 0.40816326530612246
+train_f1_score: 0.4796747967479675
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.40540540540540543
+val_AUROC: 0.6272727272727273
+val_best_bal_acc: 0.6484848484848484
+val_best_threshold: 0.4177476763725281
+val_gmean: 0.6179143806533247
+val_specificity: 0.9333333333333333
+val_sensitivity: 0.4090909090909091
+val_f1_score: 0.5161290322580645
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5357142857142857
+test_AUROC: 0.764102564102564
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+self.rank: 2
+time taken to perform 5: 14.07
+Starting epoch 6/250
+max a
+______epoch summary 6/250__
+______epoch summary 6/250____
+______epoch summary 6/250_____
+
+binary_classification_train: 0.760043894702738
+binary_classification_val: 0.7145834167798361
+binary_classification_test: 0.6895084977149963
+spatial_difference_train: 19.79537469690496
+spatial_difference_val: 19.7097096
+______epoch summary 6/250_____
+
+binary_classification_train: 0.7661092705798872
+binary_classification_val: 0.6971548050642014
+binary_classification_test: 0.7082361380259196
+spatial_difference_train: 19.792629964423902
+spatial_difference_val: 19.67455514272054
+spatial_difference_test: 19.670352935791016
+total_train: 20.558739257581305
+total_val: 20.371709664662678
+total_test: 20.378589312235516
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.47058823529411764
+train_Regular_Accuracy: 0.47058823529411764
+train_AUROC: 0.484217216298284
+train_best_bal_acc: 0.5168067226890757
+train_best_threshold: 0.45181018114089966
+train_gmean: 0.5154898848089076
+train_specificity: 0.4453781512605042
+train_sensitivity: 0.5966386554621849
+train_f1_score: 0.5490196078431373
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.4722222222222222
+val_AUROC: 0.4102167182662539
+val_best_bal_acc: 0.48142414860681115
+val_best_threshold: 0.3665902018547058
+val_gmean: 0.48825207923700326
+val_specificity: 0.6470588235294117
+val_sensitivity: 0.3684210526315789
+val_f1_score: 0.3870967741935484
+test_Balanced_A
+______epoch summary 7/250_
+______epoch summary 7/250_____
+
+binary_
+______epoch summary 7/250_____
+
+binary_classification_train: 0.7656923617635455
+binary_classification_val: 0.7210828065872192
+binary_classification_test: 0.6916312234742301
+spatial_difference_train: 19.73818434678115
+spatial_difference_val: 19.652746881757462
+spatial_difference_test: 19.662500517708914
+total_train: 20.503876723252333
+total_val: 20.373829705374582
+total_test: 20.354131971086776
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5027573529411764
+train_Regular_Accuracy: 0.5060728744939271
+train_AUROC: 0.4892003676470588
+train_best_bal_acc: 0.49849002100840334
+train_best_threshold: 0.49359166622161865
+train_gmean: 0.5023578857529274
+train_specificity: 0.484375
+train_sensitivity: 0.5210084033613446
+train_f1_score: 0.4959349593495935
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.45714285714285713
+val_AUROC: 0.5411184210526315
+val_best_bal_acc: 0.43914473684210525
+val_best_threshold: 0.35042136907577515
+val_gmean: 0.5441071875825088
+val_specificity: 0.5625
+val_sensitivity: 0.5263157894736842
+val_f1_score: 0.375
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5882352941176471
+test_AUROC: 0.7285714285714286
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+self.rank: 2
+time taken to perform 7: 13.85
+Starting epoch 8/250
+______epoch summary 8/250
+______epoch summary 8/250_____
+
+binar
+______epoch summary 8/250_____
+
+binary_classification_train: 0.7651057825847105
+binary_classification_val: 0.7219914384186268
+binary_classification_test: 0.6908905059099197
+spatial_difference_train: 19.681695547970858
+spatial_difference_val: 19.595741868019104
+spatial_difference_test: 19.604169964790344
+total_train: 20.4468
+______epoch summary 8/250_____
+
+binary_classification_train: 0.7675377103415403
+binary_classification_val: 0.7013013325631618
+binary_classification_test: 0.7142319157719612
+spatial_difference_train: 19.67473992434415
+spatial_difference_val: 19.55742585659027
+spatial_difference_test: 19.553932785987854
+total_train: 20.442277626557782
+total_val: 20.258727073669434
+total_test: 20.26816487312317
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5146570256009381
+train_Regular_Accuracy: 0.5201612903225806
+train_AUROC: 0.48837209302325585
+train_best_bal_acc: 0.5143638850889193
+train_best_threshold: 0.49584972858428955
+train_gmean: 0.5170533308674358
+train_specificity: 0.5581395348837209
+train_sensitivity: 0.4789915966386555
+train_f1_score: 0.4827586206896552
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.5
+val_AUROC: 0.27295918367346933
+val_best_bal_acc: 0.39285714285714285
+val_best_threshold: 0.39326852560043335
+val_gmean: 0.40406101782088427
+val_specifi
+______epoch summary 9/250_____
+
+binary_classification_train: 0.7589567141099409
+binary_classification_val: 0
+______epoch summary 9/250_____
+
+binary_classification_train: 0.7631293703811337
+binary_classification_val: 0.7225918935404884
+binary_classification_test: 0.6900160643789504
+spatial_difference_train: 19.623982304274435
+spatial_difference_val: 19.53868230183919
+spatial_difference_test: 19.545845455593533
+total_train: 20.387111702350655
+total_val: 20.26127423180474
+total_test: 20.235861672295464
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5372057219834498
+train_Regular_Accuracy: 0.54
+train_AUROC: 0.5396754121495926
+train_best_bal_acc: 0.5398999294374238
+train_best_threshold: 0.4995300769805908
+train_gmean: 0.5440974921413617
+train_specificity: 0.5419847328244275
+train_sensitivity: 0.5462184873949579
+train_f1_score: 0.5267489711934157
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.42105263157894735
+val_AUROC: 0.609375
+val_best_bal_acc: 0.6193181818181819
+val_best_threshold: 0.40429335832595825
+val_gmean: 0.5982930264130992
+val_specificity: 0.875
+val_sensitivity: 0.4090909090909091
+val_f1_score: 0.5
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.6571428571428571
+test_AUROC: 0.7210144927536232
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+self.rank: 2
+time taken to perform 9: 13.66
+Starting epoch 10/250
+max al
+______epoch summary 10/250_____
+
+binary_classification_t
+______epoch summary 10/250_____
+
+binary_classification_train: 0.7617487132549285
+binary_classification_val: 0.723429736495018
+binary_classification_test: 0.6889443665742874
+spatial_difference_train: 19.563922916759143
+spatial_difference_val: 19.481661128997803
+spatial_difference_test: 19.48760805130005
+total_train: 20.325671646811745
+total_val: 20.20509090423584
+total_test: 20.1765
+______epoch summary 10/250_____
+
+binary_classification_train: 0.7682147307829423
+binary_classification_val: 0.7023648411035538
+binary_classification_test: 0.7145640283823014
+spatial_difference_train: 19.5640607140281
+spatial_difference_val: 19.440681838989256
+spatial_difference_test: 19.437545394897462
+total_train: 20.332275407964534
+total_val: 20.143046569824218
+total_test: 20.15210952758789
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.4835468327653073
+train_Regular_Accuracy: 0.48659003831417624
+train_AUROC: 0.4844282524385944
+train_best_bal_acc: 0.511899165589376
+train_best_threshold: 0.45017051696777344
+train_gmean: 0.5078419009926296
+train_specificity: 0.4253731343283582
+train_sensitivity: 0.6062992125984252
+train_f1_score: 0.5428571428571428
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.45454545454545453
+val_AUROC: 0.31111111111111106
+val_best_bal_acc: 0.4222222222222222
+val_best_threshold: 0.39326852560043335
+val_gmean: 0.4472135954999579
+val
+__
+______epoch summary 11/250_____
+
+binary_classification_train: 0.75893110
+______epoch summary 11/250_____
+
+binary_classification_train: 0.7618428370184149
+binary_classification_val: 0.724013401703401
+binary_classification_test: 0.6875999109311537
+spatial_difference_train: 19.506869339745894
+spatial_difference_val: 19.42474183169278
+spatial_difference_test: 19.429534912109375
+total_train: 20.268712177749507
+total_val: 20.148755246942695
+total_test: 20.117134874517266
+calculating best thresholds with roc_curve
+calculating best thresholds with roc_curve
+val_threshold: 0.5
+using loaded threshold - 0.5 - for testing
+train_Balanced_Accuracy: 0.5563241106719368
+train_Regular_Accuracy: 0.5587044534412956
+train_AUROC: 0.55800395256917
+train_best_bal_acc: 0.555764163372859
+train_best_threshold: 0.5072627067565918
+train_gmean: 0.5587959953568722
+train_specificity: 0.5984848484848485
+train_sensitivity: 0.5217391304347826
+train_f1_score: 0.5198237885462555
+val_Balanced_Accuracy: 0.5
+val_Regular_Accuracy: 0.42857142857142855
+val_AUROC: 0.65
+val_best_bal_acc: 0.6416666666666666
+val_best_threshold: 0.3789186179637909
+val_gmean: 0.6531972647421809
+val_specificity: 0.5333333333333333
+val_sensitivity: 0.8
+val_f1_score: 0.7142857142857143
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.5
+test_AUROC: 0.63671875
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+self.rank: 2
+time taken to perform 11: 13.73
+Starting epoch 12/250
+max allocated memory: 3466.37 MB
+max cached memory: 3686.00 MB
+888888889
+val_f1_score: 0.375
+test_Balanced_Accuracy: 0.5
+test_Regular_Accuracy: 0.4666666666666667
+test_AUROC: 0.5602678571428571
+test_best_bal_acc: 0.5
+test_best_threshold: 0.5
+test_gmean: 0.0
+test_specificity: 1.0
+test_sensitivity: 0.0
+test_f1_score: 0.0
+self.rank: 0
+current_lr:3e-05
+time taken to perform 11: 13.54
+Starting epoch 12/250
+max allocated memory: 3466.37 MB
+max cached memory: 3684.00 MB

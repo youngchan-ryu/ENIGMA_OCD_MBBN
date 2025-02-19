@@ -1,0 +1,15 @@
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/condabin/conda
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/bin/conda
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/bin/conda-env
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/bin/activate
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/bin/deactivate
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/etc/profile.d/conda.sh
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/etc/fish/conf.d/conda.fish
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/shell/condabin/Conda.psm1
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/shell/condabin/conda-hook.ps1
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/lib/python3.12/site-packages/xontrib/conda.xsh
+no change     /global/common/software/nersc/pe/conda/24.10.0/Miniforge3-24.7.1-0/etc/profile.d/conda.csh
+no change     /global/homes/y/ycryu/.bashrc
+No action taken.
+slurmstepd: error: *** STEP 35958822.0 ON nid002080 CANCELLED AT 2025-02-18T04:34:01 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 35958822 ON nid002080 CANCELLED AT 2025-02-18T04:34:01 DUE TO TIME LIMIT ***
