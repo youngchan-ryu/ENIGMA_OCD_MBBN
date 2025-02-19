@@ -87,9 +87,10 @@ class Trainer():
         #wandb
         os.environ["WANDB_API_KEY"] = self.wandb_key
         os.environ["WANDB_MODE"] = self.wandb_mode
-        wandb.init(project=self.wandb_project,entity=self.wandb_entity,reinit=True, name=self.experiment_title, config=kwargs)
-        # wandb.init(mode="disabled")
-        wandb.watch(self.model,log='all',log_freq=10)
+        if self.rank == 0:
+            wandb.init(project=self.wandb_project,entity=self.wandb_entity,reinit=True, name=self.experiment_title, config=kwargs)
+            # wandb.init(mode="disabled")
+            wandb.watch(self.model,log='all',log_freq=10)
         
         self.nan_list = []
 

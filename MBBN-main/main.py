@@ -223,7 +223,11 @@ def run_disributed_phase(args,loaded_model_weights_path,phase_num,phase_name):
     else:
         pass
         
-    args.distributed = args.world_size > 1 # default: world_size = -1 
+    # args.distributed = args.world_size > 1 # default: world_size = -1 
+    if args.distributed:
+        # distributed shoudl set False due to manual distributed setting in ensemble method
+        args.distributed = False
+    print(f"run_distibuted_phase - distributed: {args.distributed}")
     
     num_gpus = args.num_UQ_gpus
     if args.num_UQ_gpus > torch.cuda.device_count():
